@@ -53,7 +53,7 @@ Description: "This activity definition describes launching an external applicati
 * Name 0..1 string "Name for this activity definition (computer friendly)"
   * ^alias = "ModuleNaam"
 * Title 0..1 string "Name for this activity definition (human friendly)"
-      * ^alias = "ModuleTitel"
+  * ^alias = "ModuleTitel"
 * Subtitle 0..1 string "Describes the clinical usage of the activity definition."
   * ^alias = "ModuleSubTitel"
 * Status 0..1 code "Status of the provider module (for example draft, active, retired). Indicates whether the module may be used in workflows."
