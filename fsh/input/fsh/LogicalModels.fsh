@@ -7,7 +7,7 @@ Title: "Patient"
 Description: "The person for whom the task is intended."
 * insert DefaultNarrative
 * ^status = #active
-* insert PublisherAndContact
+* insert PublisherAndContactMedMij
 * ^purpose = "This LogicalModel represents the Patient building block for patient use cases in the context of the AanbiedersModule"
 * insert Copyright
 * ^abstract = true
@@ -38,14 +38,13 @@ Title: "ActivityDefinition"
 Description: "This activity definition describes launching an external application module from the EHR or portal as part of a clinical or administrative workflow. When applied, it creates a Task resource that requests launch of the configured application, including the necessary launch context such as user, patient, performer, etc., so that the receiving system can open the module in the correct session and context."
 * insert DefaultNarrative
 * ^status = #active
-* insert PublisherAndContact
+* insert PublisherAndContactMedMij
 * ^purpose = "The purpose of this activity definition is to describe a launchable application module itself, including a reference to the Endpoint resource that exposes the module. Systems can use this definition to know how and where to invoke the module, while separate Task resources are used to manage and track the patient specific workflow steps that require this module to be launched."
 * insert Copyright
 * ^abstract = true
 * .
   * ^alias = "Module"
-* Extension 0..1 "Endpoint tot the service application"
-* Extension from http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension
+* ModuleEndpoint 0..1 Reference(Endpoint) "Endpoint to the service application."
   * ^alias = "Endpoint"
 * Url 0..1 "URL of the launch endpoint for the module. Systems call this URL to start the associated application"
 * Identifier 0..1 "Unique, stable content identifier for the provider module within its own domain. Enables unambiguous recognition of the same module, independent of endpoint URL or version."
@@ -73,14 +72,13 @@ Title: "Task"
 Description: "Patient specific workflow item that requests execution of a provider module. Each Task represents an instance of “perform this module for this patient”, linking to the ActivityDefinition of the module and tracking its assignment, progress, and outcome within the care process."
 * insert DefaultNarrative
 * ^status = #active
-* insert PublisherAndContact
+* insert PublisherAndContactMedMij
 * ^purpose = "To represent and manage a concrete workflow request to perform a specific provider module for a patient. The Task coordinates assignment, handover, and status tracking between systems and roles, so that initiation and completion of the module are reliably monitored within the care process."
 * insert Copyright
 * ^abstract = true
 * .
   * ^alias = "Taken"
-* Extension 0..1 "Reference to ActivityDefinition"
-* Extension from http://vzvz.nl/fhir/StructureDefinition/instantiates
+* InstantiatesDefinition 0..1 canonical "Reference to ActivityDefinition definition."
   * ^alias = "ActivityDefinition"
 * Identifier 0..1 "Business identifier that uniquely identifies this Task instance within or across systems, used to track the concrete provider module request in external workflows and integrations."
 * Status 0..1 "Current state of the provider module request (for example requested, accepted, in progress, completed, cancelled), indicating where the Task is in the execution workflow."
