@@ -1,6 +1,6 @@
-Profile: KoppelMijTask
+Profile: AanbiedersModuleTask
 Parent: Task
-Id: MedMij-Task
+Id: AanbiedersModule-Task
 Description: "The (FHIR) Task (resource) describes an eHealth task, that is, an eHealth activity assigned to a patient."
 * insert DefaultNarrative
 * ^status = #draft

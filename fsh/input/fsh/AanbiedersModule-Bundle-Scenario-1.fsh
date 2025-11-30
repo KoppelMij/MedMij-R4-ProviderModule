@@ -17,7 +17,7 @@ Usage: #example
 * status = #requested
 * intent = #order
 * priority = #routine
-* code = http://hl7.org/fhir/smart-app-launch/CodeSystem/smart-codes #launch-app-standalone "Launch application using the SMART standalone launch"
+* code = http://hl7.org/fhir/smart-app-launch/CodeSystem/smart-codes#launch-app-standalone "Launch application using the SMART standalone launch"
 * description = "Invullen COPD vragenlijst"
 * for = Reference(AanbiedersModule-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
@@ -45,7 +45,7 @@ Usage: #example
 * status = #completed
 * intent = #order
 * priority = #routine
-* code = http://hl7.org/fhir/smart-app-launch/CodeSystem/smart-codes #launch-app-standalone "Launch application using the SMART standalone launch"
+* code = http://hl7.org/fhir/smart-app-launch/CodeSystem/smart-codes#launch-app-standalone "Launch application using the SMART standalone launch"
 * description = "Invullen COPD vragenlijst"
 * for = Reference(AanbiedersModule-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod

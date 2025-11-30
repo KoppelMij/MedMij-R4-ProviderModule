@@ -1,7 +1,7 @@
 // Bundle with FHIR test instances in FSH format for KoppelMij test scenario 2
 
-Instance: KoppelMij-Task-Questionnaire-De-Groot
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/MedMij-Task
+Instance: AanbiedersModule-Task-Questionnaire-De-Groot
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-Task
 Usage: #example
 * text
   * status = #generated
@@ -9,7 +9,7 @@ Usage: #example
 * insert LanguageNL
 * extension[0]
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(KoppelMij-ActivityDefinition-Angststoornis-Questionnaire)
+  * valueReference = Reference(AanbiedersModule-ActivityDefinition-Angststoornis-Questionnaire)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medmij.nl/taskIdentifier"
@@ -17,18 +17,18 @@ Usage: #example
 * status = #requested
 * intent = #order
 * priority = #routine
-* code = http://hl7.org/fhir/smart-app-launch/CodeSystem/smart-codes #launch-app-standalone "Launch application using the SMART standalone launch"
+* code = http://hl7.org/fhir/smart-app-launch/CodeSystem/smart-codes#launch-app-standalone "Launch application using the SMART standalone launch"
 * description = "Invullen angststoornis vragenlijst t.b.v. CGT sessie"
-* for = Reference(KoppelMij-Patient-De-Groot) "Koos de Groot"
+* for = Reference(AanbiedersModule-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-08-01T09:00:00+01:00"
   * end = "2025-10-01T12:00:00+01:00"
 * authoredOn = "2025-08-01T09:00:00+01:00"
 * lastModified = "2025-08-01T09:00:00+01:00"
-* requester = Reference(KoppelMij-PractitionerRole-Vonk) "M. Vonk, Psychiater"
-* owner = Reference(KoppelMij-Patient-De-Groot) "Koos de Groot"
+* requester = Reference(AanbiedersModule-PractitionerRole-Vonk) "M. Vonk, Psychiater"
+* owner = Reference(AanbiedersModule-Patient-De-Groot) "Koos de Groot"
 
-Instance: KoppelMij-ActivityDefinition-Angststoornis-Questionnaire
+Instance: AanbiedersModule-ActivityDefinition-Angststoornis-Questionnaire
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-ActivityDefinition
 Usage: #example
 * text
@@ -37,7 +37,7 @@ Usage: #example
 * insert LanguageNL
 * extension[0]
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
-  * valueReference = Reference(KoppelMij-Endpoint-Vragenlijst-Angststoornis)
+  * valueReference = Reference(AanbiedersModule-Endpoint-Vragenlijst-Angststoornis)
 * url = "https://example.nl/web/vragenlijst/1234567"
 * identifier
   * system = "http://{name}/content/id"
@@ -49,21 +49,21 @@ Usage: #example
 * status = #active
 * description = "Vul deze vragenlijst voorafgaand aan de CGT-sessie in"
 
-Instance: KoppelMij-Endpoint-Vragenlijst-Angststoornis
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/MedMij-Endpoint
+Instance: AanbiedersModule-Endpoint-Vragenlijst-Angststoornis
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-Endpoint
 Usage: #example
 * text
   * status = #generated
-  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of an Endpoint as used in KoppelMij</div>"
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of an Endpoint as used in AanbiedersModule</div>"
 * insert LanguageNL
 * status = #active
 * connectionType = $koppeltaal-endpoint-connection-type#hti-smart-on-fhir
-* managingOrganization = Reference(KoppelMij-Organization-GGZ)
+* managingOrganization = Reference(AanbiedersModule-Organization-GGZ)
 * payloadType = $endpoint-payload-type#any
 * address = "https://module.test.5im.nl/web/api/smartonfhir/launch"
 
 
-Instance: KoppelMij-Patient-De-Groot
+Instance: AanbiedersModule-Patient-De-Groot
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient
 Usage: #example
 * text
@@ -108,18 +108,18 @@ Usage: #example
   * country = "Nederland"
     * extension[http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification].valueCodeableConcept = urn:iso:std:iso:3166#NL "Netherlands"
 
-Instance: KoppelMij-PractitionerRole-Vonk
+Instance: AanbiedersModule-PractitionerRole-Vonk
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole
 Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Zorgverlenerrol: Psychiater<br/>Zorgverlener: Vonk<br/>Organisatie: GGZ</div>"
-* practitioner = Reference(KoppelMij-Practitioner-Vonk) "M. Vonk"
-* organization = Reference(KoppelMij-Organization-GGZ) "GGZ "
+* practitioner = Reference(AanbiedersModule-Practitioner-Vonk) "M. Vonk"
+* organization = Reference(AanbiedersModule-Organization-GGZ) "GGZ "
 * specialty
   * coding = urn:oid:2.16.840.1.113883.2.4.6.7#0329 "Psychiatrie"
 
-Instance: KoppelMij-Practitioner-Vonk
+Instance: AanbiedersModule-Practitioner-Vonk
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner
 Usage: #example
 * text
@@ -154,7 +154,7 @@ Usage: #example
   * country = "Nederland"
     * extension[http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification].valueCodeableConcept = urn:iso:std:iso:3166#NL "Netherlands"
 
-Instance: KoppelMij-Organization-GGZ
+Instance: AanbiedersModule-Organization-GGZ
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization
 Usage: #example
 * text
