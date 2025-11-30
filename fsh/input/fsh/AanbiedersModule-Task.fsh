@@ -17,7 +17,7 @@ Description: "The (FHIR) Task (resource) describes an eHealth task, that is, an 
   * ^short = "Reference to ActivityDefinition" 
   * ^definition = "Reference to the ActivityDefinition, which conforms to the MedMij ActivityDefinition profile."
   * valueReference only Reference(AanbiedersModule-ActivityDefinition)
-* partOf only Reference(MedMij-Task)
+* partOf only Reference(AanbiedersModule-Task)
 * code from http://hl7.org/fhir/smart-app-launch/CodeSystem/smart-codes (extensible)
 * code ^comment = "Codes to identify what the task involves. These will typically be specific to a particular workflow."
 * for 1..
