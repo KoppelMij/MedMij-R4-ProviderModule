@@ -8,7 +8,7 @@ Usage: #example
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
 * insert LanguageNL
 * extension[0]
-  * url = $task-instantiates
+  * url = $koppeltaal-instantiates
   * valueReference = Reference(KoppelMij-ActivityDefinition-COPD-Questionnaire)
     * type = "ActivityDefinition"
 * identifier
@@ -36,7 +36,7 @@ Usage: #example
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
 * insert LanguageNL
 * extension[0]
-  * url = $task-instantiates
+  * url = $koppeltaal-instantiates
   * valueReference = Reference(KoppelMij-ActivityDefinition-COPD-Questionnaire)
     * type = "ActivityDefinition"
 * identifier
@@ -56,7 +56,7 @@ Usage: #example
 * owner = Reference(KoppelMij-Patient-Van-Duinen) "Tom van Duinen"
 
 Instance: KoppelMij-ActivityDefinition-COPD-Questionnaire
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/MedMij-ActivityDefinition
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-ActivityDefinition
 Usage: #example
 * text
   * status = #generated

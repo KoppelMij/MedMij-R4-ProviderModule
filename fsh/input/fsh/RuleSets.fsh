@@ -31,12 +31,3 @@ RuleSet: PublisherAndContactVZVZ
 
 RuleSet: LanguageNL
 * language = urn:ietf:bcp:47#nl-NL
-
-RuleSet: PublisherAndContactHL7
-* ^publisher = "HL7 International / FHIR Infrastructure"
-* ^contact.name = "HL7 International / FHIR Infrastructure"
-* ^contact.telecom.system = #email
-* ^contact.telecom.value = "fhir@lists.HL7.org"
-* ^contact.telecom.system = #url
-* ^contact.telecom.value = "http://www.hl7.org/Special/committees/fiwg"
-* ^jurisdiction = $Jurisdiction#001 "World" 
