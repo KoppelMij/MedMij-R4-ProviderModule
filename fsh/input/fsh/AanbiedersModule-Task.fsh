@@ -14,9 +14,9 @@ Description: "The (FHIR) Task (resource) describes an eHealth task, that is, an 
 * .
 ^definition = "An eHealth activity assigned to a patient."
 * extension contains $koppeltaal-instantiates named instantiates 0..*
-   * ^short = "Reference to ActivityDefinition" 
-   * ^definition = "Reference to the ActivityDefinition, which conforms to the MedMij ActivityDefinition profile."
-   * valueReference only Reference(AanbiedersModule-ActivityDefinition)
+  * ^short = "Reference to ActivityDefinition" 
+  * ^definition = "Reference to the ActivityDefinition, which conforms to the MedMij ActivityDefinition profile."
+  * valueReference only Reference(AanbiedersModule-ActivityDefinition)
 * partOf only Reference(MedMij-Task)
 * code from http://hl7.org/fhir/smart-app-launch/CodeSystem/smart-codes (extensible)
 * code ^comment = "Codes to identify what the task involves. These will typically be specific to a particular workflow."

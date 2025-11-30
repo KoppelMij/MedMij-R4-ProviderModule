@@ -1,7 +1,7 @@
 // Bundle with FHIR test instances in FSH format for KoppelMij test scenario 1
 
-Instance: KoppelMij-Task-Questionnaire-Van-Duinen
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/MedMij-Task
+Instance: AanbiedersModule-Task-Questionnaire-Van-Duinen
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-Task
 Usage: #example
 * text
   * status = #generated
@@ -9,7 +9,7 @@ Usage: #example
 * insert LanguageNL
 * extension[0]
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(KoppelMij-ActivityDefinition-COPD-Questionnaire)
+  * valueReference = Reference(AanbiedersModule-ActivityDefinition-COPD-Questionnaire)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medmij.nl/taskIdentifier"
@@ -17,19 +17,19 @@ Usage: #example
 * status = #requested
 * intent = #order
 * priority = #routine
-* code = $SmartCodes#launch-app-standalone "Launch application using the SMART standalone launch"
+* code = http://hl7.org/fhir/smart-app-launch/CodeSystem/smart-codes #launch-app-standalone "Launch application using the SMART standalone launch"
 * description = "Invullen COPD vragenlijst"
-* for = Reference(KoppelMij-Patient-Van-Duinen) "Tom van Duinen"
+* for = Reference(AanbiedersModule-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-05-01T08:25:05+01:00"
   * end = "2025-06-01T12:00:00+01:00"
 * authoredOn = "2025-05-01T08:25:05+01:00"
 * lastModified = "2025-05-01T08:25:05+01:00"
-* requester = Reference(KoppelMij-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(KoppelMij-Patient-Van-Duinen) "Tom van Duinen"
+* requester = Reference(AanbiedersModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(AanbiedersModule-Patient-Van-Duinen) "Tom van Duinen"
 
-Instance: KoppelMij-Task-Update-Questionnaire-Van-Duinen
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/MedMij-Task
+Instance: AanbiedersModule-Task-Update-Questionnaire-Van-Duinen
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-Task
 Usage: #example
 * text
   * status = #generated
@@ -37,7 +37,7 @@ Usage: #example
 * insert LanguageNL
 * extension[0]
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(KoppelMij-ActivityDefinition-COPD-Questionnaire)
+  * valueReference = Reference(AanbiedersModule-ActivityDefinition-COPD-Questionnaire)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medmij.nl/taskIdentifier"
@@ -45,17 +45,18 @@ Usage: #example
 * status = #completed
 * intent = #order
 * priority = #routine
+* code = http://hl7.org/fhir/smart-app-launch/CodeSystem/smart-codes #launch-app-standalone "Launch application using the SMART standalone launch"
 * description = "Invullen COPD vragenlijst"
-* for = Reference(KoppelMij-Patient-Van-Duinen) "Tom van Duinen"
+* for = Reference(AanbiedersModule-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-05-01T08:25:05+01:00"
   * end = "2025-06-01T12:00:00+01:00"
 * authoredOn = "2025-05-01T08:25:05+01:00"
 * lastModified = "2025-06-01T09:25:05+01:00"
-* requester = Reference(KoppelMij-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(KoppelMij-Patient-Van-Duinen) "Tom van Duinen"
+* requester = Reference(AanbiedersModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(AanbiedersModule-Patient-Van-Duinen) "Tom van Duinen"
 
-Instance: KoppelMij-ActivityDefinition-COPD-Questionnaire
+Instance: AanbiedersModule-ActivityDefinition-COPD-Questionnaire
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-ActivityDefinition
 Usage: #example
 * text
@@ -64,7 +65,7 @@ Usage: #example
 * insert LanguageNL
 * extension[0]
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
-  * valueReference = Reference(KoppelMij-Endpoint-Vragenlijst-COPD)
+  * valueReference = Reference(AanbiedersModule-Endpoint-Vragenlijst-COPD)
 * url = "https://example.nl/web/vragenlijst/1234567"
 * identifier
   * system = "http://{name}/content/id"
@@ -76,8 +77,8 @@ Usage: #example
 * status = #active
 * description = "Vul de vragenlijst met klachten in. Dit kost ongeveer 2 minuten"
 
-Instance: KoppelMij-Endpoint-Vragenlijst-COPD
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/MedMij-Endpoint
+Instance: AanbiedersModule-Endpoint-Vragenlijst-COPD
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-Endpoint
 Usage: #example
 * text
   * status = #generated
@@ -85,11 +86,11 @@ Usage: #example
 * insert LanguageNL
 * status = #active
 * connectionType = $koppeltaal-endpoint-connection-type#hti-smart-on-fhir
-* managingOrganization = Reference(KoppelMij-Organization-Huisartsenpraktijk-Medrie)
+* managingOrganization = Reference(AanbiedersModule-Organization-Huisartsenpraktijk-Medrie)
 * payloadType = $endpoint-payload-type#any
 * address = "https://module.test.5im.nl/web/api/smartonfhir/launch"
 
-Instance: KoppelMij-Patient-Van-Duinen
+Instance: AanbiedersModule-Patient-Van-Duinen
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient
 Usage: #example
 * text
@@ -134,18 +135,18 @@ Usage: #example
   * country = "Nederland"
     * extension[http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification].valueCodeableConcept = urn:iso:std:iso:3166#NL "Netherlands"
 
-Instance: KoppelMij-PractitionerRole-De-Haard
+Instance: AanbiedersModule-PractitionerRole-De-Haard
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole
 Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Zorgverlenerrol: Huisarts, apotheekhoudend<br/>Zorgverlener: Haard, de<br/>Organisatie: Huisartsenpraktijk Medrie</div>"
-* practitioner = Reference(KoppelMij-Practitioner-De-Haard) "A. de Haard"
-* organization = Reference(KoppelMij-Organization-Huisartsenpraktijk-Medrie) "Huisartstenpraktijk Medrie"
+* practitioner = Reference(AanbiedersModule-Practitioner-De-Haard) "A. de Haard"
+* organization = Reference(AanbiedersModule-Organization-Huisartsenpraktijk-Medrie) "Huisartstenpraktijk Medrie"
 * specialty
   * coding = urn:oid:2.16.840.1.113883.2.4.6.7#0110 "Huisarts, apotheekhoudend"
 
-Instance: KoppelMij-Practitioner-De-Haard
+Instance: AanbiedersModule-Practitioner-De-Haard
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner
 Usage: #example
 * text
@@ -171,7 +172,7 @@ Usage: #example
   * value = "dehaard@huisarts.nl"
   * use = #work
 
-Instance: KoppelMij-Organization-Huisartsenpraktijk-Medrie
+Instance: AanbiedersModule-Organization-Huisartsenpraktijk-Medrie
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization
 Usage: #example
 * text
