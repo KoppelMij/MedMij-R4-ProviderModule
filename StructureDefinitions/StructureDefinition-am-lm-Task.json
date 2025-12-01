@@ -1,0 +1,245 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "am-lm-Task",
+  "text": {
+    "status": "empty",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>"
+  },
+  "url": "http://medmij.nl/fhir/StructureDefinition/am-lm-Task",
+  "name": "LmTask",
+  "title": "Task",
+  "status": "active",
+  "publisher": "MedMij",
+  "contact": [
+    {
+      "name": "MedMij",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "info@medmij.nl",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "Patient specific workflow item that requests execution of a provider module. Each Task represents an instance of “perform this module for this patient”, linking to the ActivityDefinition of the module and tracking its assignment, progress, and outcome within the care process.",
+  "purpose": "To represent and manage a concrete workflow request to perform a specific provider module for a patient. The Task coordinates assignment, handover, and status tracking between systems and roles, so that initiation and completion of the module are reliably monitored within the care process.",
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "http://medmij.nl/fhir/StructureDefinition/am-lm-Task",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "am-lm-Task",
+        "path": "am-lm-Task",
+        "short": "Task",
+        "definition": "Patient specific workflow item that requests execution of a provider module. Each Task represents an instance of “perform this module for this patient”, linking to the ActivityDefinition of the module and tracking its assignment, progress, and outcome within the care process.",
+        "alias": [
+          "Taken"
+        ]
+      },
+      {
+        "id": "am-lm-Task.InstantiatesDefinition",
+        "path": "am-lm-Task.InstantiatesDefinition",
+        "short": "Reference to ActivityDefinition definition.",
+        "definition": "Reference to ActivityDefinition definition.",
+        "alias": [
+          "ActivityDefinition"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "canonical"
+          }
+        ]
+      },
+      {
+        "id": "am-lm-Task.Identifier",
+        "path": "am-lm-Task.Identifier",
+        "short": "Business identifier that uniquely identifies this Task instance within or across systems, used to track the concrete provider module request in external workflows and integrations.",
+        "definition": "Business identifier that uniquely identifies this Task instance within or across systems, used to track the concrete provider module request in external workflows and integrations.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "id": "am-lm-Task.Status",
+        "path": "am-lm-Task.Status",
+        "short": "Current state of the provider module request (for example requested, accepted, in progress, completed, cancelled), indicating where the Task is in the execution workflow.",
+        "definition": "Current state of the provider module request (for example requested, accepted, in progress, completed, cancelled), indicating where the Task is in the execution workflow.",
+        "alias": [
+          "TaakStatus"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "am-lm-Task.Intent",
+        "path": "am-lm-Task.Intent",
+        "short": "Distinguishes whether this provider module Task is a proposal, plan or full order to perform the module for the patient.",
+        "definition": "Distinguishes whether this provider module Task is a proposal, plan or full order to perform the module for the patient.",
+        "alias": [
+          "Bedoeling"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "am-lm-Task.Priority",
+        "path": "am-lm-Task.Priority",
+        "short": "Indicates how urgent it is to perform this provider module Task, for example routine, urgent or asap.",
+        "definition": "Indicates how urgent it is to perform this provider module Task, for example routine, urgent or asap.",
+        "alias": [
+          "TaakPrioriteit"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "am-lm-Task.Description",
+        "path": "am-lm-Task.Description",
+        "short": "Short, human readable explanation of what should be done in this Task for the provider module, shown to the assignee in the workflow.",
+        "definition": "Short, human readable explanation of what should be done in this Task for the provider module, shown to the assignee in the workflow.",
+        "alias": [
+          "TaakOmschrijving"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "am-lm-Task.For",
+        "path": "am-lm-Task.For",
+        "short": "Patient for whom this provider module Task is requested and whose care and data the module relates to.",
+        "definition": "Patient for whom this provider module Task is requested and whose care and data the module relates to.",
+        "alias": [
+          "Voor"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "am-lm-Task.ExecutionPeriod",
+        "path": "am-lm-Task.ExecutionPeriod",
+        "short": "Start and end time of execution.",
+        "definition": "Start and end time of execution.",
+        "alias": [
+          "Periode"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ]
+      },
+      {
+        "id": "am-lm-Task.AuthoredOn",
+        "path": "am-lm-Task.AuthoredOn",
+        "short": "Date and time when this provider module Task was created.",
+        "definition": "Date and time when this provider module Task was created.",
+        "alias": [
+          "AanmaakDatumTijd"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "am-lm-Task.LastModified",
+        "path": "am-lm-Task.LastModified",
+        "short": "Date and time when this provider module Task was last updated, for example after a status change or reassignment.",
+        "definition": "Date and time when this provider module Task was last updated, for example after a status change or reassignment.",
+        "alias": [
+          "LaatstGewijzigd"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "am-lm-Task.Requester",
+        "path": "am-lm-Task.Requester",
+        "short": "Short, human readable explanation of what should be done in this Task for the provider module, shown to the assignee in the workflow.",
+        "definition": "Short, human readable explanation of what should be done in this Task for the provider module, shown to the assignee in the workflow.",
+        "alias": [
+          "Aanvrager"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "am-lm-Task.Owner",
+        "path": "am-lm-Task.Owner",
+        "short": "Short, human readable explanation of what should be done in this Task for the provider module, shown to the assignee in the workflow.",
+        "definition": "Short, human readable explanation of what should be done in this Task for the provider module, shown to the assignee in the workflow.",
+        "alias": [
+          "TaakEigenaar"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
