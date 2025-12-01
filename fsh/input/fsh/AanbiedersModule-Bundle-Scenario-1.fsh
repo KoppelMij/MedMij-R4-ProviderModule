@@ -1,4 +1,4 @@
-// Bundle with FHIR test instances in FSH format for KoppelMij test scenario 1
+// Bundle with FHIR test instances in FSH format for AanbiedersModule test scenario 1
 
 Instance: AanbiedersModule-Task-Questionnaire-Van-Duinen
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-Task
