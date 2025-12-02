@@ -81,12 +81,19 @@ Description: "Patient specific workflow item that requests execution of a provid
 * InstantiatesDefinition 0..1 canonical "Reference to ActivityDefinition definition."
   * ^alias = "ActivityDefinition"
 * Identifier 0..1 Identifier "Business identifier that uniquely identifies this Task instance within or across systems, used to track the concrete provider module request in external workflows and integrations."
+* BasedOn 0..* Reference(ServiceRequest) "ServiceRequest on which this Task is based, representing the clinical order for the provider module."
+  * ^alias = "GebaseerdOp"
+* PartOf 0..* Reference(Task) "Parent task of which this task is a part, used to link measurement subtasks to a main provider module task."
+  * ^alias = "SubTaak"
 * Status 0..1 code "Current state of the provider module request (for example requested, accepted, in progress, completed, cancelled), indicating where the Task is in the execution workflow."
   * ^alias = "TaakStatus"
 * Intent 0..1 code "Distinguishes whether this provider module Task is a proposal, plan or full order to perform the module for the patient."
   * ^alias = "Bedoeling"
 * Priority 0..1 code "Indicates how urgent it is to perform this provider module Task, for example routine, urgent or asap."
   * ^alias = "TaakPrioriteit"
+* Code 0..1 CodeableConcept "Task Type"
+* Code from http://hl7.org/fhir/smart-app-launch/CodeSystem/smart-codes (extensible)
+  * ^alias = "TaakType"
 * Description 0..1 string "Short, human readable explanation of what should be done in this Task for the provider module, shown to the assignee in the workflow."
   * ^alias = "TaakOmschrijving"
 * For 0..1 Reference(Patient) "Patient for whom this provider module Task is requested and whose care and data the module relates to."
@@ -101,3 +108,48 @@ Description: "Patient specific workflow item that requests execution of a provid
   * ^alias = "Aanvrager"
 * Owner 0..1 Reference(Patient) "Short, human readable explanation of what should be done in this Task for the provider module, shown to the assignee in the workflow."
   * ^alias = "TaakEigenaar"
+* Restriction 0..1 BackboneElement "Constraints on performing this provider module Task. for example how many times it may be executed, within which period, and by which intended performers."
+  * ^alias = "Frequentie"
+  * Repetitions 0..1 positiveInt "How many times to repeat"
+    * ^alias = "Herhaling"
+  * Period 0..1 Period "Time window during which this Task restriction applies. for example the period in which the task may be performed."
+    * ^alias = "Periode"
+  * Recipient 0..1 Reference "Intended performer(s) for this provider module Task, such as the patient, a caregiver or a care team."
+
+Logical: LmServiceRequest
+Parent: http://hl7.org/fhir/StructureDefinition/Element
+Id: am-lm-ServiceRequest
+Title: "ServiceRequest"
+Description: "Clinical order for an eHealth activity (module) that a healthcare professional requests for a specific patient, such as filling out a questionnaire, performing home measurements, or watching an instruction video."
+* insert DefaultNarrative
+* ^status = #active
+* insert PublisherAndContactMedMij
+* ^purpose = "To represent the clinical order from a healthcare professional to start a specific provider module for a patient. This ServiceRequest provides the clinical context for Tasks that execute the module."
+* insert Copyright
+* ^abstract = true
+* .
+  * ^alias = "Zorgopdracht"
+* InstantiatesDefinition 0..1 canonical "Reference to the ActivityDefinition that defines the provider module."
+  * ^alias = "ModuleDefinitie"
+* Identifier 0..1 Identifier "Business identifier that uniquely identifies this ServiceRequest within or across systems."
+  * ^alias = "ZorgopdrachtID"
+* Status 0..1 code "Current state of the service request (for example draft, active, completed, cancelled)."
+  * ^alias = "ZorgopdrachtStatus"
+* Intent 0..1 code "Indicates the level of authority or intention associated with the request, for example order or plan."
+  * ^alias = "Bedoeling"
+* Priority 0..1 code "Indicates how urgent it is to fulfil this service request, for example routine or urgent."
+  * ^alias = "Prioriteit"
+* Code 0..1 CodeableConcept "Type of provider module or eHealth activity being requested."
+  * ^alias = "ZorgopdrachtType"
+* Subject 1..1 Reference(Patient) "Patient for whom this provider module is requested."
+  * ^alias = "Patiënt"
+* Instruction 1..1 string "Patient specific instruction for how the requested module should be performed, for example home blood pressure monitoring for 8 weeks, once daily in the morning."
+  * ^alias = "PatiëntenInstructie"
+* Occurrence 0..1 Timing "Requested schedule for performing the provider module, such as duration, frequency and time of day."
+  * ^alias = "Tijdschema"
+* ReasonCode 0..* CodeableConcept "Clinical reason or indication for requesting this provider module."
+  * ^alias = "Reden"
+* Requester 0..1 Reference(Practitioner) "Healthcare professional or organization that requests this provider module for the patient."
+  * ^alias = "Aanvrager"
+* AuthoredOn 0..1 dateTime "Date and time when this service request was created."
+  * ^alias = "AanmaakDatumTijd"
