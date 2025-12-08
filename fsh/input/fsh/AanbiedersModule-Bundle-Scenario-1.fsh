@@ -1,5 +1,5 @@
 // Bundle with FHIR test instances in FSH format for AanbiedersModule test scenario 1
-Instance: AanbiedersModule-ServiceRequest-Zorgmodule-Diabetes-Glucosemeting
+Instance: AanbiedersModule-ServiceRequest-Glucosemeting
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-ServiceRequest
 Usage: #example
 * text
@@ -59,7 +59,7 @@ U gaat gedurende 1 week zelf uw bloedglucose meten. Volg hierbij deze stappen:
 
 Instance: AanbiedersModule-Task-Bloedrukmeting-dag1-ochtend-Van-Duinen
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-Task
-Usage: #examle
+Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
@@ -70,7 +70,7 @@ Usage: #examle
 * identifier
   * system = "http://medmij.nl/taskIdentifier"
   * value = "cdf67e46-7a54-483f-8aa8-b9396c04178a"
-* basedOn = Reference(AanbiedersModule-ServiceRequest-Zorgmodule-Diabetes-Glucosemeting)
+* basedOn = Reference(AanbiedersModule-ServiceRequest-Glucosemeting)
 * status = #requested
 * intent = #order
 * priority = #routine
@@ -86,7 +86,7 @@ Usage: #examle
 
 Instance: AanbiedersModule-Task-Bloedrukmeting-dag1-avond-Van-Duinen
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-Task
-Usage: #examle
+Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
@@ -97,7 +97,7 @@ Usage: #examle
 * identifier
   * system = "http://medmij.nl/taskIdentifier"
   * value = "cdf67e46-7a54-483f-8aa8-b9396c04342a"
-* basedOn = Reference(AanbiedersModule-ServiceRequest-Zorgmodule-Diabetes-Glucosemeting)
+* basedOn = Reference(AanbiedersModule-ServiceRequest-Glucosemeting)
 * status = #requested
 * intent = #order
 * priority = #routine
@@ -113,7 +113,7 @@ Usage: #examle
 
 Instance: AanbiedersModule-Task-Bloedrukmeting-dag2-ochtend-Van-Duinen
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-Task
-Usage: #examle
+Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
@@ -124,7 +124,7 @@ Usage: #examle
 * identifier
   * system = "http://medmij.nl/taskIdentifier"
   * value = "cdf67e46-7a54-483f-8aa8-b9396c04178a"
-* basedOn = Reference(AanbiedersModule-ServiceRequest-Zorgmodule-Diabetes-Glucosemeting)
+* basedOn = Reference(AanbiedersModule-ServiceRequest-Glucosemeting)
 * status = #requested
 * intent = #order
 * priority = #routine
@@ -140,7 +140,7 @@ Usage: #examle
 
 Instance: AanbiedersModule-Task-Bloedrukmeting-dag2-avond-Van-Duinen
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-Task
-Usage: #examle
+Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
@@ -151,7 +151,7 @@ Usage: #examle
 * identifier
   * system = "http://medmij.nl/taskIdentifier"
   * value = "cdf67e46-7a54-483f-8aa8-b9396c04342a"
-* basedOn = Reference(AanbiedersModule-ServiceRequest-Zorgmodule-Diabetes-Glucosemeting)
+* basedOn = Reference(AanbiedersModule-ServiceRequest-Glucosemeting)
 * status = #requested
 * intent = #order
 * priority = #routine
@@ -167,7 +167,7 @@ Usage: #examle
 
 Instance: AanbiedersModule-Task-Bloedrukmeting-dag3-ochtend-Van-Duinen
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-Task
-Usage: #examle
+Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
@@ -178,7 +178,7 @@ Usage: #examle
 * identifier
   * system = "http://medmij.nl/taskIdentifier"
   * value = "cdf67e46-7a54-483f-8aa8-b9396c04178a"
-* basedOn = Reference(AanbiedersModule-ServiceRequest-Zorgmodule-Diabetes-Glucosemeting)
+* basedOn = Reference(AanbiedersModule-ServiceRequest-Glucosemeting)
 * status = #requested
 * intent = #order
 * priority = #routine
@@ -194,7 +194,7 @@ Usage: #examle
 
 Instance: AanbiedersModule-Task-Bloedrukmeting-dag3-avond-Van-Duinen
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-Task
-Usage: #examle
+Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
@@ -205,7 +205,7 @@ Usage: #examle
 * identifier
   * system = "http://medmij.nl/taskIdentifier"
   * value = "cdf67e46-7a54-483f-8aa8-b9396c04342a"
-* basedOn = Reference(AanbiedersModule-ServiceRequest-Zorgmodule-Diabetes-Glucosemeting)
+* basedOn = Reference(AanbiedersModule-ServiceRequest-Glucosemeting)
 * status = #requested
 * intent = #order
 * priority = #routine
@@ -221,7 +221,7 @@ Usage: #examle
 
 Instance: AanbiedersModule-Task-Bloedrukmeting-dag4-ochtend-Van-Duinen
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-Task
-Usage: #examle
+Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
@@ -232,7 +232,7 @@ Usage: #examle
 * identifier
   * system = "http://medmij.nl/taskIdentifier"
   * value = "cdf67e46-7a54-483f-8aa8-b9396c04178a"
-* basedOn = Reference(AanbiedersModule-ServiceRequest-Zorgmodule-Diabetes-Glucosemeting)
+* basedOn = Reference(AanbiedersModule-ServiceRequest-Glucosemeting)
 * status = #requested
 * intent = #order
 * priority = #routine
@@ -248,7 +248,7 @@ Usage: #examle
 
 Instance: AanbiedersModule-Task-Bloedrukmeting-dag4-avond-Van-Duinen
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-Task
-Usage: #examle
+Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
@@ -259,7 +259,7 @@ Usage: #examle
 * identifier
   * system = "http://medmij.nl/taskIdentifier"
   * value = "cdf67e46-7a54-483f-8aa8-b9396c04342a"
-* basedOn = Reference(AanbiedersModule-ServiceRequest-Zorgmodule-Diabetes-Glucosemeting)
+* basedOn = Reference(AanbiedersModule-ServiceRequest-Glucosemeting)
 * status = #requested
 * intent = #order
 * priority = #routine
@@ -275,7 +275,7 @@ Usage: #examle
 
 Instance: AanbiedersModule-Task-Bloedrukmeting-dag5-ochtend-Van-Duinen
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-Task
-Usage: #examle
+Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
@@ -286,7 +286,7 @@ Usage: #examle
 * identifier
   * system = "http://medmij.nl/taskIdentifier"
   * value = "cdf67e46-7a54-483f-8aa8-b9396c04178a"
-* basedOn = Reference(AanbiedersModule-ServiceRequest-Zorgmodule-Diabetes-Glucosemeting)
+* basedOn = Reference(AanbiedersModule-ServiceRequest-Glucosemeting)
 * status = #requested
 * intent = #order
 * priority = #routine
@@ -302,7 +302,7 @@ Usage: #examle
 
 Instance: AanbiedersModule-Task-Bloedrukmeting-dag5-avond-Van-Duinen
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-Task
-Usage: #examle
+Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
@@ -313,7 +313,7 @@ Usage: #examle
 * identifier
   * system = "http://medmij.nl/taskIdentifier"
   * value = "cdf67e46-7a54-483f-8aa8-b9396c04342a"
-* basedOn = Reference(AanbiedersModule-ServiceRequest-Zorgmodule-Diabetes-Glucosemeting)
+* basedOn = Reference(AanbiedersModule-ServiceRequest-Glucosemeting)
 * status = #requested
 * intent = #order
 * priority = #routine
@@ -329,7 +329,7 @@ Usage: #examle
 
 Instance: AanbiedersModule-Task-Bloedrukmeting-dag6-ochtend-Van-Duinen
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-Task
-Usage: #examle
+Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
@@ -340,7 +340,7 @@ Usage: #examle
 * identifier
   * system = "http://medmij.nl/taskIdentifier"
   * value = "cdf67e46-7a54-483f-8aa8-b9396c04178a"
-* basedOn = Reference(AanbiedersModule-ServiceRequest-Zorgmodule-Diabetes-Glucosemeting)
+* basedOn = Reference(AanbiedersModule-ServiceRequest-Glucosemeting)
 * status = #requested
 * intent = #order
 * priority = #routine
@@ -356,7 +356,7 @@ Usage: #examle
 
 Instance: AanbiedersModule-Task-Bloedrukmeting-dag6-avond-Van-Duinen
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-Task
-Usage: #examle
+Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
@@ -367,7 +367,7 @@ Usage: #examle
 * identifier
   * system = "http://medmij.nl/taskIdentifier"
   * value = "cdf67e46-7a54-483f-8aa8-b9396c04342a"
-* basedOn = Reference(AanbiedersModule-ServiceRequest-Zorgmodule-Diabetes-Glucosemeting)
+* basedOn = Reference(AanbiedersModule-ServiceRequest-Glucosemeting)
 * status = #requested
 * intent = #order
 * priority = #routine
@@ -383,7 +383,7 @@ Usage: #examle
 
 Instance: AanbiedersModule-Task-Bloedrukmeting-dag7-ochtend-Van-Duinen
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-Task
-Usage: #examle
+Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
@@ -394,7 +394,7 @@ Usage: #examle
 * identifier
   * system = "http://medmij.nl/taskIdentifier"
   * value = "cdf67e46-7a54-483f-8aa8-b9396c04178a"
-* basedOn = Reference(AanbiedersModule-ServiceRequest-Zorgmodule-Diabetes-Glucosemeting)
+* basedOn = Reference(AanbiedersModule-ServiceRequest-Glucosemeting)
 * status = #requested
 * intent = #order
 * priority = #routine
@@ -410,7 +410,7 @@ Usage: #examle
 
 Instance: AanbiedersModule-Task-Bloedrukmeting-dag7-avond-Van-Duinen
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-Task
-Usage: #examle
+Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
@@ -421,7 +421,7 @@ Usage: #examle
 * identifier
   * system = "http://medmij.nl/taskIdentifier"
   * value = "cdf67e46-7a54-483f-8aa8-b9396c04342a"
-* basedOn = Reference(AanbiedersModule-ServiceRequest-Zorgmodule-Diabetes-Glucosemeting)
+* basedOn = Reference(AanbiedersModule-ServiceRequest-Glucosemeting)
 * status = #requested
 * intent = #order
 * priority = #routine
