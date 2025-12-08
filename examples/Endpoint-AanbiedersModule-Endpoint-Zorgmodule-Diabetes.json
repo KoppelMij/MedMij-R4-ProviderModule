@@ -1,6 +1,6 @@
 {
   "resourceType": "Endpoint",
-  "id": "AanbiedersModule-Endpoint-Vragenlijst-COPD",
+  "id": "AanbiedersModule-Endpoint-Zorgmodule-Diabetes",
   "meta": {
     "profile": [
       "http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-Endpoint"
@@ -8,9 +8,8 @@
   },
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"nl-NL\" lang=\"nl-NL\">Example of an Endpoint as used in KoppelMij</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"nl-NL\" lang=\"nl-NL\">Example of an Endpoint as used in AanbiedersModule</div>"
   },
-  "language": "nl-NL",
   "status": "active",
   "connectionType": {
     "code": "hti-smart-on-fhir",

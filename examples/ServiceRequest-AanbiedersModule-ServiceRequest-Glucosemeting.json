@@ -1,0 +1,54 @@
+{
+  "resourceType": "ServiceRequest",
+  "id": "AanbiedersModule-ServiceRequest-Glucosemeting",
+  "meta": {
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-ServiceRequest"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"nl-NL\" lang=\"nl-NL\">Example of an ServiceRequest</div>"
+  },
+  "extension": [
+    {
+      "url": "http://vzvz.nl/fhir/StructureDefinition/instantiates",
+      "valueReference": {
+        "reference": "ActivityDefinition/AanbiedersModule-ActivityDefinition-Zorgmodule-Diabetes",
+        "type": "ActivityDefinition"
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "http://{name}/servicerequest/id",
+      "value": "123456"
+    }
+  ],
+  "status": "active",
+  "intent": "order",
+  "subject": {
+    "reference": "Patient/AanbiedersModule-Patient-Van-Duinen",
+    "display": "Tom van Duinen"
+  },
+  "occurrenceTiming": {
+    "repeat": {
+      "boundsPeriod": {
+        "start": "2025-12-22",
+        "end": "2025-12-28"
+      },
+      "period": 1,
+      "periodUnit": "d",
+      "frequency": 2,
+      "frequencyMax": 2,
+      "timeOfDay": [
+        "18:00:00"
+      ]
+    }
+  },
+  "requester": {
+    "reference": "PractitionerRole/AanbiedersModule-PractitionerRole-De-Haard",
+    "display": "A. de Haard, Huisarts"
+  },
+  "patientInstruction": "Glucose metingen 1 week, 2x daags. Meet uw bloedglucose elke ochtend voor het ontbijt (nuchter). Meet uw bloedglucose elke avond voor het avondeten."
+}

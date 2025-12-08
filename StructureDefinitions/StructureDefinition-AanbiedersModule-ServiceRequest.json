@@ -1,0 +1,154 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "AanbiedersModule-ServiceRequest",
+  "text": {
+    "status": "empty",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>"
+  },
+  "url": "http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-ServiceRequest",
+  "name": "AanbiedersModuleServiceRequest",
+  "status": "draft",
+  "publisher": "MedMij",
+  "contact": [
+    {
+      "name": "MedMij",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "info@medmij.nl",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "Clinical order for an eHealth activity (module) that a healthcare professional requests for a specific patient, such as filling out a questionnaire, performing home measurements, or watching an instruction video.",
+  "purpose": "To represent the clinical order from a healthcare professional to start a specific provider module for a patient. This ServiceRequest provides the clinical context for Tasks that execute the module.",
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "ServiceRequest",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "ServiceRequest",
+        "path": "ServiceRequest",
+        "short": "ServiceRequest",
+        "definition": "Patient specific clinical order for starting an eHealth activity (provider module) in the AanbiedersModule context. Links the patient, the requested module, the intended schedule and clinical reason, and provides the basis for Tasks that carry out the module.",
+        "alias": [
+          "Zorgopdracht",
+          "referral",
+          "referral request",
+          "transfer of care request"
+        ]
+      },
+      {
+        "id": "ServiceRequest.extension",
+        "path": "ServiceRequest.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "short": "Reference to ActivityDefinition",
+        "definition": "Reference to the ActivityDefinition, which conforms to the MedMij ActivityDefinition profile."
+      },
+      {
+        "id": "ServiceRequest.extension.extension",
+        "path": "ServiceRequest.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "ServiceRequest.extension.value[x]",
+        "path": "ServiceRequest.extension.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "ServiceRequest.extension.value[x]:valueReference",
+        "path": "ServiceRequest.extension.value[x]",
+        "sliceName": "valueReference",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-ActivityDefinition"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ServiceRequest.extension:resource-origin",
+        "path": "ServiceRequest.extension",
+        "sliceName": "resource-origin",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://koppeltaal.nl/fhir/StructureDefinition/resource-origin"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ServiceRequest.extension:instantiates",
+        "path": "ServiceRequest.extension",
+        "sliceName": "instantiates",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://vzvz.nl/fhir/StructureDefinition/instantiates"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ServiceRequest.subject",
+        "path": "ServiceRequest.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ServiceRequest.requester",
+        "path": "ServiceRequest.requester",
+        "comment": "Each occurrence of the zib HealthProfessional is normally represented by _two_ FHIR resources: a PractitionerRole resource (instance of [nl-core-HealthProfessional-PractitionerRole](http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole)) and a Practitioner resource (instance of [nl-core-HealthProfessional-Practitioner](http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner)). The Practitioner resource is referenced from the PractitionerRole instance. For this reason, sending systems should fill the reference to the PractitionerRole instance here, and not the Practitioner resource. Receiving systems can then retrieve the reference to the Practitioner resource from that PractitionerRole instance.\n\nIn rare circumstances, there is only a Practitioner instance, in which case it is that instance which will be referenced here. However, since this should be the exception, the nl-core-HealthProfessional-Practitioner profile is not explicitly mentioned as a target profile.",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,245 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "am-lm-ServiceRequest",
+  "text": {
+    "status": "empty",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>"
+  },
+  "url": "http://medmij.nl/fhir/StructureDefinition/am-lm-ServiceRequest",
+  "name": "LmServiceRequest",
+  "title": "ServiceRequest",
+  "status": "active",
+  "publisher": "MedMij",
+  "contact": [
+    {
+      "name": "MedMij",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "info@medmij.nl",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "Clinical order for an eHealth activity (module) that a healthcare professional requests for a specific patient, such as filling out a questionnaire, performing home measurements, or watching an instruction video.",
+  "purpose": "To represent the clinical order from a healthcare professional to start a specific provider module for a patient. This ServiceRequest provides the clinical context for Tasks that execute the module.",
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "http://medmij.nl/fhir/StructureDefinition/am-lm-ServiceRequest",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "am-lm-ServiceRequest",
+        "path": "am-lm-ServiceRequest",
+        "short": "ServiceRequest",
+        "definition": "Clinical order for an eHealth activity (module) that a healthcare professional requests for a specific patient, such as filling out a questionnaire, performing home measurements, or watching an instruction video.",
+        "alias": [
+          "Zorgopdracht"
+        ]
+      },
+      {
+        "id": "am-lm-ServiceRequest.InstantiatesDefinition",
+        "path": "am-lm-ServiceRequest.InstantiatesDefinition",
+        "short": "Reference to the ActivityDefinition that defines the provider module.",
+        "definition": "Reference to the ActivityDefinition that defines the provider module.",
+        "alias": [
+          "ModuleDefinitie"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "canonical"
+          }
+        ]
+      },
+      {
+        "id": "am-lm-ServiceRequest.Identifier",
+        "path": "am-lm-ServiceRequest.Identifier",
+        "short": "Business identifier that uniquely identifies this ServiceRequest within or across systems.",
+        "definition": "Business identifier that uniquely identifies this ServiceRequest within or across systems.",
+        "alias": [
+          "ZorgopdrachtID"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "id": "am-lm-ServiceRequest.Status",
+        "path": "am-lm-ServiceRequest.Status",
+        "short": "Current state of the service request (for example draft, active, completed, cancelled).",
+        "definition": "Current state of the service request (for example draft, active, completed, cancelled).",
+        "alias": [
+          "ZorgopdrachtStatus"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "am-lm-ServiceRequest.Intent",
+        "path": "am-lm-ServiceRequest.Intent",
+        "short": "Indicates the level of authority or intention associated with the request, for example order or plan.",
+        "definition": "Indicates the level of authority or intention associated with the request, for example order or plan.",
+        "alias": [
+          "Bedoeling"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "am-lm-ServiceRequest.Priority",
+        "path": "am-lm-ServiceRequest.Priority",
+        "short": "Indicates how urgent it is to fulfil this service request, for example routine or urgent.",
+        "definition": "Indicates how urgent it is to fulfil this service request, for example routine or urgent.",
+        "alias": [
+          "Prioriteit"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "am-lm-ServiceRequest.Code",
+        "path": "am-lm-ServiceRequest.Code",
+        "short": "Type of ServiceRequest or eHealth activity being requested.",
+        "definition": "Type of ServiceRequest or eHealth activity being requested.",
+        "alias": [
+          "ZorgopdrachtType"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "am-lm-ServiceRequest.Subject",
+        "path": "am-lm-ServiceRequest.Subject",
+        "short": "Patient for whom this provider module is requested.",
+        "definition": "Patient for whom this provider module is requested.",
+        "alias": [
+          "Patiënt"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "am-lm-ServiceRequest.patientInstruction",
+        "path": "am-lm-ServiceRequest.patientInstruction",
+        "short": "Patient specific instruction for how the requested module should be performed, for example home blood pressure monitoring for 8 weeks, once daily in the morning.",
+        "definition": "Patient specific instruction for how the requested module should be performed, for example home blood pressure monitoring for 8 weeks, once daily in the morning.",
+        "alias": [
+          "PatiëntenInstructie"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "am-lm-ServiceRequest.Occurrence",
+        "path": "am-lm-ServiceRequest.Occurrence",
+        "short": "Requested schedule for performing the provider module, such as duration, frequency and time of day.",
+        "definition": "Requested schedule for performing the provider module, such as duration, frequency and time of day.",
+        "alias": [
+          "Tijdschema"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Timing"
+          }
+        ]
+      },
+      {
+        "id": "am-lm-ServiceRequest.ReasonCode",
+        "path": "am-lm-ServiceRequest.ReasonCode",
+        "short": "Clinical reason or indication for requesting this provider module.",
+        "definition": "Clinical reason or indication for requesting this provider module.",
+        "alias": [
+          "Reden"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "am-lm-ServiceRequest.Requester",
+        "path": "am-lm-ServiceRequest.Requester",
+        "short": "Healthcare professional or organization that requests this provider module for the patient.",
+        "definition": "Healthcare professional or organization that requests this provider module for the patient.",
+        "alias": [
+          "Aanvrager"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "am-lm-ServiceRequest.AuthoredOn",
+        "path": "am-lm-ServiceRequest.AuthoredOn",
+        "short": "Date and time when this service request was created.",
+        "definition": "Date and time when this service request was created.",
+        "alias": [
+          "AanmaakDatumTijd"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      }
+    ]
+  }
+}
