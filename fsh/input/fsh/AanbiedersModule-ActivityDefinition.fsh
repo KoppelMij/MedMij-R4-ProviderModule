@@ -1,6 +1,6 @@
-Profile: AanbiedersModuleActivityDefinition
+Profile: ProviderModuleActivityDefinition
 Parent: ActivityDefinition
-Id: AanbiedersModule-ActivityDefinition
+Id: ProviderModule-ActivityDefinition
 Description: "The (FHIR) ActivityDefinition (resource) describes an eHealth activity that is available for assignment to a patient. When assigning an eHealth activity to a patient, an eHealth Task is created, in which sub-activities are included as contained resources that refer to the main task via Task.partOf."
 * ^status = #draft
 * insert PublisherAndContactMedMij

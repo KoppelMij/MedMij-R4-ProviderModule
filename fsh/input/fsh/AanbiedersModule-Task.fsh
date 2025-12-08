@@ -1,6 +1,6 @@
-Profile: AanbiedersModuleTask
+Profile: ProviderModuleTask
 Parent: Task
-Id: AanbiedersModule-Task
+Id: ProviderModule-Task
 Description: "The (FHIR) Task (resource) describes an eHealth task, that is, an eHealth activity assigned to a patient."
 * insert DefaultNarrative
 * ^status = #draft
@@ -16,14 +16,14 @@ Description: "The (FHIR) Task (resource) describes an eHealth task, that is, an 
 * extension contains $koppeltaal-instantiates named instantiates 0..*
   * ^short = "Reference to ActivityDefinition" 
   * ^definition = "Reference to the ActivityDefinition, which conforms to the MedMij ActivityDefinition profile."
-  * valueReference only Reference(AanbiedersModule-ActivityDefinition)
-* partOf only Reference(AanbiedersModule-Task)
+  * valueReference only Reference(ProviderModule-ActivityDefinition)
+* partOf only Reference(ProviderModule-Task)
 * code from http://hl7.org/fhir/smart-app-launch/CodeSystem/smart-codes (extensible)
 * code ^comment = "Codes to identify what the task involves. These will typically be specific to a particular workflow."
 * for 1..
 * for only Reference(http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient)
   * ^definition = "The patient who benefits from the performance of the service specified in the task."
-  * ^comment = "In AanbiedersModule this element always refers to the patient for whom the task is intended."
+  * ^comment = "In ProviderModule this element always refers to the patient for whom the task is intended."
   * ^requirements = "Used to track tasks outstanding for a beneficiary. Do not use to track the task owner or creator (see owner and creator respectively). This can also affect access control."
 * requester only Reference(http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole)
   * ^comment = """

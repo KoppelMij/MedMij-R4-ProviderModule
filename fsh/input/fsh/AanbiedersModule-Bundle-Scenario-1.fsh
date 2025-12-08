@@ -1,20 +1,20 @@
-// Bundle with FHIR test instances in FSH format for AanbiedersModule test scenario 1
-Instance: AanbiedersModule-ServiceRequest-Glucosemeting
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-ServiceRequest
+// Bundle with FHIR test instances in FSH format for ProviderModule test scenario 1
+Instance: ProviderModule-ServiceRequest-Glucosemeting
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-ServiceRequest
 Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of an ServiceRequest</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(AanbiedersModule-ActivityDefinition-Zorgmodule-Diabetes)
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Zorgmodule-Diabetes)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://{name}/servicerequest/id"
   * value = "123456"
 * status = #active
 * intent = #order
-* subject = Reference(AanbiedersModule-Patient-Van-Duinen) "Tom van Duinen"
+* subject = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 * occurrenceTiming.repeat
   * boundsPeriod.start = "2025-12-22"
   * boundsPeriod.end = "2025-12-28"
@@ -24,18 +24,18 @@ Usage: #example
   * frequencyMax = 2
   * timeOfDay = "07:00:00"
   * timeOfDay = "18:00:00"
-* requester = Reference(AanbiedersModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
 * patientInstruction = "Glucose metingen 1 week, 2x daags. Meet uw bloedglucose elke ochtend voor het ontbijt (nuchter). Meet uw bloedglucose elke avond voor het avondeten."
 
-Instance: AanbiedersModule-ActivityDefinition-Zorgmodule-Diabetes
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-ActivityDefinition
+Instance: ProviderModule-ActivityDefinition-Zorgmodule-Diabetes
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-ActivityDefinition
 Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of an ActivityDefinition</div>"
 * extension
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
-  * valueReference = Reference(AanbiedersModule-Endpoint-Zorgmodule-Diabetes)
+  * valueReference = Reference(ProviderModule-Endpoint-Zorgmodule-Diabetes)
 * url = "https://example.nl/web/zorgmodulediabetes/1234567"
 * identifier
   * system = "http://{name}/content/id"
@@ -57,397 +57,397 @@ U gaat gedurende 1 week zelf uw bloedglucose meten. Volg hierbij deze stappen:
 6. Voer dit dagelijks uit gedurende 7 dagen en neem de resultaten mee naar uw volgende afspraak.
 """
 
-Instance: AanbiedersModule-Task-Bloedrukmeting-dag1-ochtend-Van-Duinen
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-Task
+Instance: ProviderModule-Task-Bloedrukmeting-dag1-ochtend-Van-Duinen
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(AanbiedersModule-ActivityDefinition-Zorgmodule-Diabetes)
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Zorgmodule-Diabetes)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medmij.nl/taskIdentifier"
   * value = "cdf67e46-7a54-483f-8aa8-b9396c04178a"
-* basedOn = Reference(AanbiedersModule-ServiceRequest-Glucosemeting)
+* basedOn = Reference(ProviderModule-ServiceRequest-Glucosemeting)
 * status = #requested
 * intent = #order
 * priority = #routine
 * code = http://hl7.org/fhir/smart-app-launch/CodeSystem/smart-codes#launch-app-standalone "Launch application using the SMART standalone launch"
 * description = "Glucose meting"
-* for = Reference(AanbiedersModule-Patient-Van-Duinen) "Tom van Duinen"
+* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-22T07:00:00+01:00"
 * authoredOn = "2025-12-22T07:00:00+01:00"
 * lastModified = "2025-12-22T07:00:00+01:00"
-* requester = Reference(AanbiedersModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(AanbiedersModule-Patient-Van-Duinen) "Tom van Duinen"
+* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 
-Instance: AanbiedersModule-Task-Bloedrukmeting-dag1-avond-Van-Duinen
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-Task
+Instance: ProviderModule-Task-Bloedrukmeting-dag1-avond-Van-Duinen
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(AanbiedersModule-ActivityDefinition-Zorgmodule-Diabetes)
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Zorgmodule-Diabetes)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medmij.nl/taskIdentifier"
   * value = "cdf67e46-7a54-483f-8aa8-b9396c04342a"
-* basedOn = Reference(AanbiedersModule-ServiceRequest-Glucosemeting)
+* basedOn = Reference(ProviderModule-ServiceRequest-Glucosemeting)
 * status = #requested
 * intent = #order
 * priority = #routine
 * code = http://hl7.org/fhir/smart-app-launch/CodeSystem/smart-codes#launch-app-standalone "Launch application using the SMART standalone launch"
 * description = "Glucose meting"
-* for = Reference(AanbiedersModule-Patient-Van-Duinen) "Tom van Duinen"
+* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-22T18:00:00+01:00"
 * authoredOn = "2025-12-22T18:00:00+01:00"
 * lastModified = "2025-12-22T18:00:00+01:00"
-* requester = Reference(AanbiedersModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(AanbiedersModule-Patient-Van-Duinen) "Tom van Duinen"
+* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 
-Instance: AanbiedersModule-Task-Bloedrukmeting-dag2-ochtend-Van-Duinen
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-Task
+Instance: ProviderModule-Task-Bloedrukmeting-dag2-ochtend-Van-Duinen
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(AanbiedersModule-ActivityDefinition-Zorgmodule-Diabetes)
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Zorgmodule-Diabetes)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medmij.nl/taskIdentifier"
   * value = "cdf67e46-7a54-483f-8aa8-b9396c04178a"
-* basedOn = Reference(AanbiedersModule-ServiceRequest-Glucosemeting)
+* basedOn = Reference(ProviderModule-ServiceRequest-Glucosemeting)
 * status = #requested
 * intent = #order
 * priority = #routine
 * code = http://hl7.org/fhir/smart-app-launch/CodeSystem/smart-codes#launch-app-standalone "Launch application using the SMART standalone launch"
 * description = "Glucose meting"
-* for = Reference(AanbiedersModule-Patient-Van-Duinen) "Tom van Duinen"
+* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-23T07:00:00+01:00"
 * authoredOn = "2025-12-23T07:00:00+01:00"
 * lastModified = "2025-12-23T07:00:00+01:00"
-* requester = Reference(AanbiedersModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(AanbiedersModule-Patient-Van-Duinen) "Tom van Duinen"
+* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 
-Instance: AanbiedersModule-Task-Bloedrukmeting-dag2-avond-Van-Duinen
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-Task
+Instance: ProviderModule-Task-Bloedrukmeting-dag2-avond-Van-Duinen
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(AanbiedersModule-ActivityDefinition-Zorgmodule-Diabetes)
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Zorgmodule-Diabetes)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medmij.nl/taskIdentifier"
   * value = "cdf67e46-7a54-483f-8aa8-b9396c04342a"
-* basedOn = Reference(AanbiedersModule-ServiceRequest-Glucosemeting)
+* basedOn = Reference(ProviderModule-ServiceRequest-Glucosemeting)
 * status = #requested
 * intent = #order
 * priority = #routine
 * code = http://hl7.org/fhir/smart-app-launch/CodeSystem/smart-codes#launch-app-standalone "Launch application using the SMART standalone launch"
 * description = "Glucose meting"
-* for = Reference(AanbiedersModule-Patient-Van-Duinen) "Tom van Duinen"
+* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-23T18:00:00+01:00"
 * authoredOn = "2025-12-23T18:00:00+01:00"
 * lastModified = "2025-12-23T18:00:00+01:00"
-* requester = Reference(AanbiedersModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(AanbiedersModule-Patient-Van-Duinen) "Tom van Duinen"
+* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 
-Instance: AanbiedersModule-Task-Bloedrukmeting-dag3-ochtend-Van-Duinen
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-Task
+Instance: ProviderModule-Task-Bloedrukmeting-dag3-ochtend-Van-Duinen
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(AanbiedersModule-ActivityDefinition-Zorgmodule-Diabetes)
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Zorgmodule-Diabetes)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medmij.nl/taskIdentifier"
   * value = "cdf67e46-7a54-483f-8aa8-b9396c04178a"
-* basedOn = Reference(AanbiedersModule-ServiceRequest-Glucosemeting)
+* basedOn = Reference(ProviderModule-ServiceRequest-Glucosemeting)
 * status = #requested
 * intent = #order
 * priority = #routine
 * code = http://hl7.org/fhir/smart-app-launch/CodeSystem/smart-codes#launch-app-standalone "Launch application using the SMART standalone launch"
 * description = "Glucose meting"
-* for = Reference(AanbiedersModule-Patient-Van-Duinen) "Tom van Duinen"
+* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-24T07:00:00+01:00"
 * authoredOn = "2025-12-24T07:00:00+01:00"
 * lastModified = "2025-12-24T07:00:00+01:00"
-* requester = Reference(AanbiedersModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(AanbiedersModule-Patient-Van-Duinen) "Tom van Duinen"
+* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 
-Instance: AanbiedersModule-Task-Bloedrukmeting-dag3-avond-Van-Duinen
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-Task
+Instance: ProviderModule-Task-Bloedrukmeting-dag3-avond-Van-Duinen
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(AanbiedersModule-ActivityDefinition-Zorgmodule-Diabetes)
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Zorgmodule-Diabetes)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medmij.nl/taskIdentifier"
   * value = "cdf67e46-7a54-483f-8aa8-b9396c04342a"
-* basedOn = Reference(AanbiedersModule-ServiceRequest-Glucosemeting)
+* basedOn = Reference(ProviderModule-ServiceRequest-Glucosemeting)
 * status = #requested
 * intent = #order
 * priority = #routine
 * code = http://hl7.org/fhir/smart-app-launch/CodeSystem/smart-codes#launch-app-standalone "Launch application using the SMART standalone launch"
 * description = "Glucose meting"
-* for = Reference(AanbiedersModule-Patient-Van-Duinen) "Tom van Duinen"
+* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-24T18:00:00+01:00"
 * authoredOn = "2025-12-24T18:00:00+01:00"
 * lastModified = "2025-12-24T18:00:00+01:00"
-* requester = Reference(AanbiedersModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(AanbiedersModule-Patient-Van-Duinen) "Tom van Duinen"
+* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 
-Instance: AanbiedersModule-Task-Bloedrukmeting-dag4-ochtend-Van-Duinen
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-Task
+Instance: ProviderModule-Task-Bloedrukmeting-dag4-ochtend-Van-Duinen
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(AanbiedersModule-ActivityDefinition-Zorgmodule-Diabetes)
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Zorgmodule-Diabetes)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medmij.nl/taskIdentifier"
   * value = "cdf67e46-7a54-483f-8aa8-b9396c04178a"
-* basedOn = Reference(AanbiedersModule-ServiceRequest-Glucosemeting)
+* basedOn = Reference(ProviderModule-ServiceRequest-Glucosemeting)
 * status = #requested
 * intent = #order
 * priority = #routine
 * code = http://hl7.org/fhir/smart-app-launch/CodeSystem/smart-codes#launch-app-standalone "Launch application using the SMART standalone launch"
 * description = "Glucose meting"
-* for = Reference(AanbiedersModule-Patient-Van-Duinen) "Tom van Duinen"
+* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-25T07:00:00+01:00"
 * authoredOn = "2025-12-25T07:00:00+01:00"
 * lastModified = "2025-12-25T07:00:00+01:00"
-* requester = Reference(AanbiedersModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(AanbiedersModule-Patient-Van-Duinen) "Tom van Duinen"
+* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 
-Instance: AanbiedersModule-Task-Bloedrukmeting-dag4-avond-Van-Duinen
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-Task
+Instance: ProviderModule-Task-Bloedrukmeting-dag4-avond-Van-Duinen
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(AanbiedersModule-ActivityDefinition-Zorgmodule-Diabetes)
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Zorgmodule-Diabetes)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medmij.nl/taskIdentifier"
   * value = "cdf67e46-7a54-483f-8aa8-b9396c04342a"
-* basedOn = Reference(AanbiedersModule-ServiceRequest-Glucosemeting)
+* basedOn = Reference(ProviderModule-ServiceRequest-Glucosemeting)
 * status = #requested
 * intent = #order
 * priority = #routine
 * code = http://hl7.org/fhir/smart-app-launch/CodeSystem/smart-codes#launch-app-standalone "Launch application using the SMART standalone launch"
 * description = "Glucose meting"
-* for = Reference(AanbiedersModule-Patient-Van-Duinen) "Tom van Duinen"
+* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-25T18:00:00+01:00"
 * authoredOn = "2025-12-25T18:00:00+01:00"
 * lastModified = "2025-12-25T18:00:00+01:00"
-* requester = Reference(AanbiedersModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(AanbiedersModule-Patient-Van-Duinen) "Tom van Duinen"
+* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 
-Instance: AanbiedersModule-Task-Bloedrukmeting-dag5-ochtend-Van-Duinen
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-Task
+Instance: ProviderModule-Task-Bloedrukmeting-dag5-ochtend-Van-Duinen
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(AanbiedersModule-ActivityDefinition-Zorgmodule-Diabetes)
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Zorgmodule-Diabetes)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medmij.nl/taskIdentifier"
   * value = "cdf67e46-7a54-483f-8aa8-b9396c04178a"
-* basedOn = Reference(AanbiedersModule-ServiceRequest-Glucosemeting)
+* basedOn = Reference(ProviderModule-ServiceRequest-Glucosemeting)
 * status = #requested
 * intent = #order
 * priority = #routine
 * code = http://hl7.org/fhir/smart-app-launch/CodeSystem/smart-codes#launch-app-standalone "Launch application using the SMART standalone launch"
 * description = "Glucose meting"
-* for = Reference(AanbiedersModule-Patient-Van-Duinen) "Tom van Duinen"
+* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-26T07:00:00+01:00"
 * authoredOn = "2025-12-26T07:00:00+01:00"
 * lastModified = "2025-12-26T07:00:00+01:00"
-* requester = Reference(AanbiedersModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(AanbiedersModule-Patient-Van-Duinen) "Tom van Duinen"
+* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 
-Instance: AanbiedersModule-Task-Bloedrukmeting-dag5-avond-Van-Duinen
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-Task
+Instance: ProviderModule-Task-Bloedrukmeting-dag5-avond-Van-Duinen
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(AanbiedersModule-ActivityDefinition-Zorgmodule-Diabetes)
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Zorgmodule-Diabetes)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medmij.nl/taskIdentifier"
   * value = "cdf67e46-7a54-483f-8aa8-b9396c04342a"
-* basedOn = Reference(AanbiedersModule-ServiceRequest-Glucosemeting)
+* basedOn = Reference(ProviderModule-ServiceRequest-Glucosemeting)
 * status = #requested
 * intent = #order
 * priority = #routine
 * code = http://hl7.org/fhir/smart-app-launch/CodeSystem/smart-codes#launch-app-standalone "Launch application using the SMART standalone launch"
 * description = "Glucose meting"
-* for = Reference(AanbiedersModule-Patient-Van-Duinen) "Tom van Duinen"
+* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-26T18:00:00+01:00"
 * authoredOn = "2025-12-26T18:00:00+01:00"
 * lastModified = "2025-12-26T18:00:00+01:00"
-* requester = Reference(AanbiedersModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(AanbiedersModule-Patient-Van-Duinen) "Tom van Duinen"
+* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 
-Instance: AanbiedersModule-Task-Bloedrukmeting-dag6-ochtend-Van-Duinen
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-Task
+Instance: ProviderModule-Task-Bloedrukmeting-dag6-ochtend-Van-Duinen
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(AanbiedersModule-ActivityDefinition-Zorgmodule-Diabetes)
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Zorgmodule-Diabetes)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medmij.nl/taskIdentifier"
   * value = "cdf67e46-7a54-483f-8aa8-b9396c04178a"
-* basedOn = Reference(AanbiedersModule-ServiceRequest-Glucosemeting)
+* basedOn = Reference(ProviderModule-ServiceRequest-Glucosemeting)
 * status = #requested
 * intent = #order
 * priority = #routine
 * code = http://hl7.org/fhir/smart-app-launch/CodeSystem/smart-codes#launch-app-standalone "Launch application using the SMART standalone launch"
 * description = "Glucose meting"
-* for = Reference(AanbiedersModule-Patient-Van-Duinen) "Tom van Duinen"
+* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-27T07:00:00+01:00"
 * authoredOn = "2025-12-27T07:00:00+01:00"
 * lastModified = "2025-12-27T07:00:00+01:00"
-* requester = Reference(AanbiedersModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(AanbiedersModule-Patient-Van-Duinen) "Tom van Duinen"
+* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 
-Instance: AanbiedersModule-Task-Bloedrukmeting-dag6-avond-Van-Duinen
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-Task
+Instance: ProviderModule-Task-Bloedrukmeting-dag6-avond-Van-Duinen
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(AanbiedersModule-ActivityDefinition-Zorgmodule-Diabetes)
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Zorgmodule-Diabetes)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medmij.nl/taskIdentifier"
   * value = "cdf67e46-7a54-483f-8aa8-b9396c04342a"
-* basedOn = Reference(AanbiedersModule-ServiceRequest-Glucosemeting)
+* basedOn = Reference(ProviderModule-ServiceRequest-Glucosemeting)
 * status = #requested
 * intent = #order
 * priority = #routine
 * code = http://hl7.org/fhir/smart-app-launch/CodeSystem/smart-codes#launch-app-standalone "Launch application using the SMART standalone launch"
 * description = "Glucose meting"
-* for = Reference(AanbiedersModule-Patient-Van-Duinen) "Tom van Duinen"
+* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-27T18:00:00+01:00"
 * authoredOn = "2025-12-27T18:00:00+01:00"
 * lastModified = "2025-12-27T18:00:00+01:00"
-* requester = Reference(AanbiedersModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(AanbiedersModule-Patient-Van-Duinen) "Tom van Duinen"
+* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 
-Instance: AanbiedersModule-Task-Bloedrukmeting-dag7-ochtend-Van-Duinen
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-Task
+Instance: ProviderModule-Task-Bloedrukmeting-dag7-ochtend-Van-Duinen
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(AanbiedersModule-ActivityDefinition-Zorgmodule-Diabetes)
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Zorgmodule-Diabetes)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medmij.nl/taskIdentifier"
   * value = "cdf67e46-7a54-483f-8aa8-b9396c04178a"
-* basedOn = Reference(AanbiedersModule-ServiceRequest-Glucosemeting)
+* basedOn = Reference(ProviderModule-ServiceRequest-Glucosemeting)
 * status = #requested
 * intent = #order
 * priority = #routine
 * code = http://hl7.org/fhir/smart-app-launch/CodeSystem/smart-codes#launch-app-standalone "Launch application using the SMART standalone launch"
 * description = "Glucose meting"
-* for = Reference(AanbiedersModule-Patient-Van-Duinen) "Tom van Duinen"
+* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-28T07:00:00+01:00"
 * authoredOn = "2025-12-28T07:00:00+01:00"
 * lastModified = "2025-12-28T07:00:00+01:00"
-* requester = Reference(AanbiedersModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(AanbiedersModule-Patient-Van-Duinen) "Tom van Duinen"
+* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 
-Instance: AanbiedersModule-Task-Bloedrukmeting-dag7-avond-Van-Duinen
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-Task
+Instance: ProviderModule-Task-Bloedrukmeting-dag7-avond-Van-Duinen
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(AanbiedersModule-ActivityDefinition-Zorgmodule-Diabetes)
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Zorgmodule-Diabetes)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medmij.nl/taskIdentifier"
   * value = "cdf67e46-7a54-483f-8aa8-b9396c04342a"
-* basedOn = Reference(AanbiedersModule-ServiceRequest-Glucosemeting)
+* basedOn = Reference(ProviderModule-ServiceRequest-Glucosemeting)
 * status = #requested
 * intent = #order
 * priority = #routine
 * code = http://hl7.org/fhir/smart-app-launch/CodeSystem/smart-codes#launch-app-standalone "Launch application using the SMART standalone launch"
 * description = "Glucose meting"
-* for = Reference(AanbiedersModule-Patient-Van-Duinen) "Tom van Duinen"
+* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-28T18:00:00+01:00"
 * authoredOn = "2025-12-28T18:00:00+01:00"
 * lastModified = "2025-12-28T18:00:00+01:00"
-* requester = Reference(AanbiedersModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(AanbiedersModule-Patient-Van-Duinen) "Tom van Duinen"
+* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 
-Instance: AanbiedersModule-Endpoint-Zorgmodule-Diabetes
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/AanbiedersModule-Endpoint
+Instance: ProviderModule-Endpoint-Zorgmodule-Diabetes
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Endpoint
 Usage: #example
 * text
   * status = #generated
-  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of an Endpoint as used in AanbiedersModule</div>"
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of an Endpoint as used in ProviderModule</div>"
 * status = #active
 * connectionType = $koppeltaal-endpoint-connection-type#hti-smart-on-fhir
-* managingOrganization = Reference(AanbiedersModule-Organization-Huisartsenpraktijk-Medrie)
+* managingOrganization = Reference(ProviderModule-Organization-Huisartsenpraktijk-Medrie)
 * payloadType = $endpoint-payload-type#any
 * address = "https://module.test.5im.nl/web/api/smartonfhir/launch"
 
-Instance: AanbiedersModule-Patient-Van-Duinen
+Instance: ProviderModule-Patient-Van-Duinen
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient
 Usage: #example
 * text
@@ -492,18 +492,18 @@ Usage: #example
   * country = "Nederland"
     * extension[http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification].valueCodeableConcept = urn:iso:std:iso:3166#NL "Netherlands"
 
-Instance: AanbiedersModule-PractitionerRole-De-Haard
+Instance: ProviderModule-PractitionerRole-De-Haard
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole
 Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Zorgverlenerrol: Huisarts, apotheekhoudend<br/>Zorgverlener: Haard, de<br/>Organisatie: Huisartsenpraktijk Medrie</div>"
-* practitioner = Reference(AanbiedersModule-Practitioner-De-Haard) "A. de Haard"
-* organization = Reference(AanbiedersModule-Organization-Huisartsenpraktijk-Medrie) "Huisartstenpraktijk Medrie"
+* practitioner = Reference(ProviderModule-Practitioner-De-Haard) "A. de Haard"
+* organization = Reference(ProviderModule-Organization-Huisartsenpraktijk-Medrie) "Huisartstenpraktijk Medrie"
 * specialty
   * coding = urn:oid:2.16.840.1.113883.2.4.6.7#0110 "Huisarts, apotheekhoudend"
 
-Instance: AanbiedersModule-Practitioner-De-Haard
+Instance: ProviderModule-Practitioner-De-Haard
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner
 Usage: #example
 * text
@@ -529,7 +529,7 @@ Usage: #example
   * value = "dehaard@huisarts.nl"
   * use = #work
 
-Instance: AanbiedersModule-Organization-Huisartsenpraktijk-Medrie
+Instance: ProviderModule-Organization-Huisartsenpraktijk-Medrie
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization
 Usage: #example
 * text

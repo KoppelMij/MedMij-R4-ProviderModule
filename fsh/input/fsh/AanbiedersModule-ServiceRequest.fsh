@@ -1,6 +1,6 @@
-Profile: AanbiedersModuleServiceRequest
+Profile: ProviderModuleServiceRequest
 Parent: ServiceRequest
-Id: AanbiedersModule-ServiceRequest
+Id: ProviderModule-ServiceRequest
 Description: "Clinical order for an eHealth activity (module) that a healthcare professional requests for a specific patient, such as filling out a questionnaire, performing home measurements, or watching an instruction video."
 * insert DefaultNarrative
 * ^status = #draft
@@ -12,11 +12,11 @@ Description: "Clinical order for an eHealth activity (module) that a healthcare 
   * ^alias = "Zorgopdracht"
 * insert Origin
 * .
-^definition = "Patient specific clinical order for starting an eHealth activity (provider module) in the AanbiedersModule context. Links the patient, the requested module, the intended schedule and clinical reason, and provides the basis for Tasks that carry out the module."
+^definition = "Patient specific clinical order for starting an eHealth activity (provider module) in the ProviderModule context. Links the patient, the requested module, the intended schedule and clinical reason, and provides the basis for Tasks that carry out the module."
 * extension contains $koppeltaal-instantiates named instantiates 0..*
   * ^short = "Reference to ActivityDefinition" 
   * ^definition = "Reference to the ActivityDefinition, which conforms to the MedMij ActivityDefinition profile."
-  * valueReference only Reference(AanbiedersModule-ActivityDefinition)
+  * valueReference only Reference(ProviderModule-ActivityDefinition)
 * subject only Reference(http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient)
 * requester only Reference(http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole)
   * ^comment = """

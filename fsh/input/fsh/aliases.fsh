@@ -1,4 +1,4 @@
-// All Aliases used in AanbiedersModule
+// All Aliases used in ProviderModule
 
 Alias: $endpoint-connection-type = http://terminology.hl7.org/CodeSystem/endpoint-connection-type
 Alias: $endpoint-payload-type = http://terminology.hl7.org/CodeSystem/endpoint-payload-type
