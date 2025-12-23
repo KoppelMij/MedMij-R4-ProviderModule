@@ -44,10 +44,10 @@ Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of an ActivityDefinition</div>"
-* extension [0]
+* extension[0]
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
   * valueReference = Reference(ProviderModule-Endpoint-Zorgmodule-Diabetes)
-* extension [1]
+* extension[1]
   * url = "http://example.org/fhir/StructureDefinition/client-id"
   * valueString = "dvaaanbiedersmodulesweb"
 * url = "https://example.nl/web/zorgmodulediabetes/1234567"

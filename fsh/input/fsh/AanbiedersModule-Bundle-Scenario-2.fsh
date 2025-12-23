@@ -485,7 +485,7 @@ Usage: #example
 * requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
 * owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 
-Instance: ProviderModule-Task-Subtaak-Vragenlijst-WoonLeefsituatie-De-Groot
+Instance: ProviderModule-Task-Subtaak-Vragenlijst-WoonLeefsituatie-Groot
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
@@ -511,7 +511,7 @@ Usage: #example
 * authoredOn = "2025-12-23T18:00:00+01:00"
 * lastModified = "2025-12-23T18:00:00+01:00"
 * requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(ProviderModule-Patient-De-Grootn) "Koos de Groot"
+* owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 
 Instance: ProviderModule-Task-Subtaak-Informatie-GezonderLeven-De-Groot
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
