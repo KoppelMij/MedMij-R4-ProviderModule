@@ -149,7 +149,7 @@ Description: "Clinical order for an eHealth activity (module) that a healthcare 
   * ^alias = "Tijdschema"
 * ReasonCode 0..* CodeableConcept "Clinical reason or indication for requesting this provider module."
   * ^alias = "Reden"
-* Requester 0..1 Reference(Practitioner) "Healthcare professional or organization that requests this provider module for the patient."
+* Requester 0..1 Reference(PractitionerRole) "Healthcare professional or organization that requests this provider module for the patient."
   * ^alias = "Aanvrager"
 * AuthoredOn 0..1 dateTime "Date and time when this service request was created."
   * ^alias = "AanmaakDatumTijd"
