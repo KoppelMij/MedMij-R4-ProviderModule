@@ -57,10 +57,10 @@ Usage: #example
 * description = "Dit is een algemene toelichting over diabetes type 2"
 * useContext[0]
   * code = $UCT#program
-  * text = "Digitale zorgmodule Diabetes"
+  * valueCodeableConcept.text = "Digitale zorgmodule Diabetes"
 * useContext[1]
   * code = $UCT#focus
-  * coding[0] = $SCT#44054006 "Diabetes mellitus type 2"
+  * valueCodeableConcept.coding[0] = $SCT#44054006 "Diabetes mellitus type 2"
 
 Instance: ProviderModule-Task-Hoofdtaak-Zorgmodule-Diabetes
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
