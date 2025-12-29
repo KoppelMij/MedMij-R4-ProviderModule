@@ -1,6 +1,6 @@
 {
   "resourceType": "ServiceRequest",
-  "id": "ProviderModule-ServiceRequest-Glucosemeting",
+  "id": "ProviderModule-ServiceRequest-Glucosemeting-De-Groot",
   "meta": {
     "profile": [
       "http://medmij.nl/fhir/StructureDefinition/ProviderModule-ServiceRequest"
@@ -22,14 +22,14 @@
   "identifier": [
     {
       "system": "http://medrie/servicerequest/id",
-      "value": "2025-00001234"
+      "value": "2025-0000123456"
     }
   ],
   "status": "active",
   "intent": "order",
   "subject": {
-    "reference": "Patient/ProviderModule-Patient-Van-Duinen",
-    "display": "Tom van Duinen"
+    "reference": "Patient/ProviderModule-Patient-De-Groot",
+    "display": "Koos de Groot"
   },
   "occurrenceTiming": {
     "repeat": {

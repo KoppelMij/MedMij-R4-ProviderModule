@@ -1,6 +1,6 @@
 {
   "resourceType": "Task",
-  "id": "ProviderModule-Task-Bloedrukmeting-dag5-avond-Van-Duinen",
+  "id": "ProviderModule-Subtaak-Meetopdracht-Glucosemeting-dag7-ochtend",
   "meta": {
     "profile": [
       "http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task"
@@ -21,13 +21,18 @@
   ],
   "identifier": [
     {
-      "system": "http://medmij.nl/taskIdentifier",
-      "value": "cdf67e46-7a54-483f-8aa8-b9396c04342a"
+      "system": "http://medrie.nl/taskIdentifier",
+      "value": "cdf67e46-7a54-483f-8aa8-b9396c04178a"
     }
   ],
   "basedOn": [
     {
-      "reference": "ServiceRequest/ProviderModule-ServiceRequest-Glucosemeting"
+      "reference": "ServiceRequest/ProviderModule-ServiceRequest-Glucosemeting-De-Groot"
+    }
+  ],
+  "partOf": [
+    {
+      "reference": "Task/ProviderModule-Task-Hoofdtaak-Zorgmodule-Diabetes-De-Groot"
     }
   ],
   "status": "requested",
@@ -44,20 +49,20 @@
   },
   "description": "Glucose meting",
   "for": {
-    "reference": "Patient/ProviderModule-Patient-Van-Duinen",
-    "display": "Tom van Duinen"
+    "reference": "Patient/ProviderModule-Patient-De-Groot",
+    "display": "Koos de Groot"
   },
   "executionPeriod": {
-    "start": "2025-12-26T18:00:00+01:00"
+    "start": "2025-12-28T07:00:00+01:00"
   },
-  "authoredOn": "2025-12-26T18:00:00+01:00",
-  "lastModified": "2025-12-26T18:00:00+01:00",
+  "authoredOn": "2025-12-28T07:00:00+01:00",
+  "lastModified": "2025-12-28T07:00:00+01:00",
   "requester": {
     "reference": "PractitionerRole/ProviderModule-PractitionerRole-De-Haard",
     "display": "A. de Haard, Huisarts"
   },
   "owner": {
-    "reference": "Patient/ProviderModule-Patient-Van-Duinen",
-    "display": "Tom van Duinen"
+    "reference": "Patient/ProviderModule-Patient-De-Groot",
+    "display": "Koos de Groot"
   }
 }

@@ -16,18 +16,17 @@
       "valueReference": {
         "reference": "Endpoint/ProviderModule-Endpoint-Zorgmodule-Diabetes"
       }
-    }
-  ],
-  "url": "https://example.nl/web/zorgmodulediabetes/1234567",
-  "identifier": [
+    },
     {
-      "system": "http://{name}/content/id",
-      "value": "123"
+      "url": "http://example.org/fhir/StructureDefinition/client-id",
+      "valueString": "dvaaanbiedersmodulesweb"
     }
   ],
+  "url": "https://aanbiedermodule.example.org/web/api/smartonfhir/launch?iss=resourceserver.example.dva.nl",
   "version": "1.0.0",
-  "name": "Zorgmodule diabetes - Glucose metingen",
-  "title": "Glucose metingen",
+  "name": "Zorgmodule diabetes",
+  "title": "Zorgmodule diabetes",
   "status": "active",
-  "description": "Beste patiënt,\n\nU gaat gedurende 1 week zelf uw bloedglucose meten. Volg hierbij deze stappen:\n\n1. Meet uw bloedglucose elke ochtend vóór het ontbijt (nuchter).\n2. Meet uw bloedglucose elke avond vóór het avondeten.\n3. Was uw handen met warm water en zeep en droog ze goed af.\n4. Gebruik de prikpen en teststrip volgens de instructies van uw meter.\n5. Noteer de waarden direct na de meting in uw dagboekje of app.\n6. Voer dit dagelijks uit gedurende 7 dagen en neem de resultaten mee naar uw volgende afspraak."
+  "publisher": "HinqZNO",
+  "description": "De zorgmodule diabetes bestaat uit glucose metingen, een vragenlijst over de woon/leefsituatie en informatie over diabetes en gezonder leven"
 }
