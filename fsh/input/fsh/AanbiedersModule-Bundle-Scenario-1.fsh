@@ -22,8 +22,6 @@ Usage: #example
   * periodUnit = #d
   * frequency = 2
   * frequencyMax = 2
-  * timeOfDay = "07:00:00"
-  * timeOfDay = "18:00:00"
 * requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
 * patientInstruction = """
 Beste patiënt,
@@ -52,11 +50,17 @@ Usage: #example
   * valueString = "dvaaanbiedersmodulesweb"
 * url = "https://aanbiedermodule.example.org/web/api/smartonfhir/launch?iss=resourceserver.example.dva.nl"
 * version = "1.0.0"
-* name = "Zorgmodule diabetes"
-* title = "Zorgmodule diabetes"
+* name = "Informatie over diabetes type 2"
+* title = "Wat is diabetes type 2"
 * status = #active
 * publisher = "HinqZNO"
-* description = "De zorgmodule diabetes bestaat uit glucose metingen, een vragenlijst over de woon/leefsituatie en informatie over diabetes en gezonder leven"
+* description = "Dit is een algemene toelichting over diabetes type 2"
+* useContext[0]
+  * code = $UCT#program
+  * text = "Digitale zorgmodule Diabetes"
+* useContext[1]
+  * code = $UCT#focus
+  * coding[0] = $SCT#44054006 "Diabetes mellitus type 2"
 
 Instance: ProviderModule-Task-Hoofdtaak-Zorgmodule-Diabetes
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
