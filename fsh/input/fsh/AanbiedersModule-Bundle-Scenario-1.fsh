@@ -50,7 +50,7 @@ Usage: #example
 * extension[1]
   * url = "http://example.org/fhir/StructureDefinition/client-id"
   * valueString = "dvaaanbiedersmodulesweb"
-* url = "https://example.nl/web/zorgmodulediabetes/1234567"
+* url = "https://aanbiedermodule.example.org/web/api/smartonfhir/launch?iss=resourceserver.example.dva.nl"
 * version = "1.0.0"
 * name = "Zorgmodule diabetes"
 * title = "Zorgmodule diabetes"
@@ -205,7 +205,7 @@ Usage: #example
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of an Endpoint as used in ProviderModule</div>"
 * status = #active
-* connectionType = $koppeltaal-endpoint-connection-type#hti-smart-on-fhir
+* connectionType = http://terminology.hl7.org/CodeSystem/endpoint-connection-type#hl7-fhir-rest
 * managingOrganization = Reference(ProviderModule-Organization-Huisartsenpraktijk-Medrie)
 * payloadType = $endpoint-payload-type#any
 * address = "https://module.test.5im.nl/web/api/smartonfhir/launch"
