@@ -7,7 +7,7 @@ Usage: #example
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of an ServiceRequest</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Zorgmodule-Diabetes)
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Glucosemeting)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie/servicerequest/id"

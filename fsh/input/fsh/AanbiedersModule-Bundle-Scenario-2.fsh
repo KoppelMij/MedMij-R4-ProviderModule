@@ -144,7 +144,7 @@ Usage: #example
 * owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 
 
-Instance: ProviderModule-ActivityDefinition-Informatie-Thuis-Bloeddrukmeten
+Instance: ProviderModule-ActivityDefinition-Informatie-Thuismeting
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-ActivityDefinition
 Usage: #example
 * text
@@ -178,7 +178,7 @@ Usage: #example
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Informatie-Thuis-Bloeddrukmeten)
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Informatie-Thuismeting)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
