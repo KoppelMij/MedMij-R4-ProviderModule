@@ -75,7 +75,7 @@ Usage: #example
 * basedOn = Reference(ProviderModule-ServiceRequest-Glucosemeting)
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "cdf67e46-7a54-483f-8aa8-b9396c04342a"
+  * value = "TASK-123"
 * status = #received
 * intent = #order
 * priority = #routine
@@ -130,7 +130,7 @@ Usage: #example
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "task-12345"
+  * value = "TASK-12345"
 * status = #received
 * intent = #order
 * priority = #routine
@@ -184,7 +184,7 @@ Usage: #example
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "task-6789"
+  * value = "TASK-6789"
 * status = #requested
 * intent = #order
 * priority = #routine
@@ -238,7 +238,7 @@ Usage: #example
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "cdf67e46-7a54-483f-8aa8-b9396c04342a"
+  * value = "TASK-9642"
 * status = #requested
 * intent = #order
 * priority = #routine
@@ -252,7 +252,6 @@ Usage: #example
 * lastModified = "2025-12-23T18:00:00+01:00"
 * requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
 * owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
-
 
 Instance: ProviderModule-Endpoint-HINQ
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Endpoint
