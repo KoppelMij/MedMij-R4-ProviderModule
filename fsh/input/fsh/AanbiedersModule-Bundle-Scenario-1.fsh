@@ -76,6 +76,10 @@ Usage: #example
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
   * value = "TASK-123"
+* groupIdentifier
+  * system = "https://medrie.nl/fhir/identifiers/task-group"
+  * value = "module-diabetes-2025"
+  * type.text = "Digitale zorgmodule Diabetes"
 * status = #received
 * intent = #order
 * priority = #routine
