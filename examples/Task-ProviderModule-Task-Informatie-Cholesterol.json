@@ -1,6 +1,6 @@
 {
   "resourceType": "Task",
-  "id": "ProviderModule-Subtaak-Meetopdracht-Glucosemeting-dag6-ochtend",
+  "id": "ProviderModule-Task-Informatie-Cholesterol",
   "meta": {
     "profile": [
       "http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task"
@@ -14,7 +14,7 @@
     {
       "url": "http://vzvz.nl/fhir/StructureDefinition/instantiates",
       "valueReference": {
-        "reference": "ActivityDefinition/ProviderModule-ActivityDefinition-Zorgmodule-Diabetes",
+        "reference": "ActivityDefinition/ProviderModule-ActivityDefinition-Informatie-Cholesterol",
         "type": "ActivityDefinition"
       }
     }
@@ -22,20 +22,17 @@
   "identifier": [
     {
       "system": "http://medrie.nl/taskIdentifier",
-      "value": "cdf67e46-7a54-483f-8aa8-b9396c04178a"
+      "value": "TASK-88887"
     }
   ],
-  "basedOn": [
-    {
-      "reference": "ServiceRequest/ProviderModule-ServiceRequest-Glucosemeting-De-Groot"
+  "groupIdentifier": {
+    "system": "https://medrie.nl/fhir/identifiers/task-group",
+    "value": "module-CVRM-2025",
+    "type": {
+      "text": "Digitale zorgmodule CVRM"
     }
-  ],
-  "partOf": [
-    {
-      "reference": "Task/ProviderModule-Task-Hoofdtaak-Zorgmodule-Diabetes-De-Groot"
-    }
-  ],
-  "status": "requested",
+  },
+  "status": "received",
   "intent": "order",
   "priority": "routine",
   "code": {
@@ -47,16 +44,17 @@
       }
     ]
   },
-  "description": "Glucose meting",
+  "description": "Wat is cholesterol en wat zijn de risico's?",
   "for": {
     "reference": "Patient/ProviderModule-Patient-De-Groot",
     "display": "Koos de Groot"
   },
   "executionPeriod": {
-    "start": "2025-12-27T07:00:00+01:00"
+    "start": "2025-12-22",
+    "end": "2025-12-28"
   },
-  "authoredOn": "2025-12-27T07:00:00+01:00",
-  "lastModified": "2025-12-27T07:00:00+01:00",
+  "authoredOn": "2025-12-23T07:00:00+01:00",
+  "lastModified": "2025-12-23T07:00:00+01:00",
   "requester": {
     "reference": "PractitionerRole/ProviderModule-PractitionerRole-De-Haard",
     "display": "A. de Haard, Huisarts"

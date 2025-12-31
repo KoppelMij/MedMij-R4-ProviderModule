@@ -1,0 +1,58 @@
+{
+  "resourceType": "ActivityDefinition",
+  "id": "ProviderModule-ActivityDefinition-Meetopdracht-Bloeddrukmeting",
+  "meta": {
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/ProviderModule-ActivityDefinition"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"nl-NL\" lang=\"nl-NL\">Example of an ActivityDefinition</div>"
+  },
+  "extension": [
+    {
+      "url": "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension",
+      "valueReference": {
+        "reference": "Endpoint/ProviderModule-Endpoint-Minddistrict"
+      }
+    },
+    {
+      "url": "http://example.org/fhir/StructureDefinition/client-id",
+      "valueString": "dvaaanbiedersmodule"
+    }
+  ],
+  "url": "https://aanbiedermodule.example.org/web/api/smartonfhir/launch?iss=resourceserver.example.dva.nl",
+  "version": "1.0.0",
+  "name": "Meetopdacht bloeddrukmeting",
+  "title": "Bloeddrukmeting",
+  "status": "active",
+  "publisher": "Minddistrict",
+  "description": "Bloeddrukmeting volgens NHG protocol. 7 dagen, 2x per dag, 's ochtends en 's avonds",
+  "useContext": [
+    {
+      "code": {
+        "code": "program",
+        "system": "http://terminology.hl7.org/CodeSystem/usage-context-type"
+      },
+      "valueCodeableConcept": {
+        "text": "Digitale zorgmodule CVRM"
+      }
+    },
+    {
+      "code": {
+        "code": "focus",
+        "system": "http://terminology.hl7.org/CodeSystem/usage-context-type"
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "84114007",
+            "system": "http://snomed.info/sct",
+            "display": "hartfalen"
+          }
+        ]
+      }
+    }
+  ]
+}

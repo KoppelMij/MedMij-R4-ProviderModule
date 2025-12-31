@@ -1,6 +1,6 @@
 {
   "resourceType": "Task",
-  "id": "ProviderModule-Task-Subtaak-Informatie-Diabetes",
+  "id": "ProviderModule-Task-Informatie-Gezonder-Leven",
   "meta": {
     "profile": [
       "http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task"
@@ -14,7 +14,7 @@
     {
       "url": "http://vzvz.nl/fhir/StructureDefinition/instantiates",
       "valueReference": {
-        "reference": "ActivityDefinition/ProviderModule-ActivityDefinition-Zorgmodule-Diabetes",
+        "reference": "ActivityDefinition/ProviderModule-ActivityDefinition-Informatie-Gezonder-Leven",
         "type": "ActivityDefinition"
       }
     }
@@ -22,15 +22,17 @@
   "identifier": [
     {
       "system": "http://medrie.nl/taskIdentifier",
-      "value": "cdf67e46-7a54-483f-8aa8-b9396c04178a"
+      "value": "TASK-6789"
     }
   ],
-  "partOf": [
-    {
-      "reference": "Task/ProviderModule-Task-Hoofdtaak-Zorgmodule-Diabetes"
+  "groupIdentifier": {
+    "system": "https://medrie.nl/fhir/identifiers/task-group",
+    "value": "module-diabetes-2025",
+    "type": {
+      "text": "Digitale zorgmodule Diabetes"
     }
-  ],
-  "status": "received",
+  },
+  "status": "requested",
   "intent": "order",
   "priority": "routine",
   "code": {
@@ -42,7 +44,7 @@
       }
     ]
   },
-  "description": "Wat is diabetes?",
+  "description": "Informatie over gezonder gaan leven",
   "for": {
     "reference": "Patient/ProviderModule-Patient-Van-Duinen",
     "display": "Tom van Duinen"
@@ -51,8 +53,8 @@
     "start": "2025-12-22",
     "end": "2025-12-28"
   },
-  "authoredOn": "2025-12-23T07:00:00+01:00",
-  "lastModified": "2025-12-23T07:00:00+01:00",
+  "authoredOn": "2025-12-24T07:00:00+01:00",
+  "lastModified": "2025-12-24T07:00:00+01:00",
   "requester": {
     "reference": "PractitionerRole/ProviderModule-PractitionerRole-De-Haard",
     "display": "A. de Haard, Huisarts"

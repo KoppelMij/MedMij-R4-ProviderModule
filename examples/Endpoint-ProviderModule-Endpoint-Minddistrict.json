@@ -1,6 +1,6 @@
 {
   "resourceType": "Endpoint",
-  "id": "ProviderModule-Endpoint-Zorgmodule-Diabetes",
+  "id": "ProviderModule-Endpoint-Minddistrict",
   "meta": {
     "profile": [
       "http://medmij.nl/fhir/StructureDefinition/ProviderModule-Endpoint"
@@ -28,5 +28,5 @@
       ]
     }
   ],
-  "address": "https://module.test.5im.nl/web/api/smartonfhir/launch"
+  "address": "https://aanbiedermodule.example.org/web/api/smartonfhir/launch?iss=resourceserver.example.dva.nl"
 }

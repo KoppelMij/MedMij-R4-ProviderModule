@@ -14,7 +14,7 @@
     {
       "url": "http://vzvz.nl/fhir/StructureDefinition/instantiates",
       "valueReference": {
-        "reference": "ActivityDefinition/ProviderModule-ActivityDefinition-Zorgmodule-Diabetes",
+        "reference": "ActivityDefinition/ProviderModule-ActivityDefinition-Meetopdracht-Glucosemeting",
         "type": "ActivityDefinition"
       }
     }
@@ -40,10 +40,7 @@
       "period": 1,
       "periodUnit": "d",
       "frequency": 2,
-      "frequencyMax": 2,
-      "timeOfDay": [
-        "18:00:00"
-      ]
+      "frequencyMax": 2
     }
   },
   "requester": {

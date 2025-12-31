@@ -1,0 +1,58 @@
+{
+  "resourceType": "ActivityDefinition",
+  "id": "ProviderModule-ActivityDefinition-Vragenlijst-Uw-Situatie",
+  "meta": {
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/ProviderModule-ActivityDefinition"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"nl-NL\" lang=\"nl-NL\">Example of an ActivityDefinition</div>"
+  },
+  "extension": [
+    {
+      "url": "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension",
+      "valueReference": {
+        "reference": "Endpoint/ProviderModule-Endpoint-Minddistrict"
+      }
+    },
+    {
+      "url": "http://example.org/fhir/StructureDefinition/client-id",
+      "valueString": "dvaaanbiedersmodule"
+    }
+  ],
+  "url": "https://aanbiedermodule.example.org/web/api/smartonfhir/launch?iss=resourceserver.example.dva.nl",
+  "version": "1.0.0",
+  "name": "Uw situatie op gebied van hart- en vaatziekten",
+  "title": "Vragenlijst over uw situatie op gebied van hart- en vaatziekten",
+  "status": "active",
+  "publisher": "Minddistrict",
+  "description": "Vragenlijst over uw situatie op gebied van hart- en vaatziekten",
+  "useContext": [
+    {
+      "code": {
+        "code": "program",
+        "system": "http://terminology.hl7.org/CodeSystem/usage-context-type"
+      },
+      "valueCodeableConcept": {
+        "text": "Digitale zorgmodule CVRM"
+      }
+    },
+    {
+      "code": {
+        "code": "focus",
+        "system": "http://terminology.hl7.org/CodeSystem/usage-context-type"
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "84114007",
+            "system": "http://snomed.info/sct",
+            "display": "hartfalen"
+          }
+        ]
+      }
+    }
+  ]
+}

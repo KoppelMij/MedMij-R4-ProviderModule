@@ -1,6 +1,6 @@
 {
   "resourceType": "Task",
-  "id": "ProviderModule-Task-Subtaak-Meetopdracht-Glucosemeting",
+  "id": "ProviderModule-Task-Meetopdracht-Bloeddrukmeting",
   "meta": {
     "profile": [
       "http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task"
@@ -14,27 +14,29 @@
     {
       "url": "http://vzvz.nl/fhir/StructureDefinition/instantiates",
       "valueReference": {
-        "reference": "ActivityDefinition/ProviderModule-ActivityDefinition-Zorgmodule-Diabetes",
+        "reference": "ActivityDefinition/ProviderModule-ActivityDefinition-Meetopdracht-Bloeddrukmeting",
         "type": "ActivityDefinition"
       }
+    }
+  ],
+  "basedOn": [
+    {
+      "reference": "ServiceRequest/ProviderModule-ServiceRequest-Bloeddrukmeting"
     }
   ],
   "identifier": [
     {
       "system": "http://medrie.nl/taskIdentifier",
-      "value": "cdf67e46-7a54-483f-8aa8-b9396c04342a"
+      "value": "TASK-99998"
     }
   ],
-  "basedOn": [
-    {
-      "reference": "ServiceRequest/ProviderModule-ServiceRequest-Glucosemeting"
+  "groupIdentifier": {
+    "system": "https://medrie.nl/fhir/identifiers/task-group",
+    "value": "module-CVRM-2025",
+    "type": {
+      "text": "Digitale zorgmodule CVRM"
     }
-  ],
-  "partOf": [
-    {
-      "reference": "Task/ProviderModule-Task-Hoofdtaak-Zorgmodule-Diabetes"
-    }
-  ],
+  },
   "status": "received",
   "intent": "order",
   "priority": "routine",
@@ -47,10 +49,10 @@
       }
     ]
   },
-  "description": "Glucose meting",
+  "description": "Bloeddrukmeting",
   "for": {
-    "reference": "Patient/ProviderModule-Patient-Van-Duinen",
-    "display": "Tom van Duinen"
+    "reference": "Patient/ProviderModule-Patient-De-Groot",
+    "display": "Koos de Groot"
   },
   "executionPeriod": {
     "start": "2025-12-22",
@@ -63,7 +65,7 @@
     "display": "A. de Haard, Huisarts"
   },
   "owner": {
-    "reference": "Patient/ProviderModule-Patient-Van-Duinen",
-    "display": "Tom van Duinen"
+    "reference": "Patient/ProviderModule-Patient-De-Groot",
+    "display": "Koos de Groot"
   }
 }

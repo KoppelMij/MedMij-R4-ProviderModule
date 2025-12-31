@@ -1,0 +1,58 @@
+{
+  "resourceType": "ActivityDefinition",
+  "id": "ProviderModule-ActivityDefinition-Informatie-Diabetes",
+  "meta": {
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/ProviderModule-ActivityDefinition"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"nl-NL\" lang=\"nl-NL\">Example of an ActivityDefinition</div>"
+  },
+  "extension": [
+    {
+      "url": "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension",
+      "valueReference": {
+        "reference": "Endpoint/ProviderModule-Endpoint-HINQ"
+      }
+    },
+    {
+      "url": "http://example.org/fhir/StructureDefinition/client-id",
+      "valueString": "dvaaanbiedersmodulesweb"
+    }
+  ],
+  "url": "https://aanbiedermodule.example.org/web/api/smartonfhir/launch?iss=resourceserver.example.dva.nl",
+  "version": "1.0.0",
+  "name": "Informatie over diabetes type 2",
+  "title": "Wat is diabetes type 2?",
+  "status": "active",
+  "publisher": "HinqZNO",
+  "description": "Dit is een algemene toelichting over diabetes type 2",
+  "useContext": [
+    {
+      "code": {
+        "code": "program",
+        "system": "http://terminology.hl7.org/CodeSystem/usage-context-type"
+      },
+      "valueCodeableConcept": {
+        "text": "Digitale zorgmodule Diabetes"
+      }
+    },
+    {
+      "code": {
+        "code": "focus",
+        "system": "http://terminology.hl7.org/CodeSystem/usage-context-type"
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "44054006",
+            "system": "http://snomed.info/sct",
+            "display": "Diabetes mellitus type 2"
+          }
+        ]
+      }
+    }
+  ]
+}
