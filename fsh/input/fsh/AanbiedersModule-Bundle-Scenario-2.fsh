@@ -74,6 +74,10 @@ Usage: #example
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
   * value = "TASK-99998"
+* groupIdentifier
+  * system = "https://medrie.nl/fhir/identifiers/task-group"
+  * value = "module-CVRM-2025"
+  * type.text = "Digitale zorgmodule CVRM"
 * status = #received
 * intent = #order
 * priority = #routine
@@ -129,6 +133,10 @@ Usage: #example
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
   * value = "TASK-88887"
+* groupIdentifier
+  * system = "https://medrie.nl/fhir/identifiers/task-group"
+  * value = "module-CVRM-2025"
+  * type.text = "Digitale zorgmodule CVRM"
 * status = #received
 * intent = #order
 * priority = #routine
@@ -183,6 +191,10 @@ Usage: #example
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
   * value = "TASK-77774"
+* groupIdentifier
+  * system = "https://medrie.nl/fhir/identifiers/task-group"
+  * value = "module-CVRM-2025"
+  * type.text = "Digitale zorgmodule CVRM"
 * status = #requested
 * intent = #order
 * priority = #routine
@@ -237,6 +249,10 @@ Usage: #example
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
   * value = "TASK-55553"
+* groupIdentifier
+  * system = "https://medrie.nl/fhir/identifiers/task-group"
+  * value = "module-CVRM-2025"
+  * type.text = "Digitale zorgmodule CVRM"
 * status = #requested
 * intent = #order
 * priority = #routine
