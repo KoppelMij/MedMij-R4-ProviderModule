@@ -1,5 +1,5 @@
-// Bundle with FHIR test instances in FSH format for ProviderModule test scenario 1
-Instance: ProviderModule-ServiceRequest-Glucosemeting
+// Bundle with FHIR test instances in FSH format for ProviderModule test scenario 3
+Instance: ProviderModule-ServiceRequest-Saturatiemeting
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-ServiceRequest
 Usage: #example
 * text
@@ -7,10 +7,10 @@ Usage: #example
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of an ServiceRequest</div>"
 * identifier
   * system = "http://medrie/servicerequest/id"
-  * value = "2025-00001234"
+  * value = "2025-919191"
 * status = #active
 * intent = #order
-* subject = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* subject = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 * occurrenceTiming.repeat
   * boundsPeriod.start = "2025-12-22"
   * boundsPeriod.end = "2025-12-28"
@@ -22,17 +22,15 @@ Usage: #example
 * patientInstruction = """
 Beste patiënt,
 
-U gaat gedurende 1 week zelf uw bloedglucose meten. Volg hierbij deze stappen:
+U gaat gedurende 1 week zelf uw bloeddruk meten. Volg hierbij deze stappen:
 
-1. Meet uw bloedglucose elke ochtend vóór het ontbijt (nuchter).
-2. Meet uw bloedglucose elke avond vóór het avondeten.
-3. Was uw handen met warm water en zeep en droog ze goed af.
-4. Gebruik de prikpen en teststrip volgens de instructies van uw meter.
-5. Noteer de waarden direct na de meting in uw dagboekje of app.
-6. Voer dit dagelijks uit gedurende 7 dagen en neem de resultaten mee naar uw volgende afspraak.
+1. Meet uw bloeddruk elke ochtend vóór het ontbijt (nuchter).
+2. Meet uw bloeddruk elke avond vóór het avondeten.
+3. Noteer de waarden direct na de meting in uw app.
+4. Voer dit dagelijks uit gedurende 7 dagen en neem de resultaten mee naar uw volgende afspraak.
 """
 
-Instance: ProviderModule-ActivityDefinition-Meetopdracht-Glucosemeting
+Instance: ProviderModule-ActivityDefinition-Meetopdracht-Bloeddrukmeting
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-ActivityDefinition
 Usage: #example
 * text
@@ -40,23 +38,23 @@ Usage: #example
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of an ActivityDefinition</div>"
 * extension[0]
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
-  * valueReference = Reference(ProviderModule-Endpoint-HINQ)
-* url = "https://example.com/activities/zorgmodulediabetes"
+  * valueReference = Reference(ProviderModule-Endpoint-Minddistrict)
+* url = "https://example.com/activities/zorgmodulecvrm"
 * extension[1]
   * url = $client-id
-  * valueString = "dvaaanbiedersmodulesweb"
+  * valueString = "dvaaanbiedersmodule"
 * version = "1.0.0"
-* name = "Meetopdacht glucosemeting"
-* title = "Glucosemeting"
+* name = "Meetopdacht bloeddrukmeting"
+* title = "Bloeddrukmeting"
 * status = #active
-* publisher = "HinqZNO"
-* description = "Glucosemeting volgens NHG protocol. Duur: 1 week, 2x per dag"
+* publisher = "Minddistrict"
+* description = "Bloeddrukmeting volgens NHG protocol. 1 week, 2x per dag, 's ochtends en 's avonds"
 * useContext[0]
   * code = $UCT#program
-  * valueCodeableConcept.text = "Digitale zorgmodule Diabetes"
+  * valueCodeableConcept.text = "Digitale zorgmodule CVRM"
 * useContext[1]
   * code = $UCT#focus
-  * valueCodeableConcept.coding[0] = $SCT#44054006 "Diabetes mellitus type 2"
+  * valueCodeableConcept.coding[0] = $SCT#84114007 "hartfalen"
 * timingTiming.repeat
   * boundsDuration.value = 7
   * boundsDuration.system = "http://unitsofmeasure.org"
@@ -66,7 +64,7 @@ Usage: #example
   * period = 1
   * periodUnit = #d
 
-Instance: ProviderModule-Task-Meetopdracht-Glucosemeting
+Instance: ProviderModule-Task-Meetopdracht-Bloeddrukmeting
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
@@ -74,31 +72,31 @@ Usage: #example
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Glucosemeting)
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Bloeddrukmeting)
     * type = "ActivityDefinition"
-* basedOn = Reference(ProviderModule-ServiceRequest-Glucosemeting)
+* basedOn = Reference(ProviderModule-ServiceRequest-Bloeddrukmeting)
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-123"
+  * value = "TASK-99998"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
-  * value = "module-diabetes-2025"
-  * type.text = "Digitale zorgmodule Diabetes"
+  * value = "module-CVRM-2025"
+  * type.text = "Digitale zorgmodule CVRM"
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Glucosemeting"
-* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* description = "Bloeddrukmeting"
+* for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-12-22"
   * end = "2025-12-28"
 * authoredOn = "2025-12-22T18:00:00+01:00"
 * lastModified = "2025-12-22T18:00:00+01:00"
 * requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 
 
-Instance: ProviderModule-ActivityDefinition-Informatie-Diabetes
+Instance: ProviderModule-ActivityDefinition-Informatie-Cholesterol
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-ActivityDefinition
 Usage: #example
 * text
@@ -106,26 +104,26 @@ Usage: #example
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of an ActivityDefinition</div>"
 * extension[0]
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
-  * valueReference = Reference(ProviderModule-Endpoint-HINQ)
-* url = "https://example.com/activities/zorgmodulediabetes"
+  * valueReference = Reference(ProviderModule-Endpoint-Minddistrict)
+* url = "https://example.com/activities/zorgmodulecvrm"
 * extension[1]
   * url = $client-id
-  * valueString = "dvaaanbiedersmodulesweb"
+  * valueString = "dvaaanbiedersmodule"
 * version = "1.0.0"
-* name = "Informatie over diabetes type 2"
-* title = "Wat is diabetes type 2?"
+* name = "Informatie over cholesterol"
+* title = "Wat is cholesterol en wat zijn de risico's?"
 * status = #active
-* publisher = "HinqZNO"
-* description = "Dit is een algemene toelichting over diabetes type 2"
+* publisher = "Minddistrict"
+* description = "Dit is een algemene toelichting over wat is cholesterol en wat zijn de risico's"
 * useContext[0]
   * code = $UCT#program
-  * valueCodeableConcept.text = "Digitale zorgmodule Diabetes"
+  * valueCodeableConcept.text = "Digitale zorgmodule CVRM"
 * useContext[1]
   * code = $UCT#focus
-  * valueCodeableConcept.coding[0] = $SCT#44054006 "Diabetes mellitus type 2"
+  * valueCodeableConcept.coding[0] = $SCT#84114007 "hartfalen"
 
 
-Instance: ProviderModule-Task-Informatie-Diabetes
+Instance: ProviderModule-Task-Informatie-Cholesterol
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
@@ -133,30 +131,30 @@ Usage: #example
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Informatie-Diabetes)
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Informatie-Cholesterol)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-12345"
+  * value = "TASK-88887"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
-  * value = "module-diabetes-2025"
-  * type.text = "Digitale zorgmodule Diabetes"
+  * value = "module-CVRM-2025"
+  * type.text = "Digitale zorgmodule CVRM"
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Wat is diabetes type 2?"
-* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* description = "Wat is cholesterol en wat zijn de risico's?"
+* for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-12-22"
   * end = "2025-12-28"
 * authoredOn = "2025-12-23T07:00:00+01:00"
 * lastModified = "2025-12-23T07:00:00+01:00"
 * requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 
 
-Instance: ProviderModule-ActivityDefinition-Informatie-Gezonder-Leven
+Instance: ProviderModule-ActivityDefinition-Informatie-Thuismeting
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-ActivityDefinition
 Usage: #example
 * text
@@ -164,25 +162,25 @@ Usage: #example
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of an ActivityDefinition</div>"
 * extension[0]
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
-  * valueReference = Reference(ProviderModule-Endpoint-HINQ)
-* url = "https://example.com/activities/zorgmodulediabetes"
+  * valueReference = Reference(ProviderModule-Endpoint-Minddistrict)
+* url = "https://example.com/activities/zorgmodulecvrm"
 * extension[1]
   * url = $client-id
-  * valueString = "dvaaanbiedersmodulesweb"
+  * valueString = "dvaaanbiedersmodule"
 * version = "1.0.0"
-* name = "Informatie over gezonder gaan leven"
-* title = "Gezonder gaan leven"
+* name = "Informatie over thuis bloeddruk meten"
+* title = "Informatie over thuis bloeddruk meten"
 * status = #active
-* publisher = "HinqZNO"
-* description = "Dit is informatie over gezonder gaan leven"
+* publisher = "Minddistrict"
+* description = "Informatie over thuis bloeddruk meten"
 * useContext[0]
   * code = $UCT#program
-  * valueCodeableConcept.text = "Digitale zorgmodule Diabetes"
+  * valueCodeableConcept.text = "Digitale zorgmodule CVRM"
 * useContext[1]
   * code = $UCT#focus
-  * valueCodeableConcept.coding[0] = $SCT#44054006 "Diabetes mellitus type 2"
+  * valueCodeableConcept.coding[0] = $SCT#84114007 "hartfalen"
 
-Instance: ProviderModule-Task-Informatie-Gezonder-Leven
+Instance: ProviderModule-Task-Informatie-Thuis-Bloeddrukmeten
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
@@ -190,30 +188,30 @@ Usage: #example
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Informatie-Gezonder-Leven)
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Informatie-Thuismeting)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-6789"
+  * value = "TASK-77774"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
-  * value = "module-diabetes-2025"
-  * type.text = "Digitale zorgmodule Diabetes"
+  * value = "module-CVRM-2025"
+  * type.text = "Digitale zorgmodule CVRM"
 * status = #requested
 * intent = #order
 * priority = #routine
-* description = "Informatie over gezonder gaan leven"
-* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* description = "Informatie over thuis bloeddruk meten"
+* for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-12-22"
   * end = "2025-12-28"
 * authoredOn = "2025-12-24T07:00:00+01:00"
 * lastModified = "2025-12-24T07:00:00+01:00"
 * requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 
 
-Instance: ProviderModule-ActivityDefinition-Vragenlijst-WoonLeefsituatie
+Instance: ProviderModule-ActivityDefinition-Vragenlijst-Uw-Situatie
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-ActivityDefinition
 Usage: #example
 * text
@@ -221,25 +219,25 @@ Usage: #example
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of an ActivityDefinition</div>"
 * extension[0]
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
-  * valueReference = Reference(ProviderModule-Endpoint-HINQ)
-* url = "https://example.com/activities/zorgmodulediabetes"
+  * valueReference = Reference(ProviderModule-Endpoint-Minddistrict)
+* url = "https://example.com/activities/zorgmodulecvrm"
 * extension[1]
   * url = $client-id
-  * valueString = "dvaaanbiedersmodulesweb"
+  * valueString = "dvaaanbiedersmodule"
 * version = "1.0.0"
-* name = "Vragenlijst over de woon- leefsituatie"
-* title = "Vragenlijst over de woon- leefsituatie"
+* name = "Uw situatie op gebied van hart- en vaatziekten"
+* title = "Vragenlijst over uw situatie op gebied van hart- en vaatziekten"
 * status = #active
-* publisher = "HinqZNO"
-* description = "Vragenlijst over de woon- leefsituatie"
+* publisher = "Minddistrict"
+* description = "Vragenlijst over uw situatie op gebied van hart- en vaatziekten"
 * useContext[0]
   * code = $UCT#program
-  * valueCodeableConcept.text = "Digitale zorgmodule Diabetes"
+  * valueCodeableConcept.text = "Digitale zorgmodule CVRM"
 * useContext[1]
   * code = $UCT#focus
-  * valueCodeableConcept.coding[0] = $SCT#44054006 "Diabetes mellitus type 2"
+  * valueCodeableConcept.coding[0] = $SCT#84114007 "hartfalen"
 
-Instance: ProviderModule-Task-Vragenlijst-WoonLeefsituatie
+Instance: ProviderModule-Task-Vragenlijst-Uw-Situatie
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
@@ -247,29 +245,29 @@ Usage: #example
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Vragenlijst-WoonLeefsituatie)
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Vragenlijst-Uw-Situatie)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-9642"
+  * value = "TASK-55553"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
-  * value = "module-diabetes-2025"
-  * type.text = "Digitale zorgmodule Diabetes"
+  * value = "module-CVRM-2025"
+  * type.text = "Digitale zorgmodule CVRM"
 * status = #requested
 * intent = #order
 * priority = #routine
-* description = "Vragenlijst woon/leefsituatie"
-* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* description = "Vragenlijst over uw situatie op gebied van hart- en vaatziekten"
+* for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-12-22"
   * end = "2025-12-28"
 * authoredOn = "2025-12-23T18:00:00+01:00"
 * lastModified = "2025-12-23T18:00:00+01:00"
 * requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 
-Instance: ProviderModule-Endpoint-HINQ
+Instance: ProviderModule-Endpoint-Minddistrict
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Endpoint
 Usage: #example
 * text
@@ -279,88 +277,89 @@ Usage: #example
 * connectionType = http://terminology.hl7.org/CodeSystem/endpoint-connection-type#hl7-fhir-rest
 * managingOrganization = Reference(ProviderModule-Organization-Huisartsenpraktijk-Medrie)
 * payloadType = $endpoint-payload-type#any
-* address = "https://module.test.5im.nl/web/api/smartonfhir/launch"
+* address = "https://aanbiedermodule.example.org/web/api/smartonfhir/launch?iss=resourceserver.example.dva.nl"
 
-Instance: ProviderModule-Patient-Van-Duinen
+
+Instance: ProviderModule-Patient-Van-Dijk
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient
 Usage: #example
 * text
   * status = #generated
-  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Patiënt: Tom van Duinen<br/>Geboortedatum: 1961-08-02<br/>Geslacht: Man<br/>Nationaliteit: Nederlandse<br/>Telefoon: +31612345600<br/>E-mail: tomvanduinen@tom.com<br/>Adres: Maanweg 174, 2516 AB Den Haag, Nederland</div>"
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Patiënt: Sanne van Dijk<br/>Geboortedatum: 1984-03-14<br/>Geslacht: Vrouw<br/>Nationaliteit: Nederlandse<br/>Telefoon: +31655501234<br/>E-mail: sanne.vandijk@voorbeeldmail.nl<br/>Adres: Prinsengracht 263, 1016 GV Amsterdam, Nederland</div>"
 * extension[http://hl7.org/fhir/StructureDefinition/patient-nationality].extension[code].valueCodeableConcept = urn:oid:2.16.840.1.113883.2.4.4.16.32#0001 "Nederlandse"
 * identifier
   * system = "http://fhir.nl/fhir/NamingSystem/bsn"
   * value.extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].valueCode = #masked // gemaskeerd BSN
 * name[0]
   * use = #official
-  * text = "Tom van Duinen"
-  * family = "van Duinen"
+  * text = "Sanne van Dijk"
+  * family = "van Dijk"
     * extension[http://hl7.org/fhir/StructureDefinition/humanname-own-prefix].valueString = "van"
-    * extension[http://hl7.org/fhir/StructureDefinition/humanname-own-name].valueString = "Duinen"
-  * given = "Erik"
+    * extension[http://hl7.org/fhir/StructureDefinition/humanname-own-name].valueString = "Dijk"
+  * given = "Sanne"
     * extension[http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier].valueCode = #BR
 * name[1]
   * use = #usual
-  * given = "Tom"
+  * given = "Sanne"
 * telecom[0]
   * system = #phone
     * extension[http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-AddressUse#MC "mobile contact"
-  * value = "+31612345600"
+  * value = "+31655501234"
 * telecom[1]
   * system = #email
-  * value = "tomvanduinen@tom.com"
+  * value = "sanne.vandijk@voorbeeldmail.nl"
   * use = #home
-* gender = #male
-  * extension[http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification].valueCodeableConcept.coding = http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender#M "Male"
-* birthDate = "1961-08-02"
+* gender = #female
+  * extension[http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification].valueCodeableConcept.coding = http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender#F "Female"
+* birthDate = "1984-03-14"
 * deceasedBoolean = false
 * address
   * extension[http://nictiz.nl/fhir/StructureDefinition/ext-AddressInformation.AddressType].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-AddressUse#HP "primary home"
   * use = #home
   * type = #both
-  * line = "Maanweg 174"
-    * extension[http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName].valueString = "Maanweg"
-    * extension[http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber].valueString = "174"
-  * city = "Den Haag"
-  * postalCode = "2516 AB"
+  * line = "Prinsengracht 263"
+    * extension[http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName].valueString = "Prinsengracht"
+    * extension[http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber].valueString = "263"
+  * city = "Amsterdam"
+  * postalCode = "1016 GV"
   * country = "Nederland"
     * extension[http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification].valueCodeableConcept = urn:iso:std:iso:3166#NL "Netherlands"
 
-Instance: ProviderModule-PractitionerRole-De-Haard
+Instance: ProviderModule-PractitionerRole-Van-Rijn
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole
 Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Zorgverlenerrol: Huisarts, apotheekhoudend<br/>Zorgverlener: Haard, de<br/>Organisatie: Huisartsenpraktijk Medrie</div>"
-* practitioner = Reference(ProviderModule-Practitioner-De-Haard) "A. de Haard"
+* practitioner = Reference(ProviderModule-Practitioner-Van-Rijn) "M. van Rijn"
 * organization = Reference(ProviderModule-Organization-Huisartsenpraktijk-Medrie) "Huisartstenpraktijk Medrie"
 * specialty
   * coding = urn:oid:2.16.840.1.113883.2.4.6.7#0110 "Huisarts, apotheekhoudend"
 
-Instance: ProviderModule-Practitioner-De-Haard
+Instance: ProviderModule-Practitioner-Van-Rijn
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner
 Usage: #example
 * text
   * status = #generated
-  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Zorgverlener: A. de Haard<br/>BIG-nummer: 12070100<br/>Telefoon: +31612345600<br/>E-mail: dehaard@huisarts.nl<br/>Adres: Simon Smitweg 1, 2353 GA Leiderdorp, Nederland</div>"
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Zorgverlener: M. van Rijn<br/>BIG-nummer: 19078234<br/>Telefoon: +31655506789<br/>E-mail: m.vanrijn@huisartspraktijk-example.nl<br/>Adres: Laan van Meerdervoort 120, 2517 AV Den Haag, Nederland</div>"
 * identifier
   * system = "http://fhir.nl/fhir/NamingSystem/big"
-  * value = "12070100"
+  * value = "19078234"
 * name
   * use = #official
-  * text = "A. de Haard"
-  * family = "de Haard"
-    * extension[http://hl7.org/fhir/StructureDefinition/humanname-own-prefix].valueString = "de"
-    * extension[http://hl7.org/fhir/StructureDefinition/humanname-own-name].valueString = "Haard"
-  * given[0] = "A."
+  * text = "M. van Rijn"
+  * family = "van Rijn"
+    * extension[http://hl7.org/fhir/StructureDefinition/humanname-own-prefix].valueString = "van"
+    * extension[http://hl7.org/fhir/StructureDefinition/humanname-own-name].valueString = "Rijn"
+  * given[0] = "M."
     * extension[http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier].valueCode = #IN
 * telecom[0]
   * system = #phone
-  * value = "+31612345600"
+  * value = "+31655506789"
   * use = #work
 * telecom[1]
   * system = #email
-  * value = "dehaard@huisarts.nl"
+  * value = "m.vanrijn@huisartspraktijk-example.nl"
   * use = #work
 
 Instance: ProviderModule-Organization-Huisartsenpraktijk-Medrie

@@ -85,7 +85,6 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* code = http://hl7.org/fhir/smart-app-launch/CodeSystem/smart-codes#launch-app-standalone "Launch application using the SMART standalone launch"
 * description = "Bloeddrukmeting"
 * for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
@@ -144,7 +143,6 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* code = http://hl7.org/fhir/smart-app-launch/CodeSystem/smart-codes#launch-app-standalone "Launch application using the SMART standalone launch"
 * description = "Wat is cholesterol en wat zijn de risico's?"
 * for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
@@ -202,7 +200,6 @@ Usage: #example
 * status = #requested
 * intent = #order
 * priority = #routine
-* code = http://hl7.org/fhir/smart-app-launch/CodeSystem/smart-codes#launch-app-standalone "Launch application using the SMART standalone launch"
 * description = "Informatie over thuis bloeddruk meten"
 * for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
@@ -260,7 +257,6 @@ Usage: #example
 * status = #requested
 * intent = #order
 * priority = #routine
-* code = http://hl7.org/fhir/smart-app-launch/CodeSystem/smart-codes#launch-app-standalone "Launch application using the SMART standalone launch"
 * description = "Vragenlijst over uw situatie op gebied van hart- en vaatziekten"
 * for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
@@ -327,3 +323,67 @@ Usage: #example
   * postalCode = "2516 AB"
   * country = "Nederland"
     * extension[http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification].valueCodeableConcept = urn:iso:std:iso:3166#NL "Netherlands"
+
+Instance: ProviderModule-PractitionerRole-Van-Rijn
+InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole
+Usage: #example
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Zorgverlenerrol: Huisarts, apotheekhoudend<br/>Zorgverlener: Haard, de<br/>Organisatie: Huisartsenpraktijk Medrie</div>"
+* practitioner = Reference(ProviderModule-Practitioner-De-Jong) "L. de Jong"
+* organization = Reference(ProviderModule-Organization-Huisartsenpraktijk-Medrie) "Huisartstenpraktijk Medrie"
+* specialty
+  * coding = urn:oid:2.16.840.1.113883.2.4.6.7#0110 "Huisarts, apotheekhoudend"
+
+Instance: ProviderModule-Practitioner-De-Jong
+InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner
+Usage: #example
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Zorgverlener: L. de Jong<br/>BIG-nummer: 28910456<br/>Telefoon: +31655504321<br/>E-mail: l.dejong@huisartspraktijk-example.nl<br/>Adres: Stationsweg 12, 2312 AV Leiden, Nederland</div>"
+* identifier
+  * system = "http://fhir.nl/fhir/NamingSystem/big"
+  * value = "28910456"
+* name
+  * use = #official
+  * text = "L. de Jong"
+  * family = "de Jong"
+    * extension[http://hl7.org/fhir/StructureDefinition/humanname-own-prefix].valueString = "de"
+    * extension[http://hl7.org/fhir/StructureDefinition/humanname-own-name].valueString = "Jong"
+  * given[0] = "L."
+    * extension[http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier].valueCode = #IN
+* telecom[0]
+  * system = #phone
+  * value = "+31655504321"
+  * use = #work
+* telecom[1]
+  * system = #email
+  * value = "l.dejong@huisartspraktijk-example.nl"
+  * use = #work
+
+Instance: ProviderModule-Organization-Huisartsenpraktijk-Medrie
+InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization
+Usage: #example
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Organisatie: Huisartsenpraktijk <br/>AGB-code: 01010235<br/>Telefoon: +31653603740<br/>E-mail: huisartsenpraktijk-dehaard@huisarts.nl<br/>Adres: Dr. Klinkertweg 18, 8004 DB Zwolle</div>"
+* identifier
+  * system = "http://fhir.nl/fhir/NamingSystem/agb-z"
+  * value = "01010235"
+* name = "Ondersteuning Huisartsenpraktijk Medrie Bv"
+* telecom[0]
+  * system = #phone
+  * value = "+31653603740"
+  * use = #work
+* telecom[1]
+  * system = #email
+  * value = "huisartsenpraktijk-dehaard@huisarts.nl"
+  * use = #work
+* address
+  * extension[http://nictiz.nl/fhir/StructureDefinition/ext-AddressInformation.AddressType].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-AddressUse#WP "Work Place"
+  * use = #work
+  * line = "Dr. Klinkertweg 18"
+    * extension[http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName].valueString = "Dr. Klinkertweg"
+    * extension[http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber].valueString = "18"
+  * city = "Zwolle"
+  * postalCode = "8004 DB"
