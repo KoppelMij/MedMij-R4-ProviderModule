@@ -39,6 +39,7 @@ Usage: #example
 * extension[0]
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
   * valueReference = Reference(ProviderModule-Endpoint-Minddistrict)
+* url = "https://example.com/activities/zorgmodulecvrm"
 * extension[1]
   * url = $client-id
   * valueString = "dvaaanbiedersmodule"
@@ -105,6 +106,7 @@ Usage: #example
 * extension[0]
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
   * valueReference = Reference(ProviderModule-Endpoint-Minddistrict)
+* url = "https://example.com/activities/zorgmodulecvrm"
 * extension[1]
   * url = $client-id
   * valueString = "dvaaanbiedersmodule"
@@ -163,6 +165,7 @@ Usage: #example
 * extension[0]
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
   * valueReference = Reference(ProviderModule-Endpoint-Minddistrict)
+* url = "https://example.com/activities/zorgmodulecvrm"
 * extension[1]
   * url = $client-id
   * valueString = "dvaaanbiedersmodule"
@@ -220,6 +223,7 @@ Usage: #example
 * extension[0]
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
   * valueReference = Reference(ProviderModule-Endpoint-Minddistrict)
+* url = "https://example.com/activities/zorgmodulecvrm"
 * extension[1]
   * url = $client-id
   * valueString = "dvaaanbiedersmodule"
