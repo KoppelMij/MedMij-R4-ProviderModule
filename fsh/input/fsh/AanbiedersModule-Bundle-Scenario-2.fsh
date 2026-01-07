@@ -5,10 +5,6 @@ Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of an ServiceRequest</div>"
-* extension
-  * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Bloeddrukmeting)
-    * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie/servicerequest/id"
   * value = "2025-999999"
@@ -44,21 +40,28 @@ Usage: #example
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
   * valueReference = Reference(ProviderModule-Endpoint-Minddistrict)
 * extension[1]
-  * url = "http://example.org/fhir/StructureDefinition/client-id"
+  * url = $client-id
   * valueString = "dvaaanbiedersmodule"
-* url = "https://aanbiedermodule.example.org/web/api/smartonfhir/launch?iss=resourceserver.example.dva.nl"
 * version = "1.0.0"
 * name = "Meetopdacht bloeddrukmeting"
 * title = "Bloeddrukmeting"
 * status = #active
 * publisher = "Minddistrict"
-* description = "Bloeddrukmeting volgens NHG protocol. 7 dagen, 2x per dag, 's ochtends en 's avonds"
+* description = "Bloeddrukmeting volgens NHG protocol. 1 week, 2x per dag, 's ochtends en 's avonds"
 * useContext[0]
   * code = $UCT#program
   * valueCodeableConcept.text = "Digitale zorgmodule CVRM"
 * useContext[1]
   * code = $UCT#focus
   * valueCodeableConcept.coding[0] = $SCT#84114007 "hartfalen"
+* timingTiming.repeat
+  * boundsDuration.value = 7
+  * boundsDuration.system = "http://unitsofmeasure.org"
+  * boundsDuration.code = #d
+  * boundsDuration.unit = "day"
+  * frequency = 2
+  * period = 1
+  * periodUnit = #d
 
 Instance: ProviderModule-Task-Meetopdracht-Bloeddrukmeting
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
@@ -103,9 +106,8 @@ Usage: #example
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
   * valueReference = Reference(ProviderModule-Endpoint-Minddistrict)
 * extension[1]
-  * url = "http://example.org/fhir/StructureDefinition/client-id"
+  * url = $client-id
   * valueString = "dvaaanbiedersmodule"
-* url = "https://aanbiedermodule.example.org/web/api/smartonfhir/launch?iss=resourceserver.example.dva.nl"
 * version = "1.0.0"
 * name = "Informatie over cholesterol"
 * title = "Wat is cholesterol en wat zijn de risico's?"
@@ -162,9 +164,8 @@ Usage: #example
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
   * valueReference = Reference(ProviderModule-Endpoint-Minddistrict)
 * extension[1]
-  * url = "http://example.org/fhir/StructureDefinition/client-id"
+  * url = $client-id
   * valueString = "dvaaanbiedersmodule"
-* url = "https://aanbiedermodule.example.org/web/api/smartonfhir/launch?iss=resourceserver.example.dva.nl"
 * version = "1.0.0"
 * name = "Informatie over thuis bloeddruk meten"
 * title = "Informatie over thuis bloeddruk meten"
@@ -220,9 +221,8 @@ Usage: #example
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
   * valueReference = Reference(ProviderModule-Endpoint-Minddistrict)
 * extension[1]
-  * url = "http://example.org/fhir/StructureDefinition/client-id"
+  * url = $client-id
   * valueString = "dvaaanbiedersmodule"
-* url = "https://aanbiedermodule.example.org/web/api/smartonfhir/launch?iss=resourceserver.example.dva.nl"
 * version = "1.0.0"
 * name = "Uw situatie op gebied van hart- en vaatziekten"
 * title = "Vragenlijst over uw situatie op gebied van hart- en vaatziekten"
