@@ -85,14 +85,14 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Bloeddrukmeting"
+* description = "Meet je bloeddruk nuchter"
 * for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-12-22"
   * end = "2025-12-28"
 * authoredOn = "2025-12-22T18:00:00+01:00"
 * lastModified = "2025-12-22T18:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* requester = Reference(ProviderModule-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
 * owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 
 
@@ -150,7 +150,7 @@ Usage: #example
   * end = "2025-12-28"
 * authoredOn = "2025-12-23T07:00:00+01:00"
 * lastModified = "2025-12-23T07:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* requester = Reference(ProviderModule-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
 * owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 
 
@@ -207,7 +207,7 @@ Usage: #example
   * end = "2025-12-28"
 * authoredOn = "2025-12-24T07:00:00+01:00"
 * lastModified = "2025-12-24T07:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* requester = Reference(ProviderModule-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
 * owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 
 
@@ -264,7 +264,7 @@ Usage: #example
   * end = "2025-12-28"
 * authoredOn = "2025-12-23T18:00:00+01:00"
 * lastModified = "2025-12-23T18:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* requester = Reference(ProviderModule-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
 * owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 
 Instance: ProviderModule-Endpoint-Minddistrict
@@ -324,7 +324,7 @@ Usage: #example
   * country = "Nederland"
     * extension[http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification].valueCodeableConcept = urn:iso:std:iso:3166#NL "Netherlands"
 
-Instance: ProviderModule-PractitionerRole-Van-Rijn
+Instance: ProviderModule-PractitionerRole-De-Jong
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole
 Usage: #example
 * text

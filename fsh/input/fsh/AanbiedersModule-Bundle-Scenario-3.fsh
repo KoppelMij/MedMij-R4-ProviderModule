@@ -10,7 +10,7 @@ Usage: #example
   * value = "2025-919191"
 * status = #active
 * intent = #order
-* subject = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* subject = Reference(ProviderModule-Patient-De-Groot) "Sanne van Dijk"
 * occurrenceTiming.repeat
   * boundsPeriod.start = "2025-12-22"
   * boundsPeriod.end = "2025-12-28"
@@ -86,14 +86,14 @@ Usage: #example
 * intent = #order
 * priority = #routine
 * description = "Bloeddrukmeting"
-* for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* for = Reference(ProviderModule-Patient-De-Groot) "Sanne van Dijk"
 * executionPeriod
   * start = "2025-12-22"
   * end = "2025-12-28"
 * authoredOn = "2025-12-22T18:00:00+01:00"
 * lastModified = "2025-12-22T18:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* requester = Reference(ProviderModule-PractitionerRole-Van-Rijn) "M. van Rijn, huisarts"
+* owner = Reference(ProviderModule-Patient-De-Groot) "Sanne van Dijk"
 
 
 Instance: ProviderModule-ActivityDefinition-Informatie-Cholesterol
@@ -144,14 +144,14 @@ Usage: #example
 * intent = #order
 * priority = #routine
 * description = "Wat is cholesterol en wat zijn de risico's?"
-* for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* for = Reference(ProviderModule-Patient-De-Groot) "Sanne van Dijk"
 * executionPeriod
   * start = "2025-12-22"
   * end = "2025-12-28"
 * authoredOn = "2025-12-23T07:00:00+01:00"
 * lastModified = "2025-12-23T07:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* requester = Reference(ProviderModule-PractitionerRole-Van-Rijn) "M. van Rijn, huisarts"
+* owner = Reference(ProviderModule-Patient-De-Groot) "Sanne van Dijk"
 
 
 Instance: ProviderModule-ActivityDefinition-Informatie-Thuismeting
@@ -201,14 +201,14 @@ Usage: #example
 * intent = #order
 * priority = #routine
 * description = "Informatie over thuis bloeddruk meten"
-* for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* for = Reference(ProviderModule-Patient-De-Groot) "Sanne van Dijk"
 * executionPeriod
   * start = "2025-12-22"
   * end = "2025-12-28"
 * authoredOn = "2025-12-24T07:00:00+01:00"
 * lastModified = "2025-12-24T07:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* requester = Reference(ProviderModule-PractitionerRole-Van-Rijn) "M. van Rijn, huisarts"
+* owner = Reference(ProviderModule-Patient-De-Groot) "Sanne van Dijk"
 
 
 Instance: ProviderModule-ActivityDefinition-Vragenlijst-Uw-Situatie
@@ -258,14 +258,14 @@ Usage: #example
 * intent = #order
 * priority = #routine
 * description = "Vragenlijst over uw situatie op gebied van hart- en vaatziekten"
-* for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* for = Reference(ProviderModule-Patient-De-Groot) "Sanne van Dijk"
 * executionPeriod
   * start = "2025-12-22"
   * end = "2025-12-28"
 * authoredOn = "2025-12-23T18:00:00+01:00"
 * lastModified = "2025-12-23T18:00:00+01:00"
 * requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* owner = Reference(ProviderModule-Patient-De-Groot) "Sanne van Dijk"
 
 Instance: ProviderModule-Endpoint-Minddistrict
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Endpoint
@@ -325,7 +325,7 @@ Usage: #example
   * country = "Nederland"
     * extension[http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification].valueCodeableConcept = urn:iso:std:iso:3166#NL "Netherlands"
 
-Instance: ProviderModule-PractitionerRole-Van-Rijn
+Instance: P 
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole
 Usage: #example
 * text
