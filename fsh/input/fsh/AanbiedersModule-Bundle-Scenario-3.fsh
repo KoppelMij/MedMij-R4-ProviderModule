@@ -1,36 +1,6 @@
 // Bundle with FHIR test instances in FSH format for ProviderModule test scenario 3
-Instance: ProviderModule-ServiceRequest-Saturatiemeting
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-ServiceRequest
-Usage: #example
-* text
-  * status = #generated
-  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of an ServiceRequest</div>"
-* identifier
-  * system = "http://medrie/servicerequest/id"
-  * value = "2025-919191"
-* status = #active
-* intent = #order
-* subject = Reference(ProviderModule-Patient-De-Groot) "Sanne van Dijk"
-* occurrenceTiming.repeat
-  * boundsPeriod.start = "2025-12-22"
-  * boundsPeriod.end = "2025-12-28"
-  * period = 1
-  * periodUnit = #d
-  * frequency = 2
-  * frequencyMax = 2
-* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* patientInstruction = """
-Beste patiënt,
 
-U gaat gedurende 1 week zelf uw bloeddruk meten. Volg hierbij deze stappen:
-
-1. Meet uw bloeddruk elke ochtend vóór het ontbijt (nuchter).
-2. Meet uw bloeddruk elke avond vóór het avondeten.
-3. Noteer de waarden direct na de meting in uw app.
-4. Voer dit dagelijks uit gedurende 7 dagen en neem de resultaten mee naar uw volgende afspraak.
-"""
-
-Instance: ProviderModule-ActivityDefinition-Meetopdracht-Bloeddrukmeting
+Instance: ProviderModule-ActivityDefinition-Meetopdracht-Saturatiemeting
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-ActivityDefinition
 Usage: #example
 * text
@@ -38,33 +8,27 @@ Usage: #example
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of an ActivityDefinition</div>"
 * extension[0]
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
-  * valueReference = Reference(ProviderModule-Endpoint-Minddistrict)
-* url = "https://example.com/activities/zorgmodulecvrm"
+  * valueReference = Reference(ProviderModule-Endpoint-HINQ)
+* url = "https://example.com/activities/zorgmodulecopd"
 * extension[1]
   * url = $client-id
   * valueString = "dvaaanbiedersmodule"
 * version = "1.0.0"
-* name = "Meetopdacht bloeddrukmeting"
-* title = "Bloeddrukmeting"
+* name = "Meetopdacht saturatiemeting"
+* title = "Saturatiemeting"
 * status = #active
-* publisher = "Minddistrict"
-* description = "Bloeddrukmeting volgens NHG protocol. 1 week, 2x per dag, 's ochtends en 's avonds"
-* useContext[0]
-  * code = $UCT#program
-  * valueCodeableConcept.text = "Digitale zorgmodule CVRM"
-* useContext[1]
-  * code = $UCT#focus
-  * valueCodeableConcept.coding[0] = $SCT#84114007 "hartfalen"
+* publisher = "HinqZNO"
+* description = "Saturatiemeting volgens NHG protocol. 1 week, 1x per dag"
 * timingTiming.repeat
   * boundsDuration.value = 7
   * boundsDuration.system = "http://unitsofmeasure.org"
   * boundsDuration.code = #d
   * boundsDuration.unit = "day"
-  * frequency = 2
+  * frequency = 1
   * period = 1
   * periodUnit = #d
 
-Instance: ProviderModule-Task-Meetopdracht-Bloeddrukmeting
+Instance: ProviderModule-Task-Meetopdracht-Saturatiemeting-1
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
@@ -72,31 +36,216 @@ Usage: #example
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Bloeddrukmeting)
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Saturatiemeting)
     * type = "ActivityDefinition"
-* basedOn = Reference(ProviderModule-ServiceRequest-Bloeddrukmeting)
 * identifier
-  * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-99998"
+  * system = "http://hinq.nl/taskIdentifier"
+  * value = "TASK-11"
 * groupIdentifier
-  * system = "https://medrie.nl/fhir/identifiers/task-group"
-  * value = "module-CVRM-2025"
-  * type.text = "Digitale zorgmodule CVRM"
+  * system = "https://hinq.nl/fhir/identifiers/task-group"
+  * value = "module-COPD-2026"
+  * type.text = "Digitale zorgmodule COPD"
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Bloeddrukmeting"
-* for = Reference(ProviderModule-Patient-De-Groot) "Sanne van Dijk"
+* description = "Meet je zuurstofsaturatie (SpO2) met de saturatiemeter"
+* for = Reference(ProviderModule-Patient-Van-Dijk) "Sanne van Dijk"
 * executionPeriod
-  * start = "2025-12-22"
-  * end = "2025-12-28"
-* authoredOn = "2025-12-22T18:00:00+01:00"
-* lastModified = "2025-12-22T18:00:00+01:00"
+  * start = "2026-01-05"
+  * end = "2026-01-05"
+* authoredOn = "2026-01-05T08:00:00+01:00"
+* lastModified = "2026-01-05T08:00:00+01:00"
 * requester = Reference(ProviderModule-PractitionerRole-Van-Rijn) "M. van Rijn, huisarts"
-* owner = Reference(ProviderModule-Patient-De-Groot) "Sanne van Dijk"
+* owner = Reference(ProviderModule-Patient-Van-Dijk) "Sanne van Dijk"
+
+Instance: ProviderModule-Task-Meetopdracht-Saturatiemeting-2
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Usage: #example
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
+* extension
+  * url = $koppeltaal-instantiates
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Saturatiemeting)
+    * type = "ActivityDefinition"
+* identifier
+  * system = "http://hinq.nl/taskIdentifier"
+  * value = "TASK-22"
+* groupIdentifier
+  * system = "https://hinq.nl/fhir/identifiers/task-group"
+  * value = "module-COPD-2026"
+  * type.text = "Digitale zorgmodule COPD"
+* partOf= Reference(ProviderModule-Task-Meetopdracht-Saturatiemeting-1)
+* status = #received
+* intent = #order
+* priority = #routine
+* description = "Meet je zuurstofsaturatie (SpO2) met de saturatiemeter"
+* for = Reference(ProviderModule-Patient-Van-Dijk) "Sanne van Dijk"
+* executionPeriod
+  * start = "2026-01-06"
+  * end = "2026-01-06"
+* authoredOn = "2026-01-05T08:00:00+01:00"
+* lastModified = "2026-01-05T08:00:00+01:00"
+* requester = Reference(ProviderModule-PractitionerRole-Van-Rijn) "M. van Rijn, huisarts"
+* owner = Reference(ProviderModule-Patient-Van-Dijk) "Sanne van Dijk"
+
+Instance: ProviderModule-Task-Meetopdracht-Saturatiemeting-3
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Usage: #example
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
+* extension
+  * url = $koppeltaal-instantiates
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Saturatiemeting)
+    * type = "ActivityDefinition"
+* identifier
+  * system = "http://hinq.nl/taskIdentifier"
+  * value = "TASK-33"
+* groupIdentifier
+  * system = "https://hinq.nl/fhir/identifiers/task-group"
+  * value = "module-COPD-2026"
+  * type.text = "Digitale zorgmodule COPD"
+* partOf= Reference(ProviderModule-Task-Meetopdracht-Saturatiemeting-2)
+* status = #received
+* intent = #order
+* priority = #routine
+* description = "Meet je zuurstofsaturatie (SpO2) met de saturatiemeter"
+* for = Reference(ProviderModule-Patient-Van-Dijk) "Sanne van Dijk"
+* executionPeriod
+  * start = "2026-01-07"
+  * end = "2026-01-07"
+* authoredOn = "2026-01-05T08:00:00+01:00"
+* lastModified = "2026-01-05T08:00:00+01:00"
+* requester = Reference(ProviderModule-PractitionerRole-Van-Rijn) "M. van Rijn, huisarts"
+* owner = Reference(ProviderModule-Patient-Van-Dijk) "Sanne van Dijk"
+
+Instance: ProviderModule-Task-Meetopdracht-Saturatiemeting-4
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Usage: #example
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
+* extension
+  * url = $koppeltaal-instantiates
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Saturatiemeting)
+    * type = "ActivityDefinition"
+* identifier
+  * system = "http://hinq.nl/taskIdentifier"
+  * value = "TASK-44"
+* groupIdentifier
+  * system = "https://hinq.nl/fhir/identifiers/task-group"
+  * value = "module-COPD-2026"
+  * type.text = "Digitale zorgmodule COPD"
+* partOf= Reference(ProviderModule-Task-Meetopdracht-Saturatiemeting-3)
+* status = #received
+* intent = #order
+* priority = #routine
+* description = "Meet je zuurstofsaturatie (SpO2) met de saturatiemeter"
+* for = Reference(ProviderModule-Patient-Van-Dijk) "Sanne van Dijk"
+* executionPeriod
+  * start = "2026-01-08"
+  * end = "2026-01-08"
+* authoredOn = "2026-01-05T08:00:00+01:00"
+* lastModified = "2026-01-05T08:00:00+01:00"
+* requester = Reference(ProviderModule-PractitionerRole-Van-Rijn) "M. van Rijn, huisarts"
+* owner = Reference(ProviderModule-Patient-Van-Dijk) "Sanne van Dijk"
+
+Instance: ProviderModule-Task-Meetopdracht-Saturatiemeting-5
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Usage: #example
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
+* extension
+  * url = $koppeltaal-instantiates
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Saturatiemeting)
+    * type = "ActivityDefinition"
+* identifier
+  * system = "http://hinq.nl/taskIdentifier"
+  * value = "TASK-55"
+* groupIdentifier
+  * system = "https://hinq.nl/fhir/identifiers/task-group"
+  * value = "module-COPD-2026"
+  * type.text = "Digitale zorgmodule COPD"
+* partOf= Reference(ProviderModule-Task-Meetopdracht-Saturatiemeting-4)
+* status = #received
+* intent = #order
+* priority = #routine
+* description = "Meet je zuurstofsaturatie (SpO2) met de saturatiemeter"
+* for = Reference(ProviderModule-Patient-Van-Dijk) "Sanne van Dijk"
+* executionPeriod
+  * start = "2026-01-09"
+  * end = "2026-01-09"
+* authoredOn = "2026-01-05T08:00:00+01:00"
+* lastModified = "2026-01-05T08:00:00+01:00"
+* requester = Reference(ProviderModule-PractitionerRole-Van-Rijn) "M. van Rijn, huisarts"
+* owner = Reference(ProviderModule-Patient-Van-Dijk) "Sanne van Dijk"
+
+Instance: ProviderModule-Task-Meetopdracht-Saturatiemeting-6
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Usage: #example
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
+* extension
+  * url = $koppeltaal-instantiates
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Saturatiemeting)
+    * type = "ActivityDefinition"
+* identifier
+  * system = "http://hinq.nl/taskIdentifier"
+  * value = "TASK-66"
+* groupIdentifier
+  * system = "https://hinq.nl/fhir/identifiers/task-group"
+  * value = "module-COPD-2026"
+  * type.text = "Digitale zorgmodule COPD"
+* partOf= Reference(ProviderModule-Task-Meetopdracht-Saturatiemeting-5)
+* status = #received
+* intent = #order
+* priority = #routine
+* description = "Meet je zuurstofsaturatie (SpO2) met de saturatiemeter"
+* for = Reference(ProviderModule-Patient-Van-Dijk) "Sanne van Dijk"
+* executionPeriod
+  * start = "2026-01-10"
+  * end = "2026-01-10"
+* authoredOn = "2026-01-05T08:00:00+01:00"
+* lastModified = "2026-01-05T08:00:00+01:00"
+* requester = Reference(ProviderModule-PractitionerRole-Van-Rijn) "M. van Rijn, huisarts"
+* owner = Reference(ProviderModule-Patient-Van-Dijk) "Sanne van Dijk"
+
+Instance: ProviderModule-Task-Meetopdracht-Saturatiemeting-7
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Usage: #example
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
+* extension
+  * url = $koppeltaal-instantiates
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Saturatiemeting)
+    * type = "ActivityDefinition"
+* identifier
+  * system = "http://hinq.nl/taskIdentifier"
+  * value = "TASK-77"
+* groupIdentifier
+  * system = "https://hinq.nl/fhir/identifiers/task-group"
+  * value = "module-COPD-2026"
+  * type.text = "Digitale zorgmodule COPD"
+* partOf= Reference(ProviderModule-Task-Meetopdracht-Saturatiemeting-6)
+* status = #received
+* intent = #order
+* priority = #routine
+* description = "Meet je zuurstofsaturatie (SpO2) met de saturatiemeter"
+* for = Reference(ProviderModule-Patient-Van-Dijk) "Sanne van Dijk"
+* executionPeriod
+  * start = "2026-01-11"
+  * end = "2026-01-11"
+* authoredOn = "2026-01-05T08:00:00+01:00"
+* lastModified = "2026-01-05T08:00:00+01:00"
+* requester = Reference(ProviderModule-PractitionerRole-Van-Rijn) "M. van Rijn, huisarts"
+* owner = Reference(ProviderModule-Patient-Van-Dijk) "Sanne van Dijk"
 
 
-Instance: ProviderModule-ActivityDefinition-Informatie-Cholesterol
+Instance: ProviderModule-ActivityDefinition-Informatie-leven-COPD
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-ActivityDefinition
 Usage: #example
 * text
@@ -104,26 +253,20 @@ Usage: #example
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of an ActivityDefinition</div>"
 * extension[0]
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
-  * valueReference = Reference(ProviderModule-Endpoint-Minddistrict)
-* url = "https://example.com/activities/zorgmodulecvrm"
+  * valueReference = Reference(ProviderModule-Endpoint-HINQ)
+* url = "https://example.com/activities/zorgmodulecopd"
 * extension[1]
   * url = $client-id
   * valueString = "dvaaanbiedersmodule"
 * version = "1.0.0"
-* name = "Informatie over cholesterol"
-* title = "Wat is cholesterol en wat zijn de risico's?"
+* name = "Informatie over leven met COPD"
+* title = "Informatie over leven met COPD"
 * status = #active
-* publisher = "Minddistrict"
-* description = "Dit is een algemene toelichting over wat is cholesterol en wat zijn de risico's"
-* useContext[0]
-  * code = $UCT#program
-  * valueCodeableConcept.text = "Digitale zorgmodule CVRM"
-* useContext[1]
-  * code = $UCT#focus
-  * valueCodeableConcept.coding[0] = $SCT#84114007 "hartfalen"
+* publisher = "HinqZNO"
+* description = "Dit is een algemene informatie over leven met COPD"
 
 
-Instance: ProviderModule-Task-Informatie-Cholesterol
+Instance: ProviderModule-Task-Informatie-leven-COPD
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
@@ -134,24 +277,24 @@ Usage: #example
   * valueReference = Reference(ProviderModule-ActivityDefinition-Informatie-Cholesterol)
     * type = "ActivityDefinition"
 * identifier
-  * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-88887"
+  * system = "http://hinq.nl/taskIdentifier"
+  * value = "TASK-1673834"
 * groupIdentifier
-  * system = "https://medrie.nl/fhir/identifiers/task-group"
-  * value = "module-CVRM-2025"
-  * type.text = "Digitale zorgmodule CVRM"
+  * system = "https://hinq.nl/fhir/identifiers/task-group"
+  * value = "module-COPD-2026"
+  * type.text = "Digitale zorgmodule COPD"
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Wat is cholesterol en wat zijn de risico's?"
-* for = Reference(ProviderModule-Patient-De-Groot) "Sanne van Dijk"
+* description = "Lees de informatie over leven met COPD"
+* for = Reference(ProviderModule-Patient-Van-Dijk) "Sanne van Dijk"
 * executionPeriod
   * start = "2025-12-22"
   * end = "2025-12-28"
 * authoredOn = "2025-12-23T07:00:00+01:00"
 * lastModified = "2025-12-23T07:00:00+01:00"
 * requester = Reference(ProviderModule-PractitionerRole-Van-Rijn) "M. van Rijn, huisarts"
-* owner = Reference(ProviderModule-Patient-De-Groot) "Sanne van Dijk"
+* owner = Reference(ProviderModule-Patient-Van-Dijk) "Sanne van Dijk"
 
 
 Instance: ProviderModule-ActivityDefinition-Informatie-Thuismeting
@@ -162,8 +305,8 @@ Usage: #example
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of an ActivityDefinition</div>"
 * extension[0]
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
-  * valueReference = Reference(ProviderModule-Endpoint-Minddistrict)
-* url = "https://example.com/activities/zorgmodulecvrm"
+  * valueReference = Reference(ProviderModule-Endpoint-HINQ)
+* url = "https://example.com/activities/zorgmodulecopd"
 * extension[1]
   * url = $client-id
   * valueString = "dvaaanbiedersmodule"
@@ -171,14 +314,8 @@ Usage: #example
 * name = "Informatie over thuis bloeddruk meten"
 * title = "Informatie over thuis bloeddruk meten"
 * status = #active
-* publisher = "Minddistrict"
+* publisher = "HinqZNO"
 * description = "Informatie over thuis bloeddruk meten"
-* useContext[0]
-  * code = $UCT#program
-  * valueCodeableConcept.text = "Digitale zorgmodule CVRM"
-* useContext[1]
-  * code = $UCT#focus
-  * valueCodeableConcept.coding[0] = $SCT#84114007 "hartfalen"
 
 Instance: ProviderModule-Task-Informatie-Thuis-Bloeddrukmeten
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
@@ -191,24 +328,24 @@ Usage: #example
   * valueReference = Reference(ProviderModule-ActivityDefinition-Informatie-Thuismeting)
     * type = "ActivityDefinition"
 * identifier
-  * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-77774"
+  * system = "http://hinq.nl/taskIdentifier"
+  * value = "TASK-983823471"
 * groupIdentifier
-  * system = "https://medrie.nl/fhir/identifiers/task-group"
-  * value = "module-CVRM-2025"
-  * type.text = "Digitale zorgmodule CVRM"
+  * system = "https://hinq.nl/fhir/identifiers/task-group"
+  * value = "module-COPD-2026"
+  * type.text = "Digitale zorgmodule COPD"
 * status = #requested
 * intent = #order
 * priority = #routine
 * description = "Informatie over thuis bloeddruk meten"
-* for = Reference(ProviderModule-Patient-De-Groot) "Sanne van Dijk"
+* for = Reference(ProviderModule-Patient-Van-Dijk) "Sanne van Dijk"
 * executionPeriod
   * start = "2025-12-22"
   * end = "2025-12-28"
 * authoredOn = "2025-12-24T07:00:00+01:00"
 * lastModified = "2025-12-24T07:00:00+01:00"
 * requester = Reference(ProviderModule-PractitionerRole-Van-Rijn) "M. van Rijn, huisarts"
-* owner = Reference(ProviderModule-Patient-De-Groot) "Sanne van Dijk"
+* owner = Reference(ProviderModule-Patient-Van-Dijk) "Sanne van Dijk"
 
 
 Instance: ProviderModule-ActivityDefinition-Vragenlijst-Uw-Situatie
@@ -219,8 +356,8 @@ Usage: #example
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of an ActivityDefinition</div>"
 * extension[0]
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
-  * valueReference = Reference(ProviderModule-Endpoint-Minddistrict)
-* url = "https://example.com/activities/zorgmodulecvrm"
+  * valueReference = Reference(ProviderModule-Endpoint-HINQ)
+* url = "https://example.com/activities/zorgmodulecopd"
 * extension[1]
   * url = $client-id
   * valueString = "dvaaanbiedersmodule"
@@ -228,14 +365,9 @@ Usage: #example
 * name = "Uw situatie op gebied van hart- en vaatziekten"
 * title = "Vragenlijst over uw situatie op gebied van hart- en vaatziekten"
 * status = #active
-* publisher = "Minddistrict"
+* publisher = "HinqZNO"
 * description = "Vragenlijst over uw situatie op gebied van hart- en vaatziekten"
-* useContext[0]
-  * code = $UCT#program
-  * valueCodeableConcept.text = "Digitale zorgmodule CVRM"
-* useContext[1]
-  * code = $UCT#focus
-  * valueCodeableConcept.coding[0] = $SCT#84114007 "hartfalen"
+
 
 Instance: ProviderModule-Task-Vragenlijst-Uw-Situatie
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
@@ -248,37 +380,24 @@ Usage: #example
   * valueReference = Reference(ProviderModule-ActivityDefinition-Vragenlijst-Uw-Situatie)
     * type = "ActivityDefinition"
 * identifier
-  * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-55553"
+  * system = "http://hinq.nl/taskIdentifier"
+  * value = "TASK-74745858"
 * groupIdentifier
-  * system = "https://medrie.nl/fhir/identifiers/task-group"
-  * value = "module-CVRM-2025"
-  * type.text = "Digitale zorgmodule CVRM"
+  * system = "https://hinq.nl/fhir/identifiers/task-group"
+  * value = "module-COPD-2026"
+  * type.text = "Digitale zorgmodule COPD"
 * status = #requested
 * intent = #order
 * priority = #routine
 * description = "Vragenlijst over uw situatie op gebied van hart- en vaatziekten"
-* for = Reference(ProviderModule-Patient-De-Groot) "Sanne van Dijk"
+* for = Reference(ProviderModule-Patient-Van-Dijk) "Sanne van Dijk"
 * executionPeriod
   * start = "2025-12-22"
   * end = "2025-12-28"
 * authoredOn = "2025-12-23T18:00:00+01:00"
 * lastModified = "2025-12-23T18:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(ProviderModule-Patient-De-Groot) "Sanne van Dijk"
-
-Instance: ProviderModule-Endpoint-Minddistrict
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Endpoint
-Usage: #example
-* text
-  * status = #generated
-  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of an Endpoint as used in ProviderModule</div>"
-* status = #active
-* connectionType = http://terminology.hl7.org/CodeSystem/endpoint-connection-type#hl7-fhir-rest
-* managingOrganization = Reference(ProviderModule-Organization-Huisartsenpraktijk-Medrie)
-* payloadType = $endpoint-payload-type#any
-* address = "https://aanbiedermodule.example.org/web/api/smartonfhir/launch?iss=resourceserver.example.dva.nl"
-
+* requester = Reference(ProviderModule-PractitionerRole-Van-Rijn) "M. van Rijn, Huisarts"
+* owner = Reference(ProviderModule-Patient-Van-Dijk) "Sanne van Dijk"
 
 Instance: ProviderModule-Patient-Van-Dijk
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient
@@ -325,7 +444,7 @@ Usage: #example
   * country = "Nederland"
     * extension[http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification].valueCodeableConcept = urn:iso:std:iso:3166#NL "Netherlands"
 
-Instance: P 
+Instance: ProviderModule-PractitionerRole-Van-Rijn
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole
 Usage: #example
 * text

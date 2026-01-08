@@ -51,12 +51,6 @@ Usage: #example
 * status = #active
 * publisher = "HinqZNO"
 * description = "Glucosemeting volgens NHG protocol. Duur: 1 week, 2x per dag"
-* useContext[0]
-  * code = $UCT#program
-  * valueCodeableConcept.text = "Digitale zorgmodule Diabetes"
-* useContext[1]
-  * code = $UCT#focus
-  * valueCodeableConcept.coding[0] = $SCT#44054006 "Diabetes mellitus type 2"
 * timingTiming.repeat
   * boundsDuration.value = 7
   * boundsDuration.system = "http://unitsofmeasure.org"
@@ -66,7 +60,7 @@ Usage: #example
   * period = 1
   * periodUnit = #d
 
-Instance: ProviderModule-Task-Meetopdracht-Glucosemeting
+Instance: ProviderModule-Task-Meetopdracht-Glucosemeting-1
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
@@ -79,7 +73,7 @@ Usage: #example
 * basedOn = Reference(ProviderModule-ServiceRequest-Glucosemeting)
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-123"
+  * value = "TASK-1"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-diabetes-2025"
@@ -87,16 +81,431 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Glucosemeting"
+* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten)"
 * for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-22"
+  * end = "2025-12-22"
+* authoredOn = "2025-12-22T18:00:00+01:00"
+* lastModified = "2025-12-22T18:00:00+01:00"
+* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+
+Instance: ProviderModule-Task-Meetopdracht-Glucosemeting-2
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Usage: #example
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
+* extension
+  * url = $koppeltaal-instantiates
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Glucosemeting)
+    * type = "ActivityDefinition"
+* basedOn = Reference(ProviderModule-ServiceRequest-Glucosemeting)
+* identifier
+  * system = "http://medrie.nl/taskIdentifier"
+  * value = "TASK-2"
+* groupIdentifier
+  * system = "https://medrie.nl/fhir/identifiers/task-group"
+  * value = "module-diabetes-2025"
+  * type.text = "Digitale zorgmodule Diabetes"
+* partOf = Reference(ProviderModule-Task-Meetopdracht-Glucosemeting-1)
+* status = #received
+* intent = #order
+* priority = #routine
+* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten)"
+* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* executionPeriod
+  * start = "2025-12-22"
+  * end = "2025-12-22"
+* authoredOn = "2025-12-22T18:00:00+01:00"
+* lastModified = "2025-12-22T18:00:00+01:00"
+* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+
+Instance: ProviderModule-Task-Meetopdracht-Glucosemeting-3
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Usage: #example
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
+* extension
+  * url = $koppeltaal-instantiates
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Glucosemeting)
+    * type = "ActivityDefinition"
+* basedOn = Reference(ProviderModule-ServiceRequest-Glucosemeting)
+* identifier
+  * system = "http://medrie.nl/taskIdentifier"
+  * value = "TASK-3"
+* groupIdentifier
+  * system = "https://medrie.nl/fhir/identifiers/task-group"
+  * value = "module-diabetes-2025"
+  * type.text = "Digitale zorgmodule Diabetes"
+* partOf = Reference(ProviderModule-Task-Meetopdracht-Glucosemeting-2)
+* status = #received
+* intent = #order
+* priority = #routine
+* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten)"
+* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* executionPeriod
+  * start = "2025-12-23"
+  * end = "2025-12-23"
+* authoredOn = "2025-12-22T18:00:00+01:00"
+* lastModified = "2025-12-22T18:00:00+01:00"
+* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+
+Instance: ProviderModule-Task-Meetopdracht-Glucosemeting-4
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Usage: #example
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
+* extension
+  * url = $koppeltaal-instantiates
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Glucosemeting)
+    * type = "ActivityDefinition"
+* basedOn = Reference(ProviderModule-ServiceRequest-Glucosemeting)
+* identifier
+  * system = "http://medrie.nl/taskIdentifier"
+  * value = "TASK-4"
+* groupIdentifier
+  * system = "https://medrie.nl/fhir/identifiers/task-group"
+  * value = "module-diabetes-2025"
+  * type.text = "Digitale zorgmodule Diabetes"
+* partOf = Reference(ProviderModule-Task-Meetopdracht-Glucosemeting-3)
+* status = #received
+* intent = #order
+* priority = #routine
+* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten)"
+* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* executionPeriod
+  * start = "2025-12-23"
+  * end = "2025-12-23"
+* authoredOn = "2025-12-22T18:00:00+01:00"
+* lastModified = "2025-12-22T18:00:00+01:00"
+* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+
+Instance: ProviderModule-Task-Meetopdracht-Glucosemeting-5
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Usage: #example
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
+* extension
+  * url = $koppeltaal-instantiates
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Glucosemeting)
+    * type = "ActivityDefinition"
+* basedOn = Reference(ProviderModule-ServiceRequest-Glucosemeting)
+* identifier
+  * system = "http://medrie.nl/taskIdentifier"
+  * value = "TASK-5"
+* groupIdentifier
+  * system = "https://medrie.nl/fhir/identifiers/task-group"
+  * value = "module-diabetes-2025"
+  * type.text = "Digitale zorgmodule Diabetes"
+* partOf = Reference(ProviderModule-Task-Meetopdracht-Glucosemeting-4)
+* status = #received
+* intent = #order
+* priority = #routine
+* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten)"
+* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* executionPeriod
+  * start = "2025-12-24"
+  * end = "2025-12-24"
+* authoredOn = "2025-12-22T18:00:00+01:00"
+* lastModified = "2025-12-22T18:00:00+01:00"
+* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+
+Instance: ProviderModule-Task-Meetopdracht-Glucosemeting-6
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Usage: #example
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
+* extension
+  * url = $koppeltaal-instantiates
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Glucosemeting)
+    * type = "ActivityDefinition"
+* basedOn = Reference(ProviderModule-ServiceRequest-Glucosemeting)
+* identifier
+  * system = "http://medrie.nl/taskIdentifier"
+  * value = "TASK-6"
+* groupIdentifier
+  * system = "https://medrie.nl/fhir/identifiers/task-group"
+  * value = "module-diabetes-2025"
+  * type.text = "Digitale zorgmodule Diabetes"
+* partOf = Reference(ProviderModule-Task-Meetopdracht-Glucosemeting-5)
+* status = #received
+* intent = #order
+* priority = #routine
+* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten)"
+* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* executionPeriod
+  * start = "2025-12-24"
+  * end = "2025-12-24"
+* authoredOn = "2025-12-22T18:00:00+01:00"
+* lastModified = "2025-12-22T18:00:00+01:00"
+* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+
+Instance: ProviderModule-Task-Meetopdracht-Glucosemeting-7
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Usage: #example
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
+* extension
+  * url = $koppeltaal-instantiates
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Glucosemeting)
+    * type = "ActivityDefinition"
+* basedOn = Reference(ProviderModule-ServiceRequest-Glucosemeting)
+* identifier
+  * system = "http://medrie.nl/taskIdentifier"
+  * value = "TASK-7"
+* groupIdentifier
+  * system = "https://medrie.nl/fhir/identifiers/task-group"
+  * value = "module-diabetes-2025"
+  * type.text = "Digitale zorgmodule Diabetes"
+* partOf = Reference(ProviderModule-Task-Meetopdracht-Glucosemeting-6)
+* status = #received
+* intent = #order
+* priority = #routine
+* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten)"
+* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* executionPeriod
+  * start = "2025-12-25"
+  * end = "2025-12-25"
+* authoredOn = "2025-12-22T18:00:00+01:00"
+* lastModified = "2025-12-22T18:00:00+01:00"
+* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+
+Instance: ProviderModule-Task-Meetopdracht-Glucosemeting-8
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Usage: #example
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
+* extension
+  * url = $koppeltaal-instantiates
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Glucosemeting)
+    * type = "ActivityDefinition"
+* basedOn = Reference(ProviderModule-ServiceRequest-Glucosemeting)
+* identifier
+  * system = "http://medrie.nl/taskIdentifier"
+  * value = "TASK-8"
+* groupIdentifier
+  * system = "https://medrie.nl/fhir/identifiers/task-group"
+  * value = "module-diabetes-2025"
+  * type.text = "Digitale zorgmodule Diabetes"
+* partOf = Reference(ProviderModule-Task-Meetopdracht-Glucosemeting-7)
+* status = #received
+* intent = #order
+* priority = #routine
+* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten)"
+* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* executionPeriod
+  * start = "2025-12-25"
+  * end = "2025-12-25"
+* authoredOn = "2025-12-22T18:00:00+01:00"
+* lastModified = "2025-12-22T18:00:00+01:00"
+* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+
+Instance: ProviderModule-Task-Meetopdracht-Glucosemeting-9
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Usage: #example
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
+* extension
+  * url = $koppeltaal-instantiates
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Glucosemeting)
+    * type = "ActivityDefinition"
+* basedOn = Reference(ProviderModule-ServiceRequest-Glucosemeting)
+* identifier
+  * system = "http://medrie.nl/taskIdentifier"
+  * value = "TASK-9"
+* groupIdentifier
+  * system = "https://medrie.nl/fhir/identifiers/task-group"
+  * value = "module-diabetes-2025"
+  * type.text = "Digitale zorgmodule Diabetes"
+* partOf = Reference(ProviderModule-Task-Meetopdracht-Glucosemeting-8)
+* status = #received
+* intent = #order
+* priority = #routine
+* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten)"
+* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* executionPeriod
+  * start = "2025-12-26"
+  * end = "2025-12-26"
+* authoredOn = "2025-12-22T18:00:00+01:00"
+* lastModified = "2025-12-22T18:00:00+01:00"
+* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+
+Instance: ProviderModule-Task-Meetopdracht-Glucosemeting-10
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Usage: #example
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
+* extension
+  * url = $koppeltaal-instantiates
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Glucosemeting)
+    * type = "ActivityDefinition"
+* basedOn = Reference(ProviderModule-ServiceRequest-Glucosemeting)
+* identifier
+  * system = "http://medrie.nl/taskIdentifier"
+  * value = "TASK-10"
+* groupIdentifier
+  * system = "https://medrie.nl/fhir/identifiers/task-group"
+  * value = "module-diabetes-2025"
+  * type.text = "Digitale zorgmodule Diabetes"
+* partOf = Reference(ProviderModule-Task-Meetopdracht-Glucosemeting-9)
+* status = #received
+* intent = #order
+* priority = #routine
+* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten)"
+* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* executionPeriod
+  * start = "2025-12-26"
+  * end = "2025-12-26"
+* authoredOn = "2025-12-22T18:00:00+01:00"
+* lastModified = "2025-12-22T18:00:00+01:00"
+* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+
+Instance: ProviderModule-Task-Meetopdracht-Glucosemeting-11
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Usage: #example
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
+* extension
+  * url = $koppeltaal-instantiates
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Glucosemeting)
+    * type = "ActivityDefinition"
+* basedOn = Reference(ProviderModule-ServiceRequest-Glucosemeting)
+* identifier
+  * system = "http://medrie.nl/taskIdentifier"
+  * value = "TASK-11"
+* groupIdentifier
+  * system = "https://medrie.nl/fhir/identifiers/task-group"
+  * value = "module-diabetes-2025"
+  * type.text = "Digitale zorgmodule Diabetes"
+* partOf = Reference(ProviderModule-Task-Meetopdracht-Glucosemeting-10)
+* status = #received
+* intent = #order
+* priority = #routine
+* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten)"
+* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* executionPeriod
+  * start = "2025-12-27"
+  * end = "2025-12-27"
+* authoredOn = "2025-12-22T18:00:00+01:00"
+* lastModified = "2025-12-22T18:00:00+01:00"
+* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+
+Instance: ProviderModule-Task-Meetopdracht-Glucosemeting-12
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Usage: #example
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
+* extension
+  * url = $koppeltaal-instantiates
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Glucosemeting)
+    * type = "ActivityDefinition"
+* basedOn = Reference(ProviderModule-ServiceRequest-Glucosemeting)
+* identifier
+  * system = "http://medrie.nl/taskIdentifier"
+  * value = "TASK-12"
+* groupIdentifier
+  * system = "https://medrie.nl/fhir/identifiers/task-group"
+  * value = "module-diabetes-2025"
+  * type.text = "Digitale zorgmodule Diabetes"
+* partOf = Reference(ProviderModule-Task-Meetopdracht-Glucosemeting-11)
+* status = #received
+* intent = #order
+* priority = #routine
+* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten)"
+* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* executionPeriod
+  * start = "2025-12-27"
+  * end = "2025-12-27"
+* authoredOn = "2025-12-22T18:00:00+01:00"
+* lastModified = "2025-12-22T18:00:00+01:00"
+* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+
+Instance: ProviderModule-Task-Meetopdracht-Glucosemeting-13
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Usage: #example
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
+* extension
+  * url = $koppeltaal-instantiates
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Glucosemeting)
+    * type = "ActivityDefinition"
+* basedOn = Reference(ProviderModule-ServiceRequest-Glucosemeting)
+* identifier
+  * system = "http://medrie.nl/taskIdentifier"
+  * value = "TASK-13"
+* groupIdentifier
+  * system = "https://medrie.nl/fhir/identifiers/task-group"
+  * value = "module-diabetes-2025"
+  * type.text = "Digitale zorgmodule Diabetes"
+* partOf = Reference(ProviderModule-Task-Meetopdracht-Glucosemeting-12)
+* status = #received
+* intent = #order
+* priority = #routine
+* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten)"
+* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* executionPeriod
+  * start = "2025-12-28"
   * end = "2025-12-28"
 * authoredOn = "2025-12-22T18:00:00+01:00"
 * lastModified = "2025-12-22T18:00:00+01:00"
 * requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
 * owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 
+Instance: ProviderModule-Task-Meetopdracht-Glucosemeting-14
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Usage: #example
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
+* extension
+  * url = $koppeltaal-instantiates
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Glucosemeting)
+    * type = "ActivityDefinition"
+* basedOn = Reference(ProviderModule-ServiceRequest-Glucosemeting)
+* identifier
+  * system = "http://medrie.nl/taskIdentifier"
+  * value = "TASK-14"
+* groupIdentifier
+  * system = "https://medrie.nl/fhir/identifiers/task-group"
+  * value = "module-diabetes-2025"
+  * type.text = "Digitale zorgmodule Diabetes"
+* partOf = Reference(ProviderModule-Task-Meetopdracht-Glucosemeting-13)
+* status = #received
+* intent = #order
+* priority = #routine
+* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten)"
+* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* executionPeriod
+  * start = "2025-12-28"
+  * end = "2025-12-28"
+* authoredOn = "2025-12-22T18:00:00+01:00"
+* lastModified = "2025-12-22T18:00:00+01:00"
+* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 
 Instance: ProviderModule-ActivityDefinition-Informatie-Diabetes
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-ActivityDefinition
@@ -117,12 +526,6 @@ Usage: #example
 * status = #active
 * publisher = "HinqZNO"
 * description = "Dit is een algemene toelichting over diabetes type 2"
-* useContext[0]
-  * code = $UCT#program
-  * valueCodeableConcept.text = "Digitale zorgmodule Diabetes"
-* useContext[1]
-  * code = $UCT#focus
-  * valueCodeableConcept.coding[0] = $SCT#44054006 "Diabetes mellitus type 2"
 
 
 Instance: ProviderModule-Task-Informatie-Diabetes
@@ -145,7 +548,7 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Wat is diabetes type 2?"
+* description = "Lees: Wat is diabetes type 2?"
 * for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-22"
@@ -175,12 +578,6 @@ Usage: #example
 * status = #active
 * publisher = "HinqZNO"
 * description = "Dit is informatie over gezonder gaan leven"
-* useContext[0]
-  * code = $UCT#program
-  * valueCodeableConcept.text = "Digitale zorgmodule Diabetes"
-* useContext[1]
-  * code = $UCT#focus
-  * valueCodeableConcept.coding[0] = $SCT#44054006 "Diabetes mellitus type 2"
 
 Instance: ProviderModule-Task-Informatie-Gezonder-Leven
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
@@ -202,7 +599,7 @@ Usage: #example
 * status = #requested
 * intent = #order
 * priority = #routine
-* description = "Informatie over gezonder gaan leven"
+* description = "Lees de Informatie over gezonder gaan leven"
 * for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-22"
@@ -232,12 +629,7 @@ Usage: #example
 * status = #active
 * publisher = "HinqZNO"
 * description = "Vragenlijst over de woon- leefsituatie"
-* useContext[0]
-  * code = $UCT#program
-  * valueCodeableConcept.text = "Digitale zorgmodule Diabetes"
-* useContext[1]
-  * code = $UCT#focus
-  * valueCodeableConcept.coding[0] = $SCT#44054006 "Diabetes mellitus type 2"
+
 
 Instance: ProviderModule-Task-Vragenlijst-WoonLeefsituatie
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
@@ -259,7 +651,7 @@ Usage: #example
 * status = #requested
 * intent = #order
 * priority = #routine
-* description = "Vragenlijst woon/leefsituatie"
+* description = "Vul de vragenlijst in over je woon/leefsituatie"
 * for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-22"
