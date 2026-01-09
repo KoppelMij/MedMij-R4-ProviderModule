@@ -111,7 +111,7 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Meet je bloeddruk"
+* description = "Meet je bloeddruk in de ochtend nuchter (voor het ontbijt) en in de avond voor het avondeten. Noteer de waarde in de app. Je metingen helpen je zorgverlener om te zien hoe het met je gaat en of je behandeling moet worden aangepast."
 * for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-12-22"
@@ -143,7 +143,7 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Meet je bloeddruk"
+* description = "Meet je bloeddruk in de ochtend nuchter (voor het ontbijt) en in de avond voor het avondeten. Noteer de waarde in de app. Je metingen helpen je zorgverlener om te zien hoe het met je gaat en of je behandeling moet worden aangepast."
 * for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-12-23"
@@ -175,7 +175,7 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Meet je bloeddruk"
+* description = "Meet je bloeddruk in de ochtend nuchter (voor het ontbijt) en in de avond voor het avondeten. Noteer de waarde in de app. Je metingen helpen je zorgverlener om te zien hoe het met je gaat en of je behandeling moet worden aangepast."
 * for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-12-23"
@@ -207,7 +207,7 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Meet je bloeddruk"
+* description = "Meet je bloeddruk in de ochtend nuchter (voor het ontbijt) en in de avond voor het avondeten. Noteer de waarde in de app. Je metingen helpen je zorgverlener om te zien hoe het met je gaat en of je behandeling moet worden aangepast."
 * for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-12-24"
@@ -239,7 +239,7 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Meet je bloeddruk"
+* description = "Meet je bloeddruk in de ochtend nuchter (voor het ontbijt) en in de avond voor het avondeten. Noteer de waarde in de app. Je metingen helpen je zorgverlener om te zien hoe het met je gaat en of je behandeling moet worden aangepast."
 * for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-12-24"
@@ -271,7 +271,7 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Meet je bloeddruk"
+* description = "Meet je bloeddruk in de ochtend nuchter (voor het ontbijt) en in de avond voor het avondeten. Noteer de waarde in de app. Je metingen helpen je zorgverlener om te zien hoe het met je gaat en of je behandeling moet worden aangepast."
 * for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-12-25"
@@ -303,7 +303,7 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Meet je bloeddruk"
+* description = "Meet je bloeddruk in de ochtend nuchter (voor het ontbijt) en in de avond voor het avondeten. Noteer de waarde in de app. Je metingen helpen je zorgverlener om te zien hoe het met je gaat en of je behandeling moet worden aangepast."
 * for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-12-25"
@@ -335,7 +335,7 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Meet je bloeddruk"
+* description = "Meet je bloeddruk in de ochtend nuchter (voor het ontbijt) en in de avond voor het avondeten. Noteer de waarde in de app. Je metingen helpen je zorgverlener om te zien hoe het met je gaat en of je behandeling moet worden aangepast."
 * for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-12-26"
@@ -367,7 +367,7 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Meet je bloeddruk"
+* description = "Meet je bloeddruk in de ochtend nuchter (voor het ontbijt) en in de avond voor het avondeten. Noteer de waarde in de app. Je metingen helpen je zorgverlener om te zien hoe het met je gaat en of je behandeling moet worden aangepast."
 * for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-12-26"
@@ -399,7 +399,7 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Meet je bloeddruk"
+* description = "Meet je bloeddruk in de ochtend nuchter (voor het ontbijt) en in de avond voor het avondeten. Noteer de waarde in de app. Je metingen helpen je zorgverlener om te zien hoe het met je gaat en of je behandeling moet worden aangepast."
 * for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-12-27"
@@ -431,7 +431,7 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Meet je bloeddruk"
+* description = "Meet je bloeddruk in de ochtend nuchter (voor het ontbijt) en in de avond voor het avondeten. Noteer de waarde in de app. Je metingen helpen je zorgverlener om te zien hoe het met je gaat en of je behandeling moet worden aangepast."
 * for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-12-27"
@@ -463,7 +463,7 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Meet je bloeddruk"
+* description = "Meet je bloeddruk in de ochtend nuchter (voor het ontbijt) en in de avond voor het avondeten. Noteer de waarde in de app. Je metingen helpen je zorgverlener om te zien hoe het met je gaat en of je behandeling moet worden aangepast."
 * for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-12-28"
@@ -495,7 +495,7 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Meet je bloeddruk"
+* description = "Meet je bloeddruk in de ochtend nuchter (voor het ontbijt) en in de avond voor het avondeten. Noteer de waarde in de app. Je metingen helpen je zorgverlener om te zien hoe het met je gaat en of je behandeling moet worden aangepast."
 * for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-12-28"
@@ -523,7 +523,7 @@ Usage: #example
 * title = "Wat is cholesterol en wat zijn de risico's?"
 * status = #active
 * publisher = "Minddistrict"
-* description = "Dit is een algemene toelichting over wat is cholesterol en wat zijn de risico's"
+* description = "Voorlichtingsmodule cholesterol: uitlegmateriaal over wat cholesterol is, cardiovasculaire risico’s en leefstijl-/behandelopties ter ondersteuning van CVRM en gezamenlijke besluitvorming."
 
 Instance: ProviderModule-Task-Informatie-Cholesterol
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
@@ -545,7 +545,7 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Lees de informatie over wat is cholesterol en wat zijn de risico's?"
+* description = "Lees wat cholesterol is, welke risico’s erbij horen en wat je kunt doen met leefstijl en/of medicijnen."
 * for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-12-22"
@@ -574,7 +574,7 @@ Usage: #example
 * title = "Informatie over thuis bloeddruk meten"
 * status = #active
 * publisher = "Minddistrict"
-* description = "Informatie over thuis bloeddruk meten"
+* description = "Instructiemodule thuismetingen bloeddruk: patiëntinstructie voor correcte meetmethode (rust, houding, manchet, meetmomenten) en registratie, ter verbetering van betrouwbaarheid van thuismetingen"
 
 Instance: ProviderModule-Task-Informatie-Thuis-Bloeddrukmeten
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
@@ -596,7 +596,7 @@ Usage: #example
 * status = #requested
 * intent = #order
 * priority = #routine
-* description = "Beijk de informatie over je thuis je bloeddruk goed meet"
+* description = "In deze module leer je stap voor stap hoe je thuis je bloeddruk goed meet. Je krijgt tips over voorbereiding (eerst 5 minuten rustig zitten), de juiste houding, hoe je de manchet plaatst en wanneer je het beste meet. Ook lees je wat je kunt doen om meetfouten te voorkomen (zoals praten tijdens het meten of meten direct na koffie of inspanning) en hoe je je waarden in de app noteert. Zo worden je metingen betrouwbaarder en kan je zorgverlener er beter op sturen."
 * for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-12-22"
@@ -625,7 +625,7 @@ Usage: #example
 * title = "Vragenlijst over uw situatie op gebied van hart- en vaatziekten"
 * status = #active
 * publisher = "Minddistrict"
-* description = "Vragenlijst over uw situatie op gebied van hart- en vaatziekten"
+* description = "Vragenlijst ‘Uw situatie’ om relevante klachten, leefstijl en risicofactoren rond hart- en vaatziekten te inventariseren als basis voor behandelafspraken."
 
 Instance: ProviderModule-Task-Vragenlijst-Uw-Situatie
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
@@ -647,7 +647,7 @@ Usage: #example
 * status = #requested
 * intent = #order
 * priority = #routine
-* description = "Vul de vragenlijst in over jouw situatie rond hart- en vaatziekten"
+* description = "In deze vragenlijst beantwoord je vragen over jouw situatie rond hart- en vaatziekten. Denk aan klachten, leefstijl (zoals bewegen, roken en voeding) en andere factoren die invloed kunnen hebben op je gezondheid. Je antwoorden helpen jou en je zorgverlener om een compleet beeld te krijgen en samen te bepalen welke stappen het meest belangrijk zijn."
 * for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-12-22"

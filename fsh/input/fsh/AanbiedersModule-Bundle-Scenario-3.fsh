@@ -245,7 +245,7 @@ Usage: #example
 * owner = Reference(ProviderModule-Patient-Van-Dijk) "Sanne van Dijk"
 
 
-Instance: ProviderModule-ActivityDefinition-Informatie-leven-COPD
+Instance: ProviderModule-ActivityDefinition-Informatie-Leven-COPD
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-ActivityDefinition
 Usage: #example
 * text
@@ -263,7 +263,7 @@ Usage: #example
 * title = "Informatie over leven met COPD"
 * status = #active
 * publisher = "HinqZNO"
-* description = "Dit is een algemene informatie over leven met COPD"
+* description = "Informatieve module voor patiënt: leven met COPD, inclusief inhalatiegebruik, energieverdeling, beweging en omgaan met benauwdheid."
 
 
 Instance: ProviderModule-Task-Informatie-leven-COPD
@@ -274,7 +274,7 @@ Usage: #example
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Informatie-Cholesterol)
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Informatie-Leven-COPD)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://hinq.nl/taskIdentifier"
@@ -286,7 +286,7 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Lees de informatie over leven met COPD"
+* description = "Lees praktische tips om met COPD te leven: omgaan met benauwdheid, bewegen, energie verdelen en herkennen van verslechtering."
 * for = Reference(ProviderModule-Patient-Van-Dijk) "Sanne van Dijk"
 * executionPeriod
   * start = "2025-12-22"
@@ -297,7 +297,7 @@ Usage: #example
 * owner = Reference(ProviderModule-Patient-Van-Dijk) "Sanne van Dijk"
 
 
-Instance: ProviderModule-ActivityDefinition-Informatie-Thuismeting
+Instance: ProviderModule-ActivityDefinition-Informatie-Inhalatiemedicatie
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-ActivityDefinition
 Usage: #example
 * text
@@ -311,13 +311,13 @@ Usage: #example
   * url = $client-id
   * valueString = "dvaaanbiedersmodule"
 * version = "1.0.0"
-* name = "Informatie over thuis bloeddruk meten"
-* title = "Informatie over thuis bloeddruk meten"
+* name = "Instructiemodule inhalatiemedicatie"
+* title = "Instructiemodule inhalatiemedicatie"
 * status = #active
 * publisher = "HinqZNO"
-* description = "Informatie over thuis bloeddruk meten"
+* description = "Instructiemodule inhalatiemedicatie: juiste inhalatietechniek, therapietrouw en praktische adviezen (inclusief controlepunten en veelgemaakte fouten)."
 
-Instance: ProviderModule-Task-Informatie-Thuis-Bloeddrukmeten
+Instance: ProviderModule-Task-Informatie-Informatie-Inhalatiemedicatie
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
@@ -325,7 +325,7 @@ Usage: #example
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Informatie-Thuismeting)
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Informatie-Inhalatiemedicatie)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://hinq.nl/taskIdentifier"
@@ -337,7 +337,7 @@ Usage: #example
 * status = #requested
 * intent = #order
 * priority = #routine
-* description = "Informatie over thuis bloeddruk meten"
+* description = "In deze module leer je hoe je je inhalatiemedicatie goed gebruikt. Je krijgt stap-voor-stap uitleg voor jouw inhalator, tips om veelgemaakte fouten te voorkomen en een handig geheugensteuntje voor vaste innamemomenten. Zo komt de medicatie beter in je longen en heb je meer kans op minder klachten. Je leest ook wanneer je contact opneemt met je zorgverlener, bijvoorbeeld bij toenemende benauwdheid of bijwerkingen."
 * for = Reference(ProviderModule-Patient-Van-Dijk) "Sanne van Dijk"
 * executionPeriod
   * start = "2025-12-22"
@@ -348,7 +348,7 @@ Usage: #example
 * owner = Reference(ProviderModule-Patient-Van-Dijk) "Sanne van Dijk"
 
 
-Instance: ProviderModule-ActivityDefinition-Vragenlijst-Uw-Situatie
+Instance: ProviderModule-ActivityDefinition-Vragenlijst-Wat-Bereiken
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-ActivityDefinition
 Usage: #example
 * text
@@ -362,14 +362,14 @@ Usage: #example
   * url = $client-id
   * valueString = "dvaaanbiedersmodule"
 * version = "1.0.0"
-* name = "Uw situatie op gebied van hart- en vaatziekten"
-* title = "Vragenlijst over uw situatie op gebied van hart- en vaatziekten"
+* name = "Vragenlijst: Wat wilt u bereiken?"
+* title = "Vragenlijst: Wat wilt u bereiken?"
 * status = #active
 * publisher = "HinqZNO"
-* description = "Vragenlijst over uw situatie op gebied van hart- en vaatziekten"
+* description = "Vragenlijst Wat wilt u bereiken? om patiëntdoelen en prioriteiten in kaart te brengen als basis voor gezamenlijke besluitvorming en het behandel-/zelfmanagementplan."
 
 
-Instance: ProviderModule-Task-Vragenlijst-Uw-Situatie
+Instance: ProviderModule-Task-Vragenlijst-Wat-Bereiken
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
@@ -377,7 +377,7 @@ Usage: #example
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Vragenlijst-Uw-Situatie)
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Vragenlijst-Wat-Bereiken)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://hinq.nl/taskIdentifier"
@@ -389,7 +389,7 @@ Usage: #example
 * status = #requested
 * intent = #order
 * priority = #routine
-* description = "Vragenlijst over uw situatie op gebied van hart- en vaatziekten"
+* description = "In deze vragenlijst geef je aan wat je belangrijk vindt en wat je wilt bereiken met je behandeling of begeleiding. Denk aan doelen zoals meer energie, beter kunnen bewegen, minder benauwdheid of je zekerder voelen in het dagelijks leven. Er zijn geen goede of foute antwoorden: het gaat om wat voor jou werkt. Je antwoorden helpen jou en je zorgverlener om samen afspraken te maken die passen bij jouw situatie."
 * for = Reference(ProviderModule-Patient-Van-Dijk) "Sanne van Dijk"
 * executionPeriod
   * start = "2025-12-22"

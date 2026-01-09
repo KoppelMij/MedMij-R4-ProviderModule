@@ -81,7 +81,7 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten)"
+* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
 * for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-22"
@@ -113,7 +113,7 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten)"
+* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
 * for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-22"
@@ -145,7 +145,7 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten)"
+* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
 * for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-23"
@@ -177,7 +177,7 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten)"
+* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
 * for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-23"
@@ -209,7 +209,7 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten)"
+* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
 * for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-24"
@@ -241,7 +241,7 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten)"
+* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
 * for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-24"
@@ -273,7 +273,7 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten)"
+* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
 * for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-25"
@@ -305,7 +305,7 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten)"
+* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
 * for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-25"
@@ -337,7 +337,7 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten)"
+* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
 * for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-26"
@@ -369,7 +369,7 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten)"
+* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
 * for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-26"
@@ -401,7 +401,7 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten)"
+* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
 * for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-27"
@@ -433,7 +433,7 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten)"
+* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
 * for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-27"
@@ -465,7 +465,7 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten)"
+* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
 * for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-28"
@@ -497,7 +497,7 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten)"
+* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
 * for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-28"
@@ -525,7 +525,7 @@ Usage: #example
 * title = "Wat is diabetes type 2?"
 * status = #active
 * publisher = "HinqZNO"
-* description = "Dit is een algemene toelichting over diabetes type 2"
+* description = "Voorlichtingsmodule ‘Wat is diabetes type 2?’: basisuitleg over het ziektebeeld, oorzaken/risicofactoren, klachten, metingen (glucose/HbA1c) en behandelprincipes (leefstijl en medicatie) ter ondersteuning van educatie en zelfmanagement."
 
 
 Instance: ProviderModule-Task-Informatie-Diabetes
@@ -548,7 +548,7 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Lees: Wat is diabetes type 2?"
+* description = "Lees wat diabetes type 2 is en wat je zelf kunt doen"
 * for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-22"
@@ -577,7 +577,7 @@ Usage: #example
 * title = "Gezonder gaan leven"
 * status = #active
 * publisher = "HinqZNO"
-* description = "Dit is informatie over gezonder gaan leven"
+* description = "Leefstijlmodule binnen de digitale zorgmodule Diabetes: praktische informatie en motivatie voor gezonder leven (voeding, beweging, gewicht, stoppen met roken, alcohol en slaap) ter ondersteuning van glykemische controle en cardiovasculair risicomanagement."
 
 Instance: ProviderModule-Task-Informatie-Gezonder-Leven
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
@@ -599,7 +599,7 @@ Usage: #example
 * status = #requested
 * intent = #order
 * priority = #routine
-* description = "Lees de Informatie over gezonder gaan leven"
+* description = "Lees tips voor gezonder leven (voeding, bewegen en volhouden)"
 * for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-22"
@@ -628,7 +628,7 @@ Usage: #example
 * title = "Vragenlijst over de woon- leefsituatie"
 * status = #active
 * publisher = "HinqZNO"
-* description = "Vragenlijst over de woon- leefsituatie"
+* description = "Vragenlijst woon-/leefsituatie binnen de digitale zorgmodule Diabetes om contextfactoren (wonen, dagelijks functioneren, ondersteuning, leefstijl en mogelijkheden/belemmeringen) in kaart te brengen als basis voor persoonsgerichte begeleiding en haalbare leefstijlafspraken."
 
 
 Instance: ProviderModule-Task-Vragenlijst-WoonLeefsituatie
