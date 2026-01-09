@@ -480,30 +480,3 @@ Usage: #example
   * system = #email
   * value = "m.vanrijn@huisartspraktijk-example.nl"
   * use = #work
-
-Instance: ProviderModule-Organization-Huisartsenpraktijk-Medrie
-InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization
-Usage: #example
-* text
-  * status = #generated
-  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Organisatie: Huisartsenpraktijk <br/>AGB-code: 01010235<br/>Telefoon: +31653603740<br/>E-mail: huisartsenpraktijk-dehaard@huisarts.nl<br/>Adres: Dr. Klinkertweg 18, 8004 DB Zwolle</div>"
-* identifier
-  * system = "http://fhir.nl/fhir/NamingSystem/agb-z"
-  * value = "01010235"
-* name = "Ondersteuning Huisartsenpraktijk Medrie Bv"
-* telecom[0]
-  * system = #phone
-  * value = "+31653603740"
-  * use = #work
-* telecom[1]
-  * system = #email
-  * value = "huisartsenpraktijk-dehaard@huisarts.nl"
-  * use = #work
-* address
-  * extension[http://nictiz.nl/fhir/StructureDefinition/ext-AddressInformation.AddressType].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-AddressUse#WP "Work Place"
-  * use = #work
-  * line = "Dr. Klinkertweg 18"
-    * extension[http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName].valueString = "Dr. Klinkertweg"
-    * extension[http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber].valueString = "18"
-  * city = "Zwolle"
-  * postalCode = "8004 DB"
