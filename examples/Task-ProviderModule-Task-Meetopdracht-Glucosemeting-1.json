@@ -1,6 +1,6 @@
 {
   "resourceType": "Task",
-  "id": "ProviderModule-Task-Meetopdracht-Glucosemeting",
+  "id": "ProviderModule-Task-Meetopdracht-Glucosemeting-1",
   "meta": {
     "profile": [
       "http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task"
@@ -27,7 +27,7 @@
   "identifier": [
     {
       "system": "http://medrie.nl/taskIdentifier",
-      "value": "TASK-123"
+      "value": "TASK-1"
     }
   ],
   "groupIdentifier": {
@@ -40,23 +40,14 @@
   "status": "received",
   "intent": "order",
   "priority": "routine",
-  "code": {
-    "coding": [
-      {
-        "code": "launch-app-standalone",
-        "system": "http://hl7.org/fhir/smart-app-launch/CodeSystem/smart-codes",
-        "display": "Launch application using the SMART standalone launch"
-      }
-    ]
-  },
-  "description": "Glucosemeting",
+  "description": "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app",
   "for": {
     "reference": "Patient/ProviderModule-Patient-Van-Duinen",
     "display": "Tom van Duinen"
   },
   "executionPeriod": {
     "start": "2025-12-22",
-    "end": "2025-12-28"
+    "end": "2025-12-22"
   },
   "authoredOn": "2025-12-22T18:00:00+01:00",
   "lastModified": "2025-12-22T18:00:00+01:00",

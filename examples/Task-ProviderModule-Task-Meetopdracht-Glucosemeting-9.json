@@ -1,6 +1,6 @@
 {
   "resourceType": "Task",
-  "id": "ProviderModule-Task-Informatie-Gezonder-Leven",
+  "id": "ProviderModule-Task-Meetopdracht-Glucosemeting-9",
   "meta": {
     "profile": [
       "http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task"
@@ -14,15 +14,20 @@
     {
       "url": "http://vzvz.nl/fhir/StructureDefinition/instantiates",
       "valueReference": {
-        "reference": "ActivityDefinition/ProviderModule-ActivityDefinition-Informatie-Gezonder-Leven",
+        "reference": "ActivityDefinition/ProviderModule-ActivityDefinition-Meetopdracht-Glucosemeting",
         "type": "ActivityDefinition"
       }
+    }
+  ],
+  "basedOn": [
+    {
+      "reference": "ServiceRequest/ProviderModule-ServiceRequest-Glucosemeting"
     }
   ],
   "identifier": [
     {
       "system": "http://medrie.nl/taskIdentifier",
-      "value": "TASK-6789"
+      "value": "TASK-9"
     }
   ],
   "groupIdentifier": {
@@ -32,20 +37,25 @@
       "text": "Digitale zorgmodule Diabetes"
     }
   },
-  "status": "requested",
+  "partOf": [
+    {
+      "reference": "Task/ProviderModule-Task-Meetopdracht-Glucosemeting-8"
+    }
+  ],
+  "status": "received",
   "intent": "order",
   "priority": "routine",
-  "description": "Lees tips voor gezonder leven (voeding, bewegen en volhouden)",
+  "description": "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app",
   "for": {
     "reference": "Patient/ProviderModule-Patient-Van-Duinen",
     "display": "Tom van Duinen"
   },
   "executionPeriod": {
-    "start": "2025-12-22",
-    "end": "2025-12-28"
+    "start": "2025-12-26",
+    "end": "2025-12-26"
   },
-  "authoredOn": "2025-12-24T07:00:00+01:00",
-  "lastModified": "2025-12-24T07:00:00+01:00",
+  "authoredOn": "2025-12-22T18:00:00+01:00",
+  "lastModified": "2025-12-22T18:00:00+01:00",
   "requester": {
     "reference": "PractitionerRole/ProviderModule-PractitionerRole-De-Haard",
     "display": "A. de Haard, Huisarts"

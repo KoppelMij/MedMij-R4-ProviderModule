@@ -18,41 +18,15 @@
       }
     },
     {
-      "url": "http://example.org/fhir/StructureDefinition/client-id",
+      "url": "http://medmij.nl/fhir/StructureDefinition/client-id",
       "valueString": "dvaaanbiedersmodule"
     }
   ],
-  "url": "https://aanbiedermodule.example.org/web/api/smartonfhir/launch?iss=resourceserver.example.dva.nl",
+  "url": "https://example.com/activities/zorgmodulecvrm",
   "version": "1.0.0",
   "name": "Informatie over thuis bloeddruk meten",
   "title": "Informatie over thuis bloeddruk meten",
   "status": "active",
   "publisher": "Minddistrict",
-  "description": "Informatie over thuis bloeddruk meten",
-  "useContext": [
-    {
-      "code": {
-        "code": "program",
-        "system": "http://terminology.hl7.org/CodeSystem/usage-context-type"
-      },
-      "valueCodeableConcept": {
-        "text": "Digitale zorgmodule CVRM"
-      }
-    },
-    {
-      "code": {
-        "code": "focus",
-        "system": "http://terminology.hl7.org/CodeSystem/usage-context-type"
-      },
-      "valueCodeableConcept": {
-        "coding": [
-          {
-            "code": "84114007",
-            "system": "http://snomed.info/sct",
-            "display": "hartfalen"
-          }
-        ]
-      }
-    }
-  ]
+  "description": "Instructiemodule thuismetingen bloeddruk: patiëntinstructie voor correcte meetmethode (rust, houding, manchet, meetmomenten) en registratie, ter verbetering van betrouwbaarheid van thuismetingen"
 }

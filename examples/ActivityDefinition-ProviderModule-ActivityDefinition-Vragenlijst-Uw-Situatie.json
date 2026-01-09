@@ -18,41 +18,15 @@
       }
     },
     {
-      "url": "http://example.org/fhir/StructureDefinition/client-id",
+      "url": "http://medmij.nl/fhir/StructureDefinition/client-id",
       "valueString": "dvaaanbiedersmodule"
     }
   ],
-  "url": "https://aanbiedermodule.example.org/web/api/smartonfhir/launch?iss=resourceserver.example.dva.nl",
+  "url": "https://example.com/activities/zorgmodulecvrm",
   "version": "1.0.0",
   "name": "Uw situatie op gebied van hart- en vaatziekten",
   "title": "Vragenlijst over uw situatie op gebied van hart- en vaatziekten",
   "status": "active",
   "publisher": "Minddistrict",
-  "description": "Vragenlijst over uw situatie op gebied van hart- en vaatziekten",
-  "useContext": [
-    {
-      "code": {
-        "code": "program",
-        "system": "http://terminology.hl7.org/CodeSystem/usage-context-type"
-      },
-      "valueCodeableConcept": {
-        "text": "Digitale zorgmodule CVRM"
-      }
-    },
-    {
-      "code": {
-        "code": "focus",
-        "system": "http://terminology.hl7.org/CodeSystem/usage-context-type"
-      },
-      "valueCodeableConcept": {
-        "coding": [
-          {
-            "code": "84114007",
-            "system": "http://snomed.info/sct",
-            "display": "hartfalen"
-          }
-        ]
-      }
-    }
-  ]
+  "description": "Vragenlijst ‘Uw situatie’ om relevante klachten, leefstijl en risicofactoren rond hart- en vaatziekten te inventariseren als basis voor behandelafspraken."
 }

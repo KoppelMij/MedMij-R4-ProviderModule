@@ -1,6 +1,6 @@
 {
   "resourceType": "Task",
-  "id": "ProviderModule-Task-Informatie-Cholesterol",
+  "id": "ProviderModule-Task-Informatie-leven-COPD",
   "meta": {
     "profile": [
       "http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task"
@@ -14,31 +14,31 @@
     {
       "url": "http://vzvz.nl/fhir/StructureDefinition/instantiates",
       "valueReference": {
-        "reference": "ActivityDefinition/ProviderModule-ActivityDefinition-Informatie-Cholesterol",
+        "reference": "ActivityDefinition/ProviderModule-ActivityDefinition-Informatie-Leven-COPD",
         "type": "ActivityDefinition"
       }
     }
   ],
   "identifier": [
     {
-      "system": "http://medrie.nl/taskIdentifier",
-      "value": "TASK-88887"
+      "system": "http://hinq.nl/taskIdentifier",
+      "value": "TASK-1673834"
     }
   ],
   "groupIdentifier": {
-    "system": "https://medrie.nl/fhir/identifiers/task-group",
-    "value": "module-CVRM-2025",
+    "system": "https://hinq.nl/fhir/identifiers/task-group",
+    "value": "module-COPD-2026",
     "type": {
-      "text": "Digitale zorgmodule CVRM"
+      "text": "Digitale zorgmodule COPD"
     }
   },
   "status": "received",
   "intent": "order",
   "priority": "routine",
-  "description": "Lees wat cholesterol is, welke risico’s erbij horen en wat je kunt doen met leefstijl en/of medicijnen.",
+  "description": "Lees praktische tips om met COPD te leven: omgaan met benauwdheid, bewegen, energie verdelen en herkennen van verslechtering.",
   "for": {
-    "reference": "Patient/ProviderModule-Patient-De-Groot",
-    "display": "Koos de Groot"
+    "reference": "Patient/ProviderModule-Patient-Van-Dijk",
+    "display": "Sanne van Dijk"
   },
   "executionPeriod": {
     "start": "2025-12-22",
@@ -47,11 +47,11 @@
   "authoredOn": "2025-12-23T07:00:00+01:00",
   "lastModified": "2025-12-23T07:00:00+01:00",
   "requester": {
-    "reference": "PractitionerRole/ProviderModule-PractitionerRole-De-Jong",
-    "display": "L. de Jong, Huisarts"
+    "reference": "PractitionerRole/ProviderModule-PractitionerRole-Van-Rijn",
+    "display": "M. van Rijn, huisarts"
   },
   "owner": {
-    "reference": "Patient/ProviderModule-Patient-De-Groot",
-    "display": "Koos de Groot"
+    "reference": "Patient/ProviderModule-Patient-Van-Dijk",
+    "display": "Sanne van Dijk"
   }
 }

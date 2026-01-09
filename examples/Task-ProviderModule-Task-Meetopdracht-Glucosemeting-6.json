@@ -1,6 +1,6 @@
 {
   "resourceType": "Task",
-  "id": "ProviderModule-Task-Meetopdracht-Bloeddrukmeting",
+  "id": "ProviderModule-Task-Meetopdracht-Glucosemeting-6",
   "meta": {
     "profile": [
       "http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task"
@@ -14,49 +14,45 @@
     {
       "url": "http://vzvz.nl/fhir/StructureDefinition/instantiates",
       "valueReference": {
-        "reference": "ActivityDefinition/ProviderModule-ActivityDefinition-Meetopdracht-Bloeddrukmeting",
+        "reference": "ActivityDefinition/ProviderModule-ActivityDefinition-Meetopdracht-Glucosemeting",
         "type": "ActivityDefinition"
       }
     }
   ],
   "basedOn": [
     {
-      "reference": "ServiceRequest/ProviderModule-ServiceRequest-Bloeddrukmeting"
+      "reference": "ServiceRequest/ProviderModule-ServiceRequest-Glucosemeting"
     }
   ],
   "identifier": [
     {
       "system": "http://medrie.nl/taskIdentifier",
-      "value": "TASK-99998"
+      "value": "TASK-6"
     }
   ],
   "groupIdentifier": {
     "system": "https://medrie.nl/fhir/identifiers/task-group",
-    "value": "module-CVRM-2025",
+    "value": "module-diabetes-2025",
     "type": {
-      "text": "Digitale zorgmodule CVRM"
+      "text": "Digitale zorgmodule Diabetes"
     }
   },
+  "partOf": [
+    {
+      "reference": "Task/ProviderModule-Task-Meetopdracht-Glucosemeting-5"
+    }
+  ],
   "status": "received",
   "intent": "order",
   "priority": "routine",
-  "code": {
-    "coding": [
-      {
-        "code": "launch-app-standalone",
-        "system": "http://hl7.org/fhir/smart-app-launch/CodeSystem/smart-codes",
-        "display": "Launch application using the SMART standalone launch"
-      }
-    ]
-  },
-  "description": "Bloeddrukmeting",
+  "description": "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app",
   "for": {
-    "reference": "Patient/ProviderModule-Patient-De-Groot",
-    "display": "Koos de Groot"
+    "reference": "Patient/ProviderModule-Patient-Van-Duinen",
+    "display": "Tom van Duinen"
   },
   "executionPeriod": {
-    "start": "2025-12-22",
-    "end": "2025-12-28"
+    "start": "2025-12-24",
+    "end": "2025-12-24"
   },
   "authoredOn": "2025-12-22T18:00:00+01:00",
   "lastModified": "2025-12-22T18:00:00+01:00",
@@ -65,7 +61,7 @@
     "display": "A. de Haard, Huisarts"
   },
   "owner": {
-    "reference": "Patient/ProviderModule-Patient-De-Groot",
-    "display": "Koos de Groot"
+    "reference": "Patient/ProviderModule-Patient-Van-Duinen",
+    "display": "Tom van Duinen"
   }
 }

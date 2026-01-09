@@ -1,6 +1,6 @@
 {
   "resourceType": "ActivityDefinition",
-  "id": "ProviderModule-ActivityDefinition-Informatie-Diabetes",
+  "id": "ProviderModule-ActivityDefinition-Meetopdracht-Saturatiemeting",
   "meta": {
     "profile": [
       "http://medmij.nl/fhir/StructureDefinition/ProviderModule-ActivityDefinition"
@@ -19,14 +19,27 @@
     },
     {
       "url": "http://medmij.nl/fhir/StructureDefinition/client-id",
-      "valueString": "dvaaanbiedersmodulesweb"
+      "valueString": "dvaaanbiedersmodule"
     }
   ],
-  "url": "https://example.com/activities/zorgmodulediabetes",
+  "url": "https://example.com/activities/zorgmodulecopd",
   "version": "1.0.0",
-  "name": "Informatie over diabetes type 2",
-  "title": "Wat is diabetes type 2?",
+  "name": "Meetopdacht saturatiemeting",
+  "title": "Saturatiemeting",
   "status": "active",
   "publisher": "HinqZNO",
-  "description": "Voorlichtingsmodule ‘Wat is diabetes type 2?’: basisuitleg over het ziektebeeld, oorzaken/risicofactoren, klachten, metingen (glucose/HbA1c) en behandelprincipes (leefstijl en medicatie) ter ondersteuning van educatie en zelfmanagement."
+  "description": "Saturatiemeting volgens NHG protocol. 1 week, 1x per dag",
+  "timingTiming": {
+    "repeat": {
+      "boundsDuration": {
+        "value": 7,
+        "system": "http://unitsofmeasure.org",
+        "code": "d",
+        "unit": "day"
+      },
+      "frequency": 1,
+      "period": 1,
+      "periodUnit": "d"
+    }
+  }
 }

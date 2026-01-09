@@ -35,16 +35,7 @@
   "status": "requested",
   "intent": "order",
   "priority": "routine",
-  "code": {
-    "coding": [
-      {
-        "code": "launch-app-standalone",
-        "system": "http://hl7.org/fhir/smart-app-launch/CodeSystem/smart-codes",
-        "display": "Launch application using the SMART standalone launch"
-      }
-    ]
-  },
-  "description": "Informatie over thuis bloeddruk meten",
+  "description": "In deze module leer je stap voor stap hoe je thuis je bloeddruk goed meet. Je krijgt tips over voorbereiding (eerst 5 minuten rustig zitten), de juiste houding, hoe je de manchet plaatst en wanneer je het beste meet. Ook lees je wat je kunt doen om meetfouten te voorkomen (zoals praten tijdens het meten of meten direct na koffie of inspanning) en hoe je je waarden in de app noteert. Zo worden je metingen betrouwbaarder en kan je zorgverlener er beter op sturen.",
   "for": {
     "reference": "Patient/ProviderModule-Patient-De-Groot",
     "display": "Koos de Groot"
@@ -56,8 +47,8 @@
   "authoredOn": "2025-12-24T07:00:00+01:00",
   "lastModified": "2025-12-24T07:00:00+01:00",
   "requester": {
-    "reference": "PractitionerRole/ProviderModule-PractitionerRole-De-Haard",
-    "display": "A. de Haard, Huisarts"
+    "reference": "PractitionerRole/ProviderModule-PractitionerRole-De-Jong",
+    "display": "L. de Jong, Huisarts"
   },
   "owner": {
     "reference": "Patient/ProviderModule-Patient-De-Groot",

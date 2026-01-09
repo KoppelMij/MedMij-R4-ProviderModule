@@ -18,41 +18,15 @@
       }
     },
     {
-      "url": "http://example.org/fhir/StructureDefinition/client-id",
+      "url": "http://medmij.nl/fhir/StructureDefinition/client-id",
       "valueString": "dvaaanbiedersmodulesweb"
     }
   ],
-  "url": "https://aanbiedermodule.example.org/web/api/smartonfhir/launch?iss=resourceserver.example.dva.nl",
+  "url": "https://example.com/activities/zorgmodulediabetes",
   "version": "1.0.0",
   "name": "Informatie over gezonder gaan leven",
   "title": "Gezonder gaan leven",
   "status": "active",
   "publisher": "HinqZNO",
-  "description": "Dit is informatie over gezonder gaan leven",
-  "useContext": [
-    {
-      "code": {
-        "code": "program",
-        "system": "http://terminology.hl7.org/CodeSystem/usage-context-type"
-      },
-      "valueCodeableConcept": {
-        "text": "Digitale zorgmodule Diabetes"
-      }
-    },
-    {
-      "code": {
-        "code": "focus",
-        "system": "http://terminology.hl7.org/CodeSystem/usage-context-type"
-      },
-      "valueCodeableConcept": {
-        "coding": [
-          {
-            "code": "44054006",
-            "system": "http://snomed.info/sct",
-            "display": "Diabetes mellitus type 2"
-          }
-        ]
-      }
-    }
-  ]
+  "description": "Leefstijlmodule binnen de digitale zorgmodule Diabetes: praktische informatie en motivatie voor gezonder leven (voeding, beweging, gewicht, stoppen met roken, alcohol en slaap) ter ondersteuning van glykemische controle en cardiovasculair risicomanagement."
 }

@@ -1,6 +1,6 @@
 {
   "resourceType": "ActivityDefinition",
-  "id": "ProviderModule-ActivityDefinition-Informatie-Diabetes",
+  "id": "ProviderModule-ActivityDefinition-Vragenlijst-Wat-Bereiken",
   "meta": {
     "profile": [
       "http://medmij.nl/fhir/StructureDefinition/ProviderModule-ActivityDefinition"
@@ -19,14 +19,14 @@
     },
     {
       "url": "http://medmij.nl/fhir/StructureDefinition/client-id",
-      "valueString": "dvaaanbiedersmodulesweb"
+      "valueString": "dvaaanbiedersmodule"
     }
   ],
-  "url": "https://example.com/activities/zorgmodulediabetes",
+  "url": "https://example.com/activities/zorgmodulecopd",
   "version": "1.0.0",
-  "name": "Informatie over diabetes type 2",
-  "title": "Wat is diabetes type 2?",
+  "name": "Vragenlijst: Wat wilt u bereiken?",
+  "title": "Vragenlijst: Wat wilt u bereiken?",
   "status": "active",
   "publisher": "HinqZNO",
-  "description": "Voorlichtingsmodule ‘Wat is diabetes type 2?’: basisuitleg over het ziektebeeld, oorzaken/risicofactoren, klachten, metingen (glucose/HbA1c) en behandelprincipes (leefstijl en medicatie) ter ondersteuning van educatie en zelfmanagement."
+  "description": "Vragenlijst Wat wilt u bereiken? om patiëntdoelen en prioriteiten in kaart te brengen als basis voor gezamenlijke besluitvorming en het behandel-/zelfmanagementplan."
 }

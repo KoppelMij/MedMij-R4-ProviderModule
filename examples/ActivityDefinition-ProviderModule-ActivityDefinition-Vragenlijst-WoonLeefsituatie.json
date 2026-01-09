@@ -18,41 +18,15 @@
       }
     },
     {
-      "url": "http://example.org/fhir/StructureDefinition/client-id",
+      "url": "http://medmij.nl/fhir/StructureDefinition/client-id",
       "valueString": "dvaaanbiedersmodulesweb"
     }
   ],
-  "url": "https://aanbiedermodule.example.org/web/api/smartonfhir/launch?iss=resourceserver.example.dva.nl",
+  "url": "https://example.com/activities/zorgmodulediabetes",
   "version": "1.0.0",
   "name": "Vragenlijst over de woon- leefsituatie",
   "title": "Vragenlijst over de woon- leefsituatie",
   "status": "active",
   "publisher": "HinqZNO",
-  "description": "Vragenlijst over de woon- leefsituatie",
-  "useContext": [
-    {
-      "code": {
-        "code": "program",
-        "system": "http://terminology.hl7.org/CodeSystem/usage-context-type"
-      },
-      "valueCodeableConcept": {
-        "text": "Digitale zorgmodule Diabetes"
-      }
-    },
-    {
-      "code": {
-        "code": "focus",
-        "system": "http://terminology.hl7.org/CodeSystem/usage-context-type"
-      },
-      "valueCodeableConcept": {
-        "coding": [
-          {
-            "code": "44054006",
-            "system": "http://snomed.info/sct",
-            "display": "Diabetes mellitus type 2"
-          }
-        ]
-      }
-    }
-  ]
+  "description": "Vragenlijst woon-/leefsituatie binnen de digitale zorgmodule Diabetes om contextfactoren (wonen, dagelijks functioneren, ondersteuning, leefstijl en mogelijkheden/belemmeringen) in kaart te brengen als basis voor persoonsgerichte begeleiding en haalbare leefstijlafspraken."
 }

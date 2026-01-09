@@ -18,41 +18,28 @@
       }
     },
     {
-      "url": "http://example.org/fhir/StructureDefinition/client-id",
+      "url": "http://medmij.nl/fhir/StructureDefinition/client-id",
       "valueString": "dvaaanbiedersmodule"
     }
   ],
-  "url": "https://aanbiedermodule.example.org/web/api/smartonfhir/launch?iss=resourceserver.example.dva.nl",
+  "url": "https://example.com/activities/zorgmodulecvrm",
   "version": "1.0.0",
   "name": "Meetopdacht bloeddrukmeting",
   "title": "Bloeddrukmeting",
   "status": "active",
   "publisher": "Minddistrict",
-  "description": "Bloeddrukmeting volgens NHG protocol. 7 dagen, 2x per dag, 's ochtends en 's avonds",
-  "useContext": [
-    {
-      "code": {
-        "code": "program",
-        "system": "http://terminology.hl7.org/CodeSystem/usage-context-type"
+  "description": "Bloeddrukmeting volgens NHG protocol. 1 week, 2x per dag, 's ochtends en 's avonds",
+  "timingTiming": {
+    "repeat": {
+      "boundsDuration": {
+        "value": 7,
+        "system": "http://unitsofmeasure.org",
+        "code": "d",
+        "unit": "day"
       },
-      "valueCodeableConcept": {
-        "text": "Digitale zorgmodule CVRM"
-      }
-    },
-    {
-      "code": {
-        "code": "focus",
-        "system": "http://terminology.hl7.org/CodeSystem/usage-context-type"
-      },
-      "valueCodeableConcept": {
-        "coding": [
-          {
-            "code": "84114007",
-            "system": "http://snomed.info/sct",
-            "display": "hartfalen"
-          }
-        ]
-      }
+      "frequency": 2,
+      "period": 1,
+      "periodUnit": "d"
     }
-  ]
+  }
 }

@@ -1,6 +1,6 @@
 {
   "resourceType": "ActivityDefinition",
-  "id": "ProviderModule-ActivityDefinition-Informatie-Diabetes",
+  "id": "ProviderModule-ActivityDefinition-Informatie-Inhalatiemedicatie",
   "meta": {
     "profile": [
       "http://medmij.nl/fhir/StructureDefinition/ProviderModule-ActivityDefinition"
@@ -19,14 +19,14 @@
     },
     {
       "url": "http://medmij.nl/fhir/StructureDefinition/client-id",
-      "valueString": "dvaaanbiedersmodulesweb"
+      "valueString": "dvaaanbiedersmodule"
     }
   ],
-  "url": "https://example.com/activities/zorgmodulediabetes",
+  "url": "https://example.com/activities/zorgmodulecopd",
   "version": "1.0.0",
-  "name": "Informatie over diabetes type 2",
-  "title": "Wat is diabetes type 2?",
+  "name": "Instructiemodule inhalatiemedicatie",
+  "title": "Instructiemodule inhalatiemedicatie",
   "status": "active",
   "publisher": "HinqZNO",
-  "description": "Voorlichtingsmodule ‘Wat is diabetes type 2?’: basisuitleg over het ziektebeeld, oorzaken/risicofactoren, klachten, metingen (glucose/HbA1c) en behandelprincipes (leefstijl en medicatie) ter ondersteuning van educatie en zelfmanagement."
+  "description": "Instructiemodule inhalatiemedicatie: juiste inhalatietechniek, therapietrouw en praktische adviezen (inclusief controlepunten en veelgemaakte fouten)."
 }

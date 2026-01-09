@@ -1,6 +1,6 @@
 {
   "resourceType": "Task",
-  "id": "ProviderModule-Task-Vragenlijst-Uw-Situatie",
+  "id": "ProviderModule-Task-Meetopdracht-Bloeddrukmeting-13",
   "meta": {
     "profile": [
       "http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task"
@@ -14,15 +14,20 @@
     {
       "url": "http://vzvz.nl/fhir/StructureDefinition/instantiates",
       "valueReference": {
-        "reference": "ActivityDefinition/ProviderModule-ActivityDefinition-Vragenlijst-Uw-Situatie",
+        "reference": "ActivityDefinition/ProviderModule-ActivityDefinition-Meetopdracht-Bloeddrukmeting",
         "type": "ActivityDefinition"
       }
+    }
+  ],
+  "basedOn": [
+    {
+      "reference": "ServiceRequest/ProviderModule-ServiceRequest-Bloeddrukmeting"
     }
   ],
   "identifier": [
     {
       "system": "http://medrie.nl/taskIdentifier",
-      "value": "TASK-55553"
+      "value": "TASK-99998"
     }
   ],
   "groupIdentifier": {
@@ -32,20 +37,25 @@
       "text": "Digitale zorgmodule CVRM"
     }
   },
-  "status": "requested",
+  "partOf": [
+    {
+      "reference": "Task/ProviderModule-Task-Meetopdracht-Bloeddrukmeting-12"
+    }
+  ],
+  "status": "received",
   "intent": "order",
   "priority": "routine",
-  "description": "In deze vragenlijst beantwoord je vragen over jouw situatie rond hart- en vaatziekten. Denk aan klachten, leefstijl (zoals bewegen, roken en voeding) en andere factoren die invloed kunnen hebben op je gezondheid. Je antwoorden helpen jou en je zorgverlener om een compleet beeld te krijgen en samen te bepalen welke stappen het meest belangrijk zijn.",
+  "description": "Meet je bloeddruk in de ochtend nuchter (voor het ontbijt) en in de avond voor het avondeten. Noteer de waarde in de app. Je metingen helpen je zorgverlener om te zien hoe het met je gaat en of je behandeling moet worden aangepast.",
   "for": {
     "reference": "Patient/ProviderModule-Patient-De-Groot",
     "display": "Koos de Groot"
   },
   "executionPeriod": {
-    "start": "2025-12-22",
+    "start": "2025-12-28",
     "end": "2025-12-28"
   },
-  "authoredOn": "2025-12-23T18:00:00+01:00",
-  "lastModified": "2025-12-23T18:00:00+01:00",
+  "authoredOn": "2025-12-22T18:00:00+01:00",
+  "lastModified": "2025-12-22T18:00:00+01:00",
   "requester": {
     "reference": "PractitionerRole/ProviderModule-PractitionerRole-De-Jong",
     "display": "L. de Jong, Huisarts"

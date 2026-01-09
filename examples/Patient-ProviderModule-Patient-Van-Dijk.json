@@ -1,6 +1,6 @@
 {
   "resourceType": "Patient",
-  "id": "ProviderModule-Patient-De-Groot",
+  "id": "ProviderModule-Patient-Van-Dijk",
   "meta": {
     "profile": [
       "http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"
@@ -41,7 +41,7 @@
   "name": [
     {
       "given": [
-        "Koos"
+        "Sanne"
       ],
       "_given": [
         {
@@ -54,17 +54,17 @@
         }
       ],
       "use": "official",
-      "text": "Koos de Groot",
-      "family": "de Groot",
+      "text": "Sanne van Dijk",
+      "family": "van Dijk",
       "_family": {
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
-            "valueString": "de"
+            "valueString": "van"
           },
           {
             "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-name",
-            "valueString": "Groot"
+            "valueString": "Dijk"
           }
         ]
       }
@@ -72,7 +72,7 @@
     {
       "use": "usual",
       "given": [
-        "Koos"
+        "Sanne"
       ]
     }
   ],
@@ -95,11 +95,11 @@
           }
         ]
       },
-      "value": "+31612345611"
+      "value": "+31655501234"
     },
     {
       "system": "email",
-      "value": "koosdegrootn@koos.com",
+      "value": "sanne.vandijk@voorbeeldmail.nl",
       "use": "home"
     }
   ],
@@ -120,26 +120,26 @@
         }
       ],
       "line": [
-        "Spui 70"
+        "Prinsengracht 263"
       ],
       "_line": [
         {
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
-              "valueString": "Spui"
+              "valueString": "Prinsengracht"
             },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
-              "valueString": "70"
+              "valueString": "263"
             }
           ]
         }
       ],
       "use": "home",
       "type": "both",
-      "city": "Den Haag",
-      "postalCode": "2511 BT",
+      "city": "Amsterdam",
+      "postalCode": "1016 GV",
       "country": "Nederland",
       "_country": {
         "extension": [
@@ -161,9 +161,9 @@
   ],
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patiënt: Koos de Groot<br/>Geboortedatum: 1961-08-02<br/>Geslacht: Man<br/>Nationaliteit: Nederlandse<br/>Telefoon: +31612345600<br/>E-mail: tomvanduinen@tom.com<br/>Adres: Maanweg 174, 2516 AB Den Haag, Nederland</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patiënt: Sanne van Dijk<br/>Geboortedatum: 1984-03-14<br/>Geslacht: Vrouw<br/>Nationaliteit: Nederlandse<br/>Telefoon: +31655501234<br/>E-mail: sanne.vandijk@voorbeeldmail.nl<br/>Adres: Prinsengracht 263, 1016 GV Amsterdam, Nederland</div>"
   },
-  "gender": "male",
+  "gender": "female",
   "_gender": {
     "extension": [
       {
@@ -171,15 +171,15 @@
         "valueCodeableConcept": {
           "coding": [
             {
-              "code": "M",
+              "code": "F",
               "system": "http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender",
-              "display": "Male"
+              "display": "Female"
             }
           ]
         }
       }
     ]
   },
-  "birthDate": "1972-09-20",
+  "birthDate": "1984-03-14",
   "deceasedBoolean": false
 }

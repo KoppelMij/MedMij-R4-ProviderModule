@@ -18,41 +18,15 @@
       }
     },
     {
-      "url": "http://example.org/fhir/StructureDefinition/client-id",
+      "url": "http://medmij.nl/fhir/StructureDefinition/client-id",
       "valueString": "dvaaanbiedersmodule"
     }
   ],
-  "url": "https://aanbiedermodule.example.org/web/api/smartonfhir/launch?iss=resourceserver.example.dva.nl",
+  "url": "https://example.com/activities/zorgmodulecvrm",
   "version": "1.0.0",
   "name": "Informatie over cholesterol",
   "title": "Wat is cholesterol en wat zijn de risico's?",
   "status": "active",
   "publisher": "Minddistrict",
-  "description": "Dit is een algemene toelichting over wat is cholesterol en wat zijn de risico's",
-  "useContext": [
-    {
-      "code": {
-        "code": "program",
-        "system": "http://terminology.hl7.org/CodeSystem/usage-context-type"
-      },
-      "valueCodeableConcept": {
-        "text": "Digitale zorgmodule CVRM"
-      }
-    },
-    {
-      "code": {
-        "code": "focus",
-        "system": "http://terminology.hl7.org/CodeSystem/usage-context-type"
-      },
-      "valueCodeableConcept": {
-        "coding": [
-          {
-            "code": "84114007",
-            "system": "http://snomed.info/sct",
-            "display": "hartfalen"
-          }
-        ]
-      }
-    }
-  ]
+  "description": "Voorlichtingsmodule cholesterol: uitlegmateriaal over wat cholesterol is, cardiovasculaire risico’s en leefstijl-/behandelopties ter ondersteuning van CVRM en gezamenlijke besluitvorming."
 }
