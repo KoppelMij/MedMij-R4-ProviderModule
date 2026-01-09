@@ -75,7 +75,7 @@ Usage: #example
   * system = "https://hinq.nl/fhir/identifiers/task-group"
   * value = "module-COPD-2026"
   * type.text = "Digitale zorgmodule COPD"
-* partOf= Reference(ProviderModule-Task-Meetopdracht-Saturatiemeting-1)
+* partOf = Reference(ProviderModule-Task-Meetopdracht-Saturatiemeting-1)
 * status = #received
 * intent = #order
 * priority = #routine
@@ -106,7 +106,7 @@ Usage: #example
   * system = "https://hinq.nl/fhir/identifiers/task-group"
   * value = "module-COPD-2026"
   * type.text = "Digitale zorgmodule COPD"
-* partOf= Reference(ProviderModule-Task-Meetopdracht-Saturatiemeting-2)
+* partOf = Reference(ProviderModule-Task-Meetopdracht-Saturatiemeting-2)
 * status = #received
 * intent = #order
 * priority = #routine
@@ -137,7 +137,7 @@ Usage: #example
   * system = "https://hinq.nl/fhir/identifiers/task-group"
   * value = "module-COPD-2026"
   * type.text = "Digitale zorgmodule COPD"
-* partOf= Reference(ProviderModule-Task-Meetopdracht-Saturatiemeting-3)
+* partOf = Reference(ProviderModule-Task-Meetopdracht-Saturatiemeting-3)
 * status = #received
 * intent = #order
 * priority = #routine
@@ -168,7 +168,7 @@ Usage: #example
   * system = "https://hinq.nl/fhir/identifiers/task-group"
   * value = "module-COPD-2026"
   * type.text = "Digitale zorgmodule COPD"
-* partOf= Reference(ProviderModule-Task-Meetopdracht-Saturatiemeting-4)
+* partOf = Reference(ProviderModule-Task-Meetopdracht-Saturatiemeting-4)
 * status = #received
 * intent = #order
 * priority = #routine
@@ -199,7 +199,7 @@ Usage: #example
   * system = "https://hinq.nl/fhir/identifiers/task-group"
   * value = "module-COPD-2026"
   * type.text = "Digitale zorgmodule COPD"
-* partOf= Reference(ProviderModule-Task-Meetopdracht-Saturatiemeting-5)
+* partOf = Reference(ProviderModule-Task-Meetopdracht-Saturatiemeting-5)
 * status = #received
 * intent = #order
 * priority = #routine
@@ -230,7 +230,7 @@ Usage: #example
   * system = "https://hinq.nl/fhir/identifiers/task-group"
   * value = "module-COPD-2026"
   * type.text = "Digitale zorgmodule COPD"
-* partOf= Reference(ProviderModule-Task-Meetopdracht-Saturatiemeting-6)
+* partOf = Reference(ProviderModule-Task-Meetopdracht-Saturatiemeting-6)
 * status = #received
 * intent = #order
 * priority = #routine
