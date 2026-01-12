@@ -105,7 +105,7 @@ Usage: #example
   * system = "https://hinq.nl/fhir/identifiers/task-group"
   * value = "module-COPD-2026"
   * type.text = "Digitale zorgmodule COPD"
-* partOf = Reference(ProviderModule-Task-Meetopdracht-Saturatiemeting-1)
+* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Saturatiemeting)
 * status = #received
 * intent = #order
 * priority = #routine

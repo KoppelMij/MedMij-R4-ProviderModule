@@ -105,7 +105,7 @@ Usage: #example
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
-  * type.text = "Digitale zorgmodule CVRM"\
+  * type.text = "Digitale zorgmodule CVRM"
 * partOf = Reference(ProviderModule-MainTask-Meetopdracht-Bloeddrukmeting)
 * status = #received
 * intent = #order
