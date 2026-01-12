@@ -73,7 +73,7 @@ Usage: #example
 * basedOn = Reference(ProviderModule-ServiceRequest-Glucosemeting)
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-1"
+  * value = "MAINTASK"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-diabetes-2025"

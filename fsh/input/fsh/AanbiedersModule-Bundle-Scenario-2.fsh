@@ -71,7 +71,7 @@ Usage: #example
 * basedOn = Reference(ProviderModule-ServiceRequest-Bloeddrukmeting)
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-99998"
+  * value = "MAINTASK"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"

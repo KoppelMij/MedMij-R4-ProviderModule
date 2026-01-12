@@ -40,7 +40,7 @@ Usage: #example
     * type = "ActivityDefinition"
 * identifier
   * system = "http://hinq.nl/taskIdentifier"
-  * value = "TASK-11"
+  * value = "MAINTASK"
 * groupIdentifier
   * system = "https://hinq.nl/fhir/identifiers/task-group"
   * value = "module-COPD-2026"
