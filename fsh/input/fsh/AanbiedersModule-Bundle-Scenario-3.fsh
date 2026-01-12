@@ -28,7 +28,7 @@ Usage: #example
   * period = 1
   * periodUnit = #d
 
-Instance: ProviderModule-Task-Meetopdracht-Saturatiemeting-1
+Instance: ProviderModule-MainTask-Meetopdracht-Saturatiemeting
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
@@ -48,6 +48,36 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
+* for = Reference(ProviderModule-Patient-Van-Dijk) "Sanne van Dijk"
+* executionPeriod
+  * start = "2026-01-05"
+  * end = "2026-01-11"
+* authoredOn = "2026-01-05T08:00:00+01:00"
+* lastModified = "2026-01-05T08:00:00+01:00"
+* requester = Reference(ProviderModule-PractitionerRole-Van-Rijn) "M. van Rijn, huisarts"
+* owner = Reference(ProviderModule-Patient-Van-Dijk) "Sanne van Dijk"
+
+Instance: ProviderModule-SubTask-Meetopdracht-Saturatiemeting-1
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Usage: #example
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
+* extension
+  * url = $koppeltaal-instantiates
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Saturatiemeting)
+    * type = "ActivityDefinition"
+* identifier
+  * system = "http://hinq.nl/taskIdentifier"
+  * value = "TASK-11"
+* groupIdentifier
+  * system = "https://hinq.nl/fhir/identifiers/task-group"
+  * value = "module-COPD-2026"
+  * type.text = "Digitale zorgmodule COPD"
+* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Saturatiemeting)
+* status = #received
+* intent = #order
+* priority = #routine
 * description = "Meet je zuurstofsaturatie (SpO2) met de saturatiemeter"
 * for = Reference(ProviderModule-Patient-Van-Dijk) "Sanne van Dijk"
 * executionPeriod
@@ -58,7 +88,7 @@ Usage: #example
 * requester = Reference(ProviderModule-PractitionerRole-Van-Rijn) "M. van Rijn, huisarts"
 * owner = Reference(ProviderModule-Patient-Van-Dijk) "Sanne van Dijk"
 
-Instance: ProviderModule-Task-Meetopdracht-Saturatiemeting-2
+Instance: ProviderModule-SubTask-Meetopdracht-Saturatiemeting-2
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
@@ -89,7 +119,7 @@ Usage: #example
 * requester = Reference(ProviderModule-PractitionerRole-Van-Rijn) "M. van Rijn, huisarts"
 * owner = Reference(ProviderModule-Patient-Van-Dijk) "Sanne van Dijk"
 
-Instance: ProviderModule-Task-Meetopdracht-Saturatiemeting-3
+Instance: ProviderModule-SubTask-Meetopdracht-Saturatiemeting-3
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
@@ -106,7 +136,7 @@ Usage: #example
   * system = "https://hinq.nl/fhir/identifiers/task-group"
   * value = "module-COPD-2026"
   * type.text = "Digitale zorgmodule COPD"
-* partOf = Reference(ProviderModule-Task-Meetopdracht-Saturatiemeting-2)
+* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Saturatiemeting)
 * status = #received
 * intent = #order
 * priority = #routine
@@ -120,7 +150,7 @@ Usage: #example
 * requester = Reference(ProviderModule-PractitionerRole-Van-Rijn) "M. van Rijn, huisarts"
 * owner = Reference(ProviderModule-Patient-Van-Dijk) "Sanne van Dijk"
 
-Instance: ProviderModule-Task-Meetopdracht-Saturatiemeting-4
+Instance: ProviderModule-SubTask-Meetopdracht-Saturatiemeting-4
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
@@ -137,7 +167,7 @@ Usage: #example
   * system = "https://hinq.nl/fhir/identifiers/task-group"
   * value = "module-COPD-2026"
   * type.text = "Digitale zorgmodule COPD"
-* partOf = Reference(ProviderModule-Task-Meetopdracht-Saturatiemeting-3)
+* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Saturatiemeting)
 * status = #received
 * intent = #order
 * priority = #routine
@@ -151,7 +181,7 @@ Usage: #example
 * requester = Reference(ProviderModule-PractitionerRole-Van-Rijn) "M. van Rijn, huisarts"
 * owner = Reference(ProviderModule-Patient-Van-Dijk) "Sanne van Dijk"
 
-Instance: ProviderModule-Task-Meetopdracht-Saturatiemeting-5
+Instance: ProviderModule-SubTask-Meetopdracht-Saturatiemeting-5
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
@@ -168,7 +198,7 @@ Usage: #example
   * system = "https://hinq.nl/fhir/identifiers/task-group"
   * value = "module-COPD-2026"
   * type.text = "Digitale zorgmodule COPD"
-* partOf = Reference(ProviderModule-Task-Meetopdracht-Saturatiemeting-4)
+* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Saturatiemeting)
 * status = #received
 * intent = #order
 * priority = #routine
@@ -182,7 +212,7 @@ Usage: #example
 * requester = Reference(ProviderModule-PractitionerRole-Van-Rijn) "M. van Rijn, huisarts"
 * owner = Reference(ProviderModule-Patient-Van-Dijk) "Sanne van Dijk"
 
-Instance: ProviderModule-Task-Meetopdracht-Saturatiemeting-6
+Instance: ProviderModule-SubTask-Meetopdracht-Saturatiemeting-6
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
@@ -199,7 +229,7 @@ Usage: #example
   * system = "https://hinq.nl/fhir/identifiers/task-group"
   * value = "module-COPD-2026"
   * type.text = "Digitale zorgmodule COPD"
-* partOf = Reference(ProviderModule-Task-Meetopdracht-Saturatiemeting-5)
+* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Saturatiemeting)
 * status = #received
 * intent = #order
 * priority = #routine
@@ -213,7 +243,7 @@ Usage: #example
 * requester = Reference(ProviderModule-PractitionerRole-Van-Rijn) "M. van Rijn, huisarts"
 * owner = Reference(ProviderModule-Patient-Van-Dijk) "Sanne van Dijk"
 
-Instance: ProviderModule-Task-Meetopdracht-Saturatiemeting-7
+Instance: ProviderModule-SubTask-Meetopdracht-Saturatiemeting-7
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
@@ -230,7 +260,7 @@ Usage: #example
   * system = "https://hinq.nl/fhir/identifiers/task-group"
   * value = "module-COPD-2026"
   * type.text = "Digitale zorgmodule COPD"
-* partOf = Reference(ProviderModule-Task-Meetopdracht-Saturatiemeting-6)
+* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Saturatiemeting)
 * status = #received
 * intent = #order
 * priority = #routine
@@ -289,8 +319,8 @@ Usage: #example
 * description = "Lees praktische tips om met COPD te leven: omgaan met benauwdheid, bewegen, energie verdelen en herkennen van verslechtering."
 * for = Reference(ProviderModule-Patient-Van-Dijk) "Sanne van Dijk"
 * executionPeriod
-  * start = "2025-12-22"
-  * end = "2025-12-28"
+  * start = "2025-01-05"
+  * end = "2025-01-11"
 * authoredOn = "2025-12-23T07:00:00+01:00"
 * lastModified = "2025-12-23T07:00:00+01:00"
 * requester = Reference(ProviderModule-PractitionerRole-Van-Rijn) "M. van Rijn, huisarts"
@@ -340,8 +370,8 @@ Usage: #example
 * description = "In deze module leer je hoe je je inhalatiemedicatie goed gebruikt. Je krijgt stap-voor-stap uitleg voor jouw inhalator, tips om veelgemaakte fouten te voorkomen en een handig geheugensteuntje voor vaste innamemomenten. Zo komt de medicatie beter in je longen en heb je meer kans op minder klachten. Je leest ook wanneer je contact opneemt met je zorgverlener, bijvoorbeeld bij toenemende benauwdheid of bijwerkingen."
 * for = Reference(ProviderModule-Patient-Van-Dijk) "Sanne van Dijk"
 * executionPeriod
-  * start = "2025-12-22"
-  * end = "2025-12-28"
+  * start = "2025-01-05"
+  * end = "2025-01-11"
 * authoredOn = "2025-12-24T07:00:00+01:00"
 * lastModified = "2025-12-24T07:00:00+01:00"
 * requester = Reference(ProviderModule-PractitionerRole-Van-Rijn) "M. van Rijn, huisarts"
@@ -392,8 +422,8 @@ Usage: #example
 * description = "In deze vragenlijst geef je aan wat je belangrijk vindt en wat je wilt bereiken met je behandeling of begeleiding. Denk aan doelen zoals meer energie, beter kunnen bewegen, minder benauwdheid of je zekerder voelen in het dagelijks leven. Er zijn geen goede of foute antwoorden: het gaat om wat voor jou werkt. Je antwoorden helpen jou en je zorgverlener om samen afspraken te maken die passen bij jouw situatie."
 * for = Reference(ProviderModule-Patient-Van-Dijk) "Sanne van Dijk"
 * executionPeriod
-  * start = "2025-12-22"
-  * end = "2025-12-28"
+  * start = "2025-01-05"
+  * end = "2025-01-11"
 * authoredOn = "2025-12-23T18:00:00+01:00"
 * lastModified = "2025-12-23T18:00:00+01:00"
 * requester = Reference(ProviderModule-PractitionerRole-Van-Rijn) "M. van Rijn, Huisarts"

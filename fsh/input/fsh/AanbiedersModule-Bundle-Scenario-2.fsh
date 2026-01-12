@@ -58,7 +58,7 @@ Usage: #example
   * period = 1
   * periodUnit = #d
 
-Instance: ProviderModule-Task-Meetopdracht-Bloeddrukmeting-1
+Instance: ProviderModule-MainTask-Meetopdracht-Bloeddrukmeting
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
@@ -79,17 +79,16 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Meet je bloeddruk"
 * for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-12-22"
-  * end = "2025-12-22"
+  * end = "2025-12-28"
 * authoredOn = "2025-12-22T18:00:00+01:00"
 * lastModified = "2025-12-22T18:00:00+01:00"
 * requester = Reference(ProviderModule-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
 * owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 
-Instance: ProviderModule-Task-Meetopdracht-Bloeddrukmeting-2
+Instance: ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-1
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
@@ -106,8 +105,8 @@ Usage: #example
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
-  * type.text = "Digitale zorgmodule CVRM"
-* partOf = Reference(ProviderModule-Task-Meetopdracht-Bloeddrukmeting-1)
+  * type.text = "Digitale zorgmodule CVRM"\
+* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Bloeddrukmeting)
 * status = #received
 * intent = #order
 * priority = #routine
@@ -121,7 +120,7 @@ Usage: #example
 * requester = Reference(ProviderModule-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
 * owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 
-Instance: ProviderModule-Task-Meetopdracht-Bloeddrukmeting-3
+Instance: ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-2
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
@@ -139,7 +138,39 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
   * type.text = "Digitale zorgmodule CVRM"
-* partOf = Reference(ProviderModule-Task-Meetopdracht-Bloeddrukmeting-2)
+* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Bloeddrukmeting)
+* status = #received
+* intent = #order
+* priority = #routine
+* description = "Meet je bloeddruk in de ochtend nuchter (voor het ontbijt) en in de avond voor het avondeten. Noteer de waarde in de app. Je metingen helpen je zorgverlener om te zien hoe het met je gaat en of je behandeling moet worden aangepast."
+* for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* executionPeriod
+  * start = "2025-12-22"
+  * end = "2025-12-22"
+* authoredOn = "2025-12-22T18:00:00+01:00"
+* lastModified = "2025-12-22T18:00:00+01:00"
+* requester = Reference(ProviderModule-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
+* owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+
+Instance: ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-3
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Usage: #example
+* text
+  * status = #generated
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
+* extension
+  * url = $koppeltaal-instantiates
+  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Bloeddrukmeting)
+    * type = "ActivityDefinition"
+* basedOn = Reference(ProviderModule-ServiceRequest-Bloeddrukmeting)
+* identifier
+  * system = "http://medrie.nl/taskIdentifier"
+  * value = "TASK-99998"
+* groupIdentifier
+  * system = "https://medrie.nl/fhir/identifiers/task-group"
+  * value = "module-CVRM-2025"
+  * type.text = "Digitale zorgmodule CVRM"
+* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Bloeddrukmeting)
 * status = #received
 * intent = #order
 * priority = #routine
@@ -153,7 +184,7 @@ Usage: #example
 * requester = Reference(ProviderModule-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
 * owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 
-Instance: ProviderModule-Task-Meetopdracht-Bloeddrukmeting-4
+Instance: ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-4
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
@@ -171,7 +202,7 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
   * type.text = "Digitale zorgmodule CVRM"
-* partOf = Reference(ProviderModule-Task-Meetopdracht-Bloeddrukmeting-3)
+* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Bloeddrukmeting)
 * status = #received
 * intent = #order
 * priority = #routine
@@ -185,7 +216,7 @@ Usage: #example
 * requester = Reference(ProviderModule-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
 * owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 
-Instance: ProviderModule-Task-Meetopdracht-Bloeddrukmeting-5
+Instance: ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-5
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
@@ -203,7 +234,7 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
   * type.text = "Digitale zorgmodule CVRM"
-* partOf = Reference(ProviderModule-Task-Meetopdracht-Bloeddrukmeting-4)
+* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Bloeddrukmeting)
 * status = #received
 * intent = #order
 * priority = #routine
@@ -217,7 +248,7 @@ Usage: #example
 * requester = Reference(ProviderModule-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
 * owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 
-Instance: ProviderModule-Task-Meetopdracht-Bloeddrukmeting-6
+Instance: ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-6
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
@@ -235,7 +266,7 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
   * type.text = "Digitale zorgmodule CVRM"
-* partOf = Reference(ProviderModule-Task-Meetopdracht-Bloeddrukmeting-5)
+* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Bloeddrukmeting)
 * status = #received
 * intent = #order
 * priority = #routine
@@ -249,7 +280,7 @@ Usage: #example
 * requester = Reference(ProviderModule-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
 * owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 
-Instance: ProviderModule-Task-Meetopdracht-Bloeddrukmeting-7
+Instance: ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-7
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
@@ -267,7 +298,7 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
   * type.text = "Digitale zorgmodule CVRM"
-* partOf = Reference(ProviderModule-Task-Meetopdracht-Bloeddrukmeting-6)
+* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Bloeddrukmeting)
 * status = #received
 * intent = #order
 * priority = #routine
@@ -281,7 +312,7 @@ Usage: #example
 * requester = Reference(ProviderModule-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
 * owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 
-Instance: ProviderModule-Task-Meetopdracht-Bloeddrukmeting-8
+Instance: ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-8
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
@@ -299,7 +330,7 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
   * type.text = "Digitale zorgmodule CVRM"
-* partOf = Reference(ProviderModule-Task-Meetopdracht-Bloeddrukmeting-7)
+* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Bloeddrukmeting)
 * status = #received
 * intent = #order
 * priority = #routine
@@ -313,7 +344,7 @@ Usage: #example
 * requester = Reference(ProviderModule-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
 * owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 
-Instance: ProviderModule-Task-Meetopdracht-Bloeddrukmeting-9
+Instance: ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-9
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
@@ -331,7 +362,7 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
   * type.text = "Digitale zorgmodule CVRM"
-* partOf = Reference(ProviderModule-Task-Meetopdracht-Bloeddrukmeting-8)
+* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Bloeddrukmeting)
 * status = #received
 * intent = #order
 * priority = #routine
@@ -345,7 +376,7 @@ Usage: #example
 * requester = Reference(ProviderModule-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
 * owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 
-Instance: ProviderModule-Task-Meetopdracht-Bloeddrukmeting-10
+Instance: ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-10
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
@@ -363,7 +394,7 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
   * type.text = "Digitale zorgmodule CVRM"
-* partOf = Reference(ProviderModule-Task-Meetopdracht-Bloeddrukmeting-9)
+* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Bloeddrukmeting)
 * status = #received
 * intent = #order
 * priority = #routine
@@ -377,7 +408,7 @@ Usage: #example
 * requester = Reference(ProviderModule-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
 * owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 
-Instance: ProviderModule-Task-Meetopdracht-Bloeddrukmeting-11
+Instance: ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-11
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
@@ -395,7 +426,7 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
   * type.text = "Digitale zorgmodule CVRM"
-* partOf = Reference(ProviderModule-Task-Meetopdracht-Bloeddrukmeting-10)
+* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Bloeddrukmeting)
 * status = #received
 * intent = #order
 * priority = #routine
@@ -409,7 +440,7 @@ Usage: #example
 * requester = Reference(ProviderModule-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
 * owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 
-Instance: ProviderModule-Task-Meetopdracht-Bloeddrukmeting-12
+Instance: ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-12
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
@@ -427,7 +458,7 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
   * type.text = "Digitale zorgmodule CVRM"
-* partOf = Reference(ProviderModule-Task-Meetopdracht-Bloeddrukmeting-11)
+* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Bloeddrukmeting)
 * status = #received
 * intent = #order
 * priority = #routine
@@ -441,7 +472,7 @@ Usage: #example
 * requester = Reference(ProviderModule-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
 * owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 
-Instance: ProviderModule-Task-Meetopdracht-Bloeddrukmeting-13
+Instance: ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-13
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
@@ -459,7 +490,7 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
   * type.text = "Digitale zorgmodule CVRM"
-* partOf = Reference(ProviderModule-Task-Meetopdracht-Bloeddrukmeting-12)
+* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Bloeddrukmeting)
 * status = #received
 * intent = #order
 * priority = #routine
@@ -473,7 +504,7 @@ Usage: #example
 * requester = Reference(ProviderModule-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
 * owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
 
-Instance: ProviderModule-Task-Meetopdracht-Bloeddrukmeting-14
+Instance: ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-14
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
@@ -491,7 +522,7 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
   * type.text = "Digitale zorgmodule CVRM"
-* partOf = Reference(ProviderModule-Task-Meetopdracht-Bloeddrukmeting-13)
+* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Bloeddrukmeting)
 * status = #received
 * intent = #order
 * priority = #routine
