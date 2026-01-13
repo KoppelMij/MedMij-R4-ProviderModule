@@ -27,7 +27,7 @@
   "identifier": [
     {
       "system": "http://medrie.nl/taskIdentifier",
-      "value": "TASK-99998"
+      "value": "SUBTASK-Bloeddruk-7"
     }
   ],
   "groupIdentifier": {

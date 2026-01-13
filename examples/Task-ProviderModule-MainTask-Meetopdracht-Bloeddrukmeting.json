@@ -27,7 +27,7 @@
   "identifier": [
     {
       "system": "http://medrie.nl/taskIdentifier",
-      "value": "MAINTASK"
+      "value": "MAINTASK-Bloeddruk"
     }
   ],
   "groupIdentifier": {

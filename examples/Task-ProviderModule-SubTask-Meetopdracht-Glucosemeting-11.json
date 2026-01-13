@@ -22,7 +22,7 @@
   "identifier": [
     {
       "system": "http://medrie.nl/taskIdentifier",
-      "value": "TASK-11"
+      "value": "SUBTASK-Glucose-11"
     }
   ],
   "groupIdentifier": {
