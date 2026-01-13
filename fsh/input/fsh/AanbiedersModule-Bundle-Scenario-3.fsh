@@ -40,7 +40,7 @@ Usage: #example
     * type = "ActivityDefinition"
 * identifier
   * system = "http://hinq.nl/taskIdentifier"
-  * value = "MAINTASK"
+  * value = "MAINTASK-Saturatie"
 * groupIdentifier
   * system = "https://hinq.nl/fhir/identifiers/task-group"
   * value = "module-COPD-2026"
@@ -69,7 +69,7 @@ Usage: #example
     * type = "ActivityDefinition"
 * identifier
   * system = "http://hinq.nl/taskIdentifier"
-  * value = "TASK-11"
+  * value = "SUBTASK-Saturatie-1"
 * groupIdentifier
   * system = "https://hinq.nl/fhir/identifiers/task-group"
   * value = "module-COPD-2026"
@@ -100,7 +100,7 @@ Usage: #example
     * type = "ActivityDefinition"
 * identifier
   * system = "http://hinq.nl/taskIdentifier"
-  * value = "TASK-22"
+  * value = "SUBTASK-Saturatie-2"
 * groupIdentifier
   * system = "https://hinq.nl/fhir/identifiers/task-group"
   * value = "module-COPD-2026"
@@ -131,7 +131,7 @@ Usage: #example
     * type = "ActivityDefinition"
 * identifier
   * system = "http://hinq.nl/taskIdentifier"
-  * value = "TASK-33"
+  * value = "SUBTASK-Saturatie-3"
 * groupIdentifier
   * system = "https://hinq.nl/fhir/identifiers/task-group"
   * value = "module-COPD-2026"
@@ -162,7 +162,7 @@ Usage: #example
     * type = "ActivityDefinition"
 * identifier
   * system = "http://hinq.nl/taskIdentifier"
-  * value = "TASK-44"
+  * value = "SUBTASK-Saturatie-4"
 * groupIdentifier
   * system = "https://hinq.nl/fhir/identifiers/task-group"
   * value = "module-COPD-2026"
@@ -193,7 +193,7 @@ Usage: #example
     * type = "ActivityDefinition"
 * identifier
   * system = "http://hinq.nl/taskIdentifier"
-  * value = "TASK-55"
+  * value = "SUBTASK-Saturatie-5"
 * groupIdentifier
   * system = "https://hinq.nl/fhir/identifiers/task-group"
   * value = "module-COPD-2026"
@@ -224,7 +224,7 @@ Usage: #example
     * type = "ActivityDefinition"
 * identifier
   * system = "http://hinq.nl/taskIdentifier"
-  * value = "TASK-66"
+  * value = "SUBTASK-Saturatie-6"
 * groupIdentifier
   * system = "https://hinq.nl/fhir/identifiers/task-group"
   * value = "module-COPD-2026"
@@ -255,7 +255,7 @@ Usage: #example
     * type = "ActivityDefinition"
 * identifier
   * system = "http://hinq.nl/taskIdentifier"
-  * value = "TASK-77"
+  * value = "SUBTASK-Saturatie-7"
 * groupIdentifier
   * system = "https://hinq.nl/fhir/identifiers/task-group"
   * value = "module-COPD-2026"

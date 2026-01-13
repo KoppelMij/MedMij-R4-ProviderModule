@@ -102,7 +102,7 @@ Usage: #example
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-1"
+  * value = "SUBTASK-Glucose-1"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-diabetes-2025"
@@ -133,7 +133,7 @@ Usage: #example
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-2"
+  * value = "SUBTASK-Glucose-2"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-diabetes-2025"
@@ -164,7 +164,7 @@ Usage: #example
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-3"
+  * value = "SUBTASK-Glucose-3"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-diabetes-2025"
@@ -195,7 +195,7 @@ Usage: #example
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-4"
+  * value = "SUBTASK-Glucose-4"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-diabetes-2025"
@@ -226,7 +226,7 @@ Usage: #example
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-5"
+  * value = "SUBTASK-Glucose-5"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-diabetes-2025"
@@ -257,7 +257,7 @@ Usage: #example
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-6"
+  * value = "SUBTASK-Glucose-6"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-diabetes-2025"
@@ -288,7 +288,7 @@ Usage: #example
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-7"
+  * value = "SUBTASK-Glucose-7"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-diabetes-2025"
@@ -319,7 +319,7 @@ Usage: #example
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-8"
+  * value = "SUBTASK-Glucose-8"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-diabetes-2025"
@@ -350,7 +350,7 @@ Usage: #example
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-9"
+  * value = "SUBTASK-Glucose-9"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-diabetes-2025"
@@ -381,7 +381,7 @@ Usage: #example
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-10"
+  * value = "SUBTASK-Glucose-10"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-diabetes-2025"
@@ -412,7 +412,7 @@ Usage: #example
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-11"
+  * value = "SUBTASK-Glucose-11"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-diabetes-2025"
@@ -443,7 +443,7 @@ Usage: #example
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-12"
+  * value = "SUBTASK-Glucose-12"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-diabetes-2025"
@@ -474,7 +474,7 @@ Usage: #example
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-13"
+  * value = "SUBTASK-Glucose-13"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-diabetes-2025"
@@ -505,7 +505,7 @@ Usage: #example
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-14"
+  * value = "SUBTASK-Glucose-14"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-diabetes-2025"
@@ -557,7 +557,7 @@ Usage: #example
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-12345"
+  * value = "TASK-Informatie-diabetes-12345"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-diabetes-2025"
@@ -608,7 +608,7 @@ Usage: #example
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-6789"
+  * value = "TASK-Informatie-Gezonderleven-6789"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-diabetes-2025"
@@ -660,7 +660,7 @@ Usage: #example
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-9642"
+  * value = "TASK-Vragenlijst-Woonsituatie-9642"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-diabetes-2025"

@@ -71,7 +71,7 @@ Usage: #example
 * basedOn = Reference(ProviderModule-ServiceRequest-Bloeddrukmeting)
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "MAINTASK"
+  * value = "MAINTASK-Bloeddruk"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
@@ -101,7 +101,7 @@ Usage: #example
 * basedOn = Reference(ProviderModule-ServiceRequest-Bloeddrukmeting)
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-99998"
+  * value = "SUBTASK-Bloeddruk-1"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
@@ -133,7 +133,7 @@ Usage: #example
 * basedOn = Reference(ProviderModule-ServiceRequest-Bloeddrukmeting)
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-99998"
+  * value = "SUBTASK-Bloeddruk-2"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
@@ -165,7 +165,7 @@ Usage: #example
 * basedOn = Reference(ProviderModule-ServiceRequest-Bloeddrukmeting)
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-99998"
+  * value = "SUBTASK-Bloeddruk-3"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
@@ -197,7 +197,7 @@ Usage: #example
 * basedOn = Reference(ProviderModule-ServiceRequest-Bloeddrukmeting)
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-99998"
+  * value = "SUBTASK-Bloeddruk-4"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
@@ -229,7 +229,7 @@ Usage: #example
 * basedOn = Reference(ProviderModule-ServiceRequest-Bloeddrukmeting)
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-99998"
+  * value = "SUBTASK-Bloeddruk-5"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
@@ -261,7 +261,7 @@ Usage: #example
 * basedOn = Reference(ProviderModule-ServiceRequest-Bloeddrukmeting)
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-99998"
+  * value = "SUBTASK-Bloeddruk-6"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
@@ -293,7 +293,7 @@ Usage: #example
 * basedOn = Reference(ProviderModule-ServiceRequest-Bloeddrukmeting)
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-99998"
+  * value = "SUBTASK-Bloeddruk-7"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
@@ -325,7 +325,7 @@ Usage: #example
 * basedOn = Reference(ProviderModule-ServiceRequest-Bloeddrukmeting)
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-99998"
+  * value = "SUBTASK-Bloeddruk-8"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
@@ -357,7 +357,7 @@ Usage: #example
 * basedOn = Reference(ProviderModule-ServiceRequest-Bloeddrukmeting)
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-99998"
+  * value = "SUBTASK-Bloeddruk-9"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
@@ -389,7 +389,7 @@ Usage: #example
 * basedOn = Reference(ProviderModule-ServiceRequest-Bloeddrukmeting)
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-99998"
+  * value = "SUBTASK-Bloeddruk-10"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
@@ -421,7 +421,7 @@ Usage: #example
 * basedOn = Reference(ProviderModule-ServiceRequest-Bloeddrukmeting)
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-99998"
+  * value = "SUBTASK-Bloeddruk-11"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
@@ -453,7 +453,7 @@ Usage: #example
 * basedOn = Reference(ProviderModule-ServiceRequest-Bloeddrukmeting)
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-99998"
+  * value = "SUBTASK-Bloeddruk-12"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
@@ -485,7 +485,7 @@ Usage: #example
 * basedOn = Reference(ProviderModule-ServiceRequest-Bloeddrukmeting)
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-99998"
+  * value = "SUBTASK-Bloeddruk-13"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
@@ -517,7 +517,7 @@ Usage: #example
 * basedOn = Reference(ProviderModule-ServiceRequest-Bloeddrukmeting)
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-99998"
+  * value = "SUBTASK-Bloeddruk-14"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
@@ -568,7 +568,7 @@ Usage: #example
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-88887"
+  * value = "SUBTASK-Informatie-Cholesterol-1"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
@@ -619,7 +619,7 @@ Usage: #example
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-77774"
+  * value = "SUBTASK-Informatie-Bloeddruk-1"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
@@ -670,7 +670,7 @@ Usage: #example
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
-  * value = "TASK-55553"
+  * value = "SUBTASK-Informatie-Situatie-1"
 * groupIdentifier
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
