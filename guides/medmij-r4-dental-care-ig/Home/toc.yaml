@@ -1,0 +1,16 @@
+- name: Index
+  filename: Index.page.md
+- name: Functional design
+  filename: Functional-design.page.md
+- name: FHIR IG
+  filename: FHIR-IG.page.md
+- name: Artifact index
+  filename: Artifact-index
+- name: Artifact index (old)
+  filename: Artifact-index-old.page.md
+- name: Dependencies
+  filename: Dependencies.page.md
+- name: Test material
+  filename: Test-material.page.md
+- name: Release notes
+  filename: Release-notes.page.md

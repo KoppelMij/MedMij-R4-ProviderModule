@@ -28,7 +28,7 @@ U gaat gedurende 1 week zelf uw bloedglucose meten. Volg hierbij deze stappen:
 2. Meet uw bloedglucose elke avond vóór het avondeten.
 3. Was uw handen met warm water en zeep en droog ze goed af.
 4. Gebruik de prikpen en teststrip volgens de instructies van uw meter.
-5. Noteer de waarden direct na de meting in uw dagboekje of app.
+5. Noteer de waarden direct na de meting in uw app.
 6. Voer dit dagelijks uit gedurende 7 dagen en neem de resultaten mee naar uw volgende afspraak.
 """
 
