@@ -112,7 +112,7 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "voer de meetopdracht (title activityDefinition) uit" "Meet je bloedglucose en noteer de waarde in de app"
+* description = "voer de meetopdracht (title activityDefinition) uit"
 * for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-22"
