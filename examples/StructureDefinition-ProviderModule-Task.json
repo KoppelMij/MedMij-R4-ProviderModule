@@ -134,6 +134,11 @@
         ]
       },
       {
+        "id": "Task.description",
+        "path": "Task.description",
+        "definition": "A free-text description of what is to be performed. Implementers should ensure the text is readable on mobile applications."
+      },
+      {
         "id": "Task.for",
         "path": "Task.for",
         "definition": "The patient who benefits from the performance of the service specified in the task.",
