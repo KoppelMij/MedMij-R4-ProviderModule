@@ -18,6 +18,8 @@ Description: "This (FHIR) Task profile describes a patient-specific actionable i
   * ^definition = "A link to the ActivityDefinition that defines the launchable eHealth activity (i.e., what module/content should be launched or performed) associated with this Task. In both MedMij and Koppeltaal implementations, this link is carried using the Koppeltaal instantiates extension."
   * valueReference only Reference(ProviderModule-ActivityDefinition)
 * partOf only Reference(ProviderModule-Task)
+* description
+  * ^definition = "A free-text description of what is to be performed. Implementers should ensure the text is readable on mobile applications."
 * for 1..
 * for only Reference(http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient)
   * ^definition = "The patient who benefits from the performance of the service specified in the task."
