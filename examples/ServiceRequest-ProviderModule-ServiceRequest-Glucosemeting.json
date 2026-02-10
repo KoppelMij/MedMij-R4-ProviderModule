@@ -38,5 +38,5 @@
     "reference": "PractitionerRole/ProviderModule-PractitionerRole-De-Haard",
     "display": "A. de Haard, Huisarts"
   },
-  "patientInstruction": "Beste patiënt,\n\nU gaat gedurende 1 week zelf uw bloedglucose meten. Volg hierbij deze stappen:\n\n1. Meet uw bloedglucose elke ochtend vóór het ontbijt (nuchter).\n2. Meet uw bloedglucose elke avond vóór het avondeten.\n3. Was uw handen met warm water en zeep en droog ze goed af.\n4. Gebruik de prikpen en teststrip volgens de instructies van uw meter.\n5. Noteer de waarden direct na de meting in uw dagboekje of app.\n6. Voer dit dagelijks uit gedurende 7 dagen en neem de resultaten mee naar uw volgende afspraak."
+  "patientInstruction": "Beste patiënt,\n\nU gaat gedurende 1 week zelf uw bloedglucose meten. Volg hierbij deze stappen:\n\n1. Meet uw bloedglucose elke ochtend vóór het ontbijt (nuchter).\n2. Meet uw bloedglucose elke avond vóór het avondeten.\n3. Was uw handen met warm water en zeep en droog ze goed af.\n4. Gebruik de prikpen en teststrip volgens de instructies van uw meter.\n5. Noteer de waarden direct na de meting in uw app.\n6. Voer dit dagelijks uit gedurende 7 dagen en neem de resultaten mee naar uw volgende afspraak."
 }

@@ -40,7 +40,7 @@
   "status": "received",
   "intent": "order",
   "priority": "routine",
-  "description": "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app",
+  "description": "voer de meetopdracht (title activityDefinition) uit",
   "for": {
     "reference": "Patient/ProviderModule-Patient-Van-Duinen",
     "display": "Tom van Duinen"

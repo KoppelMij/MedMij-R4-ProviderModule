@@ -24,11 +24,12 @@
   ],
   "url": "https://example.com/activities/zorgmodulediabetes",
   "version": "1.0.0",
-  "name": "Meetopdacht glucosemeting",
-  "title": "Glucosemeting",
+  "name": "Glucosemeting",
+  "title": "Bloedglucose meting 1 week, 2x per dag",
   "status": "active",
   "publisher": "HinqZNO",
-  "description": "Glucosemeting volgens NHG protocol. Duur: 1 week, 2x per dag",
+  "description": "Bloedglucose meting volgens NHG protocol. Duur: 1 week, 2x per dag",
+  "usage": "controle hartfalen",
   "timingTiming": {
     "repeat": {
       "boundsDuration": {

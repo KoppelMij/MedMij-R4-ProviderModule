@@ -1,0 +1,204 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "am-lm-ActivityDefinition",
+  "text": {
+    "status": "empty",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>"
+  },
+  "url": "http://medmij.nl/fhir/StructureDefinition/am-lm-ActivityDefinition",
+  "name": "LmActivityDefinition",
+  "title": "ActivityDefinition",
+  "status": "active",
+  "publisher": "MedMij",
+  "contact": [
+    {
+      "name": "MedMij",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "info@medmij.nl",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "description": "This activity definition describes launching an external application module from the EHR or portal as part of a clinical or administrative workflow. When applied, it creates a Task resource that requests launch of the configured application, including the necessary launch context such as user, patient, performer, etc., so that the receiving system can open the module in the correct session and context.",
+  "purpose": "The purpose of this activity definition is to describe a launchable application module itself, including a reference to the Endpoint resource that exposes the module. Systems can use this definition to know how and where to invoke the module, while separate Task resources are used to manage and track the patient specific workflow steps that require this module to be launched.",
+  "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": true,
+  "type": "http://medmij.nl/fhir/StructureDefinition/am-lm-ActivityDefinition",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "am-lm-ActivityDefinition",
+        "path": "am-lm-ActivityDefinition",
+        "short": "ActivityDefinition",
+        "definition": "This activity definition describes launching an external application module from the EHR or portal as part of a clinical or administrative workflow. When applied, it creates a Task resource that requests launch of the configured application, including the necessary launch context such as user, patient, performer, etc., so that the receiving system can open the module in the correct session and context.",
+        "alias": [
+          "Module"
+        ]
+      },
+      {
+        "id": "am-lm-ActivityDefinition.ModuleEndpoint",
+        "path": "am-lm-ActivityDefinition.ModuleEndpoint",
+        "short": "Endpoint that exposes the launch service.",
+        "definition": "Endpoint that exposes the launch service.",
+        "alias": [
+          "Endpoint"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Endpoint"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "am-lm-ActivityDefinition.ClientId",
+        "path": "am-lm-ActivityDefinition.ClientId",
+        "short": "Client identifier used by the receiving module (if applicable).",
+        "definition": "Client identifier used by the receiving module (if applicable).",
+        "alias": [
+          "Client-ID"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "am-lm-ActivityDefinition.Identifier",
+        "path": "am-lm-ActivityDefinition.Identifier",
+        "short": "Business identifier that uniquely identifies this ActivityDefinition instance within or across systems.",
+        "definition": "Business identifier that uniquely identifies this ActivityDefinition instance within or across systems.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "id": "am-lm-ActivityDefinition.Version",
+        "path": "am-lm-ActivityDefinition.Version",
+        "short": "Version identifier for this provider module, used to distinguish different published revisions of the same module.",
+        "definition": "Version identifier for this provider module, used to distinguish different published revisions of the same module.",
+        "alias": [
+          "Versie"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "am-lm-ActivityDefinition.Name",
+        "path": "am-lm-ActivityDefinition.Name",
+        "short": "Name for this activity definition (computer friendly)",
+        "definition": "Name for this activity definition (computer friendly)",
+        "alias": [
+          "ModuleNaam"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "am-lm-ActivityDefinition.Title",
+        "path": "am-lm-ActivityDefinition.Title",
+        "short": "Name for this activity definition (human friendly)",
+        "definition": "Name for this activity definition (human friendly)",
+        "alias": [
+          "ModuleTitel"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "am-lm-ActivityDefinition.Status",
+        "path": "am-lm-ActivityDefinition.Status",
+        "short": "Status of the provider module (for example draft, active, retired). Indicates whether the module may be used in workflows.",
+        "definition": "Status of the provider module (for example draft, active, retired). Indicates whether the module may be used in workflows.",
+        "alias": [
+          "ModuleStatus"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ]
+      },
+      {
+        "id": "am-lm-ActivityDefinition.Publisher",
+        "path": "am-lm-ActivityDefinition.Publisher",
+        "short": "Organization responsible for publishing this activity definition. The publisher owns the content and/or functionality and manages versioning.",
+        "definition": "Organization responsible for publishing this activity definition. The publisher owns the content and/or functionality and manages versioning.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "am-lm-ActivityDefinition.Description",
+        "path": "am-lm-ActivityDefinition.Description",
+        "short": "Human readable explanation of what this provider module does and how it should be used in the workflow.",
+        "definition": "Human readable explanation of what this provider module does and how it should be used in the workflow.",
+        "alias": [
+          "ModuleOmschrijving"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "markdown"
+          }
+        ]
+      },
+      {
+        "id": "am-lm-ActivityDefinition.Timing",
+        "path": "am-lm-ActivityDefinition.Timing",
+        "short": "Timing of when this provider module should be offered or performed in the workflow, for example once, recurring, or before a specific appointment.",
+        "definition": "Timing of when this provider module should be offered or performed in the workflow, for example once, recurring, or before a specific appointment.",
+        "alias": [
+          "ModuleTijdschema"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Timing"
+          }
+        ]
+      }
+    ]
+  }
+}
