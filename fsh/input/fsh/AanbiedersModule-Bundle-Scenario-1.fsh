@@ -46,11 +46,12 @@ Usage: #example
   * url = $client-id
   * valueString = "dvaaanbiedersmodulesweb"
 * version = "1.0.0"
-* name = "Meetopdacht glucosemeting"
-* title = "Glucosemeting"
+* name = "Glucosemeting"
+* title = "Bloedglucose meting 1 week, 2x per dag"
 * status = #active
 * publisher = "HinqZNO"
-* description = "Glucosemeting volgens NHG protocol. Duur: 1 week, 2x per dag"
+* description = "Bloedglucose meting volgens NHG protocol. Duur: 1 week, 2x per dag"
+* usage = "controle hartfalen"
 * timingTiming.repeat
   * boundsDuration.value = 7
   * boundsDuration.system = "http://unitsofmeasure.org"
@@ -111,7 +112,7 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
+* description = "voer de meetopdracht (title activityDefinition) uit" "Meet je bloedglucose en noteer de waarde in de app"
 * for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-22"

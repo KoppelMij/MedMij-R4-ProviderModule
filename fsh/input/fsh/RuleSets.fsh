@@ -1,4 +1,4 @@
-// All RuleSets used in KoppelMij
+// All RuleSets used in ProviderModule
 
 RuleSet: Origin
 * extension contains
