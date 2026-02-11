@@ -1,26 +1,26 @@
 Profile: ProviderModuleServiceRequest
 Parent: ServiceRequest
 Id: ProviderModule-ServiceRequest
-Description: "Clinical order for an eHealth activity (module) that a healthcare professional requests for a specific patient, such as filling out a questionnaire, performing home measurements, or watching an instruction video."
+Description: "Clinical order for a patient-specific digital (eHealth) activity that a healthcare professional requests for a specific patient, such as completing a questionnaire, performing home measurements, viewing educational content, or launching a third-party module."
 * insert DefaultNarrative
 * ^status = #draft
 * insert PublisherAndContactMedMij
-* ^purpose = "To represent the clinical order from a healthcare professional to start a specific provider module for a patient. This ServiceRequest provides the clinical context for Tasks that execute the module."
+* ^purpose = "To represent the clinical order to start or perform a specific digital (eHealth) activity for a patient. This ServiceRequest provides the clinical intent, context, requested schedule, and patient-specific instructions, and can serve as the basis for one or more Task resources that manage execution and tracking of the activity."
 * insert Copyright
 * .
   * ^short = "ServiceRequest"
   * ^alias = "Zorgopdracht"
 * insert Origin
 * .
-^definition = "Patient specific clinical order for starting an eHealth activity (provider module) in the ProviderModule context. Links the patient, the requested module, the intended schedule and clinical reason, and provides the basis for Tasks that carry out the module."
-* extension contains $koppeltaal-instantiates named instantiates 0..*
-  * ^short = "Reference to ActivityDefinition" 
-  * ^definition = "Reference to the ActivityDefinition, which conforms to the MedMij ActivityDefinition profile."
-  * valueReference only Reference(ProviderModule-ActivityDefinition)
+^definition = "Patient-specific clinical order for requesting a digital (eHealth) activity in the ProviderModule context. It links the patient, the requested activity definition, timing/schedule, and clinical rationale, and may include patient-specific instructions. It can be referenced by Task resources that coordinate execution and status tracking."
 * subject only Reference(http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient)
+  * ^definition = "The patient for whom the activity is requested."
 * requester only Reference(http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole)
   * ^comment = """
     Each occurrence of the zib HealthProfessional is normally represented by _two_ FHIR resources: a PractitionerRole resource (instance of [nl-core-HealthProfessional-PractitionerRole](http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole)) and a Practitioner resource (instance of [nl-core-HealthProfessional-Practitioner](http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner)). The Practitioner resource is referenced from the PractitionerRole instance. For this reason, sending systems should fill the reference to the PractitionerRole instance here, and not the Practitioner resource. Receiving systems can then retrieve the reference to the Practitioner resource from that PractitionerRole instance.
 
     In rare circumstances, there is only a Practitioner instance, in which case it is that instance which will be referenced here. However, since this should be the exception, the nl-core-HealthProfessional-Practitioner profile is not explicitly mentioned as a target profile.
     """
+* patientInstruction
+  * ^short = "Patient-specific instructions"
+  * ^definition = "Patient or consumer-oriented instructions related to the requested activity. Use this element to convey patient-specific guidance that should be shown alongside the Task(s) executing this order (e.g. preferred timing, preparation steps)."
