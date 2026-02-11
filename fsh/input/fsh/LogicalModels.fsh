@@ -35,33 +35,33 @@ Logical: LmActivityDefinition
 Parent: http://hl7.org/fhir/StructureDefinition/Element
 Id: pm-lm-ActivityDefinition
 Title: "ActivityDefinition"
-Description: "This activity definition describes launching an external application module from the EHR or portal as part of a clinical or administrative workflow. When applied, it creates a Task resource that requests launch of the configured application, including the necessary launch context such as user, patient, performer, etc., so that the receiving system can open the module in the correct session and context."
+Description: "Reusable definition of a launchable digital (eHealth) activity that can be requested for a patient in MedMij and/or Koppeltaal workflows. It describes the clinical intent and (when applicable) the technical launch details (e.g., endpoint) so that systems can create patient-specific workflow Tasks that reference this definition."
 * insert DefaultNarrative
 * ^status = #active
 * insert PublisherAndContactMedMij
-* ^purpose = "The purpose of this activity definition is to describe a launchable application module itself, including a reference to the Endpoint resource that exposes the module. Systems can use this definition to know how and where to invoke the module, while separate Task resources are used to manage and track the patient specific workflow steps that require this module to be launched."
+* ^purpose = "To describe a launchable digital (eHealth) activity as a reusable template, including clinical intent and the information needed to invoke the activity in the correct context. Patient-specific workflow management and status tracking are handled in separate Task resources that reference this definition."
 * insert Copyright
 * ^abstract = true
 * .
   * ^alias = "Module"
-* ModuleEndpoint 0..1 Reference(Endpoint) "Endpoint that exposes the launch service."
+* ModuleEndpoint 0..1 Reference(Endpoint) "Endpoint that exposes the launchable activity."
   * ^alias = "Endpoint"
-* ClientId 0..1 string "Client identifier used by the receiving module (if applicable)."
-  * ^alias = "Client-ID"
 * Identifier 0..1 Identifier "Business identifier that uniquely identifies this ActivityDefinition instance within or across systems."
-* Version 0..1 string "Version identifier for this provider module, used to distinguish different published revisions of the same module."
+* Version 0..1 string "Version identifier for this provider module, used to distinguish different published revisions."
   * ^alias = "Versie"
 * Name 0..1 string "Name for this activity definition (computer friendly)"
-  * ^alias = "ModuleNaam"
-* Title 0..1 string "Name for this activity definition (human friendly)"
-  * ^alias = "ModuleTitel"
-* Status 0..1 code "Status of the provider module (for example draft, active, retired). Indicates whether the module may be used in workflows."
-  * ^alias = "ModuleStatus"
+  * ^alias = "Naam"
+* Title 0..1 string "Human-friendly title for display and selection."
+  * ^alias = "Titel"
+* Status 0..1 code "Status of the provider module (for example draft, active, retired). Indicates whether it may be used in workflows."
+  * ^alias = "Status"
 * Publisher 0..1 string "Organization responsible for publishing this activity definition. The publisher owns the content and/or functionality and manages versioning."
-* Description 0..1 markdown "Human readable explanation of what this provider module does and how it should be used in the workflow."
-  * ^alias = "ModuleOmschrijving"
-* Timing 0..1 Timing "Timing of when this provider module should be offered or performed in the workflow, for example once, recurring, or before a specific appointment."
-  * ^alias = "ModuleTijdschema"
+* Description 0..1 markdown "Human-readable explanation of what the activity is and how it supports the care process. This description is reusable and not patient-specific."
+  * ^alias = "Omschrijving"
+* Usage 0..1 string "Guidance on how this activity definition should be used in clinical workflows. In the MedMij use case, this text is intended for the healthcare professional who is selecting and assigning the activity to the patient."
+  * ^alias = "Gebruik"
+* Timing 0..1 Timing "Recommended timing for the activity when applied in a workflow (e.g., once, recurring, over a period). Patient-specific scheduling belongs in ServiceRequest resources."
+  * ^alias = "Tijdschema"
 
 Logical: LmTask
 Parent: http://hl7.org/fhir/StructureDefinition/Element
