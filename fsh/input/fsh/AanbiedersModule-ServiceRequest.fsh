@@ -23,4 +23,4 @@ Description: "Clinical order for a patient-specific digital (eHealth) activity t
     """
 * patientInstruction
   * ^short = "Patient-specific instructions"
-  * ^definition = "Patient or consumer-oriented instructions related to the requested activity. Use this element to convey patient-specific guidance that should be shown alongside the Task(s) executing this order (e.g. preferred timing, preparation steps)."
+  * ^definition = "Patient or consumer-oriented instructions related to the requested activity. Use this element to convey patient-specific guidance that should be shown alongside the Task(s) executing this order (e.g. e.g., home blood pressure monitoring for 8 weeks, once daily in the morning)."

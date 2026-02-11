@@ -119,30 +119,28 @@ Logical: LmServiceRequest
 Parent: http://hl7.org/fhir/StructureDefinition/Element
 Id: pm-lm-ServiceRequest
 Title: "ServiceRequest"
-Description: "Clinical order for an eHealth activity (module) that a healthcare professional requests for a specific patient, such as filling out a questionnaire, performing home measurements, or watching an instruction video."
+Description: "Patient-specific clinical order for a digital (eHealth) activity that a healthcare professional requests for a patient, such as completing a questionnaire, performing home measurements, viewing educational content, or launching a third-party module."
 * insert DefaultNarrative
 * ^status = #active
 * insert PublisherAndContactMedMij
-* ^purpose = "To represent the clinical order from a healthcare professional to start a specific provider module for a patient. This ServiceRequest provides the clinical context for Tasks that execute the module."
+* ^purpose = "To represent the clinical order to start or perform a specific digital (eHealth) activity for a patient. This ServiceRequest provides the clinical intent, context, requested schedule, and patient-specific instructions, and can serve as the basis for one or more Task resources that manage execution and tracking of the activity."
 * insert Copyright
 * ^abstract = true
 * .
   * ^alias = "Zorgopdracht"
 * Identifier 0..* Identifier "Business identifier that uniquely identifies this ServiceRequest within or across systems."
   * ^alias = "Identifier"
-* Status 0..1 code "Current state of the service request (for example draft, active, completed, cancelled)."
+* Status 0..1 code "Current state of the service request (e.g. draft, active, completed, cancelled)."
   * ^alias = "Status"
-* Intent 0..1 code "Indicates the level of authority or intention associated with the request, for example order or plan."
+* Intent 0..1 code "Indicates the level of authority or intention associated with the request (e.g., order or plan)."
   * ^alias = "Bedoeling"
-* Code 0..1 CodeableConcept "Type of ServiceRequest or eHealth activity being requested."
-  * ^alias = "Type"
-* Subject 1..1 Reference(Patient) "Patient for whom this provider module is requested."
+* Subject 1..1 Reference(Patient) "Patient for whom the digital activity is requested."
   * ^alias = "Patiënt"
-* patientInstruction 1..1 string "Patient specific instruction for how the requested module should be performed, for example home blood pressure monitoring for 8 weeks, once daily in the morning."
+* patientInstruction 1..1 string "Patient or consumer-oriented instructions for how the requested activity should be performed. Use this element for patient-specific guidance that should be shown alongside the Task(s) executing this order (e.g., home blood pressure monitoring for 8 weeks, once daily in the morning)."
   * ^alias = "PatiëntenInstructie"
 * Occurrence 0..1 Timing "Requested schedule for performing the provider module, such as duration, frequency and time of day."
   * ^alias = "Tijdschema"
-* Requester 0..1 Reference(PractitionerRole) "Healthcare professional or organization that requests this provider module for the patient."
+* Requester 0..1 Reference(PractitionerRole) "Healthcare professional role that requests this activity for the patient."
   * ^alias = "Aanvrager"
 * AuthoredOn 0..1 dateTime "Date and time when this service request was created."
   * ^alias = "AanmaakDatumTijd"
