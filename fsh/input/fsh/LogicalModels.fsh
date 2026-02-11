@@ -2,7 +2,7 @@
 
 Logical: LmPatient
 Parent: http://hl7.org/fhir/StructureDefinition/Element
-Id: am-lm-Patient
+Id: pm-lm-Patient
 Title: "Patient"
 Description: "The person for whom the task is intended."
 * insert DefaultNarrative
@@ -33,7 +33,7 @@ Description: "The person for whom the task is intended."
 
 Logical: LmActivityDefinition
 Parent: http://hl7.org/fhir/StructureDefinition/Element
-Id: am-lm-ActivityDefinition
+Id: pm-lm-ActivityDefinition
 Title: "ActivityDefinition"
 Description: "This activity definition describes launching an external application module from the EHR or portal as part of a clinical or administrative workflow. When applied, it creates a Task resource that requests launch of the configured application, including the necessary launch context such as user, patient, performer, etc., so that the receiving system can open the module in the correct session and context."
 * insert DefaultNarrative
@@ -65,7 +65,7 @@ Description: "This activity definition describes launching an external applicati
 
 Logical: LmTask
 Parent: http://hl7.org/fhir/StructureDefinition/Element
-Id: am-lm-Task
+Id: pm-lm-Task
 Title: "Task"
 Description: "Patient-specific workflow item that requests execution of a defined digital (eHealth) activity. Each Task represents an instance of “perform this activity for this patient”, optionally linking to an ActivityDefinition that describes the launchable activity."
 * insert DefaultNarrative
@@ -117,7 +117,7 @@ Description: "Patient-specific workflow item that requests execution of a define
 
 Logical: LmServiceRequest
 Parent: http://hl7.org/fhir/StructureDefinition/Element
-Id: am-lm-ServiceRequest
+Id: pm-lm-ServiceRequest
 Title: "ServiceRequest"
 Description: "Clinical order for an eHealth activity (module) that a healthcare professional requests for a specific patient, such as filling out a questionnaire, performing home measurements, or watching an instruction video."
 * insert DefaultNarrative
