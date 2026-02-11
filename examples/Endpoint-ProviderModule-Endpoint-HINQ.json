@@ -10,6 +10,12 @@
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"nl-NL\" lang=\"nl-NL\">Example of an Endpoint as used in ProviderModule</div>"
   },
+  "extension": [
+    {
+      "url": "http://medmij.nl/fhir/StructureDefinition/client-id",
+      "valueString": "dvaaanbiedersmodulesweb"
+    }
+  ],
   "status": "active",
   "connectionType": {
     "code": "hl7-fhir-rest",

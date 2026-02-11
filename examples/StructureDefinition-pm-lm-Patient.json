@@ -1,11 +1,11 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "am-lm-Patient",
+  "id": "pm-lm-Patient",
   "text": {
     "status": "empty",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>"
   },
-  "url": "http://medmij.nl/fhir/StructureDefinition/am-lm-Patient",
+  "url": "http://medmij.nl/fhir/StructureDefinition/pm-lm-Patient",
   "name": "LmPatient",
   "title": "Patient",
   "status": "active",
@@ -28,14 +28,14 @@
   "fhirVersion": "4.0.1",
   "kind": "logical",
   "abstract": true,
-  "type": "http://medmij.nl/fhir/StructureDefinition/am-lm-Patient",
+  "type": "http://medmij.nl/fhir/StructureDefinition/pm-lm-Patient",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {
     "element": [
       {
-        "id": "am-lm-Patient",
-        "path": "am-lm-Patient",
+        "id": "pm-lm-Patient",
+        "path": "pm-lm-Patient",
         "short": "Patient",
         "definition": "The person for whom the task is intended.",
         "alias": [
@@ -43,8 +43,8 @@
         ]
       },
       {
-        "id": "am-lm-Patient.NameInformation",
-        "path": "am-lm-Patient.NameInformation",
+        "id": "pm-lm-Patient.NameInformation",
+        "path": "pm-lm-Patient.NameInformation",
         "short": "Patient's full name.",
         "definition": "Patient's full name.",
         "alias": [
@@ -59,8 +59,8 @@
         ]
       },
       {
-        "id": "am-lm-Patient.NameInformation.FirstNames",
-        "path": "am-lm-Patient.NameInformation.FirstNames",
+        "id": "pm-lm-Patient.NameInformation.FirstNames",
+        "path": "pm-lm-Patient.NameInformation.FirstNames",
         "short": "The first names of the patient.",
         "definition": "The first names of the patient.",
         "alias": [
@@ -75,8 +75,8 @@
         ]
       },
       {
-        "id": "am-lm-Patient.NameInformation.Initials",
-        "path": "am-lm-Patient.NameInformation.Initials",
+        "id": "pm-lm-Patient.NameInformation.Initials",
+        "path": "pm-lm-Patient.NameInformation.Initials",
         "short": "The initials of the patient.",
         "definition": "The initials of the patient.",
         "alias": [
@@ -91,8 +91,8 @@
         ]
       },
       {
-        "id": "am-lm-Patient.NameInformation.LastName",
-        "path": "am-lm-Patient.NameInformation.LastName",
+        "id": "pm-lm-Patient.NameInformation.LastName",
+        "path": "pm-lm-Patient.NameInformation.LastName",
         "short": "Container of the LastName concept. This container contains all data elements of the LastName concept.",
         "definition": "Container of the LastName concept. This container contains all data elements of the LastName concept.",
         "alias": [
@@ -107,8 +107,8 @@
         ]
       },
       {
-        "id": "am-lm-Patient.NameInformation.LastName.Prefix",
-        "path": "am-lm-Patient.NameInformation.LastName.Prefix",
+        "id": "pm-lm-Patient.NameInformation.LastName.Prefix",
+        "path": "pm-lm-Patient.NameInformation.LastName.Prefix",
         "short": "Prefix to the last name of the patient.",
         "definition": "Prefix to the last name of the patient.",
         "alias": [
@@ -123,8 +123,8 @@
         ]
       },
       {
-        "id": "am-lm-Patient.NameInformation.LastName.LastName",
-        "path": "am-lm-Patient.NameInformation.LastName.LastName",
+        "id": "pm-lm-Patient.NameInformation.LastName.LastName",
+        "path": "pm-lm-Patient.NameInformation.LastName.LastName",
         "short": "The last name of the patient.",
         "definition": "The last name of the patient.",
         "alias": [
@@ -139,8 +139,8 @@
         ]
       },
       {
-        "id": "am-lm-Patient.DateOfBirth",
-        "path": "am-lm-Patient.DateOfBirth",
+        "id": "pm-lm-Patient.DateOfBirth",
+        "path": "pm-lm-Patient.DateOfBirth",
         "short": "Patient's date of birth.",
         "definition": "Patient's date of birth.",
         "alias": [
@@ -155,8 +155,8 @@
         ]
       },
       {
-        "id": "am-lm-Patient.Gender",
-        "path": "am-lm-Patient.Gender",
+        "id": "pm-lm-Patient.Gender",
+        "path": "pm-lm-Patient.Gender",
         "short": "Patient's administrative gender.",
         "definition": "Patient's administrative gender.",
         "alias": [

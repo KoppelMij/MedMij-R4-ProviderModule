@@ -16,13 +16,8 @@
       "valueReference": {
         "reference": "Endpoint/ProviderModule-Endpoint-HINQ"
       }
-    },
-    {
-      "url": "http://medmij.nl/fhir/StructureDefinition/client-id",
-      "valueString": "dvaaanbiedersmodule"
     }
   ],
-  "url": "https://example.com/activities/zorgmodulecopd",
   "version": "1.0.0",
   "name": "Vragenlijst: Wat wilt u bereiken?",
   "title": "Vragenlijst: Wat wilt u bereiken?",

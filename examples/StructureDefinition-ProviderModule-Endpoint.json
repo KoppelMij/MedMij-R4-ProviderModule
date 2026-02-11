@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "The (FHIR) Endpoint (resource) is a representation of a technical contact point of an application that offers one or more eHealth services for a healthcare provider.",
+  "description": "The (FHIR) Endpoint (resource) is a representation of a technical contact point of an application that offers one or more launchable digital (eHealth) activities for a healthcare provider.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -51,6 +51,21 @@
             "code": "Extension",
             "profile": [
               "http://koppeltaal.nl/fhir/StructureDefinition/resource-origin"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Endpoint.extension:clientId",
+        "path": "Endpoint.extension",
+        "sliceName": "clientId",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://medmij.nl/fhir/StructureDefinition/client-id"
             ]
           }
         ]

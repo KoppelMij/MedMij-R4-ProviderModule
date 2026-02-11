@@ -16,13 +16,8 @@
       "valueReference": {
         "reference": "Endpoint/ProviderModule-Endpoint-Minddistrict"
       }
-    },
-    {
-      "url": "http://medmij.nl/fhir/StructureDefinition/client-id",
-      "valueString": "dvaaanbiedersmodule"
     }
   ],
-  "url": "https://example.com/activities/zorgmodulecvrm",
   "version": "1.0.0",
   "name": "Informatie over cholesterol",
   "title": "Wat is cholesterol en wat zijn de risico's?",

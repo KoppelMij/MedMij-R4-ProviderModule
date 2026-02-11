@@ -16,13 +16,8 @@
       "valueReference": {
         "reference": "Endpoint/ProviderModule-Endpoint-HINQ"
       }
-    },
-    {
-      "url": "http://medmij.nl/fhir/StructureDefinition/client-id",
-      "valueString": "dvaaanbiedersmodule"
     }
   ],
-  "url": "https://example.com/activities/zorgmodulecopd",
   "version": "1.0.0",
   "name": "Informatie over leven met COPD",
   "title": "Informatie over leven met COPD",

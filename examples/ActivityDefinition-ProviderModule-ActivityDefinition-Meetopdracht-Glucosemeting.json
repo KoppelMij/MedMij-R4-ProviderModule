@@ -16,13 +16,8 @@
       "valueReference": {
         "reference": "Endpoint/ProviderModule-Endpoint-HINQ"
       }
-    },
-    {
-      "url": "http://medmij.nl/fhir/StructureDefinition/client-id",
-      "valueString": "dvaaanbiedersmodulesweb"
     }
   ],
-  "url": "https://example.com/activities/zorgmodulediabetes",
   "version": "1.0.0",
   "name": "Glucosemeting",
   "title": "Bloedglucose meting 1 week, 2x per dag",
