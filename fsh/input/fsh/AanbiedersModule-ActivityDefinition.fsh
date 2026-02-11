@@ -10,8 +10,7 @@ Description: "This (FHIR) ActivityDefinition profile describes a reusable defini
   * ^definition = "Definition of a launchable digital (eHealth) activity that can be used as a template for patient-specific workflow requests. The definition may describe different activity types (e.g., launching a third-party module, presenting information, completing a questionnaire, or performing a measurement) and includes the technical launch details needed to invoke the activity in the correct context."
 * extension contains
     $koppeltaal-endpoint named endpoint 1..* and
-    $koppeltaal-publisher-id named publisherId 0..* and
-    MedMijClientID named clientId 0..*
+    $koppeltaal-publisher-id named publisherId 0..*
 * extension[endpoint] ^short = "Endpoint for launching the activity"
   * ^definition = "Mandatory reference to the service application (endpoint) that provides the launchable eHealth activity. Can be more than one endpoint."
 * title 1..

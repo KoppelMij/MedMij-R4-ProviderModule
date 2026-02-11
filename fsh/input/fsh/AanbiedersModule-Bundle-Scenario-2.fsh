@@ -36,13 +36,9 @@ Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of an ActivityDefinition</div>"
-* extension[0]
+* extension
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
   * valueReference = Reference(ProviderModule-Endpoint-Minddistrict)
-* url = "https://example.com/activities/zorgmodulecvrm"
-* extension[1]
-  * url = $client-id
-  * valueString = "dvaaanbiedersmodule"
 * version = "1.0.0"
 * name = "Meetopdacht bloeddrukmeting"
 * title = "Bloeddrukmeting"
@@ -542,13 +538,9 @@ Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of an ActivityDefinition</div>"
-* extension[0]
+* extension
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
   * valueReference = Reference(ProviderModule-Endpoint-Minddistrict)
-* url = "https://example.com/activities/zorgmodulecvrm"
-* extension[1]
-  * url = $client-id
-  * valueString = "dvaaanbiedersmodule"
 * version = "1.0.0"
 * name = "Informatie over cholesterol"
 * title = "Wat is cholesterol en wat zijn de risico's?"
@@ -593,13 +585,9 @@ Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of an ActivityDefinition</div>"
-* extension[0]
+* extension
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
   * valueReference = Reference(ProviderModule-Endpoint-Minddistrict)
-* url = "https://example.com/activities/zorgmodulecvrm"
-* extension[1]
-  * url = $client-id
-  * valueString = "dvaaanbiedersmodule"
 * version = "1.0.0"
 * name = "Informatie over thuis bloeddruk meten"
 * title = "Informatie over thuis bloeddruk meten"
@@ -647,7 +635,6 @@ Usage: #example
 * extension[0]
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
   * valueReference = Reference(ProviderModule-Endpoint-Minddistrict)
-* url = "https://example.com/activities/zorgmodulecvrm"
 * extension[1]
   * url = $client-id
   * valueString = "dvaaanbiedersmodule"
@@ -694,6 +681,9 @@ Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of an Endpoint as used in ProviderModule</div>"
+* extension
+  * url = $client-id
+  * valueString = "dvaaanbiedersmodule"
 * status = #active
 * connectionType = http://terminology.hl7.org/CodeSystem/endpoint-connection-type#hl7-fhir-rest
 * managingOrganization = Reference(ProviderModule-Organization-Huisartsenpraktijk-Medrie)

@@ -6,13 +6,9 @@ Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of an ActivityDefinition</div>"
-* extension[0]
+* extension
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
   * valueReference = Reference(ProviderModule-Endpoint-HINQ)
-* url = "https://example.com/activities/zorgmodulecopd"
-* extension[1]
-  * url = $client-id
-  * valueString = "dvaaanbiedersmodule"
 * version = "1.0.0"
 * name = "Meetopdacht saturatiemeting"
 * title = "Saturatiemeting"
@@ -281,13 +277,9 @@ Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of an ActivityDefinition</div>"
-* extension[0]
+* extension
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
   * valueReference = Reference(ProviderModule-Endpoint-HINQ)
-* url = "https://example.com/activities/zorgmodulecopd"
-* extension[1]
-  * url = $client-id
-  * valueString = "dvaaanbiedersmodule"
 * version = "1.0.0"
 * name = "Informatie over leven met COPD"
 * title = "Informatie over leven met COPD"
@@ -333,13 +325,9 @@ Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of an ActivityDefinition</div>"
-* extension[0]
+* extension
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
   * valueReference = Reference(ProviderModule-Endpoint-HINQ)
-* url = "https://example.com/activities/zorgmodulecopd"
-* extension[1]
-  * url = $client-id
-  * valueString = "dvaaanbiedersmodule"
 * version = "1.0.0"
 * name = "Instructiemodule inhalatiemedicatie"
 * title = "Instructiemodule inhalatiemedicatie"
@@ -384,13 +372,9 @@ Usage: #example
 * text
   * status = #generated
   * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of an ActivityDefinition</div>"
-* extension[0]
+* extension
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
   * valueReference = Reference(ProviderModule-Endpoint-HINQ)
-* url = "https://example.com/activities/zorgmodulecopd"
-* extension[1]
-  * url = $client-id
-  * valueString = "dvaaanbiedersmodule"
 * version = "1.0.0"
 * name = "Vragenlijst: Wat wilt u bereiken?"
 * title = "Vragenlijst: Wat wilt u bereiken?"
