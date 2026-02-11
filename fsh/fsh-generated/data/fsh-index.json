@@ -1,0 +1,658 @@
+[
+  {
+    "outputFile": "ActivityDefinition-ProviderModule-ActivityDefinition-Informatie-Cholesterol.json",
+    "fshName": "ProviderModule-ActivityDefinition-Informatie-Cholesterol",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-2.fsh",
+    "startLine": 535,
+    "endLine": 549
+  },
+  {
+    "outputFile": "ActivityDefinition-ProviderModule-ActivityDefinition-Informatie-Diabetes.json",
+    "fshName": "ProviderModule-ActivityDefinition-Informatie-Diabetes",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-1.fsh",
+    "startLine": 524,
+    "endLine": 538
+  },
+  {
+    "outputFile": "ActivityDefinition-ProviderModule-ActivityDefinition-Informatie-Gezonder-Leven.json",
+    "fshName": "ProviderModule-ActivityDefinition-Informatie-Gezonder-Leven",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-1.fsh",
+    "startLine": 572,
+    "endLine": 586
+  },
+  {
+    "outputFile": "ActivityDefinition-ProviderModule-ActivityDefinition-Informatie-Inhalatiemedicatie.json",
+    "fshName": "ProviderModule-ActivityDefinition-Informatie-Inhalatiemedicatie",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-3.fsh",
+    "startLine": 322,
+    "endLine": 336
+  },
+  {
+    "outputFile": "ActivityDefinition-ProviderModule-ActivityDefinition-Informatie-Leven-COPD.json",
+    "fshName": "ProviderModule-ActivityDefinition-Informatie-Leven-COPD",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-3.fsh",
+    "startLine": 274,
+    "endLine": 288
+  },
+  {
+    "outputFile": "ActivityDefinition-ProviderModule-ActivityDefinition-Informatie-Thuismeting.json",
+    "fshName": "ProviderModule-ActivityDefinition-Informatie-Thuismeting",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-2.fsh",
+    "startLine": 582,
+    "endLine": 596
+  },
+  {
+    "outputFile": "ActivityDefinition-ProviderModule-ActivityDefinition-Meetopdracht-Bloeddrukmeting.json",
+    "fshName": "ProviderModule-ActivityDefinition-Meetopdracht-Bloeddrukmeting",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-2.fsh",
+    "startLine": 33,
+    "endLine": 55
+  },
+  {
+    "outputFile": "ActivityDefinition-ProviderModule-ActivityDefinition-Meetopdracht-Glucosemeting.json",
+    "fshName": "ProviderModule-ActivityDefinition-Meetopdracht-Glucosemeting",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-1.fsh",
+    "startLine": 35,
+    "endLine": 58
+  },
+  {
+    "outputFile": "ActivityDefinition-ProviderModule-ActivityDefinition-Meetopdracht-Saturatiemeting.json",
+    "fshName": "ProviderModule-ActivityDefinition-Meetopdracht-Saturatiemeting",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-3.fsh",
+    "startLine": 3,
+    "endLine": 25
+  },
+  {
+    "outputFile": "ActivityDefinition-ProviderModule-ActivityDefinition-Vragenlijst-Uw-Situatie.json",
+    "fshName": "ProviderModule-ActivityDefinition-Vragenlijst-Uw-Situatie",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-2.fsh",
+    "startLine": 629,
+    "endLine": 646
+  },
+  {
+    "outputFile": "ActivityDefinition-ProviderModule-ActivityDefinition-Vragenlijst-Wat-Bereiken.json",
+    "fshName": "ProviderModule-ActivityDefinition-Vragenlijst-Wat-Bereiken",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-3.fsh",
+    "startLine": 369,
+    "endLine": 383
+  },
+  {
+    "outputFile": "ActivityDefinition-ProviderModule-ActivityDefinition-Vragenlijst-WoonLeefsituatie.json",
+    "fshName": "ProviderModule-ActivityDefinition-Vragenlijst-WoonLeefsituatie",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-1.fsh",
+    "startLine": 619,
+    "endLine": 633
+  },
+  {
+    "outputFile": "Endpoint-ProviderModule-Endpoint-HINQ.json",
+    "fshName": "ProviderModule-Endpoint-HINQ",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-1.fsh",
+    "startLine": 666,
+    "endLine": 679
+  },
+  {
+    "outputFile": "Endpoint-ProviderModule-Endpoint-Minddistrict.json",
+    "fshName": "ProviderModule-Endpoint-Minddistrict",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-2.fsh",
+    "startLine": 678,
+    "endLine": 691
+  },
+  {
+    "outputFile": "Organization-ProviderModule-Organization-Huisartsenpraktijk-Medrie.json",
+    "fshName": "ProviderModule-Organization-Huisartsenpraktijk-Medrie",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-1.fsh",
+    "startLine": 763,
+    "endLine": 788
+  },
+  {
+    "outputFile": "Patient-ProviderModule-Patient-De-Groot.json",
+    "fshName": "ProviderModule-Patient-De-Groot",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-2.fsh",
+    "startLine": 693,
+    "endLine": 736
+  },
+  {
+    "outputFile": "Patient-ProviderModule-Patient-Van-Dijk.json",
+    "fshName": "ProviderModule-Patient-Van-Dijk",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-3.fsh",
+    "startLine": 416,
+    "endLine": 459
+  },
+  {
+    "outputFile": "Patient-ProviderModule-Patient-Van-Duinen.json",
+    "fshName": "ProviderModule-Patient-Van-Duinen",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-1.fsh",
+    "startLine": 681,
+    "endLine": 724
+  },
+  {
+    "outputFile": "Practitioner-ProviderModule-Practitioner-De-Haard.json",
+    "fshName": "ProviderModule-Practitioner-De-Haard",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-1.fsh",
+    "startLine": 737,
+    "endLine": 761
+  },
+  {
+    "outputFile": "Practitioner-ProviderModule-Practitioner-De-Jong.json",
+    "fshName": "ProviderModule-Practitioner-De-Jong",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-2.fsh",
+    "startLine": 749,
+    "endLine": 773
+  },
+  {
+    "outputFile": "Practitioner-ProviderModule-Practitioner-Van-Rijn.json",
+    "fshName": "ProviderModule-Practitioner-Van-Rijn",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-3.fsh",
+    "startLine": 472,
+    "endLine": 496
+  },
+  {
+    "outputFile": "PractitionerRole-ProviderModule-PractitionerRole-De-Haard.json",
+    "fshName": "ProviderModule-PractitionerRole-De-Haard",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-1.fsh",
+    "startLine": 726,
+    "endLine": 735
+  },
+  {
+    "outputFile": "PractitionerRole-ProviderModule-PractitionerRole-De-Jong.json",
+    "fshName": "ProviderModule-PractitionerRole-De-Jong",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-2.fsh",
+    "startLine": 738,
+    "endLine": 747
+  },
+  {
+    "outputFile": "PractitionerRole-ProviderModule-PractitionerRole-Van-Rijn.json",
+    "fshName": "ProviderModule-PractitionerRole-Van-Rijn",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-3.fsh",
+    "startLine": 461,
+    "endLine": 470
+  },
+  {
+    "outputFile": "ServiceRequest-ProviderModule-ServiceRequest-Bloeddrukmeting.json",
+    "fshName": "ProviderModule-ServiceRequest-Bloeddrukmeting",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-2.fsh",
+    "startLine": 2,
+    "endLine": 22
+  },
+  {
+    "outputFile": "ServiceRequest-ProviderModule-ServiceRequest-Glucosemeting.json",
+    "fshName": "ProviderModule-ServiceRequest-Glucosemeting",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-1.fsh",
+    "startLine": 2,
+    "endLine": 22
+  },
+  {
+    "outputFile": "StructureDefinition-MedMij-ClientID.json",
+    "fshName": "MedMijClientID",
+    "fshType": "Extension",
+    "fshFile": "MedMij-ClientID.fsh",
+    "startLine": 1,
+    "endLine": 17
+  },
+  {
+    "outputFile": "StructureDefinition-ProviderModule-ActivityDefinition.json",
+    "fshName": "ProviderModuleActivityDefinition",
+    "fshType": "Profile",
+    "fshFile": "AanbiedersModule-ActivityDefinition.fsh",
+    "startLine": 1,
+    "endLine": 25
+  },
+  {
+    "outputFile": "StructureDefinition-ProviderModule-Endpoint.json",
+    "fshName": "ProviderModuleEndpoint",
+    "fshType": "Profile",
+    "fshFile": "AanbiedersModule-Endpoint.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
+    "outputFile": "StructureDefinition-ProviderModule-ServiceRequest.json",
+    "fshName": "ProviderModuleServiceRequest",
+    "fshType": "Profile",
+    "fshFile": "AanbiedersModule-ServiceRequest.fsh",
+    "startLine": 1,
+    "endLine": 26
+  },
+  {
+    "outputFile": "StructureDefinition-ProviderModule-Task.json",
+    "fshName": "ProviderModuleTask",
+    "fshType": "Profile",
+    "fshFile": "AanbiedersModule-Task.fsh",
+    "startLine": 1,
+    "endLine": 38
+  },
+  {
+    "outputFile": "StructureDefinition-pm-lm-ActivityDefinition.json",
+    "fshName": "LmActivityDefinition",
+    "fshType": "Logical",
+    "fshFile": "LogicalModels.fsh",
+    "startLine": 34,
+    "endLine": 64
+  },
+  {
+    "outputFile": "StructureDefinition-pm-lm-Patient.json",
+    "fshName": "LmPatient",
+    "fshType": "Logical",
+    "fshFile": "LogicalModels.fsh",
+    "startLine": 3,
+    "endLine": 32
+  },
+  {
+    "outputFile": "StructureDefinition-pm-lm-ServiceRequest.json",
+    "fshName": "LmServiceRequest",
+    "fshType": "Logical",
+    "fshFile": "LogicalModels.fsh",
+    "startLine": 118,
+    "endLine": 146
+  },
+  {
+    "outputFile": "StructureDefinition-pm-lm-Task.json",
+    "fshName": "LmTask",
+    "fshType": "Logical",
+    "fshFile": "LogicalModels.fsh",
+    "startLine": 66,
+    "endLine": 116
+  },
+  {
+    "outputFile": "Task-ProviderModule-MainTask-Meetopdracht-Bloeddrukmeting.json",
+    "fshName": "ProviderModule-MainTask-Meetopdracht-Bloeddrukmeting",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-2.fsh",
+    "startLine": 57,
+    "endLine": 85
+  },
+  {
+    "outputFile": "Task-ProviderModule-MainTask-Meetopdracht-Glucosemeting.json",
+    "fshName": "ProviderModule-MainTask-Meetopdracht-Glucosemeting",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-1.fsh",
+    "startLine": 60,
+    "endLine": 88
+  },
+  {
+    "outputFile": "Task-ProviderModule-MainTask-Meetopdracht-Saturatiemeting.json",
+    "fshName": "ProviderModule-MainTask-Meetopdracht-Saturatiemeting",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-3.fsh",
+    "startLine": 27,
+    "endLine": 54
+  },
+  {
+    "outputFile": "Task-ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-1.json",
+    "fshName": "ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-1",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-2.fsh",
+    "startLine": 87,
+    "endLine": 117
+  },
+  {
+    "outputFile": "Task-ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-10.json",
+    "fshName": "ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-10",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-2.fsh",
+    "startLine": 375,
+    "endLine": 405
+  },
+  {
+    "outputFile": "Task-ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-11.json",
+    "fshName": "ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-11",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-2.fsh",
+    "startLine": 407,
+    "endLine": 437
+  },
+  {
+    "outputFile": "Task-ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-12.json",
+    "fshName": "ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-12",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-2.fsh",
+    "startLine": 439,
+    "endLine": 469
+  },
+  {
+    "outputFile": "Task-ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-13.json",
+    "fshName": "ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-13",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-2.fsh",
+    "startLine": 471,
+    "endLine": 501
+  },
+  {
+    "outputFile": "Task-ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-14.json",
+    "fshName": "ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-14",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-2.fsh",
+    "startLine": 503,
+    "endLine": 533
+  },
+  {
+    "outputFile": "Task-ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-2.json",
+    "fshName": "ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-2",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-2.fsh",
+    "startLine": 119,
+    "endLine": 149
+  },
+  {
+    "outputFile": "Task-ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-3.json",
+    "fshName": "ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-3",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-2.fsh",
+    "startLine": 151,
+    "endLine": 181
+  },
+  {
+    "outputFile": "Task-ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-4.json",
+    "fshName": "ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-4",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-2.fsh",
+    "startLine": 183,
+    "endLine": 213
+  },
+  {
+    "outputFile": "Task-ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-5.json",
+    "fshName": "ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-5",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-2.fsh",
+    "startLine": 215,
+    "endLine": 245
+  },
+  {
+    "outputFile": "Task-ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-6.json",
+    "fshName": "ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-6",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-2.fsh",
+    "startLine": 247,
+    "endLine": 277
+  },
+  {
+    "outputFile": "Task-ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-7.json",
+    "fshName": "ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-7",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-2.fsh",
+    "startLine": 279,
+    "endLine": 309
+  },
+  {
+    "outputFile": "Task-ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-8.json",
+    "fshName": "ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-8",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-2.fsh",
+    "startLine": 311,
+    "endLine": 341
+  },
+  {
+    "outputFile": "Task-ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-9.json",
+    "fshName": "ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-9",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-2.fsh",
+    "startLine": 343,
+    "endLine": 373
+  },
+  {
+    "outputFile": "Task-ProviderModule-SubTask-Meetopdracht-Glucosemeting-1.json",
+    "fshName": "ProviderModule-SubTask-Meetopdracht-Glucosemeting-1",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-1.fsh",
+    "startLine": 90,
+    "endLine": 119
+  },
+  {
+    "outputFile": "Task-ProviderModule-SubTask-Meetopdracht-Glucosemeting-10.json",
+    "fshName": "ProviderModule-SubTask-Meetopdracht-Glucosemeting-10",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-1.fsh",
+    "startLine": 369,
+    "endLine": 398
+  },
+  {
+    "outputFile": "Task-ProviderModule-SubTask-Meetopdracht-Glucosemeting-11.json",
+    "fshName": "ProviderModule-SubTask-Meetopdracht-Glucosemeting-11",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-1.fsh",
+    "startLine": 400,
+    "endLine": 429
+  },
+  {
+    "outputFile": "Task-ProviderModule-SubTask-Meetopdracht-Glucosemeting-12.json",
+    "fshName": "ProviderModule-SubTask-Meetopdracht-Glucosemeting-12",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-1.fsh",
+    "startLine": 431,
+    "endLine": 460
+  },
+  {
+    "outputFile": "Task-ProviderModule-SubTask-Meetopdracht-Glucosemeting-13.json",
+    "fshName": "ProviderModule-SubTask-Meetopdracht-Glucosemeting-13",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-1.fsh",
+    "startLine": 462,
+    "endLine": 491
+  },
+  {
+    "outputFile": "Task-ProviderModule-SubTask-Meetopdracht-Glucosemeting-14.json",
+    "fshName": "ProviderModule-SubTask-Meetopdracht-Glucosemeting-14",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-1.fsh",
+    "startLine": 493,
+    "endLine": 522
+  },
+  {
+    "outputFile": "Task-ProviderModule-SubTask-Meetopdracht-Glucosemeting-2.json",
+    "fshName": "ProviderModule-SubTask-Meetopdracht-Glucosemeting-2",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-1.fsh",
+    "startLine": 121,
+    "endLine": 150
+  },
+  {
+    "outputFile": "Task-ProviderModule-SubTask-Meetopdracht-Glucosemeting-3.json",
+    "fshName": "ProviderModule-SubTask-Meetopdracht-Glucosemeting-3",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-1.fsh",
+    "startLine": 152,
+    "endLine": 181
+  },
+  {
+    "outputFile": "Task-ProviderModule-SubTask-Meetopdracht-Glucosemeting-4.json",
+    "fshName": "ProviderModule-SubTask-Meetopdracht-Glucosemeting-4",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-1.fsh",
+    "startLine": 183,
+    "endLine": 212
+  },
+  {
+    "outputFile": "Task-ProviderModule-SubTask-Meetopdracht-Glucosemeting-5.json",
+    "fshName": "ProviderModule-SubTask-Meetopdracht-Glucosemeting-5",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-1.fsh",
+    "startLine": 214,
+    "endLine": 243
+  },
+  {
+    "outputFile": "Task-ProviderModule-SubTask-Meetopdracht-Glucosemeting-6.json",
+    "fshName": "ProviderModule-SubTask-Meetopdracht-Glucosemeting-6",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-1.fsh",
+    "startLine": 245,
+    "endLine": 274
+  },
+  {
+    "outputFile": "Task-ProviderModule-SubTask-Meetopdracht-Glucosemeting-7.json",
+    "fshName": "ProviderModule-SubTask-Meetopdracht-Glucosemeting-7",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-1.fsh",
+    "startLine": 276,
+    "endLine": 305
+  },
+  {
+    "outputFile": "Task-ProviderModule-SubTask-Meetopdracht-Glucosemeting-8.json",
+    "fshName": "ProviderModule-SubTask-Meetopdracht-Glucosemeting-8",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-1.fsh",
+    "startLine": 307,
+    "endLine": 336
+  },
+  {
+    "outputFile": "Task-ProviderModule-SubTask-Meetopdracht-Glucosemeting-9.json",
+    "fshName": "ProviderModule-SubTask-Meetopdracht-Glucosemeting-9",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-1.fsh",
+    "startLine": 338,
+    "endLine": 367
+  },
+  {
+    "outputFile": "Task-ProviderModule-SubTask-Meetopdracht-Saturatiemeting-1.json",
+    "fshName": "ProviderModule-SubTask-Meetopdracht-Saturatiemeting-1",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-3.fsh",
+    "startLine": 56,
+    "endLine": 85
+  },
+  {
+    "outputFile": "Task-ProviderModule-SubTask-Meetopdracht-Saturatiemeting-2.json",
+    "fshName": "ProviderModule-SubTask-Meetopdracht-Saturatiemeting-2",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-3.fsh",
+    "startLine": 87,
+    "endLine": 116
+  },
+  {
+    "outputFile": "Task-ProviderModule-SubTask-Meetopdracht-Saturatiemeting-3.json",
+    "fshName": "ProviderModule-SubTask-Meetopdracht-Saturatiemeting-3",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-3.fsh",
+    "startLine": 118,
+    "endLine": 147
+  },
+  {
+    "outputFile": "Task-ProviderModule-SubTask-Meetopdracht-Saturatiemeting-4.json",
+    "fshName": "ProviderModule-SubTask-Meetopdracht-Saturatiemeting-4",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-3.fsh",
+    "startLine": 149,
+    "endLine": 178
+  },
+  {
+    "outputFile": "Task-ProviderModule-SubTask-Meetopdracht-Saturatiemeting-5.json",
+    "fshName": "ProviderModule-SubTask-Meetopdracht-Saturatiemeting-5",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-3.fsh",
+    "startLine": 180,
+    "endLine": 209
+  },
+  {
+    "outputFile": "Task-ProviderModule-SubTask-Meetopdracht-Saturatiemeting-6.json",
+    "fshName": "ProviderModule-SubTask-Meetopdracht-Saturatiemeting-6",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-3.fsh",
+    "startLine": 211,
+    "endLine": 240
+  },
+  {
+    "outputFile": "Task-ProviderModule-SubTask-Meetopdracht-Saturatiemeting-7.json",
+    "fshName": "ProviderModule-SubTask-Meetopdracht-Saturatiemeting-7",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-3.fsh",
+    "startLine": 242,
+    "endLine": 271
+  },
+  {
+    "outputFile": "Task-ProviderModule-Task-Informatie-Cholesterol.json",
+    "fshName": "ProviderModule-Task-Informatie-Cholesterol",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-2.fsh",
+    "startLine": 551,
+    "endLine": 579
+  },
+  {
+    "outputFile": "Task-ProviderModule-Task-Informatie-Diabetes.json",
+    "fshName": "ProviderModule-Task-Informatie-Diabetes",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-1.fsh",
+    "startLine": 541,
+    "endLine": 569
+  },
+  {
+    "outputFile": "Task-ProviderModule-Task-Informatie-Gezonder-Leven.json",
+    "fshName": "ProviderModule-Task-Informatie-Gezonder-Leven",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-1.fsh",
+    "startLine": 588,
+    "endLine": 616
+  },
+  {
+    "outputFile": "Task-ProviderModule-Task-Informatie-Informatie-Inhalatiemedicatie.json",
+    "fshName": "ProviderModule-Task-Informatie-Informatie-Inhalatiemedicatie",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-3.fsh",
+    "startLine": 338,
+    "endLine": 366
+  },
+  {
+    "outputFile": "Task-ProviderModule-Task-Informatie-Thuis-Bloeddrukmeten.json",
+    "fshName": "ProviderModule-Task-Informatie-Thuis-Bloeddrukmeten",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-2.fsh",
+    "startLine": 598,
+    "endLine": 626
+  },
+  {
+    "outputFile": "Task-ProviderModule-Task-Informatie-leven-COPD.json",
+    "fshName": "ProviderModule-Task-Informatie-leven-COPD",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-3.fsh",
+    "startLine": 291,
+    "endLine": 319
+  },
+  {
+    "outputFile": "Task-ProviderModule-Task-Vragenlijst-Uw-Situatie.json",
+    "fshName": "ProviderModule-Task-Vragenlijst-Uw-Situatie",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-2.fsh",
+    "startLine": 648,
+    "endLine": 676
+  },
+  {
+    "outputFile": "Task-ProviderModule-Task-Vragenlijst-Wat-Bereiken.json",
+    "fshName": "ProviderModule-Task-Vragenlijst-Wat-Bereiken",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-3.fsh",
+    "startLine": 386,
+    "endLine": 414
+  },
+  {
+    "outputFile": "Task-ProviderModule-Task-Vragenlijst-WoonLeefsituatie.json",
+    "fshName": "ProviderModule-Task-Vragenlijst-WoonLeefsituatie",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-1.fsh",
+    "startLine": 636,
+    "endLine": 664
+  }
+]

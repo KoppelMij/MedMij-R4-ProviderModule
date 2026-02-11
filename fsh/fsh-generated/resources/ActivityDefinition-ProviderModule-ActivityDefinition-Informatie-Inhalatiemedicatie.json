@@ -1,0 +1,27 @@
+{
+  "resourceType": "ActivityDefinition",
+  "id": "ProviderModule-ActivityDefinition-Informatie-Inhalatiemedicatie",
+  "meta": {
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/ProviderModule-ActivityDefinition"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"nl-NL\" lang=\"nl-NL\">Example of an ActivityDefinition</div>"
+  },
+  "extension": [
+    {
+      "url": "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension",
+      "valueReference": {
+        "reference": "Endpoint/ProviderModule-Endpoint-HINQ"
+      }
+    }
+  ],
+  "version": "1.0.0",
+  "name": "Instructiemodule inhalatiemedicatie",
+  "title": "Instructiemodule inhalatiemedicatie",
+  "status": "active",
+  "publisher": "HinqZNO",
+  "description": "Instructiemodule inhalatiemedicatie: juiste inhalatietechniek, therapietrouw en praktische adviezen (inclusief controlepunten en veelgemaakte fouten)."
+}

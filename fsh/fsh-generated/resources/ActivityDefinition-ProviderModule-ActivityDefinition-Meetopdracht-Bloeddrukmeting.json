@@ -1,0 +1,40 @@
+{
+  "resourceType": "ActivityDefinition",
+  "id": "ProviderModule-ActivityDefinition-Meetopdracht-Bloeddrukmeting",
+  "meta": {
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/ProviderModule-ActivityDefinition"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"nl-NL\" lang=\"nl-NL\">Example of an ActivityDefinition</div>"
+  },
+  "extension": [
+    {
+      "url": "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension",
+      "valueReference": {
+        "reference": "Endpoint/ProviderModule-Endpoint-Minddistrict"
+      }
+    }
+  ],
+  "version": "1.0.0",
+  "name": "Meetopdacht bloeddrukmeting",
+  "title": "Bloeddrukmeting",
+  "status": "active",
+  "publisher": "Minddistrict",
+  "description": "Bloeddrukmeting volgens NHG protocol. 1 week, 2x per dag, 's ochtends en 's avonds",
+  "timingTiming": {
+    "repeat": {
+      "boundsDuration": {
+        "value": 7,
+        "system": "http://unitsofmeasure.org",
+        "code": "d",
+        "unit": "day"
+      },
+      "frequency": 2,
+      "period": 1,
+      "periodUnit": "d"
+    }
+  }
+}
