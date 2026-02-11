@@ -73,10 +73,10 @@ De patient journey beschrijft momenten waarop de patiënt inzicht kan of wil heb
 ### Procesbeschrijving Aanbiedersmodule
 
 #### Precondities
-- De  medewerker beschikt over een eigen PGO dat aan de MedMij-eisen voldoet. 
-- De patiënt heeft toestemming gegeven voor het elektronisch uitwisselen van medische gegevens tussen het betreffende bronsysteem en de eigen persoonlijke gezondheidsomgeving.
-- Er is sprake van een dossier voor de medewerker binnen de DTD. 
-- De beoordelende medewerker is ingelogd met de juiste authenticatie en autorisatie. 
+- De patiënt beschikt over een PGO (of andere cliëntapplicatie) dat aan de MedMij-eisen voldoet.
+- De patiënt heeft toestemming gegeven voor elektronische uitwisseling van medische gegevens tussen bronsysteem en PGO.
+- Er is een dossier voor de patiënt in het bronsysteem.
+- De zorgaanbieder is ingelogd met juiste authenticatie en autorisatie.
  
 
 #### Proces
