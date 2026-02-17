@@ -59,13 +59,16 @@ Voor de zorgaanbieder is het doel:
 
 #### Patient journey Aanbiedersmodule
 De patient journey beschrijft momenten waarop de patiënt inzicht kan of wil hebben in de digitale activiteiten:
-	1.	Ontvangst
-- De patiënt ontvangt een melding/taak dat er een digitale activiteit klaarstaat (bijv. “Meet je bloeddruk 2× per dag gedurende 7 dagen”).
-	2.	Starten van de activiteit
+Ontvangst:
+- De patiënt ontvangt een melding (via mail) dat er een digitale activiteit klaarstaat (bijv. “Meet je bloeddruk 2× per dag gedurende 7 dagen”).
+
+Starten van de activiteit:
 - De patiënt start de activiteit vanuit de PGO, bijvoorbeeld door een externe module/applicatie te openen (“Start module”). Hiermee wordt de uitvoering van de activiteit gestart in de juiste context.
-	3.	Uitvoering
+
+Uitvoering
 - De patiënt voert één of meerdere taken uit (bijv. metingen, vragenlijst, informatie bekijken) in de externe module/applicatie of via een Koppeltaal-gestuurde workflow.
-	4.	Terugkoppeling
+
+Terugkoppeling:
 - Na het uitvoeren van de activiteit gaat de patiënt terug naar de PGO. De status van de taak (en eventuele subtaken) wordt bijgewerkt zodat de voortgang en afronding zichtbaar zijn in de takenlijst. Het terugkoppelen van inhoudelijke resultaten valt in deze versie buiten scope; de focus ligt op de taken en de werkstroom zelf.
 
 
@@ -80,13 +83,36 @@ De patient journey beschrijft momenten waarop de patiënt inzicht kan of wil heb
  
 
 #### Proces
+Selectie activiteit (module):
+- Zorgaanbieder selecteert een digitale activiteit (Module) die past bij het zorgproces (bijv. CVRM/diabetes/COPD). 
 
+Aamaken en publiceren taken:
+- Het bronsysteem maakt één of meerdere Task resources aan en stelt deze beschikbaar aan de patiënt, inclusief:
+	- een koppeling naar de digitale activiteit (Module);
+	- één hoofdtaak (of meerdere taken) die de patiënt in de cliëntapp ziet;
+	- optioneel subtaken (bijv. losse meetmomenten), gekoppeld aan een hoofdtaak;
+	- planning/tijdschema, indien van toepassing;
+	- Patient-specifieke instructies, indien van toepassing.
+
+Patiënt informeren:
+- De patiënt wordt geïnformeerd (bijv. per e-mail) dat er een nieuwe taak klaarstaat in de PGO.
+
+Raadplegen door patiënt:
+- De patiënt raadpleegt deb takenlijst in de PGO en ziet per taak de omschrijving, instructies, en eventuele planning.
+
+Uitvoering:
+- De patiënt start de digitale activiteit vanuit de PGO (launch naar de module/applicatie) en voert de activiteit uit
+
+Statusupdates:
+- De status van de Task(s) wordt bijgewerkt in het bronsysteem, zodat voortgang en afronding zichtbaar zijn in de takenlijst.
 
 ### Alternatieve flow raadplegen Taken
-
+- Patiënt kan op elk moment de lijst met openstaande taken opnieuw ophalen.
+- Patiënt kan taken filteren (bijv. per “zorgmodule”/groep) op basis van contextinformatie.
 
 #### Postconditie
-
+- De patiënt heeft één of meerdere taken uitgevoerd of afgerond (status bijgewerkt).
+- De zorgaanbieder kan (op hoofdlijnen) de voortgang volgen via de status van taken.
 
 ### Bedrijfsrollen en UML activity diagram
 Deze usecase onderscheidt twee bedrijfsrollen, namelijk de Persoon en de (Zorg)Aanbieder zoals te zien in onderstaande tabel.
@@ -95,14 +121,14 @@ Tabel 1 Bedrijfsrollen
 
 | Bedrijfsrol (actor) | Beschrijving bedrijfsrol |
 | --- | --- |
-| Patiënt/ Persoon | Gebruiker van de PGO |
-| (zorg)aanbieder | Gebruiker van het bronsysteem |
+| Patiënt/ Persoon | Gebruiker van de PGO die taken ontvangt en uitvoert |
+| (zorg)aanbieder | Gebruiker van het bronsysteem die digitale activiteiten voor de patiënt aanvraagt |
 
 ### Informatieoverdracht
 Zowel de persoon als de (zorg)aanbieder maken ieder gebruik van een informatiesysteem:
-
 - PGO (persoon)
 - Bronsysteem ((zorg)aanbieder)
+- Aanbiedersmodule (digitale activiteit)
 
 #### Systemen en systeemrollen
 Deze systemen kennen ieder verschillende systeemrollen, die het uitwisselen van gegevens tussen deze systemen mogelijk maken. 
@@ -111,7 +137,9 @@ Tabel 2 Systeemrol
 
 | Systeem | Naam systeemrol | Systeemrolcode | Omschrijving |
 | --- | --- | --- | --- |
-
+| PGO | TaakGegevensRaadplegend | MM-1.0-TGR-FHIR | Raadpleegt taken, toont (patiënt)instructie en ondersteunt het starten van de digitale activiteit|
+| Bronsysteem | TaakGegevensBeschikbaarstellend | MM-1.0-TGR-FHIR | Maakt Task/ServiceRequest en stelt deze beschikbaar aan de patiënt |
+| Modulesysteem | DigitaleActiviteitUitvoerder | MM-1.0-AU-FHIR | Levert de digitale activiteit (bijv. vragenlijst, informatie, meting) en ondersteunt uitvoering na launch |
 
 ### Transacties en transactiegroepen
 Het uitwisselen van gegevens tussen de verschillende systeemrollen gebeurt op basis van transacties, een verzameling van transacties (bijvoorbeeld een vraag- en antwoordbericht) vormt een zogeheten transactiegroep. Voor de transacties die tussen de systeemrollen plaatsvinden. Hier is bij de scenario’s beschreven uit welke gegevenselementen een transactie bestaat en wat de kardinaliteit van deze elementen is. Voor de technische specificaties en FHIR implementation guide, zie de {{pagelink:TO, text:FHIR IG}}.
@@ -120,17 +148,21 @@ Tabel 3 Transactiegroep
 
 | Transactiegroep | Transactie | Systeemrolcode | Systeem | Bedrijfsrol |
 | --- | --- | --- | --- | --- |
-
+| Verzamelen Taakgegevens (PULL) | Beschikbaar stellen Taken | MM-1.0-TGR-FHIR | Bronsysteem | Zorgaanbieder |
+| Verzamelen Taakgegevens (PULL) | Raadplegen Taken | MM-1.0-TGR-FHIR | PGO | Patiënt |
+| Digitale activiteit uitvoeren (LAUNCH) | Launch naar module| MM-1.0-AU-FHIR | Modulesysteem | Patiënt |
 
 ### Ontwerp uitwisselen taken
-
-
-
-Tabel 3 Transactiegroep
-
-| Transactiegroep | Transactie | Systeemrolcode | Systeem | Bedrijfsrol |
-| --- | --- | --- | --- | --- |
-
+Functioneel ontwerpprincipes
+- Herbruikbare definitie: ActivityDefinition beschrijft “wat is de activiteit” en (indien launchbaar) waar deze te starten is (Endpoint).
+- Patient-specifieke order: ServiceRequest beschrijft dat een zorgaanbieder voor een patiënt deze activiteit inzet, incl. planning en patientInstruction.
+- Workflow tracking: Task beschrijft concrete uitvoerbare items, toewijzing en status.
+- Groepering: Taken kunnen logisch gegroepeerd worden (bijv. “Digitale zorgmodule CVRM/Diabetes”) via groupIdentifier.
+- Subtaken: Meetmomenten of deelstappen kunnen als subtaak worden gemodelleerd en koppelen aan een hoofdtaak via partOf.
 
 ### Dataset
-link naar Logical models
+De dataset wordt beschreven in de bijbehorende Logical Models:
+- LogicalModel [Task]()
+- LogicalModel [ActivityDefinition]()
+- LogicalModel [ServiceRequest]()
+- LogicalModel [Endpoint]()
