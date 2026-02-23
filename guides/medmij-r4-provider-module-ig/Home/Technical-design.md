@@ -8,49 +8,51 @@ topic: TO
 This Technical Design (TD) describes the technical implementation of the ProviderModule (Aanbiedersmodule) based on the [Functional Design]() (FD). The TD is the technical counterpart of the FD and describes:
 	•	the involved actors and systems;
 	•	the FHIR profiles and resources to be used;
-	•	the transactions (search/retrieve/publish) including example queries;
+	•	the transactions (search/retrieve/update) including example queries;
 	•	the workflow relationships between definitions, orders/requests, and workflow items.
 
 The FHIR version used for this IG is HL7 FHIR R4 (4.0.1). Infrastructure, security, authentication and authorization are governed by the MedMij framework and are not re-specified in this TD. (link naar changemanagement)
 
 ## Workflow model (FHIR Workflow)
-ProviderModule follows the [FHIR workflow](https://hl7.org/fhir/R4/workflow.html) approach where resources are grouped into:
-- Definitions: reusable definitions of activities (e.g., ActivityDefinition, Questionnaire)
+ProviderModule follows the [FHIR workflow](https://hl7.org/fhir/R4/workflow.html) approach where resources are grouped into Definitions, Requests, and Events:
+- Definitions: reusable definitions of digital activities (e.g., ActivityDefinition, Questionnaire)
 - Requests: patient-specific “orders/requests” that something should be done (e.g., ServiceRequest, Task)
-- Events: the execution/results (e.g., Observation, Procedure, QuestionnaireResponse). This is out of scope in this TD version
+- Events: the execution/results (e.g., Observation, Procedure, QuestionnaireResponse). This is out of scope in this TD version. Focus is on tasks workflow only.
 
 FHIR explicitly describes these categories (definitions/requests/events) and their relationships (e.g., requests referencing definitions, events referencing orders, parent-child relationships).
 
 ### Relationships in ProviderModule
-- ActivityDefinition (Definition) describes the digital activity (launchable module, informational content) and contains generic, reusable information about the activity (what it is and how it should be used), including the technical launch information (Endpoint).
-- ServiceRequest (Request) is the patient-specific clinical order to perform the activity, including scheduling (occurrence) and patient instructions (patientInstruction). It can also be used to provide patient-specific instructions that override or complement the generic guidance defined in the ActivityDefinition.
+- ActivityDefinition (Definition) describes the digital activity (e.g., a launchable module or informational content) and contains generic, reusable information about what the digital activity is and how it should be used, including the technical launch information via Endpoint.
+- ServiceRequest (Request) is the patient-specific clinical order to perform the digital activity, including scheduling (occurrence) and patient instructions (patientInstruction). It can also carry patient-specific instructions that override or complement the generic guidance in the ActivityDefinition.
 - Task (Request) is the actionable workflow item shown to and performed by the patient (status/owner/partOf/groupIdentifier).
-- Event resources (out of scope): Observations/QuestionnaireResponse/etc. resulting from execution (currently out of scope; focus is on tasks/workflow as stated in the FD).
+- Event resources (out of scope): Observations/QuestionnaireResponse/etc. resulting from execution (not specified here).
 
 ## Actors involved
 
 | Actor | | System | | FHIR CapabilityStatement |
 || --- | --- | --- | --- | --- | --- |
 | **Name** | **Description** | **Name** | **Description** | **Name** | **Description** |
-| Patient | The user of a personal healthcare environment | PHR | Personal health record | [TO DO] | FHIR client requirements |
-| Healthcare provider | The user of a sourcesystem | sourcesystem | Healthcare information system | [TO DO] | FHIR server requirements |
+| Patient | User who performs the digital activity | PHR | Personal health record | [TO DO] | FHIR client requirements |
+| Healthcare provider | User who initiates the digtial activity | source system | Healthcare information system | [TO DO] | FHIR server requirements |
+| Module system | System that delivers the digital activity | modul system | Healthcare information system | [TO DO] | FHIR server requirements |
 
 ## Boundaries and relationships
-This FHIR IG includes use cases for the exchange of task data between health care providers and patients (e.g. in a PHR setting).
+This FHIR IG covers use cases for exchanging task data between healthcare providers and patients (typically through a PHR).
 
 This IG guide assumes that a PHR is able to connect with a source system. It does not provide information on finding the right source system nor does it provide information about security. These infrastructure and interface specifications are described in the [MedMij Afsprakenstelsel](https://afsprakenstelsel.medmij.nl/).
 
-(toelichting FHIR-profielen))
+Out of scope for this TD version:
+- Exchange of clinical results produced by the activity (events).
 
 ## Use cases
 
 ### Overview
-The healthcare provider initiates a digital activity for the patient. The patient retrieves the task list in the PGO, starts (launches) the activity, performs it in an external application/module, and then sees task status updates in the PGO.
+The healthcare provider initiates a digital activity for the patient. The patient retrieves the task list in the PHR, starts (launches) the digital activity, performs it in an external application/module, and then sees task status updates in the PHR.
 
 ### Transactions
-- PULL task list (PGO → source system): retrieve Task and/or ServiceRequest, including the links to the ActivityDefinition (instantiates), plus basedOn and any required context
-- LAUNCH (PGO → module system): start external module via Endpoint (launch is partly outside core FHIR; Endpoint provides the launch address)
-- UPDATE status (Module system → source system): update Task.status and possibly subtasks (progress/completion)
+- PULL task list (PGO → source system): retrieve Task , including the links to the ActivityDefinition (instantiates extenstion), and basedOn links to ServiceRequest (if used).
+- LAUNCH (PGO → module system): start external module using information from ActivityDefinition and Endpoint (launch outside core REST exchange).
+- UPDATE status (Module system → source system): update Task.status and possibly subtasks.
 
 ### Use case: Provider Module
 
@@ -61,38 +63,38 @@ The dataset is specified in the Logical Models:
 - LogicalModel [ServiceRequest]()
 - LogicalModel [Endpoint]()
 
-Test material (fixtures) and example instances are published separately as test artifacts in the IG.
+Test material (fixtures) and example instances are published separately as test artifacts in the Implementation Guide.
 
 
 #### PHR: request message
-The PHR system requests the task data using individual [search](https://hl7.org/fhir/R4/search.html) interactions. The task data exchange consists of multiple FHIR resources with certain constraints. The interactions are performed by an HTTP GET as shown: search interactions. The task data exchange consists of multiple FHIR resources with certain constraints. To obtain the patient's task data, the client can use multiple individual search operations based on specified search queries. The interactions are performed by an HTTP GET as shown:  
+The PHR system requests task data using individual [search](https://hl7.org/fhir/R4/search.html) interactions. The task data exchange consists of multiple FHIR resources with specific constraints. These interactions are performed using an HTTP GET as shown below:
 
 `GET [base]/[type]{?[parameters]}`
 
-To update the status or other mutable elements of an existing Task (e.g., after launching or completing an activity), the Module system updates the Task resource on the source system using an HTTP PUT (or PATCH if supported by the server).
+To update the '.status of an existing Task (e.g., after launching or completing an activity), the Module system updates the Task resource on the source system using an HTTP PUT.
 
-PUT [base]/Task/{id}
+PUT [base]/Task/[id]
 
 #### Retreive task list (PGO → Source System)
-Goal: the patient retrieves the current tasks (and related orders/context).
+Goal: the patient retrieves current tasks and the related context needed to render the task list and enable launch.
 
 Response:
-- Bundle with Task(s) conforming to the ProviderModule-Task profile, including:
+- A Bundle containing Task resource(s) conforming to the ProviderModule-Task profile, including:
     - the referenced basedOn ServiceRequest (if present);
     - any subtasks linked via partOf (if present).
 
 #### Update Task status (Module system → Source System)   
-Goal: write back progress/completion.
+Goal: Write back progress/completion after the patient interacted with the activity (including after returning from the external module).
 
 #### Launch (PGO → module system)
-The launch is based on information in ActivityDefinition and Endpoint resource (e.g., endpoint.address). In the ProviderModule context this is the step where the PGO starts an external module/application.
+The launch is based on information in ActivityDefinition and Endpoint (e.g., endpoint.address). In the ProviderModule this is the step where the PHR starts an external module/application.
 
 The launch is an interaction outside the core REST data exchange and is based on SMART App Launch. The specifications can be found in the ()
 
 #### Workflow relationships and grouping
 
 Link to Modules (ActivityDefinition):
-- The Tasks (main task and subtasks) contain a link to ActivityDefinition that defines the launchable eHealth activity (what should be launched or performed).
+- The Tasks (main task and subtasks) contain a link to ActivityDefinition that defines the launchable digital activity (what should be launched or performed).
 - The ActivityDefinition references one or more Endpoint(s) that expose the activity and provide the technical access/launch details.
 
 Main task and subtasks:
@@ -109,7 +111,7 @@ Link to order (ServiceRequest)
 
 
 
-#### Source system: Response message
+#### Source system: example queries
 The returned data to the PHR should conform to the profiles listed in the table below. The table below shows in the first four columns the provider module sections, the HCIMs that constitute those sections and the specific content of the provider module specific information. The last column shows the FHIR search queries to obtain the Provider Module information. These queries and expected responses are based on profiles listed in the {{pagelink:FO, text: functional design}}.  
 
 <!DOCTYPE html>
@@ -175,14 +177,14 @@ The returned data to the PHR should conform to the profiles listed in the table 
         </tr>
          <tr>
             <td>4</td>
-            <td>Task</td>
+            <td>Taak</td>
             <td>Task</td>
             <td><a href="https://simplifier.net/packages/medmij.fhir.nl.r4.dentalcare/1.0.0-beta.1/files/2955334" target="_blank">PM-Task</a></td>
             <td class="monospace">GET [base]/Task</td>
         </tr>
          <tr>
             <td>5</td>
-            <td>ActivityDefinition</td>
+            <td>Digitale activiteit</td>
             <td>ActivityDefinition</td>
             <td><a href="https://simplifier.net/packages/medmij.fhir.nl.r4.dentalcare/1.0.0-beta.1/files/2955334" target="_blank">PM-ActivityDefinition</a></td>
             <td class="monospace"> Include </td>
@@ -196,7 +198,7 @@ The returned data to the PHR should conform to the profiles listed in the table 
         </tr>
          <tr>
             <td>7</td>
-            <td>ServiceRequest</td>
+            <td>Zorgopdracht</td>
             <td>ServiceRequest</td>
             <td><a href="https://simplifier.net/packages/medmij.fhir.nl.r4.dentalcare/1.0.0-beta.1/files/2955334" target="_blank">PM-ServiceRequest</a></td>
             <td class="monospace">See Task</td>
