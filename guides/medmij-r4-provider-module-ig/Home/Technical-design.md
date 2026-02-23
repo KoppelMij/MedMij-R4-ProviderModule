@@ -179,28 +179,28 @@ The returned data to the PHR should conform to the profiles listed in the table 
             <td>4</td>
             <td>Taak</td>
             <td>Task</td>
-            <td><a href="https://simplifier.net/packages/medmij.fhir.nl.r4.dentalcare/1.0.0-beta.1/files/2955334" target="_blank">PM-Task</a></td>
+            <td><a href="" target="_blank">PM-Task</a></td>
             <td class="monospace">GET [base]/Task</td>
         </tr>
          <tr>
             <td>5</td>
             <td>Digitale activiteit</td>
             <td>ActivityDefinition</td>
-            <td><a href="https://simplifier.net/packages/medmij.fhir.nl.r4.dentalcare/1.0.0-beta.1/files/2955334" target="_blank">PM-ActivityDefinition</a></td>
+            <td><a href="" target="_blank">PM-ActivityDefinition</a></td>
             <td class="monospace"> Include </td>
         </tr>
          <tr>
             <td>6</td>
             <td>Endpoint</td>
             <td>Endpoint</td>
-            <td><a href="https://simplifier.net/packages/medmij.fhir.nl.r4.dentalcare/1.0.0-beta.1/files/2955334" target="_blank">PM-Endpoint</a></td>
+            <td><a href="" target="_blank">PM-Endpoint</a></td>
             <td class="monospace"> Include </td>
         </tr>
          <tr>
             <td>7</td>
             <td>Zorgopdracht</td>
             <td>ServiceRequest</td>
-            <td><a href="https://simplifier.net/packages/medmij.fhir.nl.r4.dentalcare/1.0.0-beta.1/files/2955334" target="_blank">PM-ServiceRequest</a></td>
+            <td><a href="" target="_blank">PM-ServiceRequest</a></td>
             <td class="monospace">See Task</td>
         </tr>
     </tbody>

@@ -21,8 +21,8 @@
       ]
     }
   ],
-  "description": "Clinical order for an eHealth activity (module) that a healthcare professional requests for a specific patient, such as filling out a questionnaire, performing home measurements, or watching an instruction video.",
-  "purpose": "To represent the clinical order from a healthcare professional to start a specific provider module for a patient. This ServiceRequest provides the clinical context for Tasks that execute the module.",
+  "description": "Clinical order for a patient-specific digital (eHealth) activity that a healthcare professional requests for a specific patient, such as completing a questionnaire, performing home measurements, viewing educational content, or launching a third-party module.",
+  "purpose": "To represent the clinical order to start or perform a specific digital (eHealth) activity for a patient. This ServiceRequest provides the clinical intent, context, requested schedule, and patient-specific instructions, and can serve as the basis for one or more Task resources that manage execution and tracking of the activity.",
   "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
@@ -36,7 +36,7 @@
         "id": "ServiceRequest",
         "path": "ServiceRequest",
         "short": "ServiceRequest",
-        "definition": "Patient specific clinical order for starting an eHealth activity (provider module) in the ProviderModule context. Links the patient, the requested module, the intended schedule and clinical reason, and provides the basis for Tasks that carry out the module.",
+        "definition": "Patient-specific clinical order for requesting a digital (eHealth) activity in the ProviderModule context. It links the patient, the requested activity definition, timing/schedule, and clinical rationale, and may include patient-specific instructions. It can be referenced by Task resources that coordinate execution and status tracking.",
         "alias": [
           "Zorgopdracht",
           "referral",
@@ -56,43 +56,7 @@
           ],
           "ordered": false,
           "rules": "open"
-        },
-        "short": "Reference to ActivityDefinition",
-        "definition": "Reference to the ActivityDefinition, which conforms to the MedMij ActivityDefinition profile."
-      },
-      {
-        "id": "ServiceRequest.extension.extension",
-        "path": "ServiceRequest.extension.extension",
-        "max": "0"
-      },
-      {
-        "id": "ServiceRequest.extension.value[x]",
-        "path": "ServiceRequest.extension.value[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
         }
-      },
-      {
-        "id": "ServiceRequest.extension.value[x]:valueReference",
-        "path": "ServiceRequest.extension.value[x]",
-        "sliceName": "valueReference",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://medmij.nl/fhir/StructureDefinition/ProviderModule-ActivityDefinition"
-            ]
-          }
-        ]
       },
       {
         "id": "ServiceRequest.extension:resource-origin",
@@ -110,23 +74,9 @@
         ]
       },
       {
-        "id": "ServiceRequest.extension:instantiates",
-        "path": "ServiceRequest.extension",
-        "sliceName": "instantiates",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://vzvz.nl/fhir/StructureDefinition/instantiates"
-            ]
-          }
-        ]
-      },
-      {
         "id": "ServiceRequest.subject",
         "path": "ServiceRequest.subject",
+        "definition": "The patient for whom the activity is requested.",
         "type": [
           {
             "code": "Reference",
@@ -148,6 +98,12 @@
             ]
           }
         ]
+      },
+      {
+        "id": "ServiceRequest.patientInstruction",
+        "path": "ServiceRequest.patientInstruction",
+        "short": "Patient-specific instructions",
+        "definition": "Patient or consumer-oriented instructions related to the requested activity. Use this element to convey patient-specific guidance that should be shown alongside the Task(s) executing this order (e.g. e.g., home blood pressure monitoring for 8 weeks, once daily in the morning)."
       }
     ]
   }

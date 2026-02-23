@@ -21,8 +21,8 @@
       ]
     }
   ],
-  "description": "The (FHIR) Task (resource) describes an eHealth task, that is, an eHealth activity assigned to a patient.",
-  "purpose": "AanbiersModule allows a patient, from the portal or from a personal health environment (PGO), to use a module (from a third party) at the instruction of the healthcare provider (for example, to complete a questionnaire).",
+  "description": "This (FHIR) Task profile describes a patient-specific actionable item, intended to be presented to the patient in a client application (e.g., a PGO) and/or processed within the Koppeltaal workflow. It may optionally reference an ActivityDefinition that defines what should be launched or performed (module, questionnaire, information, measurement).",
+  "purpose": "This profile represents a patient-specific actionable item, intended to be presented to the patient in a client application (e.g., a PGO) and/or processed in the Koppeltaal workflow, optionally instantiating an ActivityDefinition that can be launched or performed (module, questionnaire, information, measurement).",
   "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
@@ -36,7 +36,7 @@
         "id": "Task",
         "path": "Task",
         "short": "Task",
-        "definition": "An eHealth activity assigned to a patient.",
+        "definition": "A patient-specific actionable item, assigned to the patient and optionally linked to an ActivityDefinition describing what to launch or perform.",
         "alias": [
           "Taak"
         ]
@@ -55,7 +55,7 @@
           "rules": "open"
         },
         "short": "Reference to ActivityDefinition",
-        "definition": "Reference to the ActivityDefinition, which conforms to the MedMij ActivityDefinition profile."
+        "definition": "A link to the ActivityDefinition that defines the launchable eHealth activity (i.e., what module/content should be launched or performed) associated with this Task. In both MedMij and Koppeltaal implementations, this link is carried using the Koppeltaal instantiates extension."
       },
       {
         "id": "Task.extension.extension",
@@ -134,19 +134,15 @@
         ]
       },
       {
-        "id": "Task.code",
-        "path": "Task.code",
-        "comment": "Codes to identify what the task involves. These will typically be specific to a particular workflow.",
-        "binding": {
-          "strength": "extensible",
-          "valueSet": "http://hl7.org/fhir/smart-app-launch/CodeSystem/smart-codes"
-        }
+        "id": "Task.description",
+        "path": "Task.description",
+        "definition": "A free-text description of what is to be performed. Implementers should ensure the text is readable on mobile applications."
       },
       {
         "id": "Task.for",
         "path": "Task.for",
         "definition": "The patient who benefits from the performance of the service specified in the task.",
-        "comment": "In ProviderModule this element always refers to the patient for whom the task is intended.",
+        "comment": "In this profile, this element always refers to the patient for whom the task is intended.",
         "requirements": "Used to track tasks outstanding for a beneficiary. Do not use to track the task owner or creator (see owner and creator respectively). This can also affect access control.",
         "min": 1,
         "type": [
@@ -176,7 +172,7 @@
         "id": "Task.owner",
         "path": "Task.owner",
         "definition": "Practitioner, CareTeam, RelatedPerson or Patient currently responsible for task execution.",
-        "comment": "In Koppeltaal the patient is usually the person who executes the task.\r\n\r\nNote, this element is not intended to be used for access restriction. That is left to the relevant applications.\r\n\r\nEach occurrence of the zib HealthProfessional is normally represented by two FHIR resources: a PractitionerRole resource (instance of [nl-core-HealthProfessional-PractitionerRole](http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole)) and a Practitioner resource (instance of [nl-core-HealthProfessional-Practitioner](http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner)). The Practitioner resource is referenced from the PractitionerRole instance. For this reason, sending systems should fill the reference to the PractitionerRole instance here, and not the Practitioner resource. Receiving systems can then retrieve the reference to the Practitioner resource from that PractitionerRole instance.\r\n\r\nIn rare circumstances, there is only a Practitioner instance, in which case it is that instance which will be referenced here. However, since this should be the exception, the nl-core-HealthProfessional-Practitioner profile is not explicitly mentioned as a target profile.",
+        "comment": "For Koppeltaal: In Koppeltaal the patient is usually the person who executes the task. Note, this element is not intended to be used for access restriction. That is left to the relevant applications.\r\n\r\nEach occurrence of the zib HealthProfessional is normally represented by two FHIR resources: a PractitionerRole resource (instance of [nl-core-HealthProfessional-PractitionerRole](http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole)) and a Practitioner resource (instance of [nl-core-HealthProfessional-Practitioner](http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner)). The Practitioner resource is referenced from the PractitionerRole instance. For this reason, sending systems should fill the reference to the PractitionerRole instance here, and not the Practitioner resource. Receiving systems can then retrieve the reference to the Practitioner resource from that PractitionerRole instance.\r\n\r\nIn rare circumstances, there is only a Practitioner instance, in which case it is that instance which will be referenced here. However, since this should be the exception, the nl-core-HealthProfessional-Practitioner profile is not explicitly mentioned as a target profile.\r\n\r\n In ProviderModule, the owner is typically the performer of the task (usually the patient), but execution may also be delegated to another responsible party such as a caregiver/contact person or a care team.",
         "min": 1,
         "type": [
           {

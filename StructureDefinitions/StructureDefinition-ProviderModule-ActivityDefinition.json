@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "The (FHIR) ActivityDefinition (resource) describes an eHealth activity that is available for assignment to a patient. When assigning an eHealth activity to a patient, an eHealth Task is created, in which sub-activities are included as contained resources that refer to the main task via Task.partOf.",
+  "description": "This (FHIR) ActivityDefinition profile describes a reusable definition of a launchable digital (eHealth) activity that can be requested for a patient in MedMij and/or Koppeltaal workflows. It captures the clinical intent and the technical launch information (e.g., endpoint) so that systems can consistently create patient-specific Tasks that reference this definition.",
   "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
@@ -30,7 +30,7 @@
       {
         "id": "ActivityDefinition",
         "path": "ActivityDefinition",
-        "definition": "Definition of a launchable eHealth activity (provider module) that can be assigned to patients, specifying its clinical intent and technical endpoint so that systems can consistently create Tasks and launch the module for a patient."
+        "definition": "Definition of a launchable digital (eHealth) activity that can be used as a template for patient-specific workflow requests. The definition may describe different activity types (e.g., launching a third-party module, presenting information, completing a questionnaire, or performing a measurement) and includes the technical launch details needed to invoke the activity in the correct context."
       },
       {
         "id": "ActivityDefinition.extension",
@@ -66,7 +66,7 @@
         "id": "ActivityDefinition.extension:endpoint",
         "path": "ActivityDefinition.extension",
         "sliceName": "endpoint",
-        "short": "Endpoint to the service application",
+        "short": "Endpoint for launching the activity",
         "definition": "Mandatory reference to the service application (endpoint) that provides the launchable eHealth activity. Can be more than one endpoint.",
         "min": 1,
         "max": "*",
@@ -95,26 +95,6 @@
         ]
       },
       {
-        "id": "ActivityDefinition.extension:clientId",
-        "path": "ActivityDefinition.extension",
-        "sliceName": "clientId",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://medmij.nl/fhir/StructureDefinition/client-id"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "ActivityDefinition.url",
-        "path": "ActivityDefinition.url",
-        "min": 1
-      },
-      {
         "id": "ActivityDefinition.title",
         "path": "ActivityDefinition.title",
         "min": 1
@@ -124,6 +104,11 @@
         "path": "ActivityDefinition.useContext",
         "definition": "The context for the content of the eHealth activity.",
         "comment": "E.g. the activity is targeted to a certain age group."
+      },
+      {
+        "id": "ActivityDefinition.usage",
+        "path": "ActivityDefinition.usage",
+        "definition": "A detailed description of how the activity definition is used from a clinical perspective. In the MedMij use case, this text is intended for the healthcare professional who is selecting and assigning the activity to the patient."
       },
       {
         "id": "ActivityDefinition.topic",
