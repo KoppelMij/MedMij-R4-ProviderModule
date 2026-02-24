@@ -213,7 +213,7 @@
     "fshType": "Extension",
     "fshFile": "MedMij-ClientID.fsh",
     "startLine": 1,
-    "endLine": 17
+    "endLine": 19
   },
   {
     "outputFile": "StructureDefinition-ProviderModule-ActivityDefinition.json",

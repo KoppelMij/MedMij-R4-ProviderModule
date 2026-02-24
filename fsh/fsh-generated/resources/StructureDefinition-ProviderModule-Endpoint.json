@@ -65,7 +65,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://medmij.nl/fhir/StructureDefinition/client-id"
+              "http://medmij.nl/fhir/StructureDefinition/ext-ClientID"
             ]
           }
         ]

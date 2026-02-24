@@ -39,8 +39,8 @@
     }
   ],
   "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Zorgverlener: L. de Jong<br/>BIG-nummer: 28910456<br/>Telefoon: +31655504321<br/>E-mail: l.dejong@huisartspraktijk-example.nl<br/>Adres: Stationsweg 12, 2312 AV Leiden, Nederland</div>"
+    "status": "empty",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">No human-readable text provided in this case.</div>"
   },
   "identifier": [
     {

@@ -39,8 +39,8 @@
     }
   ],
   "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Zorgverlener: M. van Rijn<br/>BIG-nummer: 19078234<br/>Telefoon: +31655506789<br/>E-mail: m.vanrijn@huisartspraktijk-example.nl<br/>Adres: Laan van Meerdervoort 120, 2517 AV Den Haag, Nederland</div>"
+    "status": "empty",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">No human-readable text provided in this case.</div>"
   },
   "identifier": [
     {

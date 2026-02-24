@@ -160,8 +160,8 @@
     }
   ],
   "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patiënt: Sanne van Dijk<br/>Geboortedatum: 1984-03-14<br/>Geslacht: Vrouw<br/>Nationaliteit: Nederlandse<br/>Telefoon: +31655501234<br/>E-mail: sanne.vandijk@voorbeeldmail.nl<br/>Adres: Prinsengracht 263, 1016 GV Amsterdam, Nederland</div>"
+    "status": "empty",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">No human-readable text provided in this case.</div>"
   },
   "gender": "female",
   "_gender": {

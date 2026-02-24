@@ -21,7 +21,7 @@
       ]
     }
   ],
-  "description": "Clinical order for a patient-specific digital (eHealth) activity that a healthcare professional requests for a specific patient, such as completing a questionnaire, performing home measurements, viewing educational content, or launching a third-party module.",
+  "description": "Clinical order for a patient-specific digital activity that a healthcare professional requests for a specific patient, such as completing a questionnaire, performing home measurements, viewing educational content, or launching a third-party module.",
   "purpose": "To represent the clinical order to start or perform a specific digital (eHealth) activity for a patient. This ServiceRequest provides the clinical intent, context, requested schedule, and patient-specific instructions, and can serve as the basis for one or more Task resources that manage execution and tracking of the activity.",
   "copyright": "Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise.",
   "fhirVersion": "4.0.1",
