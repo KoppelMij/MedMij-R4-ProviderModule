@@ -1,6 +1,6 @@
 Extension: MedMijClientID
 Id: MedMij-ClientID
-Description: "The client ID is used as an input parameter named “audience” in the token exchange request between PGO and the DVA authorisation server."
+Description: "The client ID from the Endpoint resource extension is used as an input parameter named “audience” in the token exchange request between PGO and the DVA authorisation server."
 * ^url = "http://medmij.nl/fhir/StructureDefinition/ext-ClientID"
 * ^status = #draft
 * insert PublisherAndContactMedMij
@@ -15,3 +15,6 @@ The module application that receives the SmartOnFhir launch URL requests a new a
 Translated with DeepL.com (free version)
  """
 * value[x] only id
+* context 
+  * type "resource"
+  * expression "Endpoint"
