@@ -159,49 +159,56 @@ The returned data to the PHR should conform to the profiles listed in the table 
               <td><a href="https://simplifier.net/packages/nictiz.fhir.nl.r4.nl-core/0.12.0-beta.1/files/2885819" target="_blank">nl-core-Patient</a></td>
             <td class="monospace">GET [base]/Patient</td>
         </tr>
-        <tr>
+         <tr>
             <td>2</td>
-            <td>Zorgverlener</td>
-            <td>HealthProfessional</td>
-            <td><a href="https://simplifier.net/packages/nictiz.fhir.nl.r4.nl-core/0.12.0-beta.1/files/2885777" target="_blank">nl-core-HealthProfessional-Practitioner 
-             <a href="https://simplifier.net/packages/nictiz.fhir.nl.r4.nl-core/0.12.0-beta.1/files/2885778" target="_blank">nl-core-HealthProfessional-PractitionerRole</a></td>
-            <td class="monospace">See Task and ServiceRequest</td>
+            <td>Taak</td>
+            <td>Task</td>
+            <td><a href="" target="_blank">pm-Task</a></td>
+            <td class="monospace">GET [base]/Task?status:not=completed</td>
+        </tr>
+         <tr>
+            <td>3</td>
+            <td>Digitale activiteit</td>
+            <td>ActivityDefinition</td>
+            <td><a href="" target="_blank">pm-ActivityDefinition</a></td>
+            <td class="monospace"> See Task </td>
+        </tr>
+         <tr>
+            <td>4</td>
+            <td>Zorgopdracht</td>
+            <td>ServiceRequest</td>
+            <td><a href="" target="_blank">pm-ServiceRequest</a></td>
+            <td class="monospace">See Task</td>
+        </tr>
+         <tr>
+            <td>5</td>
+            <td>Endpoint</td>
+            <td>Endpoint</td>
+            <td><a href="" target="_blank">pm-Endpoint</a></td>
+            <td class="monospace"> See ActivityDefinition </td>
+        </tr>
+         <tr>
+            <td>6</td>
+            <td>Taak</td>
+            <td>Task</td>
+            <td><a href="" target="_blank">pm-Task</a></td>
+            <td class="monospace">PUT [base]/Task/[id]</td>
         </tr>
         <tr>
-            <td>3</td>
+            <td>7</td>
             <td>Zorgaanbieder</td>
             <td>HealthcareProvider</td>
             <td><a href="https://simplifier.net/packages/nictiz.fhir.nl.r4.nl-core/0.12.0-beta.1/files/2885775" target="_blank">nl-core-HealthcareProvider
             <a href="https://simplifier.net/packages/nictiz.fhir.nl.r4.nl-core/0.12.0-beta.1/files/2885776" target="_blank">nl-core-HealthcareProvider-Organization</a></td>
             <td class="monospace">See PractitionerRole</td>
         </tr>
-         <tr>
-            <td>4</td>
-            <td>Taak</td>
-            <td>Task</td>
-            <td><a href="" target="_blank">PM-Task</a></td>
-            <td class="monospace">GET [base]/Task</td>
-        </tr>
-         <tr>
-            <td>5</td>
-            <td>Digitale activiteit</td>
-            <td>ActivityDefinition</td>
-            <td><a href="" target="_blank">PM-ActivityDefinition</a></td>
-            <td class="monospace"> Include </td>
-        </tr>
-         <tr>
-            <td>6</td>
-            <td>Endpoint</td>
-            <td>Endpoint</td>
-            <td><a href="" target="_blank">PM-Endpoint</a></td>
-            <td class="monospace"> Include </td>
-        </tr>
-         <tr>
-            <td>7</td>
-            <td>Zorgopdracht</td>
-            <td>ServiceRequest</td>
-            <td><a href="" target="_blank">PM-ServiceRequest</a></td>
-            <td class="monospace">See Task</td>
+        <tr>
+            <td>8</td>
+            <td>Zorgverlener</td>
+            <td>HealthProfessional</td>
+            <td><a href="https://simplifier.net/packages/nictiz.fhir.nl.r4.nl-core/0.12.0-beta.1/files/2885777" target="_blank">nl-core-HealthProfessional-Practitioner 
+             <a href="https://simplifier.net/packages/nictiz.fhir.nl.r4.nl-core/0.12.0-beta.1/files/2885778" target="_blank">nl-core-HealthProfessional-PractitionerRole</a></td>
+            <td class="monospace">See Task and ServiceRequest</td>
         </tr>
     </tbody>
 </table>
@@ -213,6 +220,5 @@ The returned data to the PHR should conform to the profiles listed in the table 
 #### Configuration search query Task
 The PHR may use and the source system shall be capable of processing the minimal requirements outlined in the FHIR R4 IG [2.7.1.1 Search on date, number or quantity](https://informatiestandaarden.nictiz.nl/wiki/FHIR:V1.0_FHIR_IG_R4#Search_URLs_and_search_parameters). Example query: 
 
-| Name | Type | Description | Example
-|
-| [date](https://www.hl7.org/fhir/R4/search.html#date)  | date | Encounter date/time based on **start** date/time | Retrieve appointments with a start date/time from 01-01-2015 onwards by `GET [base]/Encounter?date=gt2017-12-31`
+For ProviderModule, the most common use is retrieving open tasks. Retrieve all non-completed tasks for the patient context:
+GET [base]/Task?status:not=completed
