@@ -1,6 +1,6 @@
 Profile: ProviderModuleEndpoint
 Parent: Endpoint
-Id: ProviderModule-Endpoint
+Id: pm-Endpoint
 Description: "The (FHIR) Endpoint (resource) is a representation of a technical contact point of an application that offers one or more launchable digital (eHealth) activities for a healthcare provider."
 * ^status = #draft
 * insert PublisherAndContactMedMij
