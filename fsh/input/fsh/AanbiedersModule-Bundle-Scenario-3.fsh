@@ -4,8 +4,8 @@ Instance: ProviderModule-ActivityDefinition-Meetopdracht-Saturatiemeting
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-ActivityDefinition
 Usage: #example
 * text
-  * status = #generated
-  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of an ActivityDefinition</div>"
+  * status = #empty
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>No human-readable text provided in this case'</div>"
 * extension
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
   * valueReference = Reference(ProviderModule-Endpoint-HINQ)
@@ -28,8 +28,8 @@ Instance: ProviderModule-MainTask-Meetopdracht-Saturatiemeting
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
-  * status = #generated
-  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
+  * status = #empty
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>No human-readable text provided in this case'</div>"
 * extension
   * url = $koppeltaal-instantiates
   * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Saturatiemeting)
@@ -57,8 +57,8 @@ Instance: ProviderModule-SubTask-Meetopdracht-Saturatiemeting-1
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
-  * status = #generated
-  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
+  * status = #empty
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>No human-readable text provided in this case'</div>"
 * extension
   * url = $koppeltaal-instantiates
   * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Saturatiemeting)
@@ -88,8 +88,8 @@ Instance: ProviderModule-SubTask-Meetopdracht-Saturatiemeting-2
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
-  * status = #generated
-  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
+  * status = #empty
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>No human-readable text provided in this case'</div>"
 * extension
   * url = $koppeltaal-instantiates
   * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Saturatiemeting)
@@ -119,8 +119,8 @@ Instance: ProviderModule-SubTask-Meetopdracht-Saturatiemeting-3
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
-  * status = #generated
-  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
+  * status = #empty
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>No human-readable text provided in this case'</div>"
 * extension
   * url = $koppeltaal-instantiates
   * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Saturatiemeting)
@@ -150,8 +150,8 @@ Instance: ProviderModule-SubTask-Meetopdracht-Saturatiemeting-4
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
-  * status = #generated
-  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
+  * status = #empty
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>No human-readable text provided in this case'</div>"
 * extension
   * url = $koppeltaal-instantiates
   * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Saturatiemeting)
@@ -181,8 +181,8 @@ Instance: ProviderModule-SubTask-Meetopdracht-Saturatiemeting-5
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
-  * status = #generated
-  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
+  * status = #empty
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>No human-readable text provided in this case'</div>"
 * extension
   * url = $koppeltaal-instantiates
   * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Saturatiemeting)
@@ -212,8 +212,8 @@ Instance: ProviderModule-SubTask-Meetopdracht-Saturatiemeting-6
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
-  * status = #generated
-  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
+  * status = #empty
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>No human-readable text provided in this case'</div>"
 * extension
   * url = $koppeltaal-instantiates
   * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Saturatiemeting)
@@ -243,8 +243,8 @@ Instance: ProviderModule-SubTask-Meetopdracht-Saturatiemeting-7
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
-  * status = #generated
-  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
+  * status = #empty
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>No human-readable text provided in this case'</div>"
 * extension
   * url = $koppeltaal-instantiates
   * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Saturatiemeting)
@@ -275,8 +275,8 @@ Instance: ProviderModule-ActivityDefinition-Informatie-Leven-COPD
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-ActivityDefinition
 Usage: #example
 * text
-  * status = #generated
-  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of an ActivityDefinition</div>"
+  * status = #empty
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>No human-readable text provided in this case'</div>"
 * extension
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
   * valueReference = Reference(ProviderModule-Endpoint-HINQ)
@@ -292,8 +292,8 @@ Instance: ProviderModule-Task-Informatie-leven-COPD
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
-  * status = #generated
-  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
+  * status = #empty
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>No human-readable text provided in this case'</div>"
 * extension
   * url = $koppeltaal-instantiates
   * valueReference = Reference(ProviderModule-ActivityDefinition-Informatie-Leven-COPD)
@@ -323,8 +323,8 @@ Instance: ProviderModule-ActivityDefinition-Informatie-Inhalatiemedicatie
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-ActivityDefinition
 Usage: #example
 * text
-  * status = #generated
-  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of an ActivityDefinition</div>"
+  * status = #empty
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>No human-readable text provided in this case'</div>"
 * extension
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
   * valueReference = Reference(ProviderModule-Endpoint-HINQ)
@@ -339,8 +339,8 @@ Instance: ProviderModule-Task-Informatie-Informatie-Inhalatiemedicatie
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
-  * status = #generated
-  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
+  * status = #empty
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>No human-readable text provided in this case'</div>"
 * extension
   * url = $koppeltaal-instantiates
   * valueReference = Reference(ProviderModule-ActivityDefinition-Informatie-Inhalatiemedicatie)
@@ -370,8 +370,8 @@ Instance: ProviderModule-ActivityDefinition-Vragenlijst-Wat-Bereiken
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-ActivityDefinition
 Usage: #example
 * text
-  * status = #generated
-  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of an ActivityDefinition</div>"
+  * status = #empty
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>No human-readable text provided in this case'</div>"
 * extension
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
   * valueReference = Reference(ProviderModule-Endpoint-HINQ)
@@ -387,8 +387,8 @@ Instance: ProviderModule-Task-Vragenlijst-Wat-Bereiken
 InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
 Usage: #example
 * text
-  * status = #generated
-  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>Example of a task</div>"
+  * status = #empty
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>No human-readable text provided in this case'</div>"
 * extension
   * url = $koppeltaal-instantiates
   * valueReference = Reference(ProviderModule-ActivityDefinition-Vragenlijst-Wat-Bereiken)
@@ -417,8 +417,8 @@ Instance: ProviderModule-Patient-Van-Dijk
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient
 Usage: #example
 * text
-  * status = #generated
-  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Patiënt: Sanne van Dijk<br/>Geboortedatum: 1984-03-14<br/>Geslacht: Vrouw<br/>Nationaliteit: Nederlandse<br/>Telefoon: +31655501234<br/>E-mail: sanne.vandijk@voorbeeldmail.nl<br/>Adres: Prinsengracht 263, 1016 GV Amsterdam, Nederland</div>"
+  * status = #empty
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>No human-readable text provided in this case'</div>"
 * extension[http://hl7.org/fhir/StructureDefinition/patient-nationality].extension[code].valueCodeableConcept = urn:oid:2.16.840.1.113883.2.4.4.16.32#0001 "Nederlandse"
 * identifier
   * system = "http://fhir.nl/fhir/NamingSystem/bsn"
@@ -462,8 +462,8 @@ Instance: ProviderModule-PractitionerRole-Van-Rijn
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole
 Usage: #example
 * text
-  * status = #generated
-  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Zorgverlenerrol: Huisarts, apotheekhoudend<br/>Zorgverlener: Haard, de<br/>Organisatie: Huisartsenpraktijk Medrie</div>"
+  * status = #empty
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>No human-readable text provided in this case'</div>"
 * practitioner = Reference(ProviderModule-Practitioner-Van-Rijn) "M. van Rijn"
 * organization = Reference(ProviderModule-Organization-Huisartsenpraktijk-Medrie) "Huisartstenpraktijk Medrie"
 * specialty
@@ -473,8 +473,8 @@ Instance: ProviderModule-Practitioner-Van-Rijn
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner
 Usage: #example
 * text
-  * status = #generated
-  * div = "<div xmlns='http://www.w3.org/1999/xhtml'>Zorgverlener: M. van Rijn<br/>BIG-nummer: 19078234<br/>Telefoon: +31655506789<br/>E-mail: m.vanrijn@huisartspraktijk-example.nl<br/>Adres: Laan van Meerdervoort 120, 2517 AV Den Haag, Nederland</div>"
+  * status = #empty
+  * div = "<div xmlns='http://www.w3.org/1999/xhtml' xml:lang='nl-NL' lang='nl-NL'>No human-readable text provided in this case'</div>"
 * identifier
   * system = "http://fhir.nl/fhir/NamingSystem/big"
   * value = "19078234"

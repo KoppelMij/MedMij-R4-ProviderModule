@@ -1,7 +1,7 @@
 Profile: ProviderModuleServiceRequest
 Parent: ServiceRequest
 Id: ProviderModule-ServiceRequest
-Description: "Clinical order for a patient-specific digital (eHealth) activity that a healthcare professional requests for a specific patient, such as completing a questionnaire, performing home measurements, viewing educational content, or launching a third-party module."
+Description: "Clinical order for a patient-specific digital activity that a healthcare professional requests for a specific patient, such as completing a questionnaire, performing home measurements, viewing educational content, or launching a third-party module."
 * insert DefaultNarrative
 * ^status = #draft
 * insert PublisherAndContactMedMij
