@@ -24,7 +24,7 @@
   "context": [
     {
       "type": "element",
-      "expression": "Element"
+      "expression": "Endpoint.extension"
     }
   ],
   "type": "Extension",
