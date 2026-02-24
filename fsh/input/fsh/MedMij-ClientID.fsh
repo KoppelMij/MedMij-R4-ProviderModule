@@ -14,7 +14,7 @@ The module application that receives the SmartOnFhir launch URL requests a new a
 
 Translated with DeepL.com (free version)
  """
-* value[x] only valueString
+* value[x] only string
 * context 
-  * type "element"
-  * expression "Endpoint.extension"
+  * type = #element
+  * expression = "Endpoint.extension"
