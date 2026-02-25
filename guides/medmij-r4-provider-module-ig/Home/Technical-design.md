@@ -5,7 +5,7 @@ topic: TO
 # FHIR IG
 
 ## Introduction
-This Technical Design (TD) describes the technical implementation of the ProviderModule (Aanbiedersmodule) based on the [Functional Design]() (FD). The TD is the technical counterpart of the FD and describes:
+This Technical Design (TD) describes the technical implementation of the ProviderTasks (Aanbiedersmodule) based on the [Functional Design]() (FD). The TD is the technical counterpart of the FD and describes:
 	•	the involved actors and systems;
 	•	the FHIR profiles and resources to be used;
 	•	the transactions (search/retrieve/update) including example queries;
@@ -14,14 +14,14 @@ This Technical Design (TD) describes the technical implementation of the Provide
 The FHIR version used for this IG is HL7 FHIR R4 (4.0.1). Infrastructure, security, authentication and authorization are governed by the MedMij framework and are not re-specified in this TD. (link naar changemanagement)
 
 ## Workflow model (FHIR Workflow)
-ProviderModule follows the [FHIR workflow](https://hl7.org/fhir/R4/workflow.html) approach where resources are grouped into Definitions, Requests, and Events:
+ProviderTasks follows the [FHIR workflow](https://hl7.org/fhir/R4/workflow.html) approach where resources are grouped into Definitions, Requests, and Events:
 - Definitions: reusable definitions of digital activities (e.g., ActivityDefinition, Questionnaire)
 - Requests: patient-specific “orders/requests” that something should be done (e.g., ServiceRequest, Task)
 - Events: the execution/results (e.g., Observation, Procedure, QuestionnaireResponse). This is out of scope in this TD version. Focus is on tasks workflow only.
 
 FHIR explicitly describes these categories (definitions/requests/events) and their relationships (e.g., requests referencing definitions, events referencing orders, parent-child relationships).
 
-### Relationships in ProviderModule
+### Relationships in ProviderTasks
 - ActivityDefinition (Definition) describes the digital activity (e.g., a launchable module or informational content) and contains generic, reusable information about what the digital activity is and how it should be used, including the technical launch information via Endpoint.
 - ServiceRequest (Request) is the patient-specific clinical order to perform the digital activity, including scheduling (occurrence) and patient instructions (patientInstruction). It can also carry patient-specific instructions that override or complement the generic guidance in the ActivityDefinition.
 - Task (Request) is the actionable workflow item shown to and performed by the patient (status/owner/partOf/groupIdentifier).
@@ -79,7 +79,7 @@ PUT [base]/Task/[id]
 Goal: the patient retrieves current tasks and the related context needed to render the task list and enable launch.
 
 Response:
-- A Bundle containing Task resource(s) conforming to the ProviderModule-Task profile, including:
+- A Bundle containing Task resource(s) conforming to the ProviderTasks-Task profile, including:
     - the referenced basedOn ServiceRequest (if present);
     - any subtasks linked via partOf (if present).
 
@@ -87,7 +87,7 @@ Response:
 Goal: Write back progress/completion after the patient interacted with the activity (including after returning from the external module).
 
 #### Launch (PGO → module system)
-The launch is based on information in ActivityDefinition and Endpoint (e.g., endpoint.address). In the ProviderModule this is the step where the PHR starts an external module/application.
+The launch is based on information in ActivityDefinition and Endpoint (e.g., endpoint.address). In the ProviderTasks this is the step where the PHR starts an external module/application.
 
 The launch is an interaction outside the core REST data exchange and is based on SMART App Launch. The specifications can be found in the ()
 
@@ -220,5 +220,5 @@ The returned data to the PHR should conform to the profiles listed in the table 
 #### Configuration search query Task
 The PHR may use and the source system shall be capable of processing the minimal requirements outlined in the FHIR R4 IG [2.7.1.1 Search on date, number or quantity](https://informatiestandaarden.nictiz.nl/wiki/FHIR:V1.0_FHIR_IG_R4#Search_URLs_and_search_parameters). Example query: 
 
-For ProviderModule, the most common use is retrieving open tasks. Retrieve all non-completed tasks for the patient context:
+For ProviderTasks, the most common use is retrieving open tasks. Retrieve all non-completed tasks for the patient context:
 GET [base]/Task?status:not=completed

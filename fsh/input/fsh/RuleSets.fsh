@@ -1,4 +1,4 @@
-// All RuleSets used in ProviderModule
+// All RuleSets used in ProviderTasks
 
 RuleSet: Origin
 * extension contains

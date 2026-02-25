@@ -1,6 +1,6 @@
-// Bundle with FHIR test instances in FSH format for ProviderModule test scenario 1
-Instance: ProviderModule-ServiceRequest-Glucosemeting
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-ServiceRequest
+// Bundle with FHIR test instances in FSH format for ProviderTasks test scenario 1
+Instance: ProviderTasks-ServiceRequest-Glucosemeting
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-ServiceRequest
 Usage: #example
 * text
   * status = #empty
@@ -10,7 +10,7 @@ Usage: #example
   * value = "2025-00001234"
 * status = #active
 * intent = #order
-* subject = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* subject = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * occurrenceTiming.repeat
   * boundsPeriod.start = "2025-12-22"
   * boundsPeriod.end = "2025-12-28"
@@ -18,7 +18,7 @@ Usage: #example
   * periodUnit = #d
   * frequency = 2
   * frequencyMax = 2
-* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
 * patientInstruction = """
 Beste patiënt,
 
@@ -32,15 +32,15 @@ U gaat gedurende 1 week zelf uw bloedglucose meten. Volg hierbij deze stappen:
 6. Voer dit dagelijks uit gedurende 7 dagen en neem de resultaten mee naar uw volgende afspraak.
 """
 
-Instance: ProviderModule-ActivityDefinition-Meetopdracht-Glucosemeting
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-ActivityDefinition
+Instance: ProviderTasks-ActivityDefinition-Meetopdracht-Glucosemeting
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-ActivityDefinition
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
-  * valueReference = Reference(ProviderModule-Endpoint-HINQ)
+  * valueReference = Reference(ProviderTasks-Endpoint-HINQ)
 * version = "1.0.0"
 * name = "Glucosemeting"
 * title = "Bloedglucose meting 1 week, 2x per dag"
@@ -57,17 +57,17 @@ Usage: #example
   * period = 1
   * periodUnit = #d
 
-Instance: ProviderModule-MainTask-Meetopdracht-Glucosemeting
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Instance: ProviderTasks-MainTask-Meetopdracht-Glucosemeting
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Glucosemeting)
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Meetopdracht-Glucosemeting)
     * type = "ActivityDefinition"
-* basedOn = Reference(ProviderModule-ServiceRequest-Glucosemeting)
+* basedOn = Reference(ProviderTasks-ServiceRequest-Glucosemeting)
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
   * value = "MAINTASK-Glucose"
@@ -78,24 +78,24 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-22"
   * end = "2025-12-28"
 * authoredOn = "2025-12-22T18:00:00+01:00"
 * lastModified = "2025-12-22T18:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
-Instance: ProviderModule-SubTask-Meetopdracht-Glucosemeting-1
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Instance: ProviderTasks-SubTask-Meetopdracht-Glucosemeting-1
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Glucosemeting)
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Meetopdracht-Glucosemeting)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
@@ -104,29 +104,29 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-diabetes-2025"
   * type.text = "Digitale zorgmodule Diabetes"
-* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Glucosemeting)
+* partOf = Reference(ProviderTasks-MainTask-Meetopdracht-Glucosemeting)
 * status = #received
 * intent = #order
 * priority = #routine
 * description = "voer de meetopdracht (title activityDefinition) uit"
-* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-22"
   * end = "2025-12-22"
 * authoredOn = "2025-12-22T18:00:00+01:00"
 * lastModified = "2025-12-22T18:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
-Instance: ProviderModule-SubTask-Meetopdracht-Glucosemeting-2
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Instance: ProviderTasks-SubTask-Meetopdracht-Glucosemeting-2
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Glucosemeting)
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Meetopdracht-Glucosemeting)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
@@ -135,29 +135,29 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-diabetes-2025"
   * type.text = "Digitale zorgmodule Diabetes"
-* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Glucosemeting)
+* partOf = Reference(ProviderTasks-MainTask-Meetopdracht-Glucosemeting)
 * status = #received
 * intent = #order
 * priority = #routine
 * description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
-* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-22"
   * end = "2025-12-22"
 * authoredOn = "2025-12-22T18:00:00+01:00"
 * lastModified = "2025-12-22T18:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
-Instance: ProviderModule-SubTask-Meetopdracht-Glucosemeting-3
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Instance: ProviderTasks-SubTask-Meetopdracht-Glucosemeting-3
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Glucosemeting)
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Meetopdracht-Glucosemeting)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
@@ -166,29 +166,29 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-diabetes-2025"
   * type.text = "Digitale zorgmodule Diabetes"
-* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Glucosemeting)
+* partOf = Reference(ProviderTasks-MainTask-Meetopdracht-Glucosemeting)
 * status = #received
 * intent = #order
 * priority = #routine
 * description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
-* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-23"
   * end = "2025-12-23"
 * authoredOn = "2025-12-22T18:00:00+01:00"
 * lastModified = "2025-12-22T18:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
-Instance: ProviderModule-SubTask-Meetopdracht-Glucosemeting-4
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Instance: ProviderTasks-SubTask-Meetopdracht-Glucosemeting-4
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Glucosemeting)
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Meetopdracht-Glucosemeting)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
@@ -197,29 +197,29 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-diabetes-2025"
   * type.text = "Digitale zorgmodule Diabetes"
-* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Glucosemeting)
+* partOf = Reference(ProviderTasks-MainTask-Meetopdracht-Glucosemeting)
 * status = #received
 * intent = #order
 * priority = #routine
 * description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
-* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-23"
   * end = "2025-12-23"
 * authoredOn = "2025-12-22T18:00:00+01:00"
 * lastModified = "2025-12-22T18:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
-Instance: ProviderModule-SubTask-Meetopdracht-Glucosemeting-5
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Instance: ProviderTasks-SubTask-Meetopdracht-Glucosemeting-5
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Glucosemeting)
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Meetopdracht-Glucosemeting)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
@@ -228,29 +228,29 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-diabetes-2025"
   * type.text = "Digitale zorgmodule Diabetes"
-* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Glucosemeting)
+* partOf = Reference(ProviderTasks-MainTask-Meetopdracht-Glucosemeting)
 * status = #received
 * intent = #order
 * priority = #routine
 * description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
-* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-24"
   * end = "2025-12-24"
 * authoredOn = "2025-12-22T18:00:00+01:00"
 * lastModified = "2025-12-22T18:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
-Instance: ProviderModule-SubTask-Meetopdracht-Glucosemeting-6
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Instance: ProviderTasks-SubTask-Meetopdracht-Glucosemeting-6
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Glucosemeting)
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Meetopdracht-Glucosemeting)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
@@ -259,29 +259,29 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-diabetes-2025"
   * type.text = "Digitale zorgmodule Diabetes"
-* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Glucosemeting)
+* partOf = Reference(ProviderTasks-MainTask-Meetopdracht-Glucosemeting)
 * status = #received
 * intent = #order
 * priority = #routine
 * description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
-* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-24"
   * end = "2025-12-24"
 * authoredOn = "2025-12-22T18:00:00+01:00"
 * lastModified = "2025-12-22T18:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
-Instance: ProviderModule-SubTask-Meetopdracht-Glucosemeting-7
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Instance: ProviderTasks-SubTask-Meetopdracht-Glucosemeting-7
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Glucosemeting)
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Meetopdracht-Glucosemeting)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
@@ -290,29 +290,29 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-diabetes-2025"
   * type.text = "Digitale zorgmodule Diabetes"
-* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Glucosemeting)
+* partOf = Reference(ProviderTasks-MainTask-Meetopdracht-Glucosemeting)
 * status = #received
 * intent = #order
 * priority = #routine
 * description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
-* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-25"
   * end = "2025-12-25"
 * authoredOn = "2025-12-22T18:00:00+01:00"
 * lastModified = "2025-12-22T18:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
-Instance: ProviderModule-SubTask-Meetopdracht-Glucosemeting-8
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Instance: ProviderTasks-SubTask-Meetopdracht-Glucosemeting-8
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Glucosemeting)
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Meetopdracht-Glucosemeting)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
@@ -321,29 +321,29 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-diabetes-2025"
   * type.text = "Digitale zorgmodule Diabetes"
-* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Glucosemeting)
+* partOf = Reference(ProviderTasks-MainTask-Meetopdracht-Glucosemeting)
 * status = #received
 * intent = #order
 * priority = #routine
 * description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
-* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-25"
   * end = "2025-12-25"
 * authoredOn = "2025-12-22T18:00:00+01:00"
 * lastModified = "2025-12-22T18:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
-Instance: ProviderModule-SubTask-Meetopdracht-Glucosemeting-9
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Instance: ProviderTasks-SubTask-Meetopdracht-Glucosemeting-9
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Glucosemeting)
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Meetopdracht-Glucosemeting)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
@@ -352,29 +352,29 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-diabetes-2025"
   * type.text = "Digitale zorgmodule Diabetes"
-* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Glucosemeting)
+* partOf = Reference(ProviderTasks-MainTask-Meetopdracht-Glucosemeting)
 * status = #received
 * intent = #order
 * priority = #routine
 * description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
-* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-26"
   * end = "2025-12-26"
 * authoredOn = "2025-12-22T18:00:00+01:00"
 * lastModified = "2025-12-22T18:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
-Instance: ProviderModule-SubTask-Meetopdracht-Glucosemeting-10
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Instance: ProviderTasks-SubTask-Meetopdracht-Glucosemeting-10
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Glucosemeting)
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Meetopdracht-Glucosemeting)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
@@ -383,29 +383,29 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-diabetes-2025"
   * type.text = "Digitale zorgmodule Diabetes"
-* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Glucosemeting)
+* partOf = Reference(ProviderTasks-MainTask-Meetopdracht-Glucosemeting)
 * status = #received
 * intent = #order
 * priority = #routine
 * description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
-* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-26"
   * end = "2025-12-26"
 * authoredOn = "2025-12-22T18:00:00+01:00"
 * lastModified = "2025-12-22T18:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
-Instance: ProviderModule-SubTask-Meetopdracht-Glucosemeting-11
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Instance: ProviderTasks-SubTask-Meetopdracht-Glucosemeting-11
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Glucosemeting)
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Meetopdracht-Glucosemeting)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
@@ -414,29 +414,29 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-diabetes-2025"
   * type.text = "Digitale zorgmodule Diabetes"
-* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Glucosemeting)
+* partOf = Reference(ProviderTasks-MainTask-Meetopdracht-Glucosemeting)
 * status = #received
 * intent = #order
 * priority = #routine
 * description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
-* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-27"
   * end = "2025-12-27"
 * authoredOn = "2025-12-22T18:00:00+01:00"
 * lastModified = "2025-12-22T18:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
-Instance: ProviderModule-SubTask-Meetopdracht-Glucosemeting-12
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Instance: ProviderTasks-SubTask-Meetopdracht-Glucosemeting-12
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Glucosemeting)
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Meetopdracht-Glucosemeting)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
@@ -445,29 +445,29 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-diabetes-2025"
   * type.text = "Digitale zorgmodule Diabetes"
-* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Glucosemeting)
+* partOf = Reference(ProviderTasks-MainTask-Meetopdracht-Glucosemeting)
 * status = #received
 * intent = #order
 * priority = #routine
 * description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
-* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-27"
   * end = "2025-12-27"
 * authoredOn = "2025-12-22T18:00:00+01:00"
 * lastModified = "2025-12-22T18:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
-Instance: ProviderModule-SubTask-Meetopdracht-Glucosemeting-13
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Instance: ProviderTasks-SubTask-Meetopdracht-Glucosemeting-13
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Glucosemeting)
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Meetopdracht-Glucosemeting)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
@@ -476,29 +476,29 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-diabetes-2025"
   * type.text = "Digitale zorgmodule Diabetes"
-* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Glucosemeting)
+* partOf = Reference(ProviderTasks-MainTask-Meetopdracht-Glucosemeting)
 * status = #received
 * intent = #order
 * priority = #routine
 * description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
-* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-28"
   * end = "2025-12-28"
 * authoredOn = "2025-12-22T18:00:00+01:00"
 * lastModified = "2025-12-22T18:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
-Instance: ProviderModule-SubTask-Meetopdracht-Glucosemeting-14
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Instance: ProviderTasks-SubTask-Meetopdracht-Glucosemeting-14
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Glucosemeting)
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Meetopdracht-Glucosemeting)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
@@ -507,29 +507,29 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-diabetes-2025"
   * type.text = "Digitale zorgmodule Diabetes"
-* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Glucosemeting)
+* partOf = Reference(ProviderTasks-MainTask-Meetopdracht-Glucosemeting)
 * status = #received
 * intent = #order
 * priority = #routine
 * description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
-* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-28"
   * end = "2025-12-28"
 * authoredOn = "2025-12-22T18:00:00+01:00"
 * lastModified = "2025-12-22T18:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
-Instance: ProviderModule-ActivityDefinition-Informatie-Diabetes
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-ActivityDefinition
+Instance: ProviderTasks-ActivityDefinition-Informatie-Diabetes
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-ActivityDefinition
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
-  * valueReference = Reference(ProviderModule-Endpoint-HINQ)
+  * valueReference = Reference(ProviderTasks-Endpoint-HINQ)
 * version = "1.0.0"
 * name = "Informatie over diabetes type 2"
 * title = "Wat is diabetes type 2?"
@@ -538,15 +538,15 @@ Usage: #example
 * description = "Voorlichtingsmodule ‘Wat is diabetes type 2?’: basisuitleg over het ziektebeeld, oorzaken/risicofactoren, klachten, metingen (glucose/HbA1c) en behandelprincipes (leefstijl en medicatie) ter ondersteuning van educatie en zelfmanagement."
 
 
-Instance: ProviderModule-Task-Informatie-Diabetes
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Instance: ProviderTasks-Task-Informatie-Diabetes
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Informatie-Diabetes)
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Informatie-Diabetes)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
@@ -559,25 +559,25 @@ Usage: #example
 * intent = #order
 * priority = #routine
 * description = "Lees wat diabetes type 2 is en wat je zelf kunt doen"
-* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-22"
   * end = "2025-12-28"
 * authoredOn = "2025-12-23T07:00:00+01:00"
 * lastModified = "2025-12-23T07:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
 
-Instance: ProviderModule-ActivityDefinition-Informatie-Gezonder-Leven
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-ActivityDefinition
+Instance: ProviderTasks-ActivityDefinition-Informatie-Gezonder-Leven
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-ActivityDefinition
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
-  * valueReference = Reference(ProviderModule-Endpoint-HINQ)
+  * valueReference = Reference(ProviderTasks-Endpoint-HINQ)
 * version = "1.0.0"
 * name = "Informatie over gezonder gaan leven"
 * title = "Gezonder gaan leven"
@@ -585,15 +585,15 @@ Usage: #example
 * publisher = "HinqZNO"
 * description = "Leefstijlmodule binnen de digitale zorgmodule Diabetes: praktische informatie en motivatie voor gezonder leven (voeding, beweging, gewicht, stoppen met roken, alcohol en slaap) ter ondersteuning van glykemische controle en cardiovasculair risicomanagement."
 
-Instance: ProviderModule-Task-Informatie-Gezonder-Leven
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Instance: ProviderTasks-Task-Informatie-Gezonder-Leven
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Informatie-Gezonder-Leven)
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Informatie-Gezonder-Leven)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
@@ -606,25 +606,25 @@ Usage: #example
 * intent = #order
 * priority = #routine
 * description = "Lees tips voor gezonder leven (voeding, bewegen en volhouden)"
-* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-22"
   * end = "2025-12-28"
 * authoredOn = "2025-12-24T07:00:00+01:00"
 * lastModified = "2025-12-24T07:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
 
-Instance: ProviderModule-ActivityDefinition-Vragenlijst-WoonLeefsituatie
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-ActivityDefinition
+Instance: ProviderTasks-ActivityDefinition-Vragenlijst-WoonLeefsituatie
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-ActivityDefinition
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
-  * valueReference = Reference(ProviderModule-Endpoint-HINQ)
+  * valueReference = Reference(ProviderTasks-Endpoint-HINQ)
 * version = "1.0.0"
 * name = "Vragenlijst over de woon- leefsituatie"
 * title = "Vragenlijst over de woon- leefsituatie"
@@ -633,15 +633,15 @@ Usage: #example
 * description = "Vragenlijst woon-/leefsituatie binnen de digitale zorgmodule Diabetes om contextfactoren (wonen, dagelijks functioneren, ondersteuning, leefstijl en mogelijkheden/belemmeringen) in kaart te brengen als basis voor persoonsgerichte begeleiding en haalbare leefstijlafspraken."
 
 
-Instance: ProviderModule-Task-Vragenlijst-WoonLeefsituatie
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Instance: ProviderTasks-Task-Vragenlijst-WoonLeefsituatie
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Vragenlijst-WoonLeefsituatie)
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Vragenlijst-WoonLeefsituatie)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
@@ -654,17 +654,17 @@ Usage: #example
 * intent = #order
 * priority = #routine
 * description = "Vul de vragenlijst in over je woon/leefsituatie"
-* for = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-22"
   * end = "2025-12-28"
 * authoredOn = "2025-12-23T18:00:00+01:00"
 * lastModified = "2025-12-23T18:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
-* owner = Reference(ProviderModule-Patient-Van-Duinen) "Tom van Duinen"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
-Instance: ProviderModule-Endpoint-HINQ
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Endpoint
+Instance: ProviderTasks-Endpoint-HINQ
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Endpoint
 Usage: #example
 * text
   * status = #empty
@@ -674,11 +674,11 @@ Usage: #example
   * valueString = "dvaaanbiedersmodulesweb"
 * status = #active
 * connectionType = http://terminology.hl7.org/CodeSystem/endpoint-connection-type#hl7-fhir-rest
-* managingOrganization = Reference(ProviderModule-Organization-Huisartsenpraktijk-Medrie)
+* managingOrganization = Reference(ProviderTasks-Organization-Huisartsenpraktijk-Medrie)
 * payloadType = $endpoint-payload-type#any
 * address = "https://module.test.5im.nl/web/api/smartonfhir/launch"
 
-Instance: ProviderModule-Patient-Van-Duinen
+Instance: ProviderTasks-Patient-Van-Duinen
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient
 Usage: #example
 * text
@@ -723,18 +723,18 @@ Usage: #example
   * country = "Nederland"
     * extension[http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification].valueCodeableConcept = urn:iso:std:iso:3166#NL "Netherlands"
 
-Instance: ProviderModule-PractitionerRole-De-Haard
+Instance: ProviderTasks-PractitionerRole-De-Haard
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
-* practitioner = Reference(ProviderModule-Practitioner-De-Haard) "A. de Haard"
-* organization = Reference(ProviderModule-Organization-Huisartsenpraktijk-Medrie) "Huisartstenpraktijk Medrie"
+* practitioner = Reference(ProviderTasks-Practitioner-De-Haard) "A. de Haard"
+* organization = Reference(ProviderTasks-Organization-Huisartsenpraktijk-Medrie) "Huisartstenpraktijk Medrie"
 * specialty
   * coding = urn:oid:2.16.840.1.113883.2.4.6.7#0110 "Huisarts, apotheekhoudend"
 
-Instance: ProviderModule-Practitioner-De-Haard
+Instance: ProviderTasks-Practitioner-De-Haard
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner
 Usage: #example
 * text
@@ -760,7 +760,7 @@ Usage: #example
   * value = "dehaard@huisarts.nl"
   * use = #work
 
-Instance: ProviderModule-Organization-Huisartsenpraktijk-Medrie
+Instance: ProviderTasks-Organization-Huisartsenpraktijk-Medrie
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization
 Usage: #example
 * text

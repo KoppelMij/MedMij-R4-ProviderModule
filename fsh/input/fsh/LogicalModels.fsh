@@ -1,4 +1,4 @@
-// All LogicalModels used in ProviderModule
+// All LogicalModels used in ProviderTasks
 
 Logical: LmPatient
 Parent: http://hl7.org/fhir/StructureDefinition/Element
@@ -8,7 +8,7 @@ Description: "The person for whom the task is intended."
 * insert DefaultNarrative
 * ^status = #active
 * insert PublisherAndContactMedMij
-* ^purpose = "This LogicalModel represents the Patient building block for patient use cases in the context of the ProviderModule"
+* ^purpose = "This LogicalModel represents the Patient building block for patient use cases in the context of the ProviderTasks"
 * insert Copyright
 * ^abstract = true
 * .

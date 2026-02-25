@@ -12,7 +12,7 @@ De doelgroep voor deze pagina wijkt niet af van de [algemene doelgroep](https://
 ### Kaders en uitgangspunten
 
 ### Algemeen 
-- De uitwisseling is gebaseerd op het MedMij-afsprakenstelsel en de FHIR-profielen voor ProviderModule (AanbiedersModule).
+- De uitwisseling is gebaseerd op het MedMij-afsprakenstelsel en de FHIR-profielen voor ProviderTasks (AanbiedersModule).
 - De zorgaanbieder initieert een digitale activiteit voor een patiënt.
 - De patiënt ziet een takenlijst in de Persoonlijke Gezondheidsomgeving (PGO) en kan vanuit de PGO een externe module/applicatie starten om de taak uit te voeren (bijvoorbeeld via een launch naar de aanbiedersmodule) óf de taak uitvoeren via een Koppeltaal-gestuurde workflow.
 - Digitale activiteiten kunnen verschillende typen hebben, zoals: informatie bekijken, een vragenlijst invullen of thuismetingen uitvoeren.
@@ -38,7 +38,7 @@ Op dit moment wordt de usecase uit dit ontwerp getoetst in een Proof of Concept 
 ## Usecases
 
 ### Algemeen
-Binnen ProviderModule worden digitale activiteiten aangeboden aan de patiënt. 
+Binnen ProviderTasks worden digitale activiteiten aangeboden aan de patiënt. 
 De zorgaanbieder:
 	1.	selecteert een digitale activiteit (module);
 	2.	zet deze uit voor een specifieke patiënt;

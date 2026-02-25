@@ -1,6 +1,6 @@
-// Bundle with FHIR test instances in FSH format for ProviderModule test scenario 2
-Instance: ProviderModule-ServiceRequest-Bloeddrukmeting
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-ServiceRequest
+// Bundle with FHIR test instances in FSH format for ProviderTasks test scenario 2
+Instance: ProviderTasks-ServiceRequest-Bloeddrukmeting
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-ServiceRequest
 Usage: #example
 * text
   * status = #empty
@@ -10,7 +10,7 @@ Usage: #example
   * value = "2025-999999"
 * status = #active
 * intent = #order
-* subject = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* subject = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 * occurrenceTiming.repeat
   * boundsPeriod.start = "2025-12-22"
   * boundsPeriod.end = "2025-12-28"
@@ -18,7 +18,7 @@ Usage: #example
   * periodUnit = #d
   * frequency = 2
   * frequencyMax = 2
-* requester = Reference(ProviderModule-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
 * patientInstruction = """
 Beste patiënt,
 
@@ -30,15 +30,15 @@ U gaat gedurende 1 week zelf uw bloeddruk meten. Volg hierbij deze stappen:
 4. Voer dit dagelijks uit gedurende 7 dagen en neem de resultaten mee naar uw volgende afspraak.
 """
 
-Instance: ProviderModule-ActivityDefinition-Meetopdracht-Bloeddrukmeting
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-ActivityDefinition
+Instance: ProviderTasks-ActivityDefinition-Meetopdracht-Bloeddrukmeting
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-ActivityDefinition
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
-  * valueReference = Reference(ProviderModule-Endpoint-Minddistrict)
+  * valueReference = Reference(ProviderTasks-Endpoint-Minddistrict)
 * version = "1.0.0"
 * name = "Meetopdacht bloeddrukmeting"
 * title = "Bloeddrukmeting"
@@ -54,17 +54,17 @@ Usage: #example
   * period = 1
   * periodUnit = #d
 
-Instance: ProviderModule-MainTask-Meetopdracht-Bloeddrukmeting
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Instance: ProviderTasks-MainTask-Meetopdracht-Bloeddrukmeting
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Bloeddrukmeting)
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Meetopdracht-Bloeddrukmeting)
     * type = "ActivityDefinition"
-* basedOn = Reference(ProviderModule-ServiceRequest-Bloeddrukmeting)
+* basedOn = Reference(ProviderTasks-ServiceRequest-Bloeddrukmeting)
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
   * value = "MAINTASK-Bloeddruk"
@@ -75,26 +75,26 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
-* for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* for = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-12-22"
   * end = "2025-12-28"
 * authoredOn = "2025-12-22T18:00:00+01:00"
 * lastModified = "2025-12-22T18:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
-* owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
+* owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
-Instance: ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-1
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Instance: ProviderTasks-SubTask-Meetopdracht-Bloeddrukmeting-1
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Bloeddrukmeting)
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Meetopdracht-Bloeddrukmeting)
     * type = "ActivityDefinition"
-* basedOn = Reference(ProviderModule-ServiceRequest-Bloeddrukmeting)
+* basedOn = Reference(ProviderTasks-ServiceRequest-Bloeddrukmeting)
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
   * value = "SUBTASK-Bloeddruk-1"
@@ -102,31 +102,31 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
   * type.text = "Digitale zorgmodule CVRM"
-* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Bloeddrukmeting)
+* partOf = Reference(ProviderTasks-MainTask-Meetopdracht-Bloeddrukmeting)
 * status = #received
 * intent = #order
 * priority = #routine
 * description = "Meet je bloeddruk in de ochtend nuchter (voor het ontbijt) en in de avond voor het avondeten. Noteer de waarde in de app. Je metingen helpen je zorgverlener om te zien hoe het met je gaat en of je behandeling moet worden aangepast."
-* for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* for = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-12-22"
   * end = "2025-12-22"
 * authoredOn = "2025-12-22T18:00:00+01:00"
 * lastModified = "2025-12-22T18:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
-* owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
+* owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
-Instance: ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-2
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Instance: ProviderTasks-SubTask-Meetopdracht-Bloeddrukmeting-2
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Bloeddrukmeting)
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Meetopdracht-Bloeddrukmeting)
     * type = "ActivityDefinition"
-* basedOn = Reference(ProviderModule-ServiceRequest-Bloeddrukmeting)
+* basedOn = Reference(ProviderTasks-ServiceRequest-Bloeddrukmeting)
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
   * value = "SUBTASK-Bloeddruk-2"
@@ -134,31 +134,31 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
   * type.text = "Digitale zorgmodule CVRM"
-* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Bloeddrukmeting)
+* partOf = Reference(ProviderTasks-MainTask-Meetopdracht-Bloeddrukmeting)
 * status = #received
 * intent = #order
 * priority = #routine
 * description = "Meet je bloeddruk in de ochtend nuchter (voor het ontbijt) en in de avond voor het avondeten. Noteer de waarde in de app. Je metingen helpen je zorgverlener om te zien hoe het met je gaat en of je behandeling moet worden aangepast."
-* for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* for = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-12-22"
   * end = "2025-12-22"
 * authoredOn = "2025-12-22T18:00:00+01:00"
 * lastModified = "2025-12-22T18:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
-* owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
+* owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
-Instance: ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-3
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Instance: ProviderTasks-SubTask-Meetopdracht-Bloeddrukmeting-3
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Bloeddrukmeting)
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Meetopdracht-Bloeddrukmeting)
     * type = "ActivityDefinition"
-* basedOn = Reference(ProviderModule-ServiceRequest-Bloeddrukmeting)
+* basedOn = Reference(ProviderTasks-ServiceRequest-Bloeddrukmeting)
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
   * value = "SUBTASK-Bloeddruk-3"
@@ -166,31 +166,31 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
   * type.text = "Digitale zorgmodule CVRM"
-* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Bloeddrukmeting)
+* partOf = Reference(ProviderTasks-MainTask-Meetopdracht-Bloeddrukmeting)
 * status = #received
 * intent = #order
 * priority = #routine
 * description = "Meet je bloeddruk in de ochtend nuchter (voor het ontbijt) en in de avond voor het avondeten. Noteer de waarde in de app. Je metingen helpen je zorgverlener om te zien hoe het met je gaat en of je behandeling moet worden aangepast."
-* for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* for = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-12-23"
   * end = "2025-12-23"
 * authoredOn = "2025-12-22T18:00:00+01:00"
 * lastModified = "2025-12-22T18:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
-* owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
+* owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
-Instance: ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-4
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Instance: ProviderTasks-SubTask-Meetopdracht-Bloeddrukmeting-4
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Bloeddrukmeting)
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Meetopdracht-Bloeddrukmeting)
     * type = "ActivityDefinition"
-* basedOn = Reference(ProviderModule-ServiceRequest-Bloeddrukmeting)
+* basedOn = Reference(ProviderTasks-ServiceRequest-Bloeddrukmeting)
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
   * value = "SUBTASK-Bloeddruk-4"
@@ -198,31 +198,31 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
   * type.text = "Digitale zorgmodule CVRM"
-* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Bloeddrukmeting)
+* partOf = Reference(ProviderTasks-MainTask-Meetopdracht-Bloeddrukmeting)
 * status = #received
 * intent = #order
 * priority = #routine
 * description = "Meet je bloeddruk in de ochtend nuchter (voor het ontbijt) en in de avond voor het avondeten. Noteer de waarde in de app. Je metingen helpen je zorgverlener om te zien hoe het met je gaat en of je behandeling moet worden aangepast."
-* for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* for = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-12-23"
   * end = "2025-12-23"
 * authoredOn = "2025-12-22T18:00:00+01:00"
 * lastModified = "2025-12-22T18:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
-* owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
+* owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
-Instance: ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-5
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Instance: ProviderTasks-SubTask-Meetopdracht-Bloeddrukmeting-5
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Bloeddrukmeting)
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Meetopdracht-Bloeddrukmeting)
     * type = "ActivityDefinition"
-* basedOn = Reference(ProviderModule-ServiceRequest-Bloeddrukmeting)
+* basedOn = Reference(ProviderTasks-ServiceRequest-Bloeddrukmeting)
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
   * value = "SUBTASK-Bloeddruk-5"
@@ -230,31 +230,31 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
   * type.text = "Digitale zorgmodule CVRM"
-* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Bloeddrukmeting)
+* partOf = Reference(ProviderTasks-MainTask-Meetopdracht-Bloeddrukmeting)
 * status = #received
 * intent = #order
 * priority = #routine
 * description = "Meet je bloeddruk in de ochtend nuchter (voor het ontbijt) en in de avond voor het avondeten. Noteer de waarde in de app. Je metingen helpen je zorgverlener om te zien hoe het met je gaat en of je behandeling moet worden aangepast."
-* for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* for = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-12-24"
   * end = "2025-12-24"
 * authoredOn = "2025-12-22T18:00:00+01:00"
 * lastModified = "2025-12-22T18:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
-* owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
+* owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
-Instance: ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-6
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Instance: ProviderTasks-SubTask-Meetopdracht-Bloeddrukmeting-6
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Bloeddrukmeting)
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Meetopdracht-Bloeddrukmeting)
     * type = "ActivityDefinition"
-* basedOn = Reference(ProviderModule-ServiceRequest-Bloeddrukmeting)
+* basedOn = Reference(ProviderTasks-ServiceRequest-Bloeddrukmeting)
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
   * value = "SUBTASK-Bloeddruk-6"
@@ -262,31 +262,31 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
   * type.text = "Digitale zorgmodule CVRM"
-* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Bloeddrukmeting)
+* partOf = Reference(ProviderTasks-MainTask-Meetopdracht-Bloeddrukmeting)
 * status = #received
 * intent = #order
 * priority = #routine
 * description = "Meet je bloeddruk in de ochtend nuchter (voor het ontbijt) en in de avond voor het avondeten. Noteer de waarde in de app. Je metingen helpen je zorgverlener om te zien hoe het met je gaat en of je behandeling moet worden aangepast."
-* for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* for = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-12-24"
   * end = "2025-12-24"
 * authoredOn = "2025-12-22T18:00:00+01:00"
 * lastModified = "2025-12-22T18:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
-* owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
+* owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
-Instance: ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-7
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Instance: ProviderTasks-SubTask-Meetopdracht-Bloeddrukmeting-7
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Bloeddrukmeting)
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Meetopdracht-Bloeddrukmeting)
     * type = "ActivityDefinition"
-* basedOn = Reference(ProviderModule-ServiceRequest-Bloeddrukmeting)
+* basedOn = Reference(ProviderTasks-ServiceRequest-Bloeddrukmeting)
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
   * value = "SUBTASK-Bloeddruk-7"
@@ -294,31 +294,31 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
   * type.text = "Digitale zorgmodule CVRM"
-* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Bloeddrukmeting)
+* partOf = Reference(ProviderTasks-MainTask-Meetopdracht-Bloeddrukmeting)
 * status = #received
 * intent = #order
 * priority = #routine
 * description = "Meet je bloeddruk in de ochtend nuchter (voor het ontbijt) en in de avond voor het avondeten. Noteer de waarde in de app. Je metingen helpen je zorgverlener om te zien hoe het met je gaat en of je behandeling moet worden aangepast."
-* for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* for = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-12-25"
   * end = "2025-12-25"
 * authoredOn = "2025-12-22T18:00:00+01:00"
 * lastModified = "2025-12-22T18:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
-* owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
+* owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
-Instance: ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-8
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Instance: ProviderTasks-SubTask-Meetopdracht-Bloeddrukmeting-8
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Bloeddrukmeting)
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Meetopdracht-Bloeddrukmeting)
     * type = "ActivityDefinition"
-* basedOn = Reference(ProviderModule-ServiceRequest-Bloeddrukmeting)
+* basedOn = Reference(ProviderTasks-ServiceRequest-Bloeddrukmeting)
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
   * value = "SUBTASK-Bloeddruk-8"
@@ -326,31 +326,31 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
   * type.text = "Digitale zorgmodule CVRM"
-* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Bloeddrukmeting)
+* partOf = Reference(ProviderTasks-MainTask-Meetopdracht-Bloeddrukmeting)
 * status = #received
 * intent = #order
 * priority = #routine
 * description = "Meet je bloeddruk in de ochtend nuchter (voor het ontbijt) en in de avond voor het avondeten. Noteer de waarde in de app. Je metingen helpen je zorgverlener om te zien hoe het met je gaat en of je behandeling moet worden aangepast."
-* for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* for = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-12-25"
   * end = "2025-12-25"
 * authoredOn = "2025-12-22T18:00:00+01:00"
 * lastModified = "2025-12-22T18:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
-* owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
+* owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
-Instance: ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-9
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Instance: ProviderTasks-SubTask-Meetopdracht-Bloeddrukmeting-9
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Bloeddrukmeting)
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Meetopdracht-Bloeddrukmeting)
     * type = "ActivityDefinition"
-* basedOn = Reference(ProviderModule-ServiceRequest-Bloeddrukmeting)
+* basedOn = Reference(ProviderTasks-ServiceRequest-Bloeddrukmeting)
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
   * value = "SUBTASK-Bloeddruk-9"
@@ -358,31 +358,31 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
   * type.text = "Digitale zorgmodule CVRM"
-* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Bloeddrukmeting)
+* partOf = Reference(ProviderTasks-MainTask-Meetopdracht-Bloeddrukmeting)
 * status = #received
 * intent = #order
 * priority = #routine
 * description = "Meet je bloeddruk in de ochtend nuchter (voor het ontbijt) en in de avond voor het avondeten. Noteer de waarde in de app. Je metingen helpen je zorgverlener om te zien hoe het met je gaat en of je behandeling moet worden aangepast."
-* for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* for = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-12-26"
   * end = "2025-12-26"
 * authoredOn = "2025-12-22T18:00:00+01:00"
 * lastModified = "2025-12-22T18:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
-* owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
+* owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
-Instance: ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-10
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Instance: ProviderTasks-SubTask-Meetopdracht-Bloeddrukmeting-10
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Bloeddrukmeting)
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Meetopdracht-Bloeddrukmeting)
     * type = "ActivityDefinition"
-* basedOn = Reference(ProviderModule-ServiceRequest-Bloeddrukmeting)
+* basedOn = Reference(ProviderTasks-ServiceRequest-Bloeddrukmeting)
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
   * value = "SUBTASK-Bloeddruk-10"
@@ -390,31 +390,31 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
   * type.text = "Digitale zorgmodule CVRM"
-* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Bloeddrukmeting)
+* partOf = Reference(ProviderTasks-MainTask-Meetopdracht-Bloeddrukmeting)
 * status = #received
 * intent = #order
 * priority = #routine
 * description = "Meet je bloeddruk in de ochtend nuchter (voor het ontbijt) en in de avond voor het avondeten. Noteer de waarde in de app. Je metingen helpen je zorgverlener om te zien hoe het met je gaat en of je behandeling moet worden aangepast."
-* for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* for = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-12-26"
   * end = "2025-12-26"
 * authoredOn = "2025-12-22T18:00:00+01:00"
 * lastModified = "2025-12-22T18:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
-* owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
+* owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
-Instance: ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-11
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Instance: ProviderTasks-SubTask-Meetopdracht-Bloeddrukmeting-11
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Bloeddrukmeting)
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Meetopdracht-Bloeddrukmeting)
     * type = "ActivityDefinition"
-* basedOn = Reference(ProviderModule-ServiceRequest-Bloeddrukmeting)
+* basedOn = Reference(ProviderTasks-ServiceRequest-Bloeddrukmeting)
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
   * value = "SUBTASK-Bloeddruk-11"
@@ -422,31 +422,31 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
   * type.text = "Digitale zorgmodule CVRM"
-* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Bloeddrukmeting)
+* partOf = Reference(ProviderTasks-MainTask-Meetopdracht-Bloeddrukmeting)
 * status = #received
 * intent = #order
 * priority = #routine
 * description = "Meet je bloeddruk in de ochtend nuchter (voor het ontbijt) en in de avond voor het avondeten. Noteer de waarde in de app. Je metingen helpen je zorgverlener om te zien hoe het met je gaat en of je behandeling moet worden aangepast."
-* for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* for = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-12-27"
   * end = "2025-12-27"
 * authoredOn = "2025-12-22T18:00:00+01:00"
 * lastModified = "2025-12-22T18:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
-* owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
+* owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
-Instance: ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-12
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Instance: ProviderTasks-SubTask-Meetopdracht-Bloeddrukmeting-12
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Bloeddrukmeting)
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Meetopdracht-Bloeddrukmeting)
     * type = "ActivityDefinition"
-* basedOn = Reference(ProviderModule-ServiceRequest-Bloeddrukmeting)
+* basedOn = Reference(ProviderTasks-ServiceRequest-Bloeddrukmeting)
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
   * value = "SUBTASK-Bloeddruk-12"
@@ -454,31 +454,31 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
   * type.text = "Digitale zorgmodule CVRM"
-* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Bloeddrukmeting)
+* partOf = Reference(ProviderTasks-MainTask-Meetopdracht-Bloeddrukmeting)
 * status = #received
 * intent = #order
 * priority = #routine
 * description = "Meet je bloeddruk in de ochtend nuchter (voor het ontbijt) en in de avond voor het avondeten. Noteer de waarde in de app. Je metingen helpen je zorgverlener om te zien hoe het met je gaat en of je behandeling moet worden aangepast."
-* for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* for = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-12-27"
   * end = "2025-12-27"
 * authoredOn = "2025-12-22T18:00:00+01:00"
 * lastModified = "2025-12-22T18:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
-* owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
+* owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
-Instance: ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-13
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Instance: ProviderTasks-SubTask-Meetopdracht-Bloeddrukmeting-13
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Bloeddrukmeting)
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Meetopdracht-Bloeddrukmeting)
     * type = "ActivityDefinition"
-* basedOn = Reference(ProviderModule-ServiceRequest-Bloeddrukmeting)
+* basedOn = Reference(ProviderTasks-ServiceRequest-Bloeddrukmeting)
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
   * value = "SUBTASK-Bloeddruk-13"
@@ -486,31 +486,31 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
   * type.text = "Digitale zorgmodule CVRM"
-* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Bloeddrukmeting)
+* partOf = Reference(ProviderTasks-MainTask-Meetopdracht-Bloeddrukmeting)
 * status = #received
 * intent = #order
 * priority = #routine
 * description = "Meet je bloeddruk in de ochtend nuchter (voor het ontbijt) en in de avond voor het avondeten. Noteer de waarde in de app. Je metingen helpen je zorgverlener om te zien hoe het met je gaat en of je behandeling moet worden aangepast."
-* for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* for = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-12-28"
   * end = "2025-12-28"
 * authoredOn = "2025-12-22T18:00:00+01:00"
 * lastModified = "2025-12-22T18:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
-* owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
+* owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
-Instance: ProviderModule-SubTask-Meetopdracht-Bloeddrukmeting-14
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Instance: ProviderTasks-SubTask-Meetopdracht-Bloeddrukmeting-14
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Meetopdracht-Bloeddrukmeting)
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Meetopdracht-Bloeddrukmeting)
     * type = "ActivityDefinition"
-* basedOn = Reference(ProviderModule-ServiceRequest-Bloeddrukmeting)
+* basedOn = Reference(ProviderTasks-ServiceRequest-Bloeddrukmeting)
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
   * value = "SUBTASK-Bloeddruk-14"
@@ -518,29 +518,29 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
   * type.text = "Digitale zorgmodule CVRM"
-* partOf = Reference(ProviderModule-MainTask-Meetopdracht-Bloeddrukmeting)
+* partOf = Reference(ProviderTasks-MainTask-Meetopdracht-Bloeddrukmeting)
 * status = #received
 * intent = #order
 * priority = #routine
 * description = "Meet je bloeddruk in de ochtend nuchter (voor het ontbijt) en in de avond voor het avondeten. Noteer de waarde in de app. Je metingen helpen je zorgverlener om te zien hoe het met je gaat en of je behandeling moet worden aangepast."
-* for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* for = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-12-28"
   * end = "2025-12-28"
 * authoredOn = "2025-12-22T18:00:00+01:00"
 * lastModified = "2025-12-22T18:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
-* owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
+* owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
-Instance: ProviderModule-ActivityDefinition-Informatie-Cholesterol
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-ActivityDefinition
+Instance: ProviderTasks-ActivityDefinition-Informatie-Cholesterol
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-ActivityDefinition
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
-  * valueReference = Reference(ProviderModule-Endpoint-Minddistrict)
+  * valueReference = Reference(ProviderTasks-Endpoint-Minddistrict)
 * version = "1.0.0"
 * name = "Informatie over cholesterol"
 * title = "Wat is cholesterol en wat zijn de risico's?"
@@ -548,15 +548,15 @@ Usage: #example
 * publisher = "Minddistrict"
 * description = "Voorlichtingsmodule cholesterol: uitlegmateriaal over wat cholesterol is, cardiovasculaire risico’s en leefstijl-/behandelopties ter ondersteuning van CVRM en gezamenlijke besluitvorming."
 
-Instance: ProviderModule-Task-Informatie-Cholesterol
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Instance: ProviderTasks-Task-Informatie-Cholesterol
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Informatie-Cholesterol)
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Informatie-Cholesterol)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
@@ -569,25 +569,25 @@ Usage: #example
 * intent = #order
 * priority = #routine
 * description = "Lees wat cholesterol is, welke risico’s erbij horen en wat je kunt doen met leefstijl en/of medicijnen."
-* for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* for = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-12-22"
   * end = "2025-12-28"
 * authoredOn = "2025-12-23T07:00:00+01:00"
 * lastModified = "2025-12-23T07:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
-* owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
+* owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
 
-Instance: ProviderModule-ActivityDefinition-Informatie-Thuismeting
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-ActivityDefinition
+Instance: ProviderTasks-ActivityDefinition-Informatie-Thuismeting
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-ActivityDefinition
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
-  * valueReference = Reference(ProviderModule-Endpoint-Minddistrict)
+  * valueReference = Reference(ProviderTasks-Endpoint-Minddistrict)
 * version = "1.0.0"
 * name = "Informatie over thuis bloeddruk meten"
 * title = "Informatie over thuis bloeddruk meten"
@@ -595,15 +595,15 @@ Usage: #example
 * publisher = "Minddistrict"
 * description = "Instructiemodule thuismetingen bloeddruk: patiëntinstructie voor correcte meetmethode (rust, houding, manchet, meetmomenten) en registratie, ter verbetering van betrouwbaarheid van thuismetingen"
 
-Instance: ProviderModule-Task-Informatie-Thuis-Bloeddrukmeten
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Instance: ProviderTasks-Task-Informatie-Thuis-Bloeddrukmeten
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Informatie-Thuismeting)
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Informatie-Thuismeting)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
@@ -616,25 +616,25 @@ Usage: #example
 * intent = #order
 * priority = #routine
 * description = "In deze module leer je stap voor stap hoe je thuis je bloeddruk goed meet. Je krijgt tips over voorbereiding (eerst 5 minuten rustig zitten), de juiste houding, hoe je de manchet plaatst en wanneer je het beste meet. Ook lees je wat je kunt doen om meetfouten te voorkomen (zoals praten tijdens het meten of meten direct na koffie of inspanning) en hoe je je waarden in de app noteert. Zo worden je metingen betrouwbaarder en kan je zorgverlener er beter op sturen."
-* for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* for = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-12-22"
   * end = "2025-12-28"
 * authoredOn = "2025-12-24T07:00:00+01:00"
 * lastModified = "2025-12-24T07:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
-* owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
+* owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
 
-Instance: ProviderModule-ActivityDefinition-Vragenlijst-Uw-Situatie
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-ActivityDefinition
+Instance: ProviderTasks-ActivityDefinition-Vragenlijst-Uw-Situatie
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-ActivityDefinition
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension[0]
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
-  * valueReference = Reference(ProviderModule-Endpoint-Minddistrict)
+  * valueReference = Reference(ProviderTasks-Endpoint-Minddistrict)
 * extension[1]
   * url = $client-id
   * valueString = "dvaaanbiedersmodule"
@@ -645,15 +645,15 @@ Usage: #example
 * publisher = "Minddistrict"
 * description = "Vragenlijst ‘Uw situatie’ om relevante klachten, leefstijl en risicofactoren rond hart- en vaatziekten te inventariseren als basis voor behandelafspraken."
 
-Instance: ProviderModule-Task-Vragenlijst-Uw-Situatie
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Task
+Instance: ProviderTasks-Task-Vragenlijst-Uw-Situatie
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = $koppeltaal-instantiates
-  * valueReference = Reference(ProviderModule-ActivityDefinition-Vragenlijst-Uw-Situatie)
+  * valueReference = Reference(ProviderTasks-ActivityDefinition-Vragenlijst-Uw-Situatie)
     * type = "ActivityDefinition"
 * identifier
   * system = "http://medrie.nl/taskIdentifier"
@@ -666,17 +666,17 @@ Usage: #example
 * intent = #order
 * priority = #routine
 * description = "In deze vragenlijst beantwoord je vragen over jouw situatie rond hart- en vaatziekten. Denk aan klachten, leefstijl (zoals bewegen, roken en voeding) en andere factoren die invloed kunnen hebben op je gezondheid. Je antwoorden helpen jou en je zorgverlener om een compleet beeld te krijgen en samen te bepalen welke stappen het meest belangrijk zijn."
-* for = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* for = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-12-22"
   * end = "2025-12-28"
 * authoredOn = "2025-12-23T18:00:00+01:00"
 * lastModified = "2025-12-23T18:00:00+01:00"
-* requester = Reference(ProviderModule-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
-* owner = Reference(ProviderModule-Patient-De-Groot) "Koos de Groot"
+* requester = Reference(ProviderTasks-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
+* owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
-Instance: ProviderModule-Endpoint-Minddistrict
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderModule-Endpoint
+Instance: ProviderTasks-Endpoint-Minddistrict
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Endpoint
 Usage: #example
 * text
   * status = #empty
@@ -686,11 +686,11 @@ Usage: #example
   * valueString = "dvaaanbiedersmodule"
 * status = #active
 * connectionType = http://terminology.hl7.org/CodeSystem/endpoint-connection-type#hl7-fhir-rest
-* managingOrganization = Reference(ProviderModule-Organization-Huisartsenpraktijk-Medrie)
+* managingOrganization = Reference(ProviderTasks-Organization-Huisartsenpraktijk-Medrie)
 * payloadType = $endpoint-payload-type#any
 * address = "https://aanbiedermodule.example.org/web/api/smartonfhir/launch?iss=resourceserver.example.dva.nl"
 
-Instance: ProviderModule-Patient-De-Groot
+Instance: ProviderTasks-Patient-De-Groot
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient
 Usage: #example
 * text
@@ -735,18 +735,18 @@ Usage: #example
   * country = "Nederland"
     * extension[http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification].valueCodeableConcept = urn:iso:std:iso:3166#NL "Netherlands"
 
-Instance: ProviderModule-PractitionerRole-De-Jong
+Instance: ProviderTasks-PractitionerRole-De-Jong
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole
 Usage: #example
 * text
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
-* practitioner = Reference(ProviderModule-Practitioner-De-Jong) "L. de Jong"
-* organization = Reference(ProviderModule-Organization-Huisartsenpraktijk-Medrie) "Huisartstenpraktijk Medrie"
+* practitioner = Reference(ProviderTasks-Practitioner-De-Jong) "L. de Jong"
+* organization = Reference(ProviderTasks-Organization-Huisartsenpraktijk-Medrie) "Huisartstenpraktijk Medrie"
 * specialty
   * coding = urn:oid:2.16.840.1.113883.2.4.6.7#0110 "Huisarts, apotheekhoudend"
 
-Instance: ProviderModule-Practitioner-De-Jong
+Instance: ProviderTasks-Practitioner-De-Jong
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner
 Usage: #example
 * text

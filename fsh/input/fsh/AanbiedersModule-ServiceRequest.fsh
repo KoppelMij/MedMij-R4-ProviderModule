@@ -1,4 +1,4 @@
-Profile: ProviderModuleServiceRequest
+Profile: ProviderTasksServiceRequest
 Parent: ServiceRequest
 Id: pm-ServiceRequest
 Description: "Clinical order for a patient-specific digital activity that a healthcare professional requests for a specific patient, such as completing a questionnaire, performing home measurements, viewing educational content, or launching a third-party module."
@@ -12,7 +12,7 @@ Description: "Clinical order for a patient-specific digital activity that a heal
   * ^alias = "Zorgopdracht"
 * insert Origin
 * .
-^definition = "Patient-specific clinical order for requesting a digital (eHealth) activity in the ProviderModule context. It links the patient, the requested activity definition, timing/schedule, and clinical rationale, and may include patient-specific instructions. It can be referenced by Task resources that coordinate execution and status tracking."
+^definition = "Patient-specific clinical order for requesting a digital (eHealth) activity in the ProviderTasks context. It links the patient, the requested activity definition, timing/schedule, and clinical rationale, and may include patient-specific instructions. It can be referenced by Task resources that coordinate execution and status tracking."
 * subject only Reference(http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient)
   * ^definition = "The patient for whom the activity is requested."
 * requester only Reference(http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole)
