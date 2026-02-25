@@ -12,9 +12,9 @@ De doelgroep voor deze pagina wijkt niet af van de [algemene doelgroep](https://
 ### Kaders en uitgangspunten
 
 ### Algemeen 
-- De uitwisseling is gebaseerd op het MedMij-afsprakenstelsel en de FHIR-profielen voor ProviderTasks (AanbiedersModule).
+- De uitwisseling is gebaseerd op het MedMij-afsprakenstelsel en de FHIR-profielen voor ProviderTasks (Aanbiedertaken).
 - De zorgaanbieder initieert een digitale activiteit voor een patiënt.
-- De patiënt ziet een takenlijst in de Persoonlijke Gezondheidsomgeving (PGO) en kan vanuit de PGO een externe module/applicatie starten om de taak uit te voeren (bijvoorbeeld via een launch naar de aanbiedersmodule) óf de taak uitvoeren via een Koppeltaal-gestuurde workflow.
+- De patiënt ziet een takenlijst in de Persoonlijke Gezondheidsomgeving (PGO) en kan vanuit de PGO een externe module/applicatie starten om de taak uit te voeren (bijvoorbeeld via een launch naar de Aanbiedertaken) óf de taak uitvoeren via een Koppeltaal-gestuurde workflow.
 - Digitale activiteiten kunnen verschillende typen hebben, zoals: informatie bekijken, een vragenlijst invullen of thuismetingen uitvoeren.
 
 ### Richtlijn en proces
@@ -22,7 +22,7 @@ Dit ontwerp is conform specificaties genoemd in [de algemene inleiding](https:/
 
 ### Reikwijdte
 De reikwijdte van dit ontwerp beslaat:
-- de functionele beschrijving van het uitwisselen van patient-specifieke digitale activiteiten (taken) die voortvloeien uit een (door de zorgaanbieder) aangevraagde aanbiedersmodule;
+- de functionele beschrijving van het uitwisselen van patient-specifieke digitale activiteiten (taken) die voortvloeien uit een (door de zorgaanbieder) aangevraagde Aanbiedertaken;
 - de dataset (Logical Models) die benodigd is voor deze uitwisseling, inclusief de relaties tussen ServiceRequest, Task, ActivityDefinition en Endpoint.
 
 ### Infrastructuur
@@ -44,7 +44,7 @@ De zorgaanbieder:
 	2.	zet deze uit voor een specifieke patiënt;
 	3.	de patiënt ontvangt één of meerdere taken (taken) om uit te voeren.
 
-### Usecase: Aanbiedersmodule
+### Usecase: Aanbiedertaken
 
 ### Doel en relevantie uitwisselen taken
 Het doel is dat een patiënt in zijn/haar PGO inzicht heeft in:
@@ -57,7 +57,7 @@ Voor de zorgaanbieder is het doel:
 - het volgen van voortgang (op hoofdlijnen) via statusinformatie;
 
 
-#### Patient journey Aanbiedersmodule
+#### Patient journey Aanbiedertaken
 De patient journey beschrijft momenten waarop de patiënt inzicht kan of wil hebben in de digitale activiteiten:
 
 Ontvangst:
@@ -74,7 +74,7 @@ Terugkoppeling:
 
 
 
-### Procesbeschrijving Aanbiedersmodule
+### Procesbeschrijving Aanbiedertaken
 
 #### Precondities
 - De patiënt beschikt over een PGO (of andere cliëntapplicatie) dat aan de MedMij-eisen voldoet.
@@ -126,7 +126,7 @@ Tabel 1 Bedrijfsrollen
 Zowel de persoon als de (zorg)aanbieder maken ieder gebruik van een informatiesysteem:
 - PGO (persoon)
 - Bronsysteem ((zorg)aanbieder)
-- Aanbiedersmodule (persoon)
+- Aanbiedertaken (persoon)
 
 #### Systemen en systeemrollen
 Deze systemen kennen ieder verschillende systeemrollen.
@@ -148,7 +148,7 @@ Tabel 3 Transactiegroep
 | --- | --- | --- | --- | --- |
 | Verzamelen Taakgegevens (PULL) | Beschikbaar stellen Taken | MM-1.0-TGR-FHIR | Bronsysteem | Zorgaanbieder |
 | Verzamelen Taakgegevens (PULL) | Raadplegen Taken | MM-1.0-TGR-FHIR | PGO | Patiënt |
-| Digitale activiteit uitvoeren (LAUNCH) | Launch naar aanbiedersmodule| MM-1.0-DAU-FHIR | Modulesysteem | Patiënt |
+| Digitale activiteit uitvoeren (LAUNCH) | Launch naar Aanbiedertaken| MM-1.0-DAU-FHIR | Modulesysteem | Patiënt |
 
 ### Ontwerp uitwisselen taken
 Functioneel ontwerpprincipes

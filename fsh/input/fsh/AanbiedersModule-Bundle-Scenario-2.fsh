@@ -637,7 +637,7 @@ Usage: #example
   * valueReference = Reference(ProviderTasks-Endpoint-Minddistrict)
 * extension[1]
   * url = $client-id
-  * valueString = "dvaaanbiedersmodule"
+  * valueString = "dvaAanbiedertaken"
 * version = "1.0.0"
 * name = "Uw situatie op gebied van hart- en vaatziekten"
 * title = "Vragenlijst over uw situatie op gebied van hart- en vaatziekten"
@@ -683,7 +683,7 @@ Usage: #example
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = $client-id
-  * valueString = "dvaaanbiedersmodule"
+  * valueString = "dvaAanbiedertaken"
 * status = #active
 * connectionType = http://terminology.hl7.org/CodeSystem/endpoint-connection-type#hl7-fhir-rest
 * managingOrganization = Reference(ProviderTasks-Organization-Huisartsenpraktijk-Medrie)

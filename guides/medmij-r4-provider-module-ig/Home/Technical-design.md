@@ -5,7 +5,7 @@ topic: TO
 # FHIR IG
 
 ## Introduction
-This Technical Design (TD) describes the technical implementation of the ProviderTasks (Aanbiedersmodule) based on the [Functional Design]() (FD). The TD is the technical counterpart of the FD and describes:
+This Technical Design (TD) describes the technical implementation of the ProviderTasks (Aanbiedertaken) based on the [Functional Design]() (FD). The TD is the technical counterpart of the FD and describes:
 	•	the involved actors and systems;
 	•	the FHIR profiles and resources to be used;
 	•	the transactions (search/retrieve/update) including example queries;

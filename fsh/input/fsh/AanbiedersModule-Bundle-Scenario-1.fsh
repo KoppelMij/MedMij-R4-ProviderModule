@@ -671,7 +671,7 @@ Usage: #example
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * extension
   * url = $client-id
-  * valueString = "dvaaanbiedersmodulesweb"
+  * valueString = "dvaAanbiedertakensweb"
 * status = #active
 * connectionType = http://terminology.hl7.org/CodeSystem/endpoint-connection-type#hl7-fhir-rest
 * managingOrganization = Reference(ProviderTasks-Organization-Huisartsenpraktijk-Medrie)
