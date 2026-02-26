@@ -44,6 +44,7 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
+* description = "Meet je saturatie voor 1 week, 1x per dag"
 * for = Reference(ProviderTasks-Patient-Van-Dijk) "Sanne van Dijk"
 * executionPeriod
   * start = "2026-01-05"

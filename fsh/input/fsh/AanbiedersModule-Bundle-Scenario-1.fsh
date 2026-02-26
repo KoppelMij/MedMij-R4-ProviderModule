@@ -43,7 +43,7 @@ Usage: #example
   * valueReference = Reference(ProviderTasks-Endpoint-HINQ)
 * version = "1.0.0"
 * name = "Glucosemeting"
-* title = "Bloedglucose meting 1 week, 2x per dag"
+* title = "Bloedglucose meting volgens NHG protocol"
 * status = #active
 * publisher = "HinqZNO"
 * description = "Bloedglucose meting volgens NHG protocol. Duur: 1 week, 2x per dag"
@@ -78,6 +78,7 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
+* description = "Meet je bloedglucose voor 1 week, 2x per dag"
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
   * start = "2025-12-22"

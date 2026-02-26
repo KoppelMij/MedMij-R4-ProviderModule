@@ -75,6 +75,7 @@ Usage: #example
 * status = #received
 * intent = #order
 * priority = #routine
+* description = "Meet je bloeddruk voor 1 week, 2x per dag, 's ochtends en 's avonds"
 * for = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 * executionPeriod
   * start = "2025-12-22"
