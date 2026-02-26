@@ -1,7 +1,7 @@
 - name: Index
   filename: Index.page.md
 - name: Functional design
-  filename: Functional-design.page.md
+  filename: Functional-design
 - name: Technical design
   filename: Technical-design.md
 - name: Artifact index
