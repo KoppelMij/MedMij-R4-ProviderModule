@@ -144,9 +144,9 @@ Tabel 2 Systeemrol
 
 | Systeem | Naam systeemrol | Systeemrolcode | Omschrijving |
 | --- | --- | --- | --- |
-| PGO | TaakGegevensRaadplegend | PT-1.0-TGR-FHIR | Raadplegen taken bij de zorgaanbieder|
-| XIS| TaakGegevensBeschikbaarstellend | PT-1.0-TGR-FHIR | Beschikbaar stellen taken aan de patiënt |
-| Modulesysteem | DigitaleActiviteitUitvoerder | MM-1.0-DAU-FHIR | Levert de digitale activiteit en ondersteunt de uitvoering/afronding van de activiteit |
+| PGO | TaakGegevensRaadplegend | PT-1.0.0-alpha.1-TGR-FHIR | Raadplegen taken bij de zorgaanbieder|
+| XIS| TaakGegevensBeschikbaarstellend | PT-1.0.0-alpha.1-TGB-FHIR | Beschikbaar stellen taken aan de patiënt |
+| Modulesysteem | DigitaleActiviteitUitvoerder | PA-1.0.0-alpha.1-DAU-FHIR | Levert de digitale activiteit en ondersteunt de uitvoering/afronding van de activiteit |
 
 ### Transacties en transactiegroepen
 Het uitwisselen van gegevens tussen de verschillende systeemrollen gebeurt op basis van transacties, een verzameling van transacties (bijvoorbeeld een vraag- en antwoordbericht) vormt een zogeheten transactiegroep.
@@ -155,9 +155,9 @@ Tabel 3 Transactiegroep
 
 | Transactiegroep | Transactie | Systeemrolcode | Systeem | Bedrijfsrol |
 | --- | --- | --- | --- | --- |
-| Verzamelen Taakgegevens (PULL) | Beschikbaar stellen Taken | MM-1.0-TGR-FHIR | Bronsysteem | Zorgaanbieder |
-| Verzamelen Taakgegevens (PULL) | Raadplegen Taken | MM-1.0-TGR-FHIR | PGO | Patiënt |
-| Digitale activiteit uitvoeren (LAUNCH) | Launch naar AanbiederModule| MM-1.0-DAU-FHIR | Modulesysteem | Patiënt |
+| Verzamelen Taakgegevens (PULL) | Beschikbaar stellen Taken | PT-1.0.0-alpha.1-TGR-FHIR | XIS | Zorgaanbieder |
+| Verzamelen Taakgegevens (PULL) | Raadplegen Taken | PT-1.0.0-alpha.1-TGB-FHIR | PGO | Patiënt |
+| Digitale activiteit uitvoeren (LAUNCH) | Launch naar AanbiederModule| PA-1.0.0-alpha.1-DAU-FHIR | Modulesysteem | Patiënt |
 
 ### Ontwerp uitwisselen taken
 Functioneel ontwerpprincipes
