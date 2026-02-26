@@ -8,12 +8,10 @@ The following FHIR profiles have been introduced for the ProviderTask standard:
 
 | CIM (concept) | FHIR resource | FHIR profile |
 | --- | --- | --- |
-| {{pagelink: LogicalModelsIndex, text: Task, anchor: pt-Task}} | Task | {{pagelink: FHIRProfilesIndex, text: pt-Task, anchor: pt}} |
-| {{pagelink: LogicalModelsIndex, text: ActivityDefinition, anchor: pt-ActivityDefinition}} | ActivityDefinition | {{pagelink: FHIRProfilesIndex, text: pt-ActivityDefinition, anchor: pt-ActivityDefinition}} |
-| {{pagelink: LogicalModelsIndex, text: ServiceRequest, anchor: pt-ServiceRequest}} | ServiceRequest | {{pagelink: FHIRProfilesIndex, text: pt-ServiceRequest, anchor: pt-ServiceRequest}} |
-| {{pagelink: LogicalModelsIndex, text: Endpoint, anchor: pt-Endpoint}} | Endpoint | {{pagelink: FHIRProfilesIndex, text: pt-Endpoint, anchor: pt-Endpoint}} |
-| {{pagelink: LogicalModelsIndex, text: Report (Macroscopy), anchor: PathLmReport}} | Observation | {{pagelink: FHIRProfilesIndex, text: path-Report.Macroscopy, anchor: PathReportMacroscopy}} |
-
+| {{pagelink: LogicalModelsIndex, text: Task, anchor: ptlmTask}} | Task | {{pagelink: FHIRProfilesIndex, text: pt-Task, anchor: ptTask}} |
+| {{pagelink: LogicalModelsIndex, text: ActivityDefinition, anchor: ptlmActivityDefinition}} | ActivityDefinition | {{pagelink: FHIRProfilesIndex, text: pt-ActivityDefinition, anchor: ptActivityDefinition}} |
+| {{pagelink: LogicalModelsIndex, text: ServiceRequest, anchor: ptlmServiceRequest}} | ServiceRequest | {{pagelink: FHIRProfilesIndex, text: pt-ServiceRequest, anchor: ptServiceRequest}} |
+| {{pagelink: LogicalModelsIndex, text: Endpoint, anchor: ptlmEndpoint}} | Endpoint | {{pagelink: FHIRProfilesIndex, text: pt-Endpoint, anchor: ptEndpoint}} |
 
 **Table 1: Relevant pathology-specific profiles**
 
