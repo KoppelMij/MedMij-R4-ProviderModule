@@ -163,35 +163,35 @@ The returned data to the PHR should conform to the profiles listed in the table 
             <td>2</td>
             <td>Taak</td>
             <td>Task</td>
-            <td><a href="" target="_blank">pm-Task</a></td>
+            <td><a href="" target="_blank">ps-Task</a></td>
             <td class="monospace">GET [base]/Task?status:not=completed</td>
         </tr>
          <tr>
             <td>3</td>
             <td>Digitale activiteit</td>
             <td>ActivityDefinition</td>
-            <td><a href="" target="_blank">pm-ActivityDefinition</a></td>
+            <td><a href="" target="_blank">ps-ActivityDefinition</a></td>
             <td class="monospace"> See Task </td>
         </tr>
          <tr>
             <td>4</td>
             <td>Zorgopdracht</td>
             <td>ServiceRequest</td>
-            <td><a href="" target="_blank">pm-ServiceRequest</a></td>
+            <td><a href="" target="_blank">ps-ServiceRequest</a></td>
             <td class="monospace">See Task</td>
         </tr>
          <tr>
             <td>5</td>
             <td>Endpoint</td>
             <td>Endpoint</td>
-            <td><a href="" target="_blank">pm-Endpoint</a></td>
+            <td><a href="" target="_blank">ps-Endpoint</a></td>
             <td class="monospace"> See ActivityDefinition </td>
         </tr>
          <tr>
             <td>6</td>
             <td>Taak</td>
             <td>Task</td>
-            <td><a href="" target="_blank">pm-Task</a></td>
+            <td><a href="" target="_blank">ps-Task</a></td>
             <td class="monospace">PUT [base]/Task/[id]</td>
         </tr>
         <tr>
