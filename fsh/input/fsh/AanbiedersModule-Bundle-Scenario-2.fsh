@@ -686,7 +686,7 @@ Usage: #example
   * valueString = "dvaAanbiedertaken"
 * status = #active
 * connectionType = http://terminology.hl7.org/CodeSystem/endpoint-connection-type#hl7-fhir-rest
-* managingOrganization = Reference(ProviderTasks-Organization-Huisartsenpraktijk-Medrie)
+* managingOrganization = Reference(ProviderTasks-Organization-Huisartsenpraktijk-de-Haard)
 * payloadType = $endpoint-payload-type#any
 * address = "https://aanbiedermodule.example.org/web/api/smartonfhir/launch?iss=resourceserver.example.dva.nl"
 
@@ -742,7 +742,7 @@ Usage: #example
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * practitioner = Reference(ProviderTasks-Practitioner-De-Jong) "L. de Jong"
-* organization = Reference(ProviderTasks-Organization-Huisartsenpraktijk-Medrie) "Huisartstenpraktijk Medrie"
+* organization = Reference(ProviderTasks-Organization-Huisartsenpraktijk-de-Haard) "Huisartstenpraktijk de Haard"
 * specialty
   * coding = urn:oid:2.16.840.1.113883.2.4.6.7#0110 "Huisarts, apotheekhoudend"
 

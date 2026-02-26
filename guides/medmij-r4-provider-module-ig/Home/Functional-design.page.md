@@ -160,7 +160,7 @@ Functioneel ontwerpprincipes
 
 ### Dataset
 De dataset wordt beschreven in de bijbehorende Logical Models:
-- LogicalModel [Task]()
+- LogicalModel [Task](https://simplifier.net/medmij-r4-provider-module/lmtask)
 - LogicalModel [ActivityDefinition]()
 - LogicalModel [ServiceRequest]()
 - LogicalModel [Endpoint]()

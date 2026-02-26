@@ -465,7 +465,7 @@ Usage: #example
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * practitioner = Reference(ProviderTasks-Practitioner-Van-Rijn) "M. van Rijn"
-* organization = Reference(ProviderTasks-Organization-Huisartsenpraktijk-Medrie) "Huisartstenpraktijk Medrie"
+* organization = Reference(ProviderTasks-Organization-Huisartsenpraktijk-de-Haard) "Huisartstenpraktijk de Haard"
 * specialty
   * coding = urn:oid:2.16.840.1.113883.2.4.6.7#0110 "Huisarts, apotheekhoudend"
 

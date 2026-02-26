@@ -674,7 +674,7 @@ Usage: #example
   * valueString = "dvaAanbiedertakensweb"
 * status = #active
 * connectionType = http://terminology.hl7.org/CodeSystem/endpoint-connection-type#hl7-fhir-rest
-* managingOrganization = Reference(ProviderTasks-Organization-Huisartsenpraktijk-Medrie)
+* managingOrganization = Reference(ProviderTasks-Organization-Huisartsenpraktijk-De-Haard)
 * payloadType = $endpoint-payload-type#any
 * address = "https://module.test.5im.nl/web/api/smartonfhir/launch"
 
@@ -730,7 +730,7 @@ Usage: #example
   * status = #empty
   * div = "<div xmlns='http://www.w3.org/1999/xhtml'>No human-readable text provided in this case.</div>"
 * practitioner = Reference(ProviderTasks-Practitioner-De-Haard) "A. de Haard"
-* organization = Reference(ProviderTasks-Organization-Huisartsenpraktijk-Medrie) "Huisartstenpraktijk Medrie"
+* organization = Reference(ProviderTasks-Organization-Huisartsenpraktijk-De-Haard) "Huisartstenpraktijk de Haard"
 * specialty
   * coding = urn:oid:2.16.840.1.113883.2.4.6.7#0110 "Huisarts, apotheekhoudend"
 
@@ -760,7 +760,7 @@ Usage: #example
   * value = "dehaard@huisarts.nl"
   * use = #work
 
-Instance: ProviderTasks-Organization-Huisartsenpraktijk-Medrie
+Instance: ProviderTasks-Organization-Huisartsenpraktijk-De-Haard
 InstanceOf: http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization
 Usage: #example
 * text
@@ -769,7 +769,7 @@ Usage: #example
 * identifier
   * system = "http://fhir.nl/fhir/NamingSystem/agb-z"
   * value = "01010235"
-* name = "Ondersteuning Huisartsenpraktijk Medrie Bv"
+* name = "Huisartsenpraktijk de Haard"
 * telecom[0]
   * system = #phone
   * value = "+31653603740"
