@@ -126,8 +126,8 @@ Tabel 1 Bedrijfsrollen
 
 | Bedrijfsrol (actor) | Beschrijving bedrijfsrol |
 | --- | --- |
-| Patiënt/ Persoon | Gebruiker van de PGO die taken ontvangt en uitvoert |
-| (zorg)aanbieder | Gebruiker van het bronsysteem die digitale activiteiten voor de patiënt aanvraagt |
+| Patiënt | Gebruiker van de PGO |
+| Zorgaanbieder | Gebruiker van het bronsysteem |
 
 
 ### Informatieoverdracht
@@ -144,9 +144,9 @@ Tabel 2 Systeemrol
 
 | Systeem | Naam systeemrol | Systeemrolcode | Omschrijving |
 | --- | --- | --- | --- |
-| PGO | TaakGegevensRaadplegend | MM-1.0-TGR-FHIR | Raadpleegt taken, toont (patiënt)instructie en ondersteunt het starten van de digitale activiteit|
-| Bronsysteem | TaakGegevensBeschikbaarstellend | MM-1.0-TGR-FHIR | Maakt Task en/of ServiceRequest en stelt deze beschikbaar aan de patiënt |
-| Modulesysteem | DigitaleActiviteitUitvoerder | MM-1.0-DAU-FHIR | Levert de digitale activiteit (bijv. vragenlijst, informatie, meting) en ondersteunt uitvoering na launch |
+| PGO | TaakGegevensRaadplegend | PT-1.0-TGR-FHIR | Raadplegen taken bij de zorgaanbieder|
+| XIS| TaakGegevensBeschikbaarstellend | PT-1.0-TGR-FHIR | Beschikbaar stellen taken aan de patiënt |
+| Modulesysteem | DigitaleActiviteitUitvoerder | MM-1.0-DAU-FHIR | Levert de digitale activiteit en ondersteunt de uitvoering/afronding van de activiteit |
 
 ### Transacties en transactiegroepen
 Het uitwisselen van gegevens tussen de verschillende systeemrollen gebeurt op basis van transacties, een verzameling van transacties (bijvoorbeeld een vraag- en antwoordbericht) vormt een zogeheten transactiegroep.
@@ -157,7 +157,7 @@ Tabel 3 Transactiegroep
 | --- | --- | --- | --- | --- |
 | Verzamelen Taakgegevens (PULL) | Beschikbaar stellen Taken | MM-1.0-TGR-FHIR | Bronsysteem | Zorgaanbieder |
 | Verzamelen Taakgegevens (PULL) | Raadplegen Taken | MM-1.0-TGR-FHIR | PGO | Patiënt |
-| Digitale activiteit uitvoeren (LAUNCH) | Launch naar Aanbiedertaken| MM-1.0-DAU-FHIR | Modulesysteem | Patiënt |
+| Digitale activiteit uitvoeren (LAUNCH) | Launch naar AanbiederModule| MM-1.0-DAU-FHIR | Modulesysteem | Patiënt |
 
 ### Ontwerp uitwisselen taken
 Functioneel ontwerpprincipes
@@ -170,6 +170,7 @@ Functioneel ontwerpprincipes
 ### Dataset
 De dataset wordt beschreven in de bijbehorende Logical Models:
 - LogicalModel [Task](https://simplifier.net/medmij-r4-provider-module/lmtask)
-- LogicalModel [ActivityDefinition]()
-- LogicalModel [ServiceRequest]()
+- LogicalModel [ActivityDefinition](https://simplifier.net/medmij-r4-provider-module/lmactivitydefinition)
+- LogicalModel [ServiceRequest](https://simplifier.net/medmij-r4-provider-module/lmservicerequest)
 - LogicalModel [Endpoint]()
+- LogicalModel [Patient](https://simplifier.net/medmij-r4-provider-module/lmpatient)
