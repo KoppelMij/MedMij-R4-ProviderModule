@@ -174,3 +174,16 @@ De dataset wordt beschreven in de bijbehorende Logical Models:
 - LogicalModel [ServiceRequest](https://simplifier.net/medmij-r4-provider-module/lmservicerequest)
 - LogicalModel [Endpoint]()
 - LogicalModel [Patient](https://simplifier.net/medmij-r4-provider-module/lmpatient)
+
+
+### Weergaverichtlijn
+
+#### Scope weergaverichtlijn 
+De richtlijn geeft handvatten voor:
+- het gebruik van patiëntvriendelijke termen en toelichting;
+- de inhoud van het overzicht van taken in de PGO.
+
+De richtlijn geeft géén handvatten voor de vormgeving (kleur, vorm, lettertype, etc.) van taken. 
+
+#### Inhoud weergaverichtlijn
+De weergaverichtlijn voor taken is [hier]() te vinden.
