@@ -9,7 +9,6 @@ topic: FO
 ### Doelgroep
 De doelgroep voor deze pagina wijkt niet af van de [algemene doelgroep](https://informatiestandaarden.nictiz.nl/wiki/MedMij:FO:V1/FunctioneelOntwerp#Doelgroep) van de functionele ontwerpen binnen MedMij.
 
-### Kaders en uitgangspunten
 
 ### Algemeen 
 - De uitwisseling is gebaseerd op het MedMij-afsprakenstelsel en de FHIR-profielen voor ProviderTasks (Aanbiedertaken).
@@ -17,13 +16,16 @@ De doelgroep voor deze pagina wijkt niet af van de [algemene doelgroep](https://
 - De patiënt ziet een takenlijst in de Persoonlijke Gezondheidsomgeving (PGO) en kan vanuit de PGO een externe module/applicatie starten om de taak uit te voeren (bijvoorbeeld via een launch naar de Aanbiedertaken) óf de taak uitvoeren via een Koppeltaal-gestuurde workflow.
 - Digitale activiteiten kunnen verschillende typen hebben, zoals: informatie bekijken, een vragenlijst invullen of thuismetingen uitvoeren.
 
+
 ### Richtlijn en proces
 Dit ontwerp is conform specificaties genoemd in [de algemene inleiding](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.01/Ontwerpen#Richtlijn) van de functionele ontwerpen binnen MedMij.
+
 
 ### Reikwijdte
 De reikwijdte van dit ontwerp beslaat:
 - de functionele beschrijving van het uitwisselen van patient-specifieke digitale activiteiten (taken) die voortvloeien uit een (door de zorgaanbieder) aangevraagde Aanbiedertaken;
 - de dataset (Logical Models) die benodigd is voor deze uitwisseling, inclusief de relaties tussen ServiceRequest, Task, ActivityDefinition en Endpoint.
+
 
 ### Infrastructuur
 Geen nadere specificatie, anders dan genoemd in de [algemene inleiding](https://informatiestandaarden.nictiz.nl/wiki/MedMij:FO:V1/FunctioneelOntwerp#Infrastructuur) van de functionele ontwerpen binnen MedMij.
@@ -32,8 +34,11 @@ Geen nadere specificatie, anders dan genoemd in de [algemene inleiding](https://
 ### Geografische reikwijdte
 Geen nadere specificatie, anders dan genoemd in [de algemene inleiding](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V2020.02/Ontwerpen#Geografische_reikwijdte) van de MedMij functionele ontwerpen.
 
+
 ### Kwalificatie en testen
 Op dit moment wordt de usecase uit dit ontwerp getoetst in een Proof of Concept (PoC). Later volgt meer informatie over kwalificatie.
+
+
 
 ## Usecases
 
@@ -44,9 +49,10 @@ De zorgaanbieder:
 	2.	zet deze uit voor een specifieke patiënt;
 	3.	de patiënt ontvangt één of meerdere taken (taken) om uit te voeren.
 
+
 ### Usecase: Aanbiedertaken
 
-### Doel en relevantie uitwisselen taken
+#### Doel en relevantie uitwisselen taken
 Het doel is dat een patiënt in zijn/haar PGO inzicht heeft in:
 - welke digitale activiteiten door de zorgaanbieder zijn aangevraagd;
 - de voortgang/status van de taken en wat de planning is;
@@ -112,7 +118,8 @@ Statusupdates:
 - De patiënt heeft één of meerdere taken uitgevoerd of afgerond (status bijgewerkt).
 - De zorgaanbieder kan (op hoofdlijnen) de voortgang volgen via de status van taken.
 
-### Bedrijfsrollen en UML activity diagram
+
+### Bedrijfsrollen
 Deze usecase onderscheidt twee bedrijfsrollen, namelijk de Persoon en de (Zorg)Aanbieder zoals te zien in onderstaande tabel.
 
 Tabel 1 Bedrijfsrollen
@@ -122,11 +129,13 @@ Tabel 1 Bedrijfsrollen
 | Patiënt/ Persoon | Gebruiker van de PGO die taken ontvangt en uitvoert |
 | (zorg)aanbieder | Gebruiker van het bronsysteem die digitale activiteiten voor de patiënt aanvraagt |
 
+
 ### Informatieoverdracht
 Zowel de persoon als de (zorg)aanbieder maken ieder gebruik van een informatiesysteem:
 - PGO (persoon)
 - Bronsysteem ((zorg)aanbieder)
 - Aanbiedertaken (persoon)
+
 
 #### Systemen en systeemrollen
 Deze systemen kennen ieder verschillende systeemrollen.
