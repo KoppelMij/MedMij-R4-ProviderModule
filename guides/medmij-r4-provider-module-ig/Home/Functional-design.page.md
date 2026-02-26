@@ -93,7 +93,7 @@ Terugkoppeling:
 Selectie digitale activiteit (Module):
 - Zorgaanbieder selecteert een digitale activiteit (Module) die past bij het zorgproces (bijv. CVRM/diabetes/COPD). 
 
-Aamaken en publiceren taken:
+1. Aanmaken en publiceren taken:
 - Het bronsysteem maakt één of meerdere Task resources aan en stelt deze beschikbaar aan de patiënt, inclusief:
 	- een koppeling naar de digitale activiteit (ActivityDefinition);
 	- één hoofdtaak (of meerdere taken) die de patiënt in de PGO ziet;
@@ -101,16 +101,16 @@ Aamaken en publiceren taken:
 	- planning/tijdschema, indien van toepassing;
 	- Patient-specifieke instructies, indien van toepassing.
 
-Patiënt informeren:
+2. Patiënt informeren:
 - De patiënt wordt geïnformeerd (bijv. per e-mail) dat er een nieuwe taak klaarstaat in de PGO.
 
-Raadplegen door patiënt:
+3. Raadplegen door patiënt:
 - De patiënt raadpleegt de takenlijst in de PGO en ziet per taak o.a. de omschrijving, instructies, en eventuele planning. De patiënt kan taken filteren (bijv. per “zorgmodule”/groep) op basis van contextinformatie.
 
-Uitvoering:
+4. Uitvoering:
 - De patiënt start de digitale activiteit vanuit de PGO (launch naar de module/applicatie) en voert de activiteit uit in de externe applicatie. 
 
-Statusupdates:
+5. Statusupdates:
 - De status van de Task(s) wordt bijgewerkt in het bronsysteem, zodat voortgang en afronding zichtbaar zijn in de takenlijst voor de zorgaanbieder en patiënt. De patiënt kan op elk moment de lijst met openstaande taken opnieuw ophalen.
 
 
