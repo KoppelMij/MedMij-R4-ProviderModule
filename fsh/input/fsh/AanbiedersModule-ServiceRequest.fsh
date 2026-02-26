@@ -1,6 +1,6 @@
 Profile: ProviderTasksServiceRequest
 Parent: ServiceRequest
-Id: ps-ServiceRequest
+Id: pt-ServiceRequest
 Description: "Clinical order for a patient-specific digital activity that a healthcare professional requests for a specific patient, such as completing a questionnaire, performing home measurements, viewing educational content, or launching a third-party module."
 * insert DefaultNarrative
 * ^status = #draft

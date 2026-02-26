@@ -1,6 +1,6 @@
 Profile: ProviderTasksActivityDefinition
 Parent: ActivityDefinition
-Id: ps-ActivityDefinition
+Id: pt-ActivityDefinition
 Description: "This (FHIR) ActivityDefinition profile describes a reusable definition of a launchable digital (eHealth) activity that can be requested for a patient in MedMij and/or Koppeltaal workflows. It captures the clinical intent and the technical launch information (e.g., endpoint) so that systems can consistently create patient-specific Tasks that reference this definition."
 * ^status = #draft
 * insert PublisherAndContactMedMij

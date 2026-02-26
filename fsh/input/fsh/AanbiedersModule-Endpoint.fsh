@@ -1,6 +1,6 @@
 Profile: ProviderTasksEndpoint
 Parent: Endpoint
-Id: ps-Endpoint
+Id: pt-Endpoint
 Description: "This (FHIR) Endpoint profile represents the technical FHIR REST endpoint of a source system (XIS), used by a ProviderModule to retrieve and update task data and the required context for the ProviderModule use case."
 * ^status = #draft
 * insert PublisherAndContactMedMij

@@ -2,7 +2,7 @@
 
 Logical: LmPatient
 Parent: http://hl7.org/fhir/StructureDefinition/Element
-Id: ps-lm-Patient
+Id: pt-lm-Patient
 Title: "Patient"
 Description: "The person for whom the task is intended."
 * insert DefaultNarrative
@@ -33,7 +33,7 @@ Description: "The person for whom the task is intended."
 
 Logical: LmActivityDefinition
 Parent: http://hl7.org/fhir/StructureDefinition/Element
-Id: ps-lm-ActivityDefinition
+Id: pt-lm-ActivityDefinition
 Title: "ActivityDefinition"
 Description: "Reusable definition of a launchable digital (eHealth) activity that can be requested for a patient in MedMij and/or Koppeltaal workflows. It describes the clinical intent and (when applicable) the technical launch details (e.g., endpoint) so that systems can create patient-specific workflow Tasks that reference this definition."
 * insert DefaultNarrative
@@ -65,7 +65,7 @@ Description: "Reusable definition of a launchable digital (eHealth) activity tha
 
 Logical: LmTask
 Parent: http://hl7.org/fhir/StructureDefinition/Element
-Id: ps-lm-Task
+Id: pt-lm-Task
 Title: "Task"
 Description: "Patient-specific workflow item that requests execution of a defined digital (eHealth) activity. Each Task represents an instance of “perform this activity for this patient”, optionally linking to an ActivityDefinition that describes the launchable activity."
 * insert DefaultNarrative
@@ -117,7 +117,7 @@ Description: "Patient-specific workflow item that requests execution of a define
 
 Logical: LmServiceRequest
 Parent: http://hl7.org/fhir/StructureDefinition/Element
-Id: ps-lm-ServiceRequest
+Id: pt-lm-ServiceRequest
 Title: "ServiceRequest"
 Description: "Patient-specific clinical order for a digital (eHealth) activity that a healthcare professional requests for a patient, such as completing a questionnaire, performing home measurements, viewing educational content, or launching a third-party module."
 * insert DefaultNarrative
@@ -147,7 +147,7 @@ Description: "Patient-specific clinical order for a digital (eHealth) activity t
 
 Logical: LmEnpoint
 Parent: http://hl7.org/fhir/StructureDefinition/Element
-Id: ps-lm-Endpoint
+Id: pt-lm-Endpoint
 Title: "Endpoint"
 Description: "This (FHIR) Endpoint profile represents the technical FHIR REST endpoint of a source system (XIS), used by a ProviderModule to retrieve and update task data and the required context for the ProviderModule use case."
 * insert DefaultNarrative

@@ -1,6 +1,6 @@
 Profile: ProviderTasksTask
 Parent: Task
-Id: ps-Task
+Id: pt-Task
 Description: "This (FHIR) Task profile describes a patient-specific actionable item, intended to be presented to the patient in a client application (e.g., a PGO) and/or processed within the Koppeltaal workflow. It may optionally reference an ActivityDefinition that defines what should be launched or performed (module, questionnaire, information, measurement)."
 * insert DefaultNarrative
 * ^status = #draft
