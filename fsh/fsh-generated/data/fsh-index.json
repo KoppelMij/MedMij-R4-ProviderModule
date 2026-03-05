@@ -192,6 +192,14 @@
     "endLine": 483
   },
   {
+    "outputFile": "ServiceRequest-ProviderTasks-ServiceRequest-Bloeddrukmeting.json",
+    "fshName": "ProviderTasks-ServiceRequest-Bloeddrukmeting",
+    "fshType": "Instance",
+    "fshFile": "AanbiedersModule-Bundle-Scenario-2.fsh",
+    "startLine": 2,
+    "endLine": 22
+  },
+  {
     "outputFile": "ServiceRequest-ProviderTasks-ServiceRequest-Glucosemeting.json",
     "fshName": "ProviderTasks-ServiceRequest-Glucosemeting",
     "fshType": "Instance",
