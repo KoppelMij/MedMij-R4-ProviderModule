@@ -5,6 +5,6 @@ Description: "This (FHIR) Endpoint profile represents the technical FHIR REST en
 * ^status = #draft
 * insert PublisherAndContactMedMij
 * insert Origin
-* extension contains MedMijClientID named clientId 0..*
+* extension contains ProviderTask-ClientID named clientId 0..*
 * connectionType from $koppeltaal-endpoint-connection-type-vs (extensible)
 * managingOrganization only Reference(http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization)
