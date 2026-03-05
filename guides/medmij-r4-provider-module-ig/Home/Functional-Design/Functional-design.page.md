@@ -23,12 +23,12 @@ Dit ontwerp is conform specificaties genoemd in [de algemene inleiding](https:/
 
 ### Reikwijdte
 De reikwijdte van dit ontwerp beslaat:
-- de functionele beschrijving van het uitwisselen van patient-specifieke digitale activiteiten (taken) die voortvloeien uit een (door de zorgaanbieder) aangevraagde Aanbiedertaken;
+- de functionele beschrijving van het uitwisselen van patient-specifieke digitale activiteiten (taken) die voortvloeien uit (door de zorgaanbieder) aangevraagde Aanbiedertaken;
 - de dataset (Logical Models) die benodigd is voor deze uitwisseling, inclusief de relaties tussen ServiceRequest, Task, ActivityDefinition en Endpoint.
 
 
 ### Infrastructuur
-Geen nadere specificatie, anders dan genoemd in de [algemene inleiding](https://informatiestandaarden.nictiz.nl/wiki/MedMij:FO:V1/FunctioneelOntwerp#Infrastructuur) van de functionele ontwerpen binnen MedMij.
+Geen nadere specificatie, anders dan genoemd in de [de algemene inleiding](https://informatiestandaarden.nictiz.nl/wiki/MedMij:FO:V1/FunctioneelOntwerp#Infrastructuur) van de functionele ontwerpen binnen MedMij.
 
 
 ### Geografische reikwijdte
@@ -45,9 +45,9 @@ Op dit moment wordt de usecase uit dit ontwerp getoetst in een Proof of Concept 
 ### Algemeen
 Binnen ProviderTasks worden digitale activiteiten aangeboden aan de patiënt. 
 De zorgaanbieder:
-	1.	selecteert een digitale activiteit (module);
-	2.	zet deze uit voor een specifieke patiënt;
-	3.	de patiënt ontvangt één of meerdere taken (taken) om uit te voeren.
+- selecteert een digitale activiteit (module);
+- zet deze uit voor een specifieke patiënt;
+- de patiënt ontvangt één of meerdere taken (taken) om uit te voeren.
 
 
 ### Usecase: Aanbiedertaken
