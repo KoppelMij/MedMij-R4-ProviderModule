@@ -10,7 +10,7 @@ Usage: #example
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
   * valueReference = Reference(ProviderTasks-Endpoint-HINQ)
 * version = "1.0.0"
-* name = "Meetopdacht saturatiemeting"
+* name = "MeetopdachtSaturatiemeting"
 * title = "Saturatiemeting"
 * status = #active
 * publisher = "HinqZNO"
@@ -282,7 +282,7 @@ Usage: #example
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
   * valueReference = Reference(ProviderTasks-Endpoint-HINQ)
 * version = "1.0.0"
-* name = "Informatie over leven met COPD"
+* name = "InformatieLevenMetCOPD"
 * title = "Informatie over leven met COPD"
 * status = #active
 * publisher = "HinqZNO"
@@ -330,7 +330,7 @@ Usage: #example
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
   * valueReference = Reference(ProviderTasks-Endpoint-HINQ)
 * version = "1.0.0"
-* name = "Instructiemodule inhalatiemedicatie"
+* name = "InstructieInhalatiemedicatie"
 * title = "Instructiemodule inhalatiemedicatie"
 * status = #active
 * publisher = "HinqZNO"
@@ -377,7 +377,7 @@ Usage: #example
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
   * valueReference = Reference(ProviderTasks-Endpoint-HINQ)
 * version = "1.0.0"
-* name = "Vragenlijst: Wat wilt u bereiken?"
+* name = "VragenlijstWatWiltUBereiken?"
 * title = "Vragenlijst: Wat wilt u bereiken?"
 * status = #active
 * publisher = "HinqZNO"

@@ -40,7 +40,7 @@ Usage: #example
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
   * valueReference = Reference(ProviderTasks-Endpoint-Minddistrict)
 * version = "1.0.0"
-* name = "Meetopdacht bloeddrukmeting"
+* name = "MeetopdachtBloeddrukmeting"
 * title = "Bloeddrukmeting"
 * status = #active
 * publisher = "Minddistrict"
@@ -543,7 +543,7 @@ Usage: #example
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
   * valueReference = Reference(ProviderTasks-Endpoint-Minddistrict)
 * version = "1.0.0"
-* name = "Informatie over cholesterol"
+* name = "InformatieCholesterol"
 * title = "Wat is cholesterol en wat zijn de risico's?"
 * status = #active
 * publisher = "Minddistrict"
@@ -590,7 +590,7 @@ Usage: #example
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
   * valueReference = Reference(ProviderTasks-Endpoint-Minddistrict)
 * version = "1.0.0"
-* name = "Informatie over thuis bloeddruk meten"
+* name = "InformatieBloeddrukmeten"
 * title = "Informatie over thuis bloeddruk meten"
 * status = #active
 * publisher = "Minddistrict"
@@ -640,7 +640,7 @@ Usage: #example
   * url = $client-id
   * valueString = "dvaAanbiedertaken"
 * version = "1.0.0"
-* name = "Uw situatie op gebied van hart- en vaatziekten"
+* name = "VragenlijstHartVaatziekten"
 * title = "Vragenlijst over uw situatie op gebied van hart- en vaatziekten"
 * status = #active
 * publisher = "Minddistrict"
