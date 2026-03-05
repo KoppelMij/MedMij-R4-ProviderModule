@@ -1,7 +1,7 @@
 // Bundle with FHIR test instances in FSH format for ProviderTasks test scenario 3
 
 Instance: ProviderTasks-ActivityDefinition-Meetopdracht-Saturatiemeting
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-ActivityDefinition
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-ActivityDefinition
 Usage: #example
 * text
   * status = #empty
@@ -28,7 +28,7 @@ Usage: #example
   * periodUnit = #d
 
 Instance: ProviderTasks-MainTask-Meetopdracht-Saturatiemeting
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -58,7 +58,7 @@ Usage: #example
 * owner = Reference(ProviderTasks-Patient-Van-Dijk) "Sanne van Dijk"
 
 Instance: ProviderTasks-SubTask-Meetopdracht-Saturatiemeting-1
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -89,7 +89,7 @@ Usage: #example
 * owner = Reference(ProviderTasks-Patient-Van-Dijk) "Sanne van Dijk"
 
 Instance: ProviderTasks-SubTask-Meetopdracht-Saturatiemeting-2
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -120,7 +120,7 @@ Usage: #example
 * owner = Reference(ProviderTasks-Patient-Van-Dijk) "Sanne van Dijk"
 
 Instance: ProviderTasks-SubTask-Meetopdracht-Saturatiemeting-3
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -151,7 +151,7 @@ Usage: #example
 * owner = Reference(ProviderTasks-Patient-Van-Dijk) "Sanne van Dijk"
 
 Instance: ProviderTasks-SubTask-Meetopdracht-Saturatiemeting-4
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -182,7 +182,7 @@ Usage: #example
 * owner = Reference(ProviderTasks-Patient-Van-Dijk) "Sanne van Dijk"
 
 Instance: ProviderTasks-SubTask-Meetopdracht-Saturatiemeting-5
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -213,7 +213,7 @@ Usage: #example
 * owner = Reference(ProviderTasks-Patient-Van-Dijk) "Sanne van Dijk"
 
 Instance: ProviderTasks-SubTask-Meetopdracht-Saturatiemeting-6
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -244,7 +244,7 @@ Usage: #example
 * owner = Reference(ProviderTasks-Patient-Van-Dijk) "Sanne van Dijk"
 
 Instance: ProviderTasks-SubTask-Meetopdracht-Saturatiemeting-7
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -276,7 +276,7 @@ Usage: #example
 
 
 Instance: ProviderTasks-ActivityDefinition-Informatie-Leven-COPD
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-ActivityDefinition
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-ActivityDefinition
 Usage: #example
 * text
   * status = #empty
@@ -296,7 +296,7 @@ Usage: #example
 
 
 Instance: ProviderTasks-Task-Informatie-leven-COPD
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -327,7 +327,7 @@ Usage: #example
 
 
 Instance: ProviderTasks-ActivityDefinition-Informatie-Inhalatiemedicatie
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-ActivityDefinition
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-ActivityDefinition
 Usage: #example
 * text
   * status = #empty
@@ -346,7 +346,7 @@ Usage: #example
 * description = "Instructiemodule inhalatiemedicatie: juiste inhalatietechniek, therapietrouw en praktische adviezen (inclusief controlepunten en veelgemaakte fouten)."
 
 Instance: ProviderTasks-Task-Informatie-Informatie-Inhalatiemedicatie
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -377,7 +377,7 @@ Usage: #example
 
 
 Instance: ProviderTasks-ActivityDefinition-Vragenlijst-Wat-Bereiken
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-ActivityDefinition
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-ActivityDefinition
 Usage: #example
 * text
   * status = #empty
@@ -397,7 +397,7 @@ Usage: #example
 
 
 Instance: ProviderTasks-Task-Vragenlijst-Wat-Bereiken
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty

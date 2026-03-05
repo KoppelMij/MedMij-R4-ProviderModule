@@ -1,6 +1,6 @@
 // Bundle with FHIR test instances in FSH format for ProviderTasks test scenario 1
 Instance: ProviderTasks-ServiceRequest-Glucosemeting
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-ServiceRequest
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-ServiceRequest
 Usage: #example
 * text
   * status = #empty
@@ -33,7 +33,7 @@ U gaat gedurende 1 week zelf uw bloedglucose meten. Volg hierbij deze stappen:
 """
 
 Instance: ProviderTasks-ActivityDefinition-Meetopdracht-Glucosemeting
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-ActivityDefinition
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-ActivityDefinition
 Usage: #example
 * text
   * status = #empty
@@ -61,7 +61,7 @@ Usage: #example
   * periodUnit = #d
 
 Instance: ProviderTasks-MainTask-Meetopdracht-Glucosemeting
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -92,7 +92,7 @@ Usage: #example
 * owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
 Instance: ProviderTasks-SubTask-Meetopdracht-Glucosemeting-1
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -123,7 +123,7 @@ Usage: #example
 * owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
 Instance: ProviderTasks-SubTask-Meetopdracht-Glucosemeting-2
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -154,7 +154,7 @@ Usage: #example
 * owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
 Instance: ProviderTasks-SubTask-Meetopdracht-Glucosemeting-3
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -185,7 +185,7 @@ Usage: #example
 * owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
 Instance: ProviderTasks-SubTask-Meetopdracht-Glucosemeting-4
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -216,7 +216,7 @@ Usage: #example
 * owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
 Instance: ProviderTasks-SubTask-Meetopdracht-Glucosemeting-5
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -247,7 +247,7 @@ Usage: #example
 * owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
 Instance: ProviderTasks-SubTask-Meetopdracht-Glucosemeting-6
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -278,7 +278,7 @@ Usage: #example
 * owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
 Instance: ProviderTasks-SubTask-Meetopdracht-Glucosemeting-7
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -309,7 +309,7 @@ Usage: #example
 * owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
 Instance: ProviderTasks-SubTask-Meetopdracht-Glucosemeting-8
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -340,7 +340,7 @@ Usage: #example
 * owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
 Instance: ProviderTasks-SubTask-Meetopdracht-Glucosemeting-9
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -371,7 +371,7 @@ Usage: #example
 * owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
 Instance: ProviderTasks-SubTask-Meetopdracht-Glucosemeting-10
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -402,7 +402,7 @@ Usage: #example
 * owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
 Instance: ProviderTasks-SubTask-Meetopdracht-Glucosemeting-11
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -433,7 +433,7 @@ Usage: #example
 * owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
 Instance: ProviderTasks-SubTask-Meetopdracht-Glucosemeting-12
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -464,7 +464,7 @@ Usage: #example
 * owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
 Instance: ProviderTasks-SubTask-Meetopdracht-Glucosemeting-13
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -495,7 +495,7 @@ Usage: #example
 * owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
 Instance: ProviderTasks-SubTask-Meetopdracht-Glucosemeting-14
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -526,7 +526,7 @@ Usage: #example
 * owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
 Instance: ProviderTasks-ActivityDefinition-Informatie-Diabetes
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-ActivityDefinition
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-ActivityDefinition
 Usage: #example
 * text
   * status = #empty
@@ -546,7 +546,7 @@ Usage: #example
 
 
 Instance: ProviderTasks-Task-Informatie-Diabetes
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -577,7 +577,7 @@ Usage: #example
 
 
 Instance: ProviderTasks-ActivityDefinition-Informatie-Gezonder-Leven
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-ActivityDefinition
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-ActivityDefinition
 Usage: #example
 * text
   * status = #empty
@@ -596,7 +596,7 @@ Usage: #example
 * description = "Leefstijlmodule binnen de digitale zorgmodule Diabetes: praktische informatie en motivatie voor gezonder leven (voeding, beweging, gewicht, stoppen met roken, alcohol en slaap) ter ondersteuning van glykemische controle en cardiovasculair risicomanagement."
 
 Instance: ProviderTasks-Task-Informatie-Gezonder-Leven
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -627,7 +627,7 @@ Usage: #example
 
 
 Instance: ProviderTasks-ActivityDefinition-Vragenlijst-WoonLeefsituatie
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-ActivityDefinition
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-ActivityDefinition
 Usage: #example
 * text
   * status = #empty
@@ -647,7 +647,7 @@ Usage: #example
 
 
 Instance: ProviderTasks-Task-Vragenlijst-WoonLeefsituatie
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -677,7 +677,7 @@ Usage: #example
 * owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
 Instance: ProviderTasks-Endpoint-HINQ
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Endpoint
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Endpoint
 Usage: #example
 * text
   * status = #empty

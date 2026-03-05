@@ -1,4 +1,4 @@
-Extension: ProviderTask-ClientID
+Extension: ProviderTaskClientID
 Id: pt-ClientID
 Description: "The client ID from the Endpoint resource extension is used as an input parameter named “audience” in the token exchange request between PGO and the DVA authorisation server."
 * ^url = "http://medmij.nl/fhir/StructureDefinition/ext-ClientID"

@@ -31,7 +31,7 @@ U gaat gedurende 1 week zelf uw bloeddruk meten. Volg hierbij deze stappen:
 """
 
 Instance: ProviderTasks-ActivityDefinition-Meetopdracht-Bloeddrukmeting
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-ActivityDefinition
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-ActivityDefinition
 Usage: #example
 * text
   * status = #empty
@@ -58,7 +58,7 @@ Usage: #example
   * periodUnit = #d
 
 Instance: ProviderTasks-MainTask-Meetopdracht-Bloeddrukmeting
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -89,7 +89,7 @@ Usage: #example
 * owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
 Instance: ProviderTasks-SubTask-Meetopdracht-Bloeddrukmeting-1
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -121,7 +121,7 @@ Usage: #example
 * owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
 Instance: ProviderTasks-SubTask-Meetopdracht-Bloeddrukmeting-2
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -153,7 +153,7 @@ Usage: #example
 * owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
 Instance: ProviderTasks-SubTask-Meetopdracht-Bloeddrukmeting-3
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -185,7 +185,7 @@ Usage: #example
 * owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
 Instance: ProviderTasks-SubTask-Meetopdracht-Bloeddrukmeting-4
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -217,7 +217,7 @@ Usage: #example
 * owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
 Instance: ProviderTasks-SubTask-Meetopdracht-Bloeddrukmeting-5
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -249,7 +249,7 @@ Usage: #example
 * owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
 Instance: ProviderTasks-SubTask-Meetopdracht-Bloeddrukmeting-6
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -281,7 +281,7 @@ Usage: #example
 * owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
 Instance: ProviderTasks-SubTask-Meetopdracht-Bloeddrukmeting-7
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -313,7 +313,7 @@ Usage: #example
 * owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
 Instance: ProviderTasks-SubTask-Meetopdracht-Bloeddrukmeting-8
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -345,7 +345,7 @@ Usage: #example
 * owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
 Instance: ProviderTasks-SubTask-Meetopdracht-Bloeddrukmeting-9
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -377,7 +377,7 @@ Usage: #example
 * owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
 Instance: ProviderTasks-SubTask-Meetopdracht-Bloeddrukmeting-10
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -409,7 +409,7 @@ Usage: #example
 * owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
 Instance: ProviderTasks-SubTask-Meetopdracht-Bloeddrukmeting-11
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -441,7 +441,7 @@ Usage: #example
 * owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
 Instance: ProviderTasks-SubTask-Meetopdracht-Bloeddrukmeting-12
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -473,7 +473,7 @@ Usage: #example
 * owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
 Instance: ProviderTasks-SubTask-Meetopdracht-Bloeddrukmeting-13
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -505,7 +505,7 @@ Usage: #example
 * owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
 Instance: ProviderTasks-SubTask-Meetopdracht-Bloeddrukmeting-14
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -537,7 +537,7 @@ Usage: #example
 * owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
 Instance: ProviderTasks-ActivityDefinition-Informatie-Cholesterol
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-ActivityDefinition
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-ActivityDefinition
 Usage: #example
 * text
   * status = #empty
@@ -556,7 +556,7 @@ Usage: #example
 * description = "Voorlichtingsmodule cholesterol: uitlegmateriaal over wat cholesterol is, cardiovasculaire risico’s en leefstijl-/behandelopties ter ondersteuning van CVRM en gezamenlijke besluitvorming."
 
 Instance: ProviderTasks-Task-Informatie-Cholesterol
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -587,7 +587,7 @@ Usage: #example
 
 
 Instance: ProviderTasks-ActivityDefinition-Informatie-Thuismeting
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-ActivityDefinition
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-ActivityDefinition
 Usage: #example
 * text
   * status = #empty
@@ -606,7 +606,7 @@ Usage: #example
 * description = "Instructiemodule thuismetingen bloeddruk: patiëntinstructie voor correcte meetmethode (rust, houding, manchet, meetmomenten) en registratie, ter verbetering van betrouwbaarheid van thuismetingen"
 
 Instance: ProviderTasks-Task-Informatie-Thuis-Bloeddrukmeten
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -637,7 +637,7 @@ Usage: #example
 
 
 Instance: ProviderTasks-ActivityDefinition-Vragenlijst-Uw-Situatie
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-ActivityDefinition
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-ActivityDefinition
 Usage: #example
 * text
   * status = #empty
@@ -656,7 +656,7 @@ Usage: #example
 * description = "Vragenlijst ‘Uw situatie’ om relevante klachten, leefstijl en risicofactoren rond hart- en vaatziekten te inventariseren als basis voor behandelafspraken."
 
 Instance: ProviderTasks-Task-Vragenlijst-Uw-Situatie
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Task
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Task
 Usage: #example
 * text
   * status = #empty
@@ -686,7 +686,7 @@ Usage: #example
 * owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
 Instance: ProviderTasks-Endpoint-Minddistrict
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-Endpoint
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-Endpoint
 Usage: #example
 * text
   * status = #empty
