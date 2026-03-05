@@ -50,7 +50,7 @@ Out of scope for this TD version:
 The healthcare provider initiates a digital activity for the patient. The patient retrieves the task list in the PHR, starts (launches) the digital activity, performs it in an external application/module, and then sees task status updates in the PHR.
 
 ### Transactions
-- PULL task list (PGO → source system): retrieve Task , including the links to the ActivityDefinition (instantiates extenstion), and basedOn links to ServiceRequest (if used).
+- PULL task list (PGO → source system): retrieve Task , including the links to the ActivityDefinition (instantiates extension), and basedOn links to ServiceRequest (if used).
 - LAUNCH (PGO → module system): start external module using information from ActivityDefinition and Endpoint (launch outside core REST exchange).
 - UPDATE status (Module system → source system): update Task.status and possibly subtasks.
 
