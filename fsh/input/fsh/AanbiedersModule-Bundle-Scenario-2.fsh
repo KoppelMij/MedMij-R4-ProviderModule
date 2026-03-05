@@ -1,6 +1,6 @@
 // Bundle with FHIR test instances in FSH format for ProviderTasks test scenario 2
 Instance: ProviderTasks-ServiceRequest-Bloeddrukmeting
-InstanceOf: http://medmij.nl/fhir/StructureDefinition/ProviderTasks-ServiceRequest
+InstanceOf: http://medmij.nl/fhir/StructureDefinition/pt-ServiceRequest
 Usage: #example
 * text
   * status = #empty
