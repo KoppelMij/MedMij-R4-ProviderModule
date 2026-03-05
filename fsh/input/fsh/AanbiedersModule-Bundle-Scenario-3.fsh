@@ -9,6 +9,9 @@ Usage: #example
 * extension
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
   * valueReference = Reference(ProviderTasks-Endpoint-HINQ)
+* identifier
+  * system = "https://hing.zno.com/content/id"
+  * value = "a1b1eaa4-ba6b-41dc-b98c-7b1d72c335b5"
 * version = "1.0.0"
 * name = "MeetopdachtSaturatiemeting"
 * title = "Saturatiemeting"
@@ -281,6 +284,9 @@ Usage: #example
 * extension
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
   * valueReference = Reference(ProviderTasks-Endpoint-HINQ)
+* identifier
+  * system = "https://hing.zno.com/content/id"
+  * value = "ba7471c5-6b5c-4ac6-83c4-512d195cc9d8"
 * version = "1.0.0"
 * name = "InformatieLevenMetCOPD"
 * title = "Informatie over leven met COPD"
@@ -329,6 +335,9 @@ Usage: #example
 * extension
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
   * valueReference = Reference(ProviderTasks-Endpoint-HINQ)
+* identifier
+  * system = "https://hing.zno.com/content/id"
+  * value = "3a8ab931-6106-4df8-ba62-28882f6bfe5f"
 * version = "1.0.0"
 * name = "InstructieInhalatiemedicatie"
 * title = "Instructiemodule inhalatiemedicatie"
@@ -376,6 +385,9 @@ Usage: #example
 * extension
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
   * valueReference = Reference(ProviderTasks-Endpoint-HINQ)
+* identifier
+  * system = "https://hing.zno.com/content/id"
+  * value = "669734ff-2c72-4758-b6ac-786a4c8474b4"
 * version = "1.0.0"
 * name = "VragenlijstWatWiltUBereiken?"
 * title = "Vragenlijst: Wat wilt u bereiken?"

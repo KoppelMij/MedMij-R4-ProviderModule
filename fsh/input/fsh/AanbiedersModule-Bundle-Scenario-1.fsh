@@ -41,6 +41,9 @@ Usage: #example
 * extension
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
   * valueReference = Reference(ProviderTasks-Endpoint-HINQ)
+* identifier
+  * system = "https://hing.zno.com/content/id"
+  * value = "60756972-0a15-47e1-8497-2e7d2919ebd7"
 * version = "1.0.0"
 * name = "MeetopdrachtBloedglucosemeting"
 * title = "Bloedglucose meting volgens NHG protocol"
@@ -531,6 +534,9 @@ Usage: #example
 * extension
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
   * valueReference = Reference(ProviderTasks-Endpoint-HINQ)
+* identifier
+  * system = "https://hing.zno.com/content/id"
+  * value = "e767acd0-5928-4b0e-8310-e60e718b603d"
 * version = "1.0.0"
 * name = "Informatie over diabetes type 2"
 * title = "Wat is diabetes type 2?"
@@ -579,6 +585,9 @@ Usage: #example
 * extension
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
   * valueReference = Reference(ProviderTasks-Endpoint-HINQ)
+* identifier
+  * system = "https://hing.zno.com/content/id"
+  * value = "801e6797-cb52-4020-847a-7440a15b5998"
 * version = "1.0.0"
 * name = "InformatieGezonderLeven"
 * title = "Gezonder gaan leven"
@@ -626,6 +635,9 @@ Usage: #example
 * extension
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
   * valueReference = Reference(ProviderTasks-Endpoint-HINQ)
+* identifier
+  * system = "https://hinq.zno.com/content/id"
+  * value = "d11eb00f-8659-4af2-97bf-1a0b656e0b4d"
 * version = "1.0.0"
 * name = "VragenlijstWoonLeefsituatie"
 * title = "Vragenlijst over de woon- leefsituatie"

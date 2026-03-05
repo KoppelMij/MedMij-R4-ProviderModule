@@ -39,6 +39,9 @@ Usage: #example
 * extension
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
   * valueReference = Reference(ProviderTasks-Endpoint-Minddistrict)
+* identifier
+  * system = "https://ns.minddistrict.com/content/id"
+  * value = "481365c2-a85c-49cc-bb74-d6d8a6a53b46"
 * version = "1.0.0"
 * name = "MeetopdachtBloeddrukmeting"
 * title = "Bloeddrukmeting"
@@ -542,6 +545,9 @@ Usage: #example
 * extension
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
   * valueReference = Reference(ProviderTasks-Endpoint-Minddistrict)
+* identifier
+  * system = "https://ns.minddistrict.com/content/id"
+  * value = "c45485ee-8a42-466b-97ba-ac6537b0bf89"
 * version = "1.0.0"
 * name = "InformatieCholesterol"
 * title = "Wat is cholesterol en wat zijn de risico's?"
@@ -589,6 +595,9 @@ Usage: #example
 * extension
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
   * valueReference = Reference(ProviderTasks-Endpoint-Minddistrict)
+* identifier
+  * system = "https://ns.minddistrict.com/content/id"
+  * value = "7e5633b6-2cf2-49bf-8f1c-e105c8b82b22"
 * version = "1.0.0"
 * name = "InformatieBloeddrukmeten"
 * title = "Informatie over thuis bloeddruk meten"
@@ -636,9 +645,9 @@ Usage: #example
 * extension[0]
   * url = "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension"
   * valueReference = Reference(ProviderTasks-Endpoint-Minddistrict)
-* extension[1]
-  * url = $client-id
-  * valueString = "dvaAanbiedertaken"
+* identifier
+  * system = "https://ns.minddistrict.com/content/id"
+  * value = "c4bd168d-963c-4360-86fa-39d4b6e08d83"
 * version = "1.0.0"
 * name = "VragenlijstHartVaatziekten"
 * title = "Vragenlijst over uw situatie op gebied van hart- en vaatziekten"
