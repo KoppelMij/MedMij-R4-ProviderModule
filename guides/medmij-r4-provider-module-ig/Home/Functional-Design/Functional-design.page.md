@@ -10,7 +10,7 @@ topic: FO
 De doelgroep voor deze pagina wijkt niet af van de [algemene doelgroep](https://informatiestandaarden.nictiz.nl/wiki/MedMij:FO:V1/FunctioneelOntwerp#Doelgroep) van de functionele ontwerpen binnen MedMij.
 
 
-### Uitganspunten
+### Uitgangspunten
 - De uitwisseling is gebaseerd op het MedMij-afsprakenstelsel en de FHIR-profielen voor ProviderTasks (Aanbiedertaken).
 - De zorgaanbieder initieert een digitale activiteit voor een patiënt.
 - De patiënt ziet een takenlijst in de Persoonlijke Gezondheidsomgeving (PGO) en kan vanuit de PGO een externe module/applicatie starten om de taak uit te voeren (bijvoorbeeld via een launch naar de Aanbiedertaken) óf de taak uitvoeren via een Koppeltaal-gestuurde workflow.
