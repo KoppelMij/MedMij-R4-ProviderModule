@@ -100,6 +100,7 @@ Link to Modules (ActivityDefinition):
 Main task and subtasks:
 - If subtasks are used, there is always a main (parent) task representing the overall activity/module.
 - Subtasks reference the main task via Task.partOf.
+- Subtasks are only used for repeating tasks of a single digital activity (one ActivityDefinition). Therefore, subtasks linked via Task.partOf SHALL NOT reference a different ActivityDefinition than their main task.
 - Grouping of tasks within a single digital care module can be done using Task.groupIdentifier.
 
 Link to order (ServiceRequest)
