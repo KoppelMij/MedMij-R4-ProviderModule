@@ -165,7 +165,7 @@ Functioneel ontwerpprincipes
 - Patient-specifieke order: ServiceRequest is de patient-specifieke klinische order om de activiteit uit te voeren, inclusief planning en patiëntinstructies.
 - Workflow tracking: Task is het workflow-item dat de patiënt ziet en uitvoert.
 - Groepering: Taken kunnen logisch gegroepeerd worden (bijv. “Digitale zorgmodule CVRM/Diabetes”) via groupIdentifier.
-- Subtaken: Meetmomenten of deelstappen kunnen als subtaak worden gemodelleerd en koppelen aan een hoofdtaak via partOf.
+- Subtaken: Meetmomenten of deelstappen kunnen als subtaak worden gemodelleerd en gekoppeld aan een hoofdtaak via partOf.
 
 ### Dataset
 De dataset wordt beschreven in de bijbehorende Logical Models:

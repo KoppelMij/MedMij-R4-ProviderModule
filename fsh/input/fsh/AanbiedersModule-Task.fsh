@@ -17,6 +17,7 @@ Description: "This (FHIR) Task profile describes a patient-specific actionable i
   * ^short = "Reference to ActivityDefinition" 
   * ^definition = "A link to the ActivityDefinition that defines the launchable eHealth activity (i.e., what module/content should be launched or performed) associated with this Task. In both MedMij and Koppeltaal implementations, this link is carried using the Koppeltaal instantiates extension."
   * valueReference only Reference(ProviderTasksActivityDefinition)
+* identifier 1..
 * groupIdentifier
   * ^definition = "An identifier that links together multiple tasks and other requests that were created in the same context. The groupIdentifier (system/value pair) can be used to group and filter related Tasks (e.g., all tasks belonging to the same digital activity or workflow package). In this profile, groupIdentifier.type.text is used to provide a human-readable group label for display in the PGO."
 * partOf only Reference(ProviderTasksTask)
