@@ -83,8 +83,8 @@ Usage: #example
 * executionPeriod
   * start = "2025-12-22"
   * end = "2025-12-28"
-* authoredOn = "2025-12-22T18:00:00+01:00"
-* lastModified = "2025-12-22T18:00:00+01:00"
+* authoredOn = "2025-12-22T08:00:00+01:00"
+* lastModified = "2025-12-22T08:00:00+01:00"
 * requester = Reference(ProviderTasks-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
 * owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
@@ -115,8 +115,8 @@ Usage: #example
 * executionPeriod
   * start = "2025-12-22"
   * end = "2025-12-22"
-* authoredOn = "2025-12-22T18:00:00+01:00"
-* lastModified = "2025-12-22T18:00:00+01:00"
+* authoredOn = "2025-12-22T08:00:00+01:00"
+* lastModified = "2025-12-22T08:00:00+01:00"
 * requester = Reference(ProviderTasks-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
 * owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
@@ -147,8 +147,8 @@ Usage: #example
 * executionPeriod
   * start = "2025-12-22"
   * end = "2025-12-22"
-* authoredOn = "2025-12-22T18:00:00+01:00"
-* lastModified = "2025-12-22T18:00:00+01:00"
+* authoredOn = "2025-12-22T08:00:00+01:00"
+* lastModified = "2025-12-22T08:00:00+01:00"
 * requester = Reference(ProviderTasks-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
 * owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
@@ -179,8 +179,8 @@ Usage: #example
 * executionPeriod
   * start = "2025-12-23"
   * end = "2025-12-23"
-* authoredOn = "2025-12-22T18:00:00+01:00"
-* lastModified = "2025-12-22T18:00:00+01:00"
+* authoredOn = "2025-12-22T08:00:00+01:00"
+* lastModified = "2025-12-22T08:00:00+01:00"
 * requester = Reference(ProviderTasks-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
 * owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
@@ -211,8 +211,8 @@ Usage: #example
 * executionPeriod
   * start = "2025-12-23"
   * end = "2025-12-23"
-* authoredOn = "2025-12-22T18:00:00+01:00"
-* lastModified = "2025-12-22T18:00:00+01:00"
+* authoredOn = "2025-12-22T08:00:00+01:00"
+* lastModified = "2025-12-22T08:00:00+01:00"
 * requester = Reference(ProviderTasks-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
 * owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
@@ -243,8 +243,8 @@ Usage: #example
 * executionPeriod
   * start = "2025-12-24"
   * end = "2025-12-24"
-* authoredOn = "2025-12-22T18:00:00+01:00"
-* lastModified = "2025-12-22T18:00:00+01:00"
+* authoredOn = "2025-12-22T08:00:00+01:00"
+* lastModified = "2025-12-22T08:00:00+01:00"
 * requester = Reference(ProviderTasks-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
 * owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
@@ -275,8 +275,8 @@ Usage: #example
 * executionPeriod
   * start = "2025-12-24"
   * end = "2025-12-24"
-* authoredOn = "2025-12-22T18:00:00+01:00"
-* lastModified = "2025-12-22T18:00:00+01:00"
+* authoredOn = "2025-12-22T08:00:00+01:00"
+* lastModified = "2025-12-22T08:00:00+01:00"
 * requester = Reference(ProviderTasks-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
 * owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
@@ -307,8 +307,8 @@ Usage: #example
 * executionPeriod
   * start = "2025-12-25"
   * end = "2025-12-25"
-* authoredOn = "2025-12-22T18:00:00+01:00"
-* lastModified = "2025-12-22T18:00:00+01:00"
+* authoredOn = "2025-12-22T08:00:00+01:00"
+* lastModified = "2025-12-22T08:00:00+01:00"
 * requester = Reference(ProviderTasks-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
 * owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
@@ -339,8 +339,8 @@ Usage: #example
 * executionPeriod
   * start = "2025-12-25"
   * end = "2025-12-25"
-* authoredOn = "2025-12-22T18:00:00+01:00"
-* lastModified = "2025-12-22T18:00:00+01:00"
+* authoredOn = "2025-12-22T08:00:00+01:00"
+* lastModified = "2025-12-22T08:00:00+01:00"
 * requester = Reference(ProviderTasks-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
 * owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
@@ -371,8 +371,8 @@ Usage: #example
 * executionPeriod
   * start = "2025-12-26"
   * end = "2025-12-26"
-* authoredOn = "2025-12-22T18:00:00+01:00"
-* lastModified = "2025-12-22T18:00:00+01:00"
+* authoredOn = "2025-12-22T08:00:00+01:00"
+* lastModified = "2025-12-22T08:00:00+01:00"
 * requester = Reference(ProviderTasks-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
 * owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
@@ -403,8 +403,8 @@ Usage: #example
 * executionPeriod
   * start = "2025-12-26"
   * end = "2025-12-26"
-* authoredOn = "2025-12-22T18:00:00+01:00"
-* lastModified = "2025-12-22T18:00:00+01:00"
+* authoredOn = "2025-12-22T08:00:00+01:00"
+* lastModified = "2025-12-22T08:00:00+01:00"
 * requester = Reference(ProviderTasks-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
 * owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
@@ -435,8 +435,8 @@ Usage: #example
 * executionPeriod
   * start = "2025-12-27"
   * end = "2025-12-27"
-* authoredOn = "2025-12-22T18:00:00+01:00"
-* lastModified = "2025-12-22T18:00:00+01:00"
+* authoredOn = "2025-12-22T08:00:00+01:00"
+* lastModified = "2025-12-22T08:00:00+01:00"
 * requester = Reference(ProviderTasks-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
 * owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
@@ -467,8 +467,8 @@ Usage: #example
 * executionPeriod
   * start = "2025-12-27"
   * end = "2025-12-27"
-* authoredOn = "2025-12-22T18:00:00+01:00"
-* lastModified = "2025-12-22T18:00:00+01:00"
+* authoredOn = "2025-12-22T08:00:00+01:00"
+* lastModified = "2025-12-22T08:00:00+01:00"
 * requester = Reference(ProviderTasks-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
 * owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
@@ -499,8 +499,8 @@ Usage: #example
 * executionPeriod
   * start = "2025-12-28"
   * end = "2025-12-28"
-* authoredOn = "2025-12-22T18:00:00+01:00"
-* lastModified = "2025-12-22T18:00:00+01:00"
+* authoredOn = "2025-12-22T08:00:00+01:00"
+* lastModified = "2025-12-22T08:00:00+01:00"
 * requester = Reference(ProviderTasks-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
 * owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 
@@ -531,8 +531,8 @@ Usage: #example
 * executionPeriod
   * start = "2025-12-28"
   * end = "2025-12-28"
-* authoredOn = "2025-12-22T18:00:00+01:00"
-* lastModified = "2025-12-22T18:00:00+01:00"
+* authoredOn = "2025-12-22T08:00:00+01:00"
+* lastModified = "2025-12-22T08:00:00+01:00"
 * requester = Reference(ProviderTasks-PractitionerRole-De-Jong) "L. de Jong, Huisarts"
 * owner = Reference(ProviderTasks-Patient-De-Groot) "Koos de Groot"
 

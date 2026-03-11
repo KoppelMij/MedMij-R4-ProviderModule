@@ -86,8 +86,8 @@ Usage: #example
 * executionPeriod
   * start = "2025-12-22"
   * end = "2025-12-28"
-* authoredOn = "2025-12-22T18:00:00+01:00"
-* lastModified = "2025-12-22T18:00:00+01:00"
+* authoredOn = "2025-12-22T08:00:00+01:00"
+* lastModified = "2025-12-22T08:00:00+01:00"
 * requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
 * owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
@@ -115,10 +115,10 @@ Usage: #example
 * description = "voer de meetopdracht (title activityDefinition) uit"
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
-  * start = "2025-12-22"
-  * end = "2025-12-22"
-* authoredOn = "2025-12-22T18:00:00+01:00"
-* lastModified = "2025-12-22T18:00:00+01:00"
+  * start = "2025-12-22T08:00:00+01:00"
+  * end = "2025-12-22T00:00:00+01:00"
+* authoredOn = "2025-12-22T08:00:00+01:00"
+* lastModified = "2025-12-22T08:00:00+01:00"
 * requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
 * owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
@@ -146,10 +146,10 @@ Usage: #example
 * description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
-  * start = "2025-12-22"
-  * end = "2025-12-22"
-* authoredOn = "2025-12-22T18:00:00+01:00"
-* lastModified = "2025-12-22T18:00:00+01:00"
+  * start = "2025-12-22T08:00:00+01:00"
+  * end = "2025-12-22T00:00:00+01:00"
+* authoredOn = "2025-12-22T08:00:00+01:00"
+* lastModified = "2025-12-22T08:00:00+01:00"
 * requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
 * owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
@@ -177,10 +177,10 @@ Usage: #example
 * description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
-  * start = "2025-12-23"
-  * end = "2025-12-23"
-* authoredOn = "2025-12-22T18:00:00+01:00"
-* lastModified = "2025-12-22T18:00:00+01:00"
+  * start = "2025-12-23T08:00:00+01:00"
+  * end = "2025-12-23T00:00:00+01:00"
+* authoredOn = "2025-12-22T08:00:00+01:00"
+* lastModified = "2025-12-22T08:00:00+01:00"
 * requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
 * owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
@@ -208,10 +208,10 @@ Usage: #example
 * description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
-  * start = "2025-12-23"
-  * end = "2025-12-23"
-* authoredOn = "2025-12-22T18:00:00+01:00"
-* lastModified = "2025-12-22T18:00:00+01:00"
+  * start = "2025-12-23T18:00:00+01:00"
+  * end = "2025-12-23T00:00:00+01:00"
+* authoredOn = "2025-12-22T08:00:00+01:00"
+* lastModified = "2025-12-22T08:00:00+01:00"
 * requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
 * owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
@@ -239,10 +239,10 @@ Usage: #example
 * description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
-  * start = "2025-12-24"
-  * end = "2025-12-24"
-* authoredOn = "2025-12-22T18:00:00+01:00"
-* lastModified = "2025-12-22T18:00:00+01:00"
+  * start = "2025-12-24T08:00:00+01:00"
+  * end = "2025-12-24T00:00:00+01:00"
+* authoredOn = "2025-12-22T08:00:00+01:00"
+* lastModified = "2025-12-22T08:00:00+01:00"
 * requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
 * owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
@@ -270,10 +270,10 @@ Usage: #example
 * description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
-  * start = "2025-12-24"
-  * end = "2025-12-24"
-* authoredOn = "2025-12-22T18:00:00+01:00"
-* lastModified = "2025-12-22T18:00:00+01:00"
+  * start = "2025-12-24T18:00:00+01:00"
+  * end = "2025-12-24T00:00:00+01:00"
+* authoredOn = "2025-12-22T08:00:00+01:00"
+* lastModified = "2025-12-22T08:00:00+01:00"
 * requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
 * owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
@@ -301,10 +301,10 @@ Usage: #example
 * description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
-  * start = "2025-12-25"
-  * end = "2025-12-25"
-* authoredOn = "2025-12-22T18:00:00+01:00"
-* lastModified = "2025-12-22T18:00:00+01:00"
+  * start = "2025-12-25T08:00:00+01:00"
+  * end = "2025-12-25T00:00:00+01:00"
+* authoredOn = "2025-12-22T08:00:00+01:00"
+* lastModified = "2025-12-22T08:00:00+01:00"
 * requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
 * owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
@@ -332,10 +332,10 @@ Usage: #example
 * description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
-  * start = "2025-12-25"
-  * end = "2025-12-25"
-* authoredOn = "2025-12-22T18:00:00+01:00"
-* lastModified = "2025-12-22T18:00:00+01:00"
+  * start = "2025-12-25T18:00:00+01:00"
+  * end = "2025-12-25T00:00:00+01:00"
+* authoredOn = "2025-12-22T08:00:00+01:00"
+* lastModified = "2025-12-22T08:00:00+01:00"
 * requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
 * owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
@@ -363,10 +363,10 @@ Usage: #example
 * description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
-  * start = "2025-12-26"
-  * end = "2025-12-26"
-* authoredOn = "2025-12-22T18:00:00+01:00"
-* lastModified = "2025-12-22T18:00:00+01:00"
+  * start = "2025-12-26T08:00:00+01:00"
+  * end = "2025-12-26T00:00:00+01:00"
+* authoredOn = "2025-12-22T08:00:00+01:00"
+* lastModified = "2025-12-22T08:00:00+01:00"
 * requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
 * owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
@@ -394,10 +394,10 @@ Usage: #example
 * description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
-  * start = "2025-12-26"
-  * end = "2025-12-26"
-* authoredOn = "2025-12-22T18:00:00+01:00"
-* lastModified = "2025-12-22T18:00:00+01:00"
+  * start = "2025-12-26T18:00:00+01:00"
+  * end = "2025-12-26T00:00:00+01:00"
+* authoredOn = "2025-12-22T08:00:00+01:00"
+* lastModified = "2025-12-22T08:00:00+01:00"
 * requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
 * owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
@@ -425,10 +425,10 @@ Usage: #example
 * description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
-  * start = "2025-12-27"
-  * end = "2025-12-27"
-* authoredOn = "2025-12-22T18:00:00+01:00"
-* lastModified = "2025-12-22T18:00:00+01:00"
+  * start = "2025-12-27T08:00:00+01:00"
+  * end = "2025-12-27T00:00:00+01:00"
+* authoredOn = "2025-12-22T08:00:00+01:00"
+* lastModified = "2025-12-22T08:00:00+01:00"
 * requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
 * owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
@@ -456,10 +456,10 @@ Usage: #example
 * description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
-  * start = "2025-12-27"
-  * end = "2025-12-27"
-* authoredOn = "2025-12-22T18:00:00+01:00"
-* lastModified = "2025-12-22T18:00:00+01:00"
+  * start = "2025-12-27T18:00:00+01:00"
+  * end = "2025-12-27T00:00:00+01:00"
+* authoredOn = "2025-12-22T08:00:00+01:00"
+* lastModified = "2025-12-22T08:00:00+01:00"
 * requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
 * owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
@@ -487,10 +487,10 @@ Usage: #example
 * description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
-  * start = "2025-12-28"
-  * end = "2025-12-28"
-* authoredOn = "2025-12-22T18:00:00+01:00"
-* lastModified = "2025-12-22T18:00:00+01:00"
+  * start = "2025-12-28T08:00:00+01:00"
+  * end = "2025-12-28T00:00:00+01:00"
+* authoredOn = "2025-12-22T08:00:00+01:00"
+* lastModified = "2025-12-22T08:00:00+01:00"
 * requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
 * owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
@@ -518,10 +518,10 @@ Usage: #example
 * description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
 * for = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 * executionPeriod
-  * start = "2025-12-28"
-  * end = "2025-12-28"
-* authoredOn = "2025-12-22T18:00:00+01:00"
-* lastModified = "2025-12-22T18:00:00+01:00"
+  * start = "2025-12-28T18:00:00+01:00"
+  * end = "2025-12-28T00:00:00+01:00"
+* authoredOn = "2025-12-22T08:00:00+01:00"
+* lastModified = "2025-12-22T08:00:00+01:00"
 * requester = Reference(ProviderTasks-PractitionerRole-De-Haard) "A. de Haard, Huisarts"
 * owner = Reference(ProviderTasks-Patient-Van-Duinen) "Tom van Duinen"
 
