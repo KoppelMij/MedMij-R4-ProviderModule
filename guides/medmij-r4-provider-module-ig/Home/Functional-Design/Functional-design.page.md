@@ -13,7 +13,7 @@ De doelgroep voor deze pagina wijkt niet af van de [algemene doelgroep](https://
 ### Uitgangspunten
 - De uitwisseling is gebaseerd op het MedMij-afsprakenstelsel en de FHIR-profielen voor ProviderTasks (Aanbiedertaken).
 - De zorgaanbieder initieert een digitale activiteit voor een patiënt.
-- De patiënt ziet een takenlijst in de Persoonlijke Gezondheidsomgeving (PGO) en kan vanuit de PGO een externe module/applicatie starten om de taak uit te voeren (bijvoorbeeld via een launch naar de Aanbiedertaken) óf de taak uitvoeren via een Koppeltaal-gestuurde workflow.
+- De patiënt ziet een takenlijst in de Persoonlijke Gezondheidsomgeving (PGO) en kan vanuit de PGO een externe module/applicatie starten om de taak uit te voeren (bijvoorbeeld via een launch naar de Aanbiedertaken) óf de taak uitvoeren via een Koppeltaal-gestuurde workflow. De takenlijst bevat zowel openstaande taken, maar kan daarnaast ook afgeronde taken tonen.
 - Digitale activiteiten kunnen verschillende typen hebben, zoals: informatie bekijken, een vragenlijst invullen of thuismetingen uitvoeren.
 
 
@@ -43,11 +43,11 @@ Op dit moment wordt de usecase uit dit ontwerp getoetst in een Proof of Concept 
 ## Usecases
 
 ### Algemeen
-Binnen ProviderTasks worden digitale activiteiten aangeboden aan de patiënt. 
+Binnen Aanbiedertaken worden digitale activiteiten aangeboden aan de patiënt in de PGO. 
 De zorgaanbieder:
 - selecteert een digitale activiteit (module);
 - zet deze uit voor een specifieke patiënt;
-- de patiënt ontvangt één of meerdere taken (taken) om uit te voeren.
+- de patiënt ontvangt één of meerdere taken om uit te voeren.
 
 
 ### Usecase: Aanbiedertaken
@@ -96,8 +96,8 @@ Terugkoppeling:
 2. Aanmaken en publiceren taken:
 - Het bronsysteem maakt één of meerdere Task resources aan en stelt deze beschikbaar aan de patiënt, inclusief:
 	- een koppeling naar de digitale activiteit (ActivityDefinition);
-	- één hoofdtaak (of meerdere taken) die de patiënt in de PGO ziet;
-	- optioneel subtaken (bijv. losse meetmomenten), gekoppeld aan een hoofdtaak;
+	- één taak (of meerdere taken) die de patiënt in de PGO ziet;
+	- optioneel zijn reperterende subtaken (bijv. losse meetmomenten), gekoppeld aan een hoofdtaak;
 	- planning/tijdschema, indien van toepassing;
 	- Patient-specifieke instructies, indien van toepassing.
 
