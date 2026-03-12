@@ -78,7 +78,7 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-diabetes-2025"
   * type.text = "Digitale zorgmodule Diabetes"
-* status = #received
+* status = #in-progress
 * intent = #order
 * priority = #routine
 * description = "Meet je bloedglucose voor 1 week, 2x per dag"
@@ -109,7 +109,7 @@ Usage: #example
   * value = "module-diabetes-2025"
   * type.text = "Digitale zorgmodule Diabetes"
 * partOf = Reference(ProviderTasks-MainTask-Meetopdracht-Glucosemeting)
-* status = #received
+* status = #completed
 * intent = #order
 * priority = #routine
 * description = "voer de meetopdracht (title activityDefinition) uit"
@@ -140,7 +140,7 @@ Usage: #example
   * value = "module-diabetes-2025"
   * type.text = "Digitale zorgmodule Diabetes"
 * partOf = Reference(ProviderTasks-MainTask-Meetopdracht-Glucosemeting)
-* status = #received
+* status = #completed
 * intent = #order
 * priority = #routine
 * description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
@@ -171,7 +171,7 @@ Usage: #example
   * value = "module-diabetes-2025"
   * type.text = "Digitale zorgmodule Diabetes"
 * partOf = Reference(ProviderTasks-MainTask-Meetopdracht-Glucosemeting)
-* status = #received
+* status = #completed
 * intent = #order
 * priority = #routine
 * description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"
@@ -202,7 +202,7 @@ Usage: #example
   * value = "module-diabetes-2025"
   * type.text = "Digitale zorgmodule Diabetes"
 * partOf = Reference(ProviderTasks-MainTask-Meetopdracht-Glucosemeting)
-* status = #received
+* status = #cancelled
 * intent = #order
 * priority = #routine
 * description = "Meet je bloedglucose (in de ochtend nuchter en in de avond voor het eten) en noteer de waarde in de app"

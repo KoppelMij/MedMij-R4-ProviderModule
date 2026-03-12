@@ -672,7 +672,7 @@ Usage: #example
   * system = "https://medrie.nl/fhir/identifiers/task-group"
   * value = "module-CVRM-2025"
   * type.text = "Digitale zorgmodule CVRM"
-* status = #requested
+* status = #failed
 * intent = #order
 * priority = #routine
 * description = "In deze vragenlijst beantwoord je vragen over jouw situatie rond hart- en vaatziekten. Denk aan klachten, leefstijl (zoals bewegen, roken en voeding) en andere factoren die invloed kunnen hebben op je gezondheid. Je antwoorden helpen jou en je zorgverlener om een compleet beeld te krijgen en samen te bepalen welke stappen het meest belangrijk zijn."

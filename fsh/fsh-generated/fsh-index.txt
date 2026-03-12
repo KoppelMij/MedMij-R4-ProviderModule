@@ -29,7 +29,7 @@ StructureDefinition-pt-ActivityDefinition.json                                  
 StructureDefinition-pt-ClientID.json                                                    ProviderTaskClientID                                            Extension  MedMij-ClientID.fsh                      1 - 19
 StructureDefinition-pt-Endpoint.json                                                    ProviderTasksEndpoint                                           Profile    AanbiedersModule-Endpoint.fsh            1 - 10
 StructureDefinition-pt-ServiceRequest.json                                              ProviderTasksServiceRequest                                     Profile    AanbiedersModule-ServiceRequest.fsh      1 - 26
-StructureDefinition-pt-Task.json                                                        ProviderTasksTask                                               Profile    AanbiedersModule-Task.fsh                1 - 40
+StructureDefinition-pt-Task.json                                                        ProviderTasksTask                                               Profile    AanbiedersModule-Task.fsh                1 - 41
 StructureDefinition-pt-lm-ActivityDefinition.json                                       LmActivityDefinition                                            Logical    LogicalModels.fsh                        34 - 64
 StructureDefinition-pt-lm-Endpoint.json                                                 LmEnpoint                                                       Logical    LogicalModels.fsh                        148 - 162
 StructureDefinition-pt-lm-Patient.json                                                  LmPatient                                                       Logical    LogicalModels.fsh                        3 - 32
