@@ -52,7 +52,7 @@ The healthcare provider initiates a digital activity for the patient. The patien
 ### Transactions
 - PULL task list (PGO → source system): retrieve Task , including the links to the ActivityDefinition (instantiates extension), and basedOn links to ServiceRequest (if used).
 - LAUNCH (PGO → module system): start external module using information from ActivityDefinition and Endpoint (launch outside core REST exchange).
-- UPDATE status (Module system → source system): update Task.status and possibly subtasks.
+- UPDATE status (Module system → source system): update Task.status for both main tasks and subtasks to reflect progress and completion.
 
 ### Use case: Provider Module
 
@@ -76,7 +76,7 @@ To update the '.status of an existing Task (e.g., after launching or completing 
 PUT [base]/Task/[id]
 
 #### Retreive task list (PGO → Source System)
-Goal: the patient retrieves current tasks and the related context needed to render the task list and enable launch.
+Goal: the patient retrieves both open and completed tasks, along with the related context required to display the task list and support launching the associated digital activity.
 
 Response:
 - A Bundle containing Task resource(s) conforming to the ProviderTasks-Task profile, including:
@@ -165,7 +165,7 @@ The returned data to the PHR should conform to the profiles listed in the table 
             <td>Taak</td>
             <td>Task</td>
             <td><a href="" target="_blank">pt-Task</a></td>
-            <td class="monospace">GET [base]/Task?status:not=completed</td>
+            <td class="monospace">GET [base]/Task</td>
         </tr>
          <tr>
             <td>3</td>
@@ -193,7 +193,7 @@ The returned data to the PHR should conform to the profiles listed in the table 
             <td>Taak</td>
             <td>Task</td>
             <td><a href="" target="_blank">pt-Task</a></td>
-            <td class="monospace">PUT [base]/Task/[id]</td>
+            <td class="monospace">PATCH [base]/Task/[id]</td>
         </tr>
         <tr>
             <td>7</td>
