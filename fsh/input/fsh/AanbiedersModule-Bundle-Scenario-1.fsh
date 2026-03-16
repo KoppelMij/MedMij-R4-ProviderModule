@@ -51,7 +51,7 @@ Usage: #example
 * status = #active
 * publisher = "HinqZNO"
 * description = "Bloedglucose meting volgens NHG protocol. Duur: 1 week, 2x per dag"
-* usage = "controle hartfalen"
+* usage = "controle diabetes"
 * timingTiming.repeat
   * boundsDuration.value = 7
   * boundsDuration.system = "http://unitsofmeasure.org"
