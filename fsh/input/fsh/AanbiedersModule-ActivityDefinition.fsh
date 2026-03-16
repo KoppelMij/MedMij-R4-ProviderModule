@@ -13,6 +13,7 @@ Description: "This (FHIR) ActivityDefinition profile describes a reusable defini
     $koppeltaal-publisher-id named publisherId 0..*
 * extension[endpoint] ^short = "Endpoint for launching the activity"
   * ^definition = "Mandatory reference to the service application (endpoint) that provides the launchable eHealth activity. Can be more than one endpoint."
+* url 1..
 * title 1..
 * useContext
   * ^definition = "The context for the content of the eHealth activity."
