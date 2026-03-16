@@ -7,4 +7,4 @@ Description: "This (FHIR) Endpoint profile represents the technical FHIR REST en
 * insert Origin
 * extension contains ProviderTaskClientID named clientId 0..*
 * connectionType from $koppeltaal-endpoint-connection-type-vs (extensible)
-* managingOrganization only Reference(http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization)
+* managingOrganization only Reference(Organization or http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization)
