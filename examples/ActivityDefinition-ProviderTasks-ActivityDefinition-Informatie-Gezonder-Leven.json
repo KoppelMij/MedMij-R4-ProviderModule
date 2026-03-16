@@ -1,0 +1,33 @@
+{
+  "resourceType": "ActivityDefinition",
+  "id": "ProviderTasks-ActivityDefinition-Informatie-Gezonder-Leven",
+  "meta": {
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/pt-ActivityDefinition"
+    ]
+  },
+  "text": {
+    "status": "empty",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">No human-readable text provided in this case.</div>"
+  },
+  "extension": [
+    {
+      "url": "http://koppeltaal.nl/fhir/StructureDefinition/KT2EndpointExtension",
+      "valueReference": {
+        "reference": "Endpoint/ProviderTasks-Endpoint-HINQ"
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "https://hing.zno.com/content/id",
+      "value": "801e6797-cb52-4020-847a-7440a15b5998"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "InformatieGezonderLeven",
+  "title": "Gezonder gaan leven",
+  "status": "active",
+  "publisher": "HinqZNO",
+  "description": "Leefstijlmodule binnen de digitale zorgmodule Diabetes: praktische informatie en motivatie voor gezonder leven (voeding, beweging, gewicht, stoppen met roken, alcohol en slaap) ter ondersteuning van glykemische controle en cardiovasculair risicomanagement."
+}

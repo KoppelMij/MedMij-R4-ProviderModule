@@ -1,0 +1,14 @@
+- name: Index
+  filename: Index.page.md
+- name: Functional design
+  filename: Functional-design
+- name: Technical design
+  filename: Technical-design.md
+- name: Artifact index
+  filename: Artifact-index
+- name: Dependencies
+  filename: Dependencies.page.md
+- name: Test material
+  filename: Test-material
+- name: Release notes
+  filename: Release-notes.page.md
