@@ -6,4 +6,4 @@
 
 [Zib publication 2020](https://zibs.nl/wiki/HCIM_Release_2020(EN))
 
-[Koppeltaal v2.0](https://simplifier.net/packages/koppeltaalv2.00/0.15.0)
+[Koppeltaalv2.00 0.15.0](https://simplifier.net/packages/koppeltaalv2.00/0.15.0)
