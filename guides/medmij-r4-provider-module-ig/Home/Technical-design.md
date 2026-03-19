@@ -226,6 +226,7 @@ In addition to full updates (PUT), a source system shall support the FHIR PATCH 
 
 In the FHIRPath Patch approach, the client sends a Parameters resource that contains one or more operation parameters. Each operation specifies the patch type (e.g., replace), the FHIRPath path that identifies the element to update, and the new value to apply. The following example uses FHIRPath Patch to replace the Task status by setting Task.status to completed:
 
+```json
 {
   "resourceType": "Parameters",
   "parameter": [
