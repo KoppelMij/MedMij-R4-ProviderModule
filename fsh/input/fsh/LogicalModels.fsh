@@ -31,54 +31,45 @@ Description: "The person for whom the task is intended."
 * Gender from http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.0.1.1--20200901000000 (required)
   * ^alias = "Geslacht"
 
-Logical: LmActivityDefinition
+Logical: LmActivity
 Parent: http://hl7.org/fhir/StructureDefinition/Element
-Id: pt-lm-ActivityDefinition
-Title: "ActivityDefinition"
-Description: "Reusable definition of a launchable digital (eHealth) activity that can be requested for a patient in MedMij and/or Koppeltaal workflows. It describes the clinical intent and (when applicable) the technical launch details (e.g., endpoint) so that systems can create patient-specific workflow Tasks that reference this definition."
+Id: pt-lm-Activit
+Title: "Digital Activity"
+Description: "Reusable definition of a digital activity (module) that can be selected by a healthcare professional and presented to a patient as part of the care process. The activity describes what the patient will do (e.g., read information, complete a questionnaire, perform a home measurement) and provides the information needed to start or access the activity when applicable."
 * insert DefaultNarrative
 * ^status = #active
 * insert PublisherAndContactMedMij
-* ^purpose = "To describe a launchable digital (eHealth) activity as a reusable template, including clinical intent and the information needed to invoke the activity in the correct context. Patient-specific workflow management and status tracking are handled in separate Task resources that reference this definition."
+* ^purpose = "To describe a reusable digital activity that can be selected and assigned by a healthcare professional to support the care process for a patient. The activity provides patient-facing content or actions (e.g., information, questionnaires, or home measurements)."
 * insert Copyright
 * ^abstract = true
 * .
-  * ^alias = "Module"
-* ModuleEndpoint 0..1 Reference(Endpoint) "Endpoint that exposes the launchable activity."
-  * ^alias = "Endpoint"
-* Identifier 0..1 Identifier "Business identifier that uniquely identifies this ActivityDefinition instance within or across systems."
-* Version 0..1 string "Version identifier for this provider module, used to distinguish different published revisions."
-  * ^alias = "Versie"
-* Name 0..1 string "Name for this activity definition (computer friendly)"
-  * ^alias = "Naam"
-* Title 0..1 string "Human-friendly title for display and selection."
+  * ^alias = "Digitale Activiteit"
+* Title 0..1 string "Short, human-friendly title for the digital activity."
   * ^alias = "Titel"
-* Status 0..1 code "Status of the provider module (for example draft, active, retired). Indicates whether it may be used in workflows."
+* Status 0..1 code "Lifecycle status of the digital activity (e.g., draft, active, retired). A retired activity can no longer be selected or assigned."
   * ^alias = "Status"
-* Publisher 0..1 string "Organization responsible for publishing this activity definition. The publisher owns the content and/or functionality and manages versioning."
-* Description 0..1 markdown "Human-readable explanation of what the activity is and how it supports the care process. This description is reusable and not patient-specific."
+* Publisher 0..1 string "Organization responsible for the content/functionality of this digital activity and its maintenance."
+* Description 0..1 markdown "Guidance on how this digital activity should be used in clinical workflows."
   * ^alias = "Omschrijving"
-* Usage 0..1 string "Guidance on how this activity definition should be used in clinical workflows. In the MedMij use case, this text is intended for the healthcare professional who is selecting and assigning the activity to the patient."
-  * ^alias = "Gebruik"
-* Timing 0..1 Timing "Recommended timing for the activity when applied in a workflow (e.g., once, recurring, over a period). Patient-specific scheduling belongs in ServiceRequest resources."
+* Timing 0..1 Timing "Generic recommendation for how often/when the activity is typically performed. Patient-specific scheduling belongs in the clinical order (e.g., ServiceRequest)."
   * ^alias = "Tijdschema"
 
 Logical: LmTask
 Parent: http://hl7.org/fhir/StructureDefinition/Element
 Id: pt-lm-Task
 Title: "Task"
-Description: "Patient-specific workflow item that requests execution of a defined digital (eHealth) activity. Each Task represents an instance of “perform this activity for this patient”, optionally linking to an ActivityDefinition that describes the launchable activity."
+Description: "Patient-specific workflow item that requests execution of a defined digital activity. Each Task represents an instance of “perform this activity for this patient”, optionally linking to an ActivityDefinition that describes the launchable activity."
 * insert DefaultNarrative
 * ^status = #active
 * insert PublisherAndContactMedMij
-* ^purpose = "To represent and manage a concrete patient-specific request to perform a digital (eHealth) activity. The Task supports assignment, handover, and status tracking between systems and roles, so that initiation and completion of the activity can be monitored within the care process. The Task can be used in both MedMij and Koppeltaal implementations (client applications such as a PGO are one possible presentation layer)."
+* ^purpose = "To represent and manage a concrete patient-specific request to perform a digital activity. The Task supports assignment, handover, and status tracking between systems and roles, so that initiation and completion of the activity can be monitored within the care process. The Task can be used in both MedMij and Koppeltaal implementations (client applications such as a PGO are one possible presentation layer)."
 * insert Copyright
 * ^abstract = true
 * .
   * ^alias = "Taken"
 * Instantiates 0..1 BackboneElement "Link to the definitional activity that this Task instantiates."
   * ^short = "Instantiates ActivityDefinition"
-  * ^definition = "A link to the ActivityDefinition that defines the launchable eHealth activity (i.e., what module/content should be launched or performed) associated with this Task. In both MedMij and Koppeltaal implementations, this link is carried using the Koppeltaal instantiates extension."
+  * ^definition = "A link to the ActivityDefinition that defines the launchable digital activity (i.e., what module/content should be launched or performed) associated with this Task. In both MedMij and Koppeltaal implementations, this link is carried using the Koppeltaal instantiates extension."
   * ActivityDefinition 0..1 Reference(ActivityDefinition) "Reference to the ActivityDefinition that describes the activity to launch/perform."
     * ^alias = "ActivityDefinition"
 * Identifier 0..1 Identifier "Business identifier that uniquely identifies this Task instance within or across systems."
@@ -119,11 +110,11 @@ Logical: LmServiceRequest
 Parent: http://hl7.org/fhir/StructureDefinition/Element
 Id: pt-lm-ServiceRequest
 Title: "ServiceRequest"
-Description: "Patient-specific clinical order for a digital (eHealth) activity that a healthcare professional requests for a patient, such as completing a questionnaire, performing home measurements, viewing educational content, or launching a third-party module."
+Description: "Patient-specific clinical order for a digital activity that a healthcare professional requests for a patient, such as completing a questionnaire, performing home measurements, viewing educational content, or launching a third-party module."
 * insert DefaultNarrative
 * ^status = #active
 * insert PublisherAndContactMedMij
-* ^purpose = "To represent the clinical order to start or perform a specific digital (eHealth) activity for a patient. This ServiceRequest provides the clinical intent, context, requested schedule, and patient-specific instructions, and can serve as the basis for one or more Task resources that manage execution and tracking of the activity."
+* ^purpose = "To represent the clinical order to start or perform a specific digital activity for a patient. This ServiceRequest provides the clinical intent, context, requested schedule, and patient-specific instructions, and can serve as the basis for one or more Task resources that manage execution and tracking of the activity."
 * insert Copyright
 * ^abstract = true
 * .
