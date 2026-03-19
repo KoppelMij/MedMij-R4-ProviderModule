@@ -45,7 +45,7 @@
         "path": "Endpoint.extension",
         "sliceName": "resource-origin",
         "min": 0,
-        "max": "*",
+        "max": "1",
         "type": [
           {
             "code": "Extension",
