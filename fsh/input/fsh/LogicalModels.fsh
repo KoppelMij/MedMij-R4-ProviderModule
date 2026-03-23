@@ -33,7 +33,7 @@ Description: "The person for whom the task is intended."
 
 Logical: LmActivity
 Parent: http://hl7.org/fhir/StructureDefinition/Element
-Id: pt-lm-Activit
+Id: pt-lm-Activity
 Title: "Digital Activity"
 Description: "Reusable definition of a digital activity (module) that can be selected by a healthcare professional and presented to a patient as part of the care process. The activity describes what the patient will do (e.g., read information, complete a questionnaire, perform a home measurement) and provides the information needed to start or access the activity when applicable."
 * insert DefaultNarrative
