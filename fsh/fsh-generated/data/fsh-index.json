@@ -248,7 +248,7 @@
     "endLine": 41
   },
   {
-    "outputFile": "StructureDefinition-pt-lm-Activit.json",
+    "outputFile": "StructureDefinition-pt-lm-Activity.json",
     "fshName": "LmActivity",
     "fshType": "Logical",
     "fshFile": "LogicalModels.fsh",

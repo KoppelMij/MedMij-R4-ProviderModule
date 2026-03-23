@@ -30,7 +30,7 @@ StructureDefinition-pt-ClientID.json                                            
 StructureDefinition-pt-Endpoint.json                                                    ProviderTasksEndpoint                                           Profile    AanbiedersModule-Endpoint.fsh            1 - 10
 StructureDefinition-pt-ServiceRequest.json                                              ProviderTasksServiceRequest                                     Profile    AanbiedersModule-ServiceRequest.fsh      1 - 26
 StructureDefinition-pt-Task.json                                                        ProviderTasksTask                                               Profile    AanbiedersModule-Task.fsh                1 - 41
-StructureDefinition-pt-lm-Activit.json                                                  LmActivity                                                      Logical    LogicalModels.fsh                        34 - 55
+StructureDefinition-pt-lm-Activity.json                                                 LmActivity                                                      Logical    LogicalModels.fsh                        34 - 55
 StructureDefinition-pt-lm-Patient.json                                                  LmPatient                                                       Logical    LogicalModels.fsh                        3 - 32
 StructureDefinition-pt-lm-ServiceRequest.json                                           LmServiceRequest                                                Logical    LogicalModels.fsh                        91 - 109
 StructureDefinition-pt-lm-Task.json                                                     LmTask                                                          Logical    LogicalModels.fsh                        57 - 89
