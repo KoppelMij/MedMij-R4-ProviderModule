@@ -67,8 +67,8 @@ Description: "Patient-specific task that tells a patient what to do as part of a
 * ^abstract = true
 * .
   * ^alias = "Taak"
-* ActivityDefinition 0..1 Reference(ActivityDefinition) "Reference to the activity definition associated with this task."
-    * ^alias = "DigtaleActiviteit"
+* ActivityDefinition 0..1 Reference(ActivityDefinition) "Reference to the digital activity definition associated with this task."
+  * ^alias = "DigtaleActiviteit"
 * BasedOn 0..1 Reference(ServiceRequest) "Clinical order that triggered this patient task. May include patient-specific instructions and the requested schedule."
   * ^alias = "GebaseerdOp"
 * Status 0..1 code "Current state of the Task in the workflow (e.g., requested, received, accepted, in-progress, completed, cancelled)."
@@ -92,7 +92,7 @@ Logical: LmServiceRequest
 Parent: http://hl7.org/fhir/StructureDefinition/Element
 Id: pt-lm-ServiceRequest
 Title: "ServiceRequest"
-Description: "Patient-specific clinical order for a digital activity, created by a healthcare professional for a patient (e.g., completing a questionnaire, performing home measurements, viewing educational content, or starting a third-party module)."
+Description: "Patient-specific clinical order for a digital activity, created by a healthcare professional for a patient."
 * insert DefaultNarrative
 * ^status = #active
 * insert PublisherAndContactMedMij
