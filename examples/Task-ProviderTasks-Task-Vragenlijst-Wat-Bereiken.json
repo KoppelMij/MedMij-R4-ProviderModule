@@ -1,0 +1,57 @@
+{
+  "resourceType": "Task",
+  "id": "ProviderTasks-Task-Vragenlijst-Wat-Bereiken",
+  "meta": {
+    "profile": [
+      "http://medmij.nl/fhir/StructureDefinition/pt-Task"
+    ]
+  },
+  "text": {
+    "status": "empty",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">No human-readable text provided in this case.</div>"
+  },
+  "extension": [
+    {
+      "url": "http://vzvz.nl/fhir/StructureDefinition/instantiates",
+      "valueReference": {
+        "reference": "ActivityDefinition/ProviderTasks-ActivityDefinition-Vragenlijst-Wat-Bereiken",
+        "type": "ActivityDefinition"
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "http://hinq.nl/taskIdentifier",
+      "value": "TASK-74745858"
+    }
+  ],
+  "groupIdentifier": {
+    "system": "https://hinq.nl/fhir/identifiers/task-group",
+    "value": "module-COPD-2026",
+    "type": {
+      "text": "Digitale zorgmodule COPD"
+    }
+  },
+  "status": "requested",
+  "intent": "order",
+  "priority": "routine",
+  "description": "In deze vragenlijst geef je aan wat je belangrijk vindt en wat je wilt bereiken met je behandeling of begeleiding. Denk aan doelen zoals meer energie, beter kunnen bewegen, minder benauwdheid of je zekerder voelen in het dagelijks leven. Er zijn geen goede of foute antwoorden: het gaat om wat voor jou werkt. Je antwoorden helpen jou en je zorgverlener om samen afspraken te maken die passen bij jouw situatie.",
+  "for": {
+    "reference": "Patient/ProviderTasks-Patient-Van-Dijk",
+    "display": "Sanne van Dijk"
+  },
+  "executionPeriod": {
+    "start": "2025-01-05",
+    "end": "2025-01-11"
+  },
+  "authoredOn": "2025-12-23T18:00:00+01:00",
+  "lastModified": "2025-12-23T18:00:00+01:00",
+  "requester": {
+    "reference": "PractitionerRole/ProviderTasks-PractitionerRole-Van-Rijn",
+    "display": "M. van Rijn, Huisarts"
+  },
+  "owner": {
+    "reference": "Patient/ProviderTasks-Patient-Van-Dijk",
+    "display": "Sanne van Dijk"
+  }
+}
